@@ -1,0 +1,46 @@
+{
+  "name": "astro-breadcrumbs",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "exports": "./index.js",
+  "main": "index.js",
+  "scripts": {
+    "release": "semantic-release --branches main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felix-berlin/astro-breadcrumbs.git"
+  },
+  "keywords": [
+    "astro",
+    "astro.js",
+    "breadcrumbs",
+    "a11y"
+  ],
+  "author": {
+    "name": "Felix Scholze",
+    "email": "felix@webshaped.de",
+    "url": "https://webshaped.de"
+  },
+  "funding": [
+    {
+      "type": "PayPal",
+      "url": "https://paypal.me/FelixScholze"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/felixberlin"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felix-berlin/astro-breadcrumbs/issues"
+  },
+  "homepage": "https://github.com/felix-berlin/astro-breadcrumbs#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.5"
+  }
+}
