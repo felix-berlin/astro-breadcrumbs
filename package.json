@@ -1,7 +1,7 @@
 {
   "name": "astro-breadcrumbs",
   "version": "0.1.0",
-  "description": "",
+  "description": "Dynamic breadcrumbs component for Astro.js.",
   "type": "module",
   "exports": "./index.js",
   "main": "index.js",
@@ -15,8 +15,12 @@
   "keywords": [
     "astro",
     "astro.js",
+    "astro-component",
+    "withastro",
     "breadcrumbs",
-    "a11y"
+    "a11y",
+    "accessibility",
+    "ui"
   ],
   "author": {
     "name": "Felix Scholze",
