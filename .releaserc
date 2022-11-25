@@ -1,6 +1,6 @@
 {
   "release": {
-    "branches": ["main"]
+    "branches": "main"
   },
   "tagFormat": "v${version}",
   "plugins": [
