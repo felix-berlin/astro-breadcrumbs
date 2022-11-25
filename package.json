@@ -1,6 +1,6 @@
 {
   "name": "astro-breadcrumbs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Dynamic breadcrumbs component for Astro.js.",
   "type": "module",
   "exports": "./index.js",
