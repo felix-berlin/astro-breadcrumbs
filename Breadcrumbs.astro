@@ -15,6 +15,10 @@ interface BreadcrumbItem {
   'aria-current'?: string;
 }
 
+/**
+ * Array of breadcrumb items.
+ * The first item is the index page.
+ */
 let parts: Array<BreadcrumbItem> = [
   {
     text: indexText,
@@ -23,6 +27,9 @@ let parts: Array<BreadcrumbItem> = [
   }
 ];
 
+/**
+ * Loop through the paths and create a breadcrumb item for each.
+ */
 paths.forEach((text: string, i: number) => {
   const href = `/${paths.slice(0, i + 1).join('/')}`;
 
