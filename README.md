@@ -27,16 +27,20 @@ npm install astro-breadcrumbs
 
 ## 🛠️ Usage
 
+### Index page as text
+
 ```astro
 ---
 import Breadcrumbs from 'astro-breadcrumbs';
 ---
 
-<Breadcrumbs indexText={"Home"}>
+<Breadcrumbs indexText={"home"}>
+
   <span slot="separator" class="c-breadcrumbs__separator">
-    // Add icon or text here
+    <!-- Add icon or text here -->
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
   </span>
+
 </Breadcrumbs>
 
 ```
@@ -48,21 +52,97 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
 ```html
 <nav aria-label="Breadcrumbs" class="c-breadcrumbs">
   <ol class="c-breadcrumbs__crumbs">
+
     <li class="c-breadcrumbs__crumb">
-        <a href="/" class="c-breadcrumbs__link">Home</a>
+        <a href="/" class="c-breadcrumbs__link">home</a>
+
+        <!-- (separator slot) -->
         <span class="c-breadcrumbs__separator">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </span>
       </li>
+
       <li class="c-breadcrumbs__crumb">
-        <a href="/de" class="c-breadcrumbs__link">Category</a>
+        <a href="/category" class="c-breadcrumbs__link">category</a>
+
+        <!-- (separator slot) -->
         <span class="c-breadcrumbs__separator">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </span>
       </li>
+
       <li class="c-breadcrumbs__crumb">
-        <a href="/de/datenschutz-checkbox-fuer-wordpress-kommentare-ohne-plugin" class="c-breadcrumbs__link">Astro is great</a>
+        <a href="/category/astro-is-great" class="c-breadcrumbs__link">astro is great</a>
       </li>
+
+  </ol>
+</nav>
+```
+
+---
+
+### Index page as custom element
+
+```astro
+---
+import Breadcrumbs from 'astro-breadcrumbs';
+---
+
+<Breadcrumbs>
+
+  <span slot="index">
+    <!-- Add custom element for the first element (home icon?) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+  </span>
+
+  <span slot="separator" class="c-breadcrumbs__separator">
+    <!-- Add icon or text here (chevron-right icon?) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </span>
+
+</Breadcrumbs>
+
+```
+
+### Output
+
+When the current page is `https://example.wtf/category/astro-is-great` the output will be:
+
+```html
+<nav aria-label="Breadcrumbs" class="c-breadcrumbs">
+  <ol class="c-breadcrumbs__crumbs">
+
+    <li class="c-breadcrumbs__crumb">
+
+        <a href="/" class="c-breadcrumbs__link">
+          <!-- (index slot) Custom element (Home icon?) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </a>
+
+        <!-- (separator slot) -->
+        <span class="c-breadcrumbs__separator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </span>
+
+      </li>
+
+      <li class="c-breadcrumbs__crumb">
+
+        <a href="/category" class="c-breadcrumbs__link">category</a>
+
+        <!-- (separator slot) -->
+        <span class="c-breadcrumbs__separator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </span>
+
+      </li>
+
+      <li class="c-breadcrumbs__crumb">
+
+        <a href="/astro-is-great" class="c-breadcrumbs__link">astro is great</a>
+
+      </li>
+
   </ol>
 </nav>
 ```
@@ -71,15 +151,16 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
 
 ## Props
 
-| Props            |      Defaults       |  Required |
-| ---------------- | :-----------------: | --------: |
-| ``indexText``    |     ``'Home'``      | ``false`` |
-| ``mainBemClass`` | ``'c-breadcrumbs'`` | ``false`` |
+| Props          |     Defaults      | Required |
+| -------------- | :---------------: | -------: |
+| `indexText`    |     `'Home'`      |  `false` |
+| `mainBemClass` | `'c-breadcrumbs'` |  `false` |
 
 ---
 
 ## Slots
 
-| Slots         | Defaults | Required |
-| ------------- | :------: | :------: |
-| ``separator`` |    -     |    -     |
+| Slots       | Defaults | Required | Description                                               |
+| ----------- | :------: | :------: | --------------------------------------------------------- |
+| `separator` |    -     |    -     | Adds a custom element after the link                      |
+| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated |

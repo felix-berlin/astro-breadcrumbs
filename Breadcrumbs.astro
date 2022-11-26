@@ -4,16 +4,19 @@ interface BreadcrumbsProps {
   mainBemClass?: string;
 }
 
-const { indexText = 'Home', mainBemClass = 'c-breadcrumbs' } = Astro.props as BreadcrumbsProps;
-
-const paths = Astro.url.pathname.split('/').filter((crumb: any) => crumb);
-const ariaCurrent = Astro.request.url.pathname === '/' ? 'page' : undefined;
-
 interface BreadcrumbItem {
   text: string;
   href: string;
   'aria-current'?: string;
 }
+
+const {
+  indexText = 'Home',
+  mainBemClass = 'c-breadcrumbs'
+} = Astro.props as BreadcrumbsProps;
+
+const paths = Astro.url.pathname.split('/').filter((crumb: any) => crumb);
+const ariaCurrent = Astro.request.url.pathname === '/' ? 'page' : undefined;
 
 /**
  * Array of breadcrumb items.
@@ -30,8 +33,8 @@ let parts: Array<BreadcrumbItem> = [
 /**
  * Loop through the paths and create a breadcrumb item for each.
  */
-paths.forEach((text: string, i: number) => {
-  const href = `/${paths.slice(0, i + 1).join('/')}`;
+paths.forEach((text: string, index: number) => {
+  const href = `/${paths.slice(0, index + 1).join('/')}`;
 
   parts = [
     ...parts,
@@ -48,10 +51,25 @@ paths.forEach((text: string, i: number) => {
   <ol class={`${mainBemClass}__crumbs`}>
     {
       parts.map(({ text, ...attrs }, index, array) =>
+
       <li class={`${mainBemClass}__crumb`}>
-        <a {...attrs} class={`${mainBemClass}__link`}>{text}</a>
-        {(Astro.slots.has('separator') && array.length - 1 !== index) && <slot name="separator"></slot>}
-      </li>)
+
+        {(Astro.slots.has('index') && index === 0) &&
+          <a {...attrs} class={`${mainBemClass}__link`}>
+            <slot name="index"></slot>
+          </a>
+        }
+
+        {(!Astro.slots.has('index') || Astro.slots.has('index') && index !== 0) &&
+         <a {...attrs} class={`${mainBemClass}__link`}>{text}</a>
+        }
+
+        {(Astro.slots.has('separator') && array.length - 1 !== index) &&
+          <slot name="separator"></slot>
+        }
+      </li>
+
+      )
     }
   </ol>
 </nav>
