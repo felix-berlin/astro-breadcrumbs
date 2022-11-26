@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "Dynamic breadcrumbs component for Astro.js.",
   "type": "module",
-  "exports": "./index.js",
-  "main": "index.js",
+  "exports": "./index.ts",
+  "main": "index.ts",
   "scripts": {
     "release": "semantic-release --branches main"
   },
