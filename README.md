@@ -31,7 +31,7 @@ npm install astro-breadcrumbs
 
 ```astro
 ---
-import Breadcrumbs from 'astro-breadcrumbs';
+import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
 <Breadcrumbs indexText={"home"}>
@@ -85,7 +85,7 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
 
 ```astro
 ---
-import Breadcrumbs from 'astro-breadcrumbs';
+import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
 <Breadcrumbs>
