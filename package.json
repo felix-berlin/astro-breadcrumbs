@@ -1,11 +1,16 @@
 {
   "name": "astro-breadcrumbs",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Dynamic breadcrumbs component for Astro.js.",
   "type": "module",
   "exports": "./index.js",
   "main": "index.js",
   "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "release": "semantic-release --branches main"
   },
   "repository": {
@@ -43,6 +48,7 @@
   },
   "homepage": "https://github.com/felix-berlin/astro-breadcrumbs#readme",
   "devDependencies": {
+    "astro": "^2.0.10",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "semantic-release": "^19.0.5"
