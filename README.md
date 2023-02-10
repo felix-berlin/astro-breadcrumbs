@@ -158,7 +158,7 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
 | Props          |     Defaults      | Required | Description                                             |
 | -------------- | :---------------: | :------: | ------------------------------------------------------- |
 | `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                          |
-| `mainBemClass` | `'c-breadcrumbs'` | `false`  | Starting point for all css classes                      |
+| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                          |
 | `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`nav`) |
 ---
 
