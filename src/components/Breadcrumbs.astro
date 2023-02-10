@@ -2,6 +2,7 @@
 interface BreadcrumbsProps {
   indexText?: string;
   mainBemClass?: string;
+  ariaLabel?: string;
 }
 
 interface BreadcrumbItem {
@@ -10,8 +11,11 @@ interface BreadcrumbItem {
   "aria-current"?: string;
 }
 
-const { indexText = "Home", mainBemClass = "c-breadcrumbs" } =
-  Astro.props as BreadcrumbsProps;
+const {
+  indexText = "Home",
+  mainBemClass = "c-breadcrumbs",
+  ariaLabel = "breadcrumbs",
+} = Astro.props as BreadcrumbsProps;
 
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
 
@@ -42,7 +46,7 @@ paths.forEach((text: string, index: number) => {
 });
 ---
 
-<nav aria-label="Breadcrumb" class={mainBemClass}>
+<nav aria-label={ariaLabel} class={mainBemClass}>
   <ol class={`${mainBemClass}__crumbs`}>
     {
       parts.map(({ text, ...attrs }, index, array) => (
