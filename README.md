@@ -155,11 +155,11 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
 
 ## Props
 
-| Props          |     Defaults      | Required |
-| -------------- | :---------------: | -------: |
-| `indexText`    |     `'Home'`      |  `false` |
-| `mainBemClass` | `'c-breadcrumbs'` |  `false` |
-
+| Props          |     Defaults      | Required | Description                                             |
+| -------------- | :---------------: | :------: | ------------------------------------------------------- |
+| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                          |
+| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                          |
+| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`nav`) |
 ---
 
 ## Slots

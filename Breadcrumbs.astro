@@ -2,21 +2,22 @@
 interface BreadcrumbsProps {
   indexText?: string;
   mainBemClass?: string;
+  ariaLabel?: string;
 }
 
 interface BreadcrumbItem {
   text: string;
   href: string;
-  'aria-current'?: string;
+  "aria-current"?: string;
 }
 
 const {
-  indexText = 'Home',
-  mainBemClass = 'c-breadcrumbs'
+  indexText = "Home",
+  mainBemClass = "c-breadcrumbs",
+  ariaLabel = "breadcrumbs",
 } = Astro.props as BreadcrumbsProps;
 
-const paths = Astro.url.pathname.split('/').filter((crumb: any) => crumb);
-const ariaCurrent = Astro.request.url.pathname === '/' ? 'page' : undefined;
+const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
 
 /**
  * Array of breadcrumb items.
@@ -25,51 +26,53 @@ const ariaCurrent = Astro.request.url.pathname === '/' ? 'page' : undefined;
 let parts: Array<BreadcrumbItem> = [
   {
     text: indexText,
-    href: '/',
-    'aria-current': ariaCurrent
-  }
+    href: "/",
+  },
 ];
 
 /**
  * Loop through the paths and create a breadcrumb item for each.
  */
 paths.forEach((text: string, index: number) => {
-  const href = `/${paths.slice(0, index + 1).join('/')}`;
+  const href = `/${paths.slice(0, index + 1).join("/")}`;
 
   parts = [
     ...parts,
     {
-      text: text.replace(/[-_]/g, ' '),
+      text: text.replace(/[-_]/g, " "),
       href,
-      'aria-current': ariaCurrent
-    }
+    },
   ];
-})
+});
 ---
 
-<nav aria-label="Breadcrumbs" class={mainBemClass}>
+<nav aria-label={ariaLabel} class={mainBemClass}>
   <ol class={`${mainBemClass}__crumbs`}>
     {
-      parts.map(({ text, ...attrs }, index, array) =>
+      parts.map(({ text, ...attrs }, index, array) => (
+        <li class={`${mainBemClass}__crumb`}>
+          {Astro.slots.has("index") && index === 0 && (
+            <a {...attrs} class={`${mainBemClass}__link`}>
+              <slot name="index" />
+            </a>
+          )}
 
-      <li class={`${mainBemClass}__crumb`}>
+          {(!Astro.slots.has("index") ||
+            (Astro.slots.has("index") && index !== 0)) && (
+            <a
+              {...attrs}
+              class={`${mainBemClass}__link`}
+              aria-current={index + 1 === array.length ? "location" : false}
+            >
+              {text}
+            </a>
+          )}
 
-        {(Astro.slots.has('index') && index === 0) &&
-          <a {...attrs} class={`${mainBemClass}__link`}>
-            <slot name="index"></slot>
-          </a>
-        }
-
-        {(!Astro.slots.has('index') || Astro.slots.has('index') && index !== 0) &&
-         <a {...attrs} class={`${mainBemClass}__link`}>{text}</a>
-        }
-
-        {(Astro.slots.has('separator') && array.length - 1 !== index) &&
-          <slot name="separator"></slot>
-        }
-      </li>
-
-      )
+          {Astro.slots.has("separator") && array.length - 1 !== index && (
+            <slot name="separator" />
+          )}
+        </li>
+      ))
     }
   </ol>
 </nav>

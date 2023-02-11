@@ -1,3 +1,5 @@
 .releaserc
 renovate.json
 .github
+astro
+.vscode

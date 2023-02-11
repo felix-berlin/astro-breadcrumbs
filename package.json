@@ -6,6 +6,11 @@
   "exports": "./index.ts",
   "main": "index.ts",
   "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "release": "semantic-release --branches main"
   },
   "repository": {
