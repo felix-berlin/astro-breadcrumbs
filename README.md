@@ -4,7 +4,7 @@
 ![npm](https://img.shields.io/npm/v/astro-breadcrumbs?logo=npm&style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/felix-berlin/astro-breadcrumbs?label=github&logo=github&style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/felix-berlin/astro-breadcrumbs/release.yml?label=release&logo=github&style=flat-square)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/felix-berlin/astro-breadcrumbs?style=flat-square&logo=github)
+![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
 
 A dynamic breadcrumbs component for [Astro](https://astro.build/).
 
@@ -26,6 +26,24 @@ npm install astro-breadcrumbs
 ---
 
 ## 🛠️ Usage
+
+## Props
+
+| Props          |     Defaults      | Required | Description                                               |
+| -------------- | :---------------: | :------: | --------------------------------------------------------- |
+| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                            |
+| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                            |
+| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`<nav>`) |
+---
+
+## Slots
+
+| Slots       | Defaults | Required | Description                                               |
+| ----------- | :------: | :------: | --------------------------------------------------------- |
+| `separator` |    -     |    -     | Adds a custom element after the link                      |
+| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated |
+
+---
 
 ### Live examples
 
@@ -150,21 +168,3 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
   </ol>
 </nav>
 ```
-
----
-
-## Props
-
-| Props          |     Defaults      | Required | Description                                             |
-| -------------- | :---------------: | :------: | ------------------------------------------------------- |
-| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                          |
-| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                          |
-| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`nav`) |
----
-
-## Slots
-
-| Slots       | Defaults | Required | Description                                               |
-| ----------- | :------: | :------: | --------------------------------------------------------- |
-| `separator` |    -     |    -     | Adds a custom element after the link                      |
-| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated |
