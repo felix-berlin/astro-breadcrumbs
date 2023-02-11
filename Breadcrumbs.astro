@@ -3,6 +3,7 @@ interface BreadcrumbsProps {
   indexText?: string;
   mainBemClass?: string;
   ariaLabel?: string;
+  crumbs?: Array<BreadcrumbItem>;
 }
 
 interface BreadcrumbItem {
@@ -15,35 +16,52 @@ const {
   indexText = "Home",
   mainBemClass = "c-breadcrumbs",
   ariaLabel = "breadcrumbs",
+  crumbs = [],
 } = Astro.props as BreadcrumbsProps;
 
-const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
+let parts: Array<BreadcrumbItem> = [];
 
 /**
- * Array of breadcrumb items.
- * The first item is the index page.
+ * If no crumbs are passed, generate them dynamically.
  */
-let parts: Array<BreadcrumbItem> = [
-  {
-    text: indexText,
-    href: "/",
-  },
-];
+if (crumbs.length === 0) {
+  console.log("dynamic");
 
-/**
- * Loop through the paths and create a breadcrumb item for each.
- */
-paths.forEach((text: string, index: number) => {
-  const href = `/${paths.slice(0, index + 1).join("/")}`;
+  const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
 
+  /**
+   * Array of breadcrumb items.
+   * The first item is the index page.
+   */
   parts = [
-    ...parts,
     {
-      text: text.replace(/[-_]/g, " "),
-      href,
+      text: indexText,
+      href: "/",
     },
   ];
-});
+
+  /**
+   * Loop through the paths and create a breadcrumb item for each.
+   */
+  paths.forEach((text: string, index: number) => {
+    const href = `/${paths.slice(0, index + 1).join("/")}`;
+
+    parts = [
+      ...parts,
+      {
+        text: text.replace(/[-_]/g, " "),
+        href,
+      },
+    ];
+  });
+}
+
+/**
+ * If crumbs are passed, use them.
+ */
+if (crumbs.length > 0) {
+  parts = crumbs;
+}
 ---
 
 <nav aria-label={ariaLabel} class={mainBemClass}>

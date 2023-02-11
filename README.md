@@ -6,8 +6,9 @@
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/felix-berlin/astro-breadcrumbs/release.yml?label=release&logo=github&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
 
-A dynamic breadcrumbs component for [Astro](https://astro.build/).
+Well configurable breadcrumb component for [Astro](https://astro.build/).
 
+> Create breadcrumbs completely dynamically or specify exactly how they should look.
 ---
 
 This component comes with:
@@ -29,11 +30,12 @@ npm install astro-breadcrumbs
 
 ## Props
 
-| Props          |     Defaults      | Required | Description                                               |
-| -------------- | :---------------: | :------: | --------------------------------------------------------- |
-| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                            |
-| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                            |
-| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`<nav>`) |
+| Props          |     Defaults      | Required | Description                                                                                                                                                       |
+| -------------- | :---------------: | :------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                                                                                                                                    |
+| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                                                                                                                                    |
+| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`<nav>`)                                                                                                         |
+| `crumbs`       |       `[]`        | `false`  | This property expects an array of objects that describe the breadcrumbs "manually". If set dynamic creation will be disabled and `indexText` will have no affect. |
 ---
 
 ## Slots
@@ -168,3 +170,5 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
   </ol>
 </nav>
 ```
+
+<a href="https://www.buymeacoffee.com/felixberlin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
