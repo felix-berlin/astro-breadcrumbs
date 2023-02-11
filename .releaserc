@@ -1,7 +1,8 @@
 {
   "release": {
-    "branches": ["main"]
+    "branches": [ "main" ]
   },
+  "branches": [ "main" ],
   "tagFormat": "v${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -21,5 +22,6 @@
       "message": "Release <%= nextRelease.version %> - <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %> [skip ci]\n\n<%= nextRelease.notes %>"
     }]
   ],
-  "dryRun": false
+  "dryRun": false,
+  "debug": true
 }
