@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.2.0...v1.3.0) (2023-02-11)
+
+
+### Features
+
+* Add new prop crumbs - Create breadcrumbs by your own ([aa2d111](https://github.com/felix-berlin/astro-breadcrumbs/commit/aa2d111f993fd1a36e0f0804a4fe5ec4e6384b0c))
+
+# [1.2.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.1.0...v1.2.0) (2023-02-11)
+
+
+### Bug Fixes
+
+* **aria-current:** attribute is now created correctly ([a18acf1](https://github.com/felix-berlin/astro-breadcrumbs/commit/a18acf1186b705906d23fbd2a1f4dec20c15bcd0))
+
+
+### Features
+
+* **aria-label:** is now a optional prop ([60b3463](https://github.com/felix-berlin/astro-breadcrumbs/commit/60b34630de64ba1b541f4c83f1c5138a3ec4375d))
+
 # [1.1.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.0.0...v1.1.0) (2022-11-26)
 
 
