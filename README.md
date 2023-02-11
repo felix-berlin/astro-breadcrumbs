@@ -27,6 +27,24 @@ npm install astro-breadcrumbs
 
 ## 🛠️ Usage
 
+## Props
+
+| Props          |     Defaults      | Required | Description                                               |
+| -------------- | :---------------: | :------: | --------------------------------------------------------- |
+| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                            |
+| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                            |
+| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`<nav>`) |
+---
+
+## Slots
+
+| Slots       | Defaults | Required | Description                                               |
+| ----------- | :------: | :------: | --------------------------------------------------------- |
+| `separator` |    -     |    -     | Adds a custom element after the link                      |
+| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated |
+
+---
+
 ### Live examples
 
 [Code Sandbox Example](https://codesandbox.io/p/sandbox/astro-breadcrumbs-kl3oj6?file=%2Fsrc%2Fpages%2Fen%2Fcategory%2Fexample%2Fmy-page.astro&selection=%5B%7B%22endColumn%22%3A8%2C%22endLineNumber%22%3A12%2C%22startColumn%22%3A8%2C%22startLineNumber%22%3A12%7D%5D)
@@ -150,21 +168,3 @@ When the current page is `https://example.wtf/category/astro-is-great` the outpu
   </ol>
 </nav>
 ```
-
----
-
-## Props
-
-| Props          |     Defaults      | Required | Description                                             |
-| -------------- | :---------------: | :------: | ------------------------------------------------------- |
-| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                          |
-| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                          |
-| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`nav`) |
----
-
-## Slots
-
-| Slots       | Defaults | Required | Description                                               |
-| ----------- | :------: | :------: | --------------------------------------------------------- |
-| `separator` |    -     |    -     | Adds a custom element after the link                      |
-| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated |
