@@ -1,6 +1,21 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../../../../Breadcrumbs.astro";
+
+const customCrumbs = [
+  {
+    text: "Custom Crumb 1",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 2",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 3",
+    href: "#",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro Breadcrumbs.">
@@ -61,6 +76,9 @@ import Breadcrumbs from "../../../../../../Breadcrumbs.astro";
         >
       </span>
     </Breadcrumbs>
+
+    <h2>Example 3 - Custom breadcrumb list</h2>
+    <Breadcrumbs crumbs={customCrumbs} />
   </main>
 </Layout>
 
