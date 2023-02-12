@@ -16,6 +16,23 @@ const customCrumbs = [
     href: "#",
   },
 ];
+
+const crumbsWithCustomAttributes = [
+  {
+    text: "Crumb with custom title",
+    href: "#",
+    title: "Custom title",
+  },
+  {
+    text: "Crumb with custom data attribute",
+    href: "#",
+    "data-custom": "Custom data attribute",
+  },
+  {
+    text: "Custom Crumb 3",
+    href: "#",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro Breadcrumbs.">
@@ -79,6 +96,9 @@ const customCrumbs = [
 
     <h2>Example 3 - Custom breadcrumb list</h2>
     <Breadcrumbs crumbs={customCrumbs} />
+
+    <h2>Example 4 - Custom breadcrumb list with custom attributes</h2>
+    <Breadcrumbs crumbs={crumbsWithCustomAttributes} />
   </main>
 </Layout>
 
