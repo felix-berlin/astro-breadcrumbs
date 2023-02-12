@@ -30,26 +30,28 @@ npm install astro-breadcrumbs
 
 ## Props
 
-| Props          |     Defaults      | Required | Description                                                                                                                                                       |
-| -------------- | :---------------: | :------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `indexText`    |     `'Home'`      | `false`  | Label of the first nav element                                                                                                                                    |
-| `mainBemClass` | `'c-breadcrumbs'` | `false`  | BEM root class                                                                                                                                                    |
-| `ariaLabel`    |  `'breadcrumbs'`  | `false`  | Controls the `aria-label` on the parent element (`<nav>`)                                                                                                         |
-| `crumbs`       |       `[]`        | `false`  | This property expects an array of objects that describe the breadcrumbs "manually". If set dynamic creation will be disabled and `indexText` will have no affect. |
+| Props          | Types              |     Defaults      | Description                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------- | ------------------ | :---------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `indexText`    | `string`           |     `'Home'`      | Label of the first nav element                                                                                                                                                                                                                                                                                                                                                               |
+| `mainBemClass` | `string`           | `'c-breadcrumbs'` | BEM root class                                                                                                                                                                                                                                                                                                                                                                               |
+| `ariaLabel`    | `string`           |  `'breadcrumbs'`  | Controls the `aria-label` on the parent element (`<nav>`)                                                                                                                                                                                                                                                                                                                                    |
+| `crumbs`       | `BreadcrumbItem[]` |       `[]`        | This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute. If set dynamic creation will be disabled and `indexText` will have no affect. |
 ---
 
 ## Slots
 
-| Slots       | Defaults | Required | Description                                               |
-| ----------- | :------: | :------: | --------------------------------------------------------- |
-| `separator` |    -     |    -     | Adds a custom element after the link                      |
-| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated |
+| Slots       | Defaults | Required | Description                                                                                                                                                                                                                                                                                          |
+| ----------- | :------: | :------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `separator` |    -     |    -     | Add custom elements like svg's or icons after the `<a>` tag. With accessibility in mind you should consider to add a `aria-label=""` or `aria-hidden="true"` to your icon. This slot has no wrapping element so you have to add your own css class, for example: `class="c-breadcrumbs__separator"`. |
+| `index`     |    -     |    -     | [The first element] If present `indexText` is deactivated                                                                                                                                                                                                                                            |
 
 ---
 
 ### Live examples
 
 [Code Sandbox Example](https://codesandbox.io/p/sandbox/astro-breadcrumbs-kl3oj6?file=%2Fsrc%2Fpages%2Fen%2Fcategory%2Fexample%2Fmy-page.astro&selection=%5B%7B%22endColumn%22%3A8%2C%22endLineNumber%22%3A12%2C%22startColumn%22%3A8%2C%22startLineNumber%22%3A12%7D%5D)
+
+Looking for more examples? Check out the [examples](https://github.com/felix-berlin/astro-breadcrumbs/blob/main/astro/src/pages/en/category/astro/page.astro) in the repository.
 
 ### Index page as text
 
