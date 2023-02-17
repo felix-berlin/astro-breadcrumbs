@@ -4,6 +4,7 @@ interface BreadcrumbsProps {
   mainBemClass?: string;
   ariaLabel?: string;
   crumbs?: Array<BreadcrumbItem>;
+  schemaJsonScript?: boolean;
 }
 
 interface BreadcrumbItem {
@@ -17,6 +18,7 @@ const {
   mainBemClass = "c-breadcrumbs",
   ariaLabel = "breadcrumbs",
   crumbs = [],
+  schemaJsonScript = true,
 } = Astro.props as BreadcrumbsProps;
 
 let parts: Array<BreadcrumbItem> = [];
@@ -60,6 +62,22 @@ if (crumbs.length === 0) {
 if (crumbs.length > 0) {
   parts = crumbs;
 }
+
+/**
+ * Generate the schema.org JSON.
+ */
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: parts.map((part, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@id": part.href,
+      name: part.text,
+    },
+  })),
+});
 ---
 
 <nav aria-label={ariaLabel} class={mainBemClass}>
@@ -92,3 +110,8 @@ if (crumbs.length > 0) {
     }
   </ol>
 </nav>
+{
+  schemaJsonScript && (
+    <script type="application/ld+json" set:html={schemaJson} />
+  )
+}
