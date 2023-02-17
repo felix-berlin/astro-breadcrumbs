@@ -17,6 +17,7 @@ This component comes with:
 - ❎ No styles
 - ✅ CSS classes with BEM naming convention
 - ✅ A11y support
+- ✅ Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag support
 
 ## 📦 Installation
 
@@ -36,7 +37,7 @@ npm install astro-breadcrumbs
 | `mainBemClass`     |      `string`      | `'c-breadcrumbs'` | BEM root class                                                                                                                                                                                                                                                                                                                                                                               |
 | `ariaLabel`        |      `string`      |  `'breadcrumbs'`  | Controls the `aria-label` on the parent element (`<nav>`)                                                                                                                                                                                                                                                                                                                                    |
 | `crumbs`           | `BreadcrumbItem[]` |       `[]`        | This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute. If set dynamic creation will be disabled and `indexText` will have no affect. |
-| `schemaJsonScript` |     `boolean`      |      `true`       | Enable or disable the [schema.org JSON](https://schema.org/BreadcrumbList) script tag generation. element                                                                                                                                                                                                                                                                                    |
+| `schemaJsonScript` |     `boolean`      |      `true`       | Enable or disable the [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag generation. element                                                                                                                                                                                                                                                                                 |
 ---
 
 ## Slots
