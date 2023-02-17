@@ -1,5 +1,7 @@
 # 🍞 Astro | Breadcrumbs
 
+<img src="./logo-no-background.svg" width="200" height="200" style="border-radius:50%;background-color:#FFBE79;">
+
 ![npm](https://img.shields.io/npm/dm/astro-breadcrumbs?logo=npm&style=flat-square)
 ![npm](https://img.shields.io/npm/v/astro-breadcrumbs?logo=npm&style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/felix-berlin/astro-breadcrumbs?label=github&logo=github&style=flat-square)
@@ -18,6 +20,24 @@ This component comes with:
 - ✅ CSS classes with BEM naming convention
 - ✅ A11y support
 - ✅ Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag support
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [🍞 Astro | Breadcrumbs](#-astro--breadcrumbs)
+  - [📦 Installation](#-installation)
+  - [🛠️ Usage](#️-usage)
+  - [Props](#props)
+  - [| `schemaJsonScript` |     `boolean`      |      `true`       | Enable or disable the schema.org JSON-LD script tag generation. element                                                                                                                                                                                                                                                                                 |](#-schemajsonscript------boolean------------true--------enable-or-disable-the-schemaorg-json-ld-script-tag-generation-element---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+  - [Slots](#slots)
+    - [Live examples](#live-examples)
+    - [Index page as text](#index-page-as-text)
+    - [Output](#output)
+    - [Index page as custom element](#index-page-as-custom-element)
+    - [Output](#output-1)
+
+<!-- /code_chunk_output -->
 
 ## 📦 Installation
 
