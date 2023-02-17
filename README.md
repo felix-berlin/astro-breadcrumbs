@@ -4,7 +4,7 @@
 ![npm](https://img.shields.io/npm/v/astro-breadcrumbs?logo=npm&style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/felix-berlin/astro-breadcrumbs?label=github&logo=github&style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/felix-berlin/astro-breadcrumbs/release.yml?label=release&logo=github&style=flat-square)
-![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
+![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
 
 Well configurable breadcrumb component for [Astro](https://astro.build/).
 
