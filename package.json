@@ -1,16 +1,14 @@
 {
   "name": "astro-breadcrumbs",
   "version": "1.4.0",
-  "description": "Dynamic breadcrumbs component for Astro.js.",
+  "description": "Well configurable breadcrumb component for Astro.js. Create breadcrumbs completely dynamically or specify exactly how they should look.",
   "type": "module",
   "exports": "./index.ts",
   "main": "index.ts",
+  "workspaces": [
+    "demo"
+  ],
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
     "release": "semantic-release --branches main"
   },
   "repository": {
@@ -25,7 +23,8 @@
     "breadcrumbs",
     "a11y",
     "accessibility",
-    "ui"
+    "ui",
+    "structured data schema"
   ],
   "author": {
     "name": "Felix Scholze",
@@ -42,14 +41,17 @@
       "url": "https://www.buymeacoffee.com/felixberlin"
     }
   ],
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/felix-berlin/astro-breadcrumbs/issues"
   },
   "homepage": "https://github.com/felix-berlin/astro-breadcrumbs#readme",
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^20.0.0"
+    "semantic-release": "^20.1.0"
+  },
+  "peerDependencies": {
+    "astro": "^2.0.0-beta.0"
   }
 }
