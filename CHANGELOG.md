@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.3.1...v1.4.0) (2023-02-17)
+
+
+### Features
+
+* add schema.org JSON script tag generaton ([6bc8529](https://github.com/felix-berlin/astro-breadcrumbs/commit/6bc852959ef5ad34dc0bdffe87d980a8a7972bbe))
+
 ## [1.3.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.3.0...v1.3.1) (2023-02-11)
 
 
