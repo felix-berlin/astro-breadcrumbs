@@ -4,6 +4,7 @@ interface BreadcrumbsProps {
   mainBemClass?: string;
   ariaLabel?: string;
   crumbs?: Array<BreadcrumbItem>;
+  schemaJsonScript?: boolean;
 }
 
 interface BreadcrumbItem {
@@ -17,6 +18,7 @@ const {
   mainBemClass = "c-breadcrumbs",
   ariaLabel = "breadcrumbs",
   crumbs = [],
+  schemaJsonScript = true,
 } = Astro.props as BreadcrumbsProps;
 
 let parts: Array<BreadcrumbItem> = [];
@@ -61,63 +63,30 @@ if (crumbs.length > 0) {
   parts = crumbs;
 }
 
-const schemaJson = () => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: parts.map((part, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@id": part.href,
-        name: part.text,
-      },
-    })),
-  };
-};
-
-console.log(JSON.stringify(schemaJson, null, 2));
-
-const test = {
+/**
+ * Generate the schema.org JSON.
+ */
+const schemaJson = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      item: {
-        "@id": "https://example.com/dresses",
-        name: "Dresses",
-      },
+  itemListElement: parts.map((part, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@id": part.href,
+      name: part.text,
     },
-    {
-      "@type": "ListItem",
-      position: 2,
-      item: {
-        "@id": "https://example.com/dresses/real",
-        name: "Real Dresses",
-      },
-    },
-  ],
-};
+  })),
+});
 ---
 
 <nav aria-label={ariaLabel} class={mainBemClass}>
-  <ol
-    class={`${mainBemClass}__crumbs`}
-    itemscope
-    itemtype="https://schema.org/BreadcrumbList"
-  >
+  <ol class={`${mainBemClass}__crumbs`}>
     {
       parts.map(({ text, ...attrs }, index, array) => (
-        <li
-          class={`${mainBemClass}__crumb`}
-          itemprop="itemListElement"
-          itemscope
-          itemtype="https://schema.org/ListItem"
-        >
+        <li class={`${mainBemClass}__crumb`}>
           {Astro.slots.has("index") && index === 0 && (
-            <a {...attrs} class={`${mainBemClass}__link`} itemprop="item">
+            <a {...attrs} class={`${mainBemClass}__link`}>
               <slot name="index" />
             </a>
           )}
@@ -128,13 +97,10 @@ const test = {
               {...attrs}
               class={`${mainBemClass}__link`}
               aria-current={index + 1 === array.length ? "location" : false}
-              itemprop="item"
             >
               {text}
             </a>
           )}
-
-          <meta itemprop="position" content={index} />
 
           {Astro.slots.has("separator") && array.length - 1 !== index && (
             <slot name="separator" />
@@ -144,18 +110,8 @@ const test = {
     }
   </ol>
 </nav>
-
-<script type="application/ld+json" is:inline>
-  {
-        "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: parts.map((part, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@id": part.href,
-        name: part.text,
-      },
-    })),
-  }
-</script>
+{
+  schemaJsonScript && (
+    <script type="application/ld+json" set:html={schemaJson} />
+  )
+}
