@@ -53,7 +53,7 @@ npm install astro-breadcrumbs
 
 [Code Sandbox Example](https://codesandbox.io/p/sandbox/astro-breadcrumbs-kl3oj6?file=%2Fsrc%2Fpages%2Fen%2Fcategory%2Fexample%2Fmy-page.astro&selection=%5B%7B%22endColumn%22%3A8%2C%22endLineNumber%22%3A12%2C%22startColumn%22%3A8%2C%22startLineNumber%22%3A12%7D%5D)
 
-Looking for more examples? Check out the [examples](https://github.com/felix-berlin/astro-breadcrumbs/blob/main/astro/src/pages/en/category/astro/page.astro) in the repository.
+Looking for more examples? Check out the [examples](https://github.com/felix-berlin/astro-breadcrumbs/blob/main/demo/src/pages/en/category/astro/page.astro) in the repository.
 
 ### Index page as text
 
