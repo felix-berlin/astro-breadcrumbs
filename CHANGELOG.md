@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.4.1...v1.4.2) (2023-02-17)
+
+
+### Bug Fixes
+
+* wrong export path ([1babc98](https://github.com/felix-berlin/astro-breadcrumbs/commit/1babc98d09c1d11398609a2f78adb8679cf83601))
+
 ## [1.4.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.4.0...v1.4.1) (2023-02-17)
 
 
