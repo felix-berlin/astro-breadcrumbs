@@ -46,7 +46,7 @@
   "bugs": {
     "url": "https://github.com/felix-berlin/astro-breadcrumbs/issues"
   },
-  "homepage": "https://github.com/felix-berlin/astro-breadcrumbs#readme",
+  "homepage": "https://docs.astro-breadcrumbs.kasimir.dev",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
