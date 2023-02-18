@@ -141,9 +141,44 @@ Enable or disable the [schema.org JSON-LD](https://schema.org/BreadcrumbList) sc
 import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
-<Breadcrumbs schemaJsonScript={false} />
+<Breadcrumbs />
 ```
 
 **Rendered Component:**
 
-<Breadcrumbs schemaJsonScript={false} />
+<Breadcrumbs />
+
+```html
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "/",
+        "name": "Home"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "/en",
+        "name": "en"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "/en/properties",
+        "name": "properties"
+      }
+    }
+  ]
+}
+</script>
+```
