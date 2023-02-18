@@ -37,6 +37,9 @@ export const SIDEBAR: Sidebar = {
 		'Start Here': [
 			{ text: 'Introduction', link: 'en/introduction' },
 		],
-		'Configuration': [{ text: 'Properties', link: 'en/properties' }],
+		'Configuration': [
+			{ text: 'Properties', link: 'en/properties' },
+			{ text: 'Slots', link: 'en/slots' }
+		],
 	},
 };

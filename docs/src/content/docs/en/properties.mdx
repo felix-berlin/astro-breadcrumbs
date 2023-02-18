@@ -16,6 +16,10 @@ Label of the first nav element.
 **Usage:**
 
 ```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
 <Breadcrumbs indexText="Home" />
 ```
 
@@ -34,6 +38,10 @@ BEM root.
 **Usage:**
 
 ```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
 <Breadcrumbs mainBemClass="o-bread-crumb" />
 ```
 
@@ -52,6 +60,10 @@ Controls the `aria-label` on the parent element (`<nav>`).
 **Usage:**
 
 ```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
 <Breadcrumbs ariaLabel="a structured list of pages" />
 ```
 
@@ -118,6 +130,16 @@ const customCrumbs = [
 
 Enable or disable the [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag generation.
 
+**Usage:**
+
 ```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
 <Breadcrumbs schemaJsonScript={false} />
 ```
+
+**Rendered Component:**
+
+<Breadcrumbs schemaJsonScript={false} />
