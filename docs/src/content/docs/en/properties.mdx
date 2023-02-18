@@ -3,6 +3,8 @@ title: "Properties"
 description: "Lorem ipsum dolor sit amet - 4"
 ---
 
+import { Breadcrumbs } from "astro-breadcrumbs";
+
 ## indexText
 
 **Type:** `string`
@@ -11,9 +13,15 @@ description: "Lorem ipsum dolor sit amet - 4"
 
 Label of the first nav element.
 
+**Usage:**
+
 ```astro
-<astro-breadcrumbs indexText="Home" />
+<Breadcrumbs indexText="Home" />
 ```
+
+**Rendered Component:**
+
+<Breadcrumbs indexText="Home" />
 
 ## mainBemClass
 
@@ -23,9 +31,15 @@ Label of the first nav element.
 
 BEM root.
 
+**Usage:**
+
 ```astro
-<astro-breadcrumbs mainBemClass="bread-crumb" />
+<Breadcrumbs mainBemClass="o-bread-crumb" />
 ```
+
+**Rendered Component:**
+
+<Breadcrumbs mainBemClass="o-bread-crumb" />
 
 ## ariaLabel
 
@@ -35,9 +49,15 @@ BEM root.
 
 Controls the `aria-label` on the parent element (`<nav>`).
 
+**Usage:**
+
 ```astro
-<astro-breadcrumbs ariaLabel="a structured list of pages" />
+<Breadcrumbs ariaLabel="a structured list of pages" />
 ```
+
+**Rendered Component:**
+
+<Breadcrumbs ariaLabel="a structured list of pages" />
 
 ## crumbs
 
@@ -46,6 +66,49 @@ Controls the `aria-label` on the parent element (`<nav>`).
 **Default:** `[]`
 
 This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute. If set dynamic creation will be disabled and `indexText` will have no affect.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+const customCrumbs = [
+  {
+    text: "Custom Crumb 1",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 2",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 3",
+    href: "#",
+  },
+];
+---
+
+<Breadcrumbs crumbs={customCrumbs} />
+
+```
+
+**Rendered Component:**
+
+<Breadcrumbs crumbs={[
+  {
+    text: "Custom Crumb 1",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 2",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 3",
+    href: "#",
+  },
+]} />
 
 ## schemaJsonScript
 
@@ -56,5 +119,5 @@ This property expects an array of objects that describe the breadcrumbs "manuall
 Enable or disable the [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag generation.
 
 ```astro
-<astro-breadcrumbs schemaJsonScript={false} />
+<Breadcrumbs schemaJsonScript={false} />
 ```
