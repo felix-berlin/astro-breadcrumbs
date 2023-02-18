@@ -10,18 +10,20 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"astro": "^2.0.13",
-		"preact": "^10.12.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"@astrojs/react": "^2.0.2",
-		"@astrojs/preact": "^2.0.3",
 		"@algolia/client-search": "^4.14.3",
+		"@astrojs/mdx": "^0.17.0",
+		"@astrojs/preact": "^2.0.3",
+		"@astrojs/react": "^2.0.2",
 		"@docsearch/css": "^3.3.3",
 		"@docsearch/react": "^3.3.3",
+		"@types/node": "^18.14.0",
 		"@types/react": "^18.0.28",
-		"@types/node": "^18.13.0",
-		"@types/react-dom": "^18.0.11"
+		"@types/react-dom": "^18.0.11",
+		"astro": "^2.0.14",
+		"astro-breadcrumbs": "^1.4.2",
+		"preact": "^10.12.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"html-escaper": "^3.0.3"

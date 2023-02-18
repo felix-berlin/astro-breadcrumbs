@@ -6,12 +6,10 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
+		src: 'https://github.com/felix-berlin/astro-breadcrumbs/blob/main/logo-color.svg',
 		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
+			'astro-breadcrumb logo',
 	},
-	twitter: 'astrodotbuild',
 };
 
 export const KNOWN_LANGUAGES = {
@@ -21,7 +19,7 @@ export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 export const GITHUB_EDIT_URL = `https://github.com/felix-berlin/astro-breadcrumbs/tree/main/docs`;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const COMMUNITY_INVITE_URL = `https://github.com/felix-berlin/astro-breadcrumbs/discussions`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
