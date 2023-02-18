@@ -4,9 +4,9 @@ type Props = {
 	path: string;
 };
 const { path } = Astro.props;
-const resolvedPath = `examples/docs/${path}`;
-const url = `https://api.github.com/repos/withastro/astro/commits?path=${resolvedPath}`;
-const commitsURL = `https://github.com/withastro/astro/commits/main/${resolvedPath}`;
+const resolvedPath = `docs/${path}`;
+const url = `https://api.github.com/repos/felix-berlin/astro-breadcrumbs/commits?path=${resolvedPath}`;
+const commitsURL = `https://github.com/felix-berlin/astro-breadcrumbs/commits/main/${resolvedPath}`;
 
 type Commit = {
 	author: {
@@ -17,18 +17,20 @@ type Commit = {
 
 async function getCommits(url: string) {
 	try {
-		const token = import.meta.env.GITHUB_TOKEN ?? 'hello';
+		const token = import.meta.env.GITHUB_TOKEN ?? "hello";
 		if (!token) {
-			throw new Error('Cannot find "GITHUB_TOKEN" used for escaping rate-limiting.');
+			throw new Error(
+				'Cannot find "GITHUB_TOKEN" used for escaping rate-limiting.'
+			);
 		}
 
-		const auth = `Basic ${Buffer.from(token, 'binary').toString('base64')}`;
+		const auth = `Basic ${Buffer.from(token, "binary").toString("base64")}`;
 
 		const res = await fetch(url, {
-			method: 'GET',
+			method: "GET",
 			headers: {
 				Authorization: auth,
-				'User-Agent': 'astro-docs/1.0',
+				"User-Agent": "astro-docs/1.0",
 			},
 		});
 
@@ -43,14 +45,14 @@ async function getCommits(url: string) {
 
 		return data as Commit[];
 	} catch (e) {
-		console.warn(`[error]  /src/components/AvatarList.astro 
+		console.warn(`[error]  /src/components/AvatarList.astro
     ${(e as any)?.message ?? e}`);
 		return [] as Commit[];
 	}
 }
 
 function removeDups(arr: Commit[]) {
-	const map = new Map<string, Commit['author']>();
+	const map = new Map<string, Commit["author"]>();
 
 	for (let item of arr) {
 		const author = item.author;
@@ -69,7 +71,10 @@ const additionalContributors = unique.length - recentContributors.length; // lis
 
 <!-- Thanks to @5t3ph for https://smolcss.dev/#smol-avatar-list! -->
 <div class="contributors">
-	<ul class="avatar-list" style={`--avatar-count: ${recentContributors.length}`}>
+	<ul
+		class="avatar-list"
+		style={`--avatar-count: ${recentContributors.length}`}
+	>
 		{
 			recentContributors.map((item) => (
 				<li>
@@ -89,8 +94,10 @@ const additionalContributors = unique.length - recentContributors.length; // lis
 	{
 		additionalContributors > 0 && (
 			<span>
-				<a href={commitsURL}>{`and ${additionalContributors} additional contributor${
-					additionalContributors > 1 ? 's' : ''
+				<a
+					href={commitsURL}
+				>{`and ${additionalContributors} additional contributor${
+					additionalContributors > 1 ? "s" : ""
 				}.`}</a>
 			</span>
 		)
@@ -108,7 +115,10 @@ const additionalContributors = unique.length - recentContributors.length; // lis
 		/* Default to displaying most of the avatar to
   enable easier access on touch devices, ensuring
   the WCAG touch target size is met or exceeded */
-		grid-template-columns: repeat(var(--avatar-count), max(44px, calc(var(--avatar-size) / 1.15)));
+		grid-template-columns: repeat(
+			var(--avatar-count),
+			max(44px, calc(var(--avatar-size) / 1.15))
+		);
 		/* `padding` matches added visual dimensions of
   the `box-shadow` to help create a more accurate
   computed component size */
@@ -118,9 +128,12 @@ const additionalContributors = unique.length - recentContributors.length; // lis
 
 	@media (any-hover: hover) and (any-pointer: fine) {
 		.avatar-list {
-			/* We create 1 extra cell to enable the computed 
+			/* We create 1 extra cell to enable the computed
     width to match the final visual width */
-			grid-template-columns: repeat(calc(var(--avatar-count) + 1), calc(var(--avatar-size) / 1.75));
+			grid-template-columns: repeat(
+				calc(var(--avatar-count) + 1),
+				calc(var(--avatar-size) / 1.75)
+			);
 		}
 	}
 
