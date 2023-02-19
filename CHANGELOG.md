@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.4.2...v1.5.0) (2023-02-19)
+
+
+### Features
+
+* add scss style api ([a847c05](https://github.com/felix-berlin/astro-breadcrumbs/commit/a847c05cad6eb39338931b9be13bb223f2648dcf))
+
 ## [1.4.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.4.1...v1.4.2) (2023-02-17)
 
 
