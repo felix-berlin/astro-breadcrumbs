@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.5.0...v1.5.1) (2023-02-19)
+
+
+### Bug Fixes
+
+* missing scss & css export ([7573f78](https://github.com/felix-berlin/astro-breadcrumbs/commit/7573f7866cae89f249ab85fa0b539337a56da2fc))
+
 # [1.5.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.4.2...v1.5.0) (2023-02-19)
 
 
