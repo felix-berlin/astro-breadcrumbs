@@ -7,9 +7,14 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"styles:build": "sass ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
+		"styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css"
 	},
 	"dependencies": {
-		"astro": "^2.0.13"
+		"astro": "^2.0.14"
+	},
+	"devDependencies": {
+		"sass": "^1.58.3"
 	}
 }

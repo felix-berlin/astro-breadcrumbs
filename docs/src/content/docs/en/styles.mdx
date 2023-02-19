@@ -1,0 +1,73 @@
+---
+title: "Styling"
+description: "Lorem ipsum dolor sit amet - 3"
+---
+
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+
+## separator
+
+**Default:** `-`
+
+Add custom elements like svg's or icons after the `<a>` tag. With accessibility in mind you should consider to add a `aria-label=""` or `aria-hidden="true"` to your icon. This slot has no wrapping element so you have to add your own css class, for example: `class="c-breadcrumbs__separator"`.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs indexText="home">
+
+  <span slot="separator" class="c-breadcrumbs__separator" aria-hidden="true">
+    <!-- Add icon or text here -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </span>
+
+</Breadcrumbs>
+```
+
+**Rendered Component:**
+
+<Breadcrumbs indexText="home">
+
+  <span slot="separator" class="c-breadcrumbs__separator" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </span>
+
+</Breadcrumbs>
+
+## index
+
+**Default:** `-`
+
+[The first element] If present `indexText` is deactivated.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs>
+
+  <span slot="index" aria-label="Index Page">
+    <!-- Add custom element for the first element (home icon?) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+  </span>
+
+</Breadcrumbs>
+```
+
+**Rendered Component:**
+
+<Breadcrumbs>
+
+  <span slot="index" aria-label="Index Page">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+  </span>
+
+</Breadcrumbs>

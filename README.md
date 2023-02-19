@@ -15,11 +15,12 @@ Well configurable breadcrumb component for [Astro](https://astro.build/).
 
 This component comes with:
 
-- ❎ No extra dependencies
-- ❎ No styles
-- ✅ CSS classes with BEM naming convention
-- ✅ A11y support
-- ✅ Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag support
+- ✅ **Zero dependencies**
+- ✅ **Optional styles**
+- ✅ **CSS classes with BEM naming convention**
+- ✅ **A11y support**
+- ✅ **Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag support**
+- ✅ **Small size**
 
 ## 📦 Installation
 

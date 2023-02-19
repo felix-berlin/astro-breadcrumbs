@@ -1,0 +1,38 @@
+.c-breadcrumbs {
+  --color-link-breadcrumbs: inherit;
+  --size-font-breadcrumbs: 1rem;
+  --spacing-vertical-separator-breadcrumbs: 6px;
+}
+.c-breadcrumbs__crumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-breadcrumbs__crumbs:where(.has-no-separators) {
+  row-gap: var(--spacing-vertical-separator-breadcrumbs);
+  column-gap: 1rem;
+}
+.c-breadcrumbs__crumb {
+  display: flex;
+  align-items: center;
+}
+.c-breadcrumbs__crumb:has(.c-breadcrumbs__separator) .c-breadcrumbs__separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 var(--spacing-vertical-separator-breadcrumbs);
+}
+.c-breadcrumbs__crumb:has(svg, image) :where(svg, image) {
+  max-width: var(--size-font-breadcrumbs);
+  max-height: var(--size-font-breadcrumbs);
+}
+.c-breadcrumbs__link {
+  font-size: var(--size-font-breadcrumbs);
+  text-decoration: none;
+  color: var(--color-link-breadcrumbs);
+  line-height: 1;
+}
+
+/*# sourceMappingURL=breadcrumbs.css.map */

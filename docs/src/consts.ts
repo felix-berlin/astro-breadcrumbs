@@ -6,7 +6,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/felix-berlin/astro-breadcrumbs/blob/main/logo-color.svg',
+		src: 'https://raw.githubusercontent.com/felix-berlin/astro-breadcrumbs/main/logo-color.svg',
 		alt:
 			'astro-breadcrumb logo',
 	},
@@ -39,7 +39,8 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Configuration': [
 			{ text: 'Properties', link: 'en/properties' },
-			{ text: 'Slots', link: 'en/slots' }
+			{ text: 'Slots', link: 'en/slots' },
+			{ text: 'Styles', link: 'en/styles' }
 		],
 	},
 };
