@@ -5,5 +5,6 @@ demo
 docs
 .vscode
 src/breadcrumbs-dist.scss
+logo.svg
 logo-color.svg
 logo-no-background.svg
