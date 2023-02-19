@@ -3,7 +3,11 @@
   "version": "1.5.0",
   "description": "Well configurable breadcrumb component for Astro.js. Create breadcrumbs completely dynamically or specify exactly how they should look.",
   "type": "module",
-  "exports": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./breadcrumbs.css": "./src/breadcrumbs.css",
+    "./breadcrumbs.scss": "./src/breadcrumbs.scss"
+  },
   "main": "index.ts",
   "workspaces": [
     "demo",

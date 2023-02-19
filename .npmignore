@@ -4,3 +4,6 @@ renovate.json
 demo
 docs
 .vscode
+src/breadcrumbs-dist.scss
+logo-color.svg
+logo-no-background.svg
