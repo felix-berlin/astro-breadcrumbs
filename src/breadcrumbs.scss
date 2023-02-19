@@ -1,0 +1,104 @@
+$bem-root: 'c-breadcrumbs' !default;
+$overflow-behavior: 'wrap' !default;
+$overflow-wrap-horizontal-spacing: 1rem !default;
+$color-link: inherit !default;
+$color-hover-link: null !default;
+$color-separator: null !default;
+$color-is-current: null !default;
+$color-is-index: null !default;
+$size-font: 1rem !default;
+$spacing-vertical-separator: 6px !default;
+$icons-not-bigger-than-font-size: true !default;
+$transition-link-breadcrumbs: color 0.2s ease-in-out !default;
+
+.#{$bem-root} {
+  --color-link-breadcrumbs: #{$color-link};
+  --size-font-breadcrumbs: #{$size-font};
+  --spacing-vertical-separator-breadcrumbs: #{$spacing-vertical-separator};
+
+  &__crumbs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+
+    @if $overflow-behavior =='wrap' {
+      flex-wrap: wrap;
+    }
+
+    &:where(.has-no-separators) {
+      row-gap: var(--spacing-vertical-separator-breadcrumbs);
+
+      @if $overflow-behavior =='wrap' {
+        column-gap: $overflow-wrap-horizontal-spacing;
+      }
+    }
+  }
+
+  &__crumb {
+    display: flex;
+    align-items: center;
+
+    @if $overflow-behavior == 'ellipsis' {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &:has(.#{$bem-root}__separator) {
+
+      .#{$bem-root}__separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 var(--spacing-vertical-separator-breadcrumbs);
+
+        @if $color-separator {
+          color: $color-separator;
+        }
+      }
+    }
+
+    @if $icons-not-bigger-than-font-size {
+
+      &:has(svg, image) :where(svg, image) {
+        max-width: var(--size-font-breadcrumbs);
+        max-height: var(--size-font-breadcrumbs);
+      }
+    }
+  }
+
+  &__link {
+    font-size: var(--size-font-breadcrumbs);
+    text-decoration: none;
+    color: var(--color-link-breadcrumbs);
+    line-height: 1;
+
+    @if $color-hover-link {
+
+      transition: $transition-link-breadcrumbs;
+
+      @media (hover: hover) {
+
+        &:hover {
+          --color-link-breadcrumbs: #{$color-hover-link};
+        }
+      }
+    }
+
+    @if $color-is-current {
+
+      &:where(.is-current) {
+        --color-link-breadcrumbs: #{$color-is-current};
+      }
+    }
+
+    @if $color-is-index {
+
+      &:where(.is-index) {
+        --color-link-breadcrumbs: #{$color-is-index};
+      }
+    }
+  }
+}

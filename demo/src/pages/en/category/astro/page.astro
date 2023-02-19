@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../../../../src/Breadcrumbs.astro";
+// import "../../../../styles/styles.scss";
 
 const customCrumbs = [
   {
@@ -41,68 +42,82 @@ const crumbsWithCustomAttributes = [
 
     <h2>Example 1 - Custom separator</h2>
     <Breadcrumbs indexText={"home"}>
-      <span slot="separator" class="c-breadcrumbs__separator">
-        <!-- Add icon or text here -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </span>
+      <!-- Add icon or text here -->
+      <svg
+        slot="separator"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
     </Breadcrumbs>
 
     <h2>Example 2 - Custom index and separator</h2>
     <Breadcrumbs>
-      <span slot="index">
-        <!-- Add custom element for the first element (home icon?) -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-          ></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg
-        >
-      </span>
+      <!-- Add custom element for the first element (home icon?) -->
+      <svg
+        slot="index"
+        aria-label="Home Page"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+        ></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg
+      >
 
-      <span slot="separator" class="c-breadcrumbs__separator">
-        <!-- Add icon or text here (chevron-right icon?) -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><polyline points="9 18 15 12 9 6"></polyline></svg
-        >
-      </span>
+      <!-- Add icon or text here (chevron-right icon?) -->
+      <svg
+        slot="separator"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><polyline points="9 18 15 12 9 6"></polyline></svg
+      >
     </Breadcrumbs>
 
     <h2>Example 3 - Custom breadcrumb list</h2>
     <Breadcrumbs crumbs={customCrumbs} />
 
-    <h2>Example 4 - Custom breadcrumb list with custom attributes</h2>
+    <h2>
+      Example 4 - Custom breadcrumb list with custom attributes - And ellipsis
+      styles
+    </h2>
     <Breadcrumbs crumbs={crumbsWithCustomAttributes} schemaJsonScript={false} />
+
+    <h2>
+      Example 5 - Custom breadcrumb list with custom attributes - And wrap
+      styles
+    </h2>
+    <Breadcrumbs
+      crumbs={crumbsWithCustomAttributes}
+      mainBemClass="c-breadcrumbs-wrap"
+      schemaJsonScript={false}
+    />
   </main>
 </Layout>
+<style lang="scss">
+  // <style lang="scss" define:vars={{ "color-breadcrumbs": "green" }}>
+  // --color-breadcrumbs: blue;
+  // @import "../../../../styles/styles.scss";
 
-<style>
   :root {
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
   }

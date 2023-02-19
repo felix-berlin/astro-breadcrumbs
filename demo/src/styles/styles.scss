@@ -1,0 +1,9 @@
+@use '../../../src/breadcrumbs.scss' with (
+  $bem-root: 'c-breadcrumbs',
+  $overflow-behavior: 'wrap',
+  $size-font: 1.1rem,
+  $color-link: red,
+  $color-separator: blue,
+  $color-is-current: green,
+  $color-is-index: lightgreen
+);
