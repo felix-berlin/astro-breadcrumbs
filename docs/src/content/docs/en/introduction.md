@@ -22,9 +22,3 @@ This component comes with:
 - ✅ **Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag support**
 - ✅ **Small size**
 - ✅ **Zero Config Mode. Just install and use!**
-
-## Getting Started
-
-```bash
-npm install astro-breadcrumbs
-```

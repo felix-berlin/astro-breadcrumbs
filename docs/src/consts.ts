@@ -36,11 +36,12 @@ export const SIDEBAR: Sidebar = {
 	en: {
 		'Start Here': [
 			{ text: 'Introduction', link: 'en/introduction' },
+			{ text: 'Installation', link: 'en/installation' },
 		],
 		'Configuration': [
 			{ text: 'Properties', link: 'en/properties' },
 			{ text: 'Slots', link: 'en/slots' },
-			{ text: 'Styles', link: 'en/styles' }
+			{ text: 'SCSS Style API', link: 'en/scss-api' }
 		],
 	},
 };

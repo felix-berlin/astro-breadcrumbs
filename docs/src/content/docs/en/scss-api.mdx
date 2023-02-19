@@ -1,0 +1,155 @@
+---
+title: "Styling"
+description: "Lorem ipsum dolor sit amet - 3"
+---
+
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+
+## $bem-root
+
+**Default:** `'c-breadcrumbs'`
+
+**Type:** `string`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $bem-root: 'c-breadcrumbs'
+);
+```
+
+## $overflow-behavior
+
+**Default:** `'wrap'`
+
+**Type:** `'wrap' | 'ellipsis'`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $overflow-behavior: 'wrap'
+);
+```
+
+## $overflow-wrap-horizontal-spacing
+
+**Default:** `1rem`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $overflow-wrap-horizontal-spacing: 10px
+);
+```
+
+## $color-link
+
+**Default:** `inherit`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $color-link: red
+);
+```
+
+## $color-hover-link
+
+**Default:** `null`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $color-hover-link: blue
+);
+```
+
+## $color-separator
+
+**Default:** `null`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $color-separator: green
+);
+```
+
+## $color-is-current
+
+**Default:** `null`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $color-is-current: green
+);
+```
+
+## $color-is-index
+
+**Default:** `null`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $color-is-index: green
+);
+```
+
+## $size-font
+
+**Default:** `1rem`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $size-font: 12px
+);
+```
+
+## $spacing-vertical-separator
+
+**Default:** `6px`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $spacing-vertical-separator: 3px
+);
+```
+
+## $icons-not-bigger-than-font-size
+
+**Default:** `true`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+ $icons-not-bigger-than-font-size: false
+);
+```
+
+## $transition-link-breadcrumbs
+
+**Default:** `color 0.2s ease-in-out`
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+ $transition-link-breadcrumbs: all 0.3s ease
+);
+```
