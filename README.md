@@ -1,6 +1,6 @@
 # 🍞 Astro | Breadcrumbs
 
-<img src="./logo-color.svg" width="200" height="200" style="border-radius:50%">
+<img src="./logo.svg" width="200" height="200">
 
 ![npm](https://img.shields.io/npm/dm/astro-breadcrumbs?logo=npm&style=flat-square)
 ![npm](https://img.shields.io/npm/v/astro-breadcrumbs?logo=npm&style=flat-square)
@@ -16,11 +16,14 @@ Well configurable breadcrumb component for [Astro](https://astro.build/).
 This component comes with:
 
 - ✅ **Zero dependencies**
-- ✅ **Optional styles**
+- ✅ **Choose between SCSS or CSS styles:**
+  - **SCSS file with a lot of settings**
+  - **CSS File with configurable CSS vars**
 - ✅ **CSS classes with BEM naming convention**
 - ✅ **A11y support**
 - ✅ **Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList) script tag support**
 - ✅ **Small size**
+- ✅ **Zero Config Mode. Just install and use!**
 
 ## 📦 Installation
 
