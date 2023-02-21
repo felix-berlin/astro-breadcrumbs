@@ -23,9 +23,9 @@ export const COMMUNITY_INVITE_URL = `https://github.com/felix-berlin/astro-bread
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'XXXXXXXXXX',
-	appId: 'XXXXXXXXXX',
-	apiKey: 'XXXXXXXXXX',
+	indexName: import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME,
+	appId: import.meta.env.PUBLIC_ALGOLIA_APP_ID,
+	apiKey: import.meta.env.PUBLIC_ALGOLIA_API_KEY,
 };
 
 export type Sidebar = Record<
