@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $bem-root: 'c-breadcrumbs' !default;
 $overflow-behavior: 'wrap' !default;
 $overflow-wrap-horizontal-spacing: 1rem !default;
@@ -10,6 +12,15 @@ $size-font: 1rem !default;
 $spacing-vertical-separator: 6px !default;
 $icons-not-bigger-than-font-size: true !default;
 $transition-link-breadcrumbs: color 0.2s ease-in-out !default;
+
+$valid-overflow-behaviors: (
+  'wrap',
+  'ellipsis'
+);
+
+@if not list.index($valid-overflow-behaviors, $overflow-behavior) {
+  @error '❌  ===> #{$overflow-behavior} is not a valid option for $overflow-behavior. Please use: #{$valid-overflow-behaviors}';
+}
 
 .#{$bem-root} {
   --color-link-breadcrumbs: #{$color-link};
