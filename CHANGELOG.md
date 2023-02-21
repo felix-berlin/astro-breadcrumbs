@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.5.1...v1.6.0) (2023-02-21)
+
+
+### Features
+
+* add error handling for $overflow-behavior ([de34c36](https://github.com/felix-berlin/astro-breadcrumbs/commit/de34c36ead68e435f6b0e4681bde004e6cba580c))
+
 ## [1.5.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.5.0...v1.5.1) (2023-02-19)
 
 
