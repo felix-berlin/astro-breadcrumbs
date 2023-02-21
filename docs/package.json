@@ -14,6 +14,7 @@
 		"@astrojs/mdx": "^0.17.0",
 		"@astrojs/preact": "^2.0.3",
 		"@astrojs/react": "^2.0.2",
+		"@astrojs/sitemap": "^1.0.1",
 		"@docsearch/css": "^3.3.3",
 		"@docsearch/react": "^3.3.3",
 		"@fontsource/ibm-plex-mono": "^4.5.13",

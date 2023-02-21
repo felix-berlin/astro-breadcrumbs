@@ -7,8 +7,7 @@ export const SITE = {
 export const OPEN_GRAPH = {
 	image: {
 		src: 'https://raw.githubusercontent.com/felix-berlin/astro-breadcrumbs/main/logo-color.svg',
-		alt:
-			'astro-breadcrumb logo',
+		alt: 'astro-breadcrumb logo',
 	},
 };
 
