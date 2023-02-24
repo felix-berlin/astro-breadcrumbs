@@ -3,13 +3,17 @@ title: "SCSS API"
 description: "API for the SCSS files of Astro Breadcrumbs."
 ---
 
-import { Breadcrumbs } from "astro-breadcrumbs";
+To keep the CSS file size as small as possible, many of the existing variables act as opt-ins for the CSS rule(s) behind them.
+
+In addition, a few variables set the initail value for the associated CSS variables. This way they don't have to be overwritten in the project.
 
 ## $bem-root
 
 **Default:** `'c-breadcrumbs'`
 
 **Type:** `string`
+
+Defines the basic BEM class. Attention, the class name must be the same as [mainBemClass](http://localhost:3000/en/properties#mainbemclass).
 
 **Usage:**
 
@@ -24,6 +28,14 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 **Default:** `'wrap'`
 
 **Type:** `'wrap' | 'ellipsis'`
+
+**Throws:** `@error` if the value is not `'wrap'` or `'ellipsis'`
+
+Select the behavior when the breadcrumbs become larger than the display area.
+
+`Wrap` lets elements that are too large for the area move to the next line.
+
+`Ellipsis` displays all breadcrumbs in a single line, no matter how wide the component gets. As the name implies, `text-overflow: ellipsis;` is used here.
 
 **Usage:**
 
@@ -49,6 +61,10 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 **Default:** `inherit`
 
+Initial value for `--color-link-breadcrumbs`.
+
+Defines the color rule for `c-breadcrumbs__link`.
+
 **Usage:**
 
 ```scss
@@ -60,6 +76,8 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 ## $color-hover-link
 
 **Default:** `null`
+
+**Opt-in** for hover styles. If not set `$transition-link-breadcrumbs` has no effect.
 
 **Usage:**
 
