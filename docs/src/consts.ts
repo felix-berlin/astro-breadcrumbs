@@ -40,6 +40,9 @@ export const SIDEBAR: Sidebar = {
 		'Configuration': [
 			{ text: 'Properties', link: 'en/properties' },
 			{ text: 'Slots', link: 'en/slots' },
+		],
+		'Styling': [
+			{ text: 'Setup SCSS Config', link: 'en/setup-scss-config' },
 			{ text: 'SCSS Style API', link: 'en/scss-api' }
 		],
 	},

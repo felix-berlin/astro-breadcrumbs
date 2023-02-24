@@ -1,0 +1,39 @@
+---
+title: "Setup SCSS Config"
+description: "How to use the configurable SCSS file"
+---
+
+## How to use the configurable SCSS file
+
+It seems that there is currently no way to use the [SASS module system](https://sass-lang.com/documentation/modules) directly within Astro files.
+
+*Please correct me if this should be different and open a [Github issue](https://github.com/felix-berlin/astro-breadcrumbs/issues).*
+
+### 1. Install the SASS Pre-processors
+
+If already present this is optional.
+
+```bash
+npm add -D sass
+```
+
+### 2. Create a new SCSS file
+
+Create a new SCSS file (for example styles.scss) in your project and import the `astro-breadcrumbs` SCSS file. You can then use the SCSS variables to customize the look of the breadcrumbs.
+
+```scss
+
+```scss
+@use 'astro-breadcrumbs/breadcrumbs.scss' with (
+  /// Your config here
+);
+```
+
+### 3. Import the SCSS file in your Astro file
+
+```astro
+---
+import "../styles/styles.scss";
+---
+```
+
