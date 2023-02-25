@@ -43,7 +43,8 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Styling': [
 			{ text: 'Setup SCSS Config', link: 'en/setup-scss-config' },
-			{ text: 'SCSS Style API', link: 'en/scss-api' }
+			{ text: 'SCSS Style API', link: 'en/scss-api' },
+			{ text: 'CSS Styles', link: 'en/css-api' }
 		],
 	},
 };
