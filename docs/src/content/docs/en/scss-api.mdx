@@ -29,6 +29,8 @@ Defines the basic BEM class. Attention, the class name must be the same as [main
 
 **Type:** `'wrap' | 'ellipsis'`
 
+**Opt-in CSS Rule(s):** Yes
+
 **Throws:** `@error` if the value is not `'wrap'` or `'ellipsis'`
 
 Select the behavior when the breadcrumbs become larger than the display area.
@@ -48,6 +50,8 @@ Select the behavior when the breadcrumbs become larger than the display area.
 ## $overflow-wrap-horizontal-spacing
 
 **Default:** `1rem`
+
+Depents on the value of `$overflow-behavior`. If `$overflow-behavior` is set to `'wrap'`, this variable sets the horizontal spacing between the breadcrumbs.
 
 **Usage:**
 
@@ -77,7 +81,9 @@ Defines the color rule for `c-breadcrumbs__link`.
 
 **Default:** `null`
 
-**Opt-in** for hover styles. If not set `$transition-link-breadcrumbs` has no effect.
+**Opt-in CSS Rule(s):** Yes
+
+Sets the link color hover styles. If not set `$transition-link-breadcrumbs` has no effect.
 
 **Usage:**
 
@@ -91,6 +97,10 @@ Defines the color rule for `c-breadcrumbs__link`.
 
 **Default:** `null`
 
+**Opt-in CSS Rule(s):** Yes
+
+Sets the color of the separator.
+
 **Usage:**
 
 ```scss
@@ -102,6 +112,10 @@ Defines the color rule for `c-breadcrumbs__link`.
 ## $color-is-current
 
 **Default:** `null`
+
+**Opt-in CSS Rule(s):** Yes
+
+Sets the color of the current breadcrumb.
 
 **Usage:**
 
@@ -115,6 +129,10 @@ Defines the color rule for `c-breadcrumbs__link`.
 
 **Default:** `null`
 
+**Opt-in CSS Rule(s):** Yes
+
+Sets the color of the index breadcrumb.
+
 **Usage:**
 
 ```scss
@@ -126,6 +144,10 @@ Defines the color rule for `c-breadcrumbs__link`.
 ## $size-font
 
 **Default:** `1rem`
+
+Initial value for `--size-font-breadcrumbs`.
+
+Sets the font size of the breadcrumbs.
 
 **Usage:**
 
@@ -139,6 +161,10 @@ Defines the color rule for `c-breadcrumbs__link`.
 
 **Default:** `6px`
 
+Initial value for `--spacing-vertical-separator-breadcrumbs`.
+
+Controles the vertical spacing of the separator.
+
 **Usage:**
 
 ```scss
@@ -151,6 +177,10 @@ Defines the color rule for `c-breadcrumbs__link`.
 
 **Default:** `true`
 
+**Opt-in CSS Rule(s):** Yes
+
+Will set the max size of the icons to the same size as the font.
+
 **Usage:**
 
 ```scss
@@ -162,6 +192,8 @@ Defines the color rule for `c-breadcrumbs__link`.
 ## $transition-link-breadcrumbs
 
 **Default:** `color 0.2s ease-in-out`
+
+Sets the transition for the link color. If `$color-hover-link` is not set, this variable has no effect.
 
 **Usage:**
 
