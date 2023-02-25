@@ -4,7 +4,8 @@ type Props = {
 	path: string;
 };
 const { path } = Astro.props;
-const resolvedPath = `docs/${path}`;
+const mxdPath = path.replace(/.md$/, ".mdx");
+const resolvedPath = `docs/${mxdPath}`;
 const url = `https://api.github.com/repos/felix-berlin/astro-breadcrumbs/commits?path=${resolvedPath}`;
 const commitsURL = `https://github.com/felix-berlin/astro-breadcrumbs/commits/main/${resolvedPath}`;
 
