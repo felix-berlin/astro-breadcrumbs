@@ -3,6 +3,7 @@ import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap'
+import matomo from 'astro-matomo';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +14,14 @@ export default defineConfig({
 		react(),
 		mdx(),
 		sitemap(),
+		matomo({
+			enabled: import.meta.env.PROD,
+			host: "https://analytics.webshaped.de/",
+			siteId: 10,
+			debug: false,
+			heartBeatTimer: 5,
+			disableCookies: true
+		}),
 	],
 	site: `https://docs.astro-breadcrumbs.kasimir.dev`,
 });
