@@ -2,6 +2,6 @@
 
 .c-breadcrumbs {
   &__link {
-    color: var(--theme-accent);
+    --color-link-breadcrumbs: var(--theme-accent);
   }
 }

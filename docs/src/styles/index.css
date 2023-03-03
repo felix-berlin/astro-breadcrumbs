@@ -425,13 +425,19 @@ h2.heading {
 	padding: .25rem;
 }
 
-.o-demo .c-breadcrumbs {
-	--color-link-breadcrumbs: #000;
+.o-demo .c-breadcrumbs__link {
+	--color-link-breadcrumbs: hsla(217, 19%, 27%, 1);;
+}
 
+.o-demo .c-breadcrumbs {
 	margin: 0;
 	background-color: white;
 	opacity: 0.8;
 	padding: 3rem;
 	width: 100%;
 	text-transform: capitalize;
+}
+
+.o-demo .c-breadcrumbs__separator {
+	color: var(--theme-accent);
 }
