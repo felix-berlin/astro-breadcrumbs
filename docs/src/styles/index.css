@@ -69,12 +69,12 @@ h2 {
 }
 
 h1 {
-	font-size: 3.25rem;
+	font-size: 3rem;
 	font-weight: 800;
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 h3 {
@@ -408,4 +408,30 @@ h2.heading {
 
 .current-header-link a {
 	color: var(--theme-text);
+}
+
+:root {
+	--accent: 124, 58, 237;
+	--accent-gradient: linear-gradient(45deg,
+			rgb(var(--accent)),
+			#da62c4 30%,
+			white 60%);
+}
+
+.o-demo {
+	background-image: var(--accent-gradient);
+	background-position: 0;
+	background-size: 400%;
+	padding: .25rem;
+}
+
+.o-demo .c-breadcrumbs {
+	--color-link-breadcrumbs: #000;
+
+	margin: 0;
+	background-color: white;
+	opacity: 0.8;
+	padding: 3rem;
+	width: 100%;
+	text-transform: capitalize;
 }

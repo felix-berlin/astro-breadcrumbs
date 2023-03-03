@@ -1,1 +1,7 @@
-@use "astro-breadcrumbs/breadcrumbs.scss" with ($color-link: #fff);
+@use "astro-breadcrumbs/breadcrumbs.scss";
+
+.c-breadcrumbs {
+  &__link {
+    color: var(--theme-accent);
+  }
+}

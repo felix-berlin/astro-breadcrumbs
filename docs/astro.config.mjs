@@ -20,7 +20,8 @@ export default defineConfig({
 			siteId: 10,
 			debug: false,
 			heartBeatTimer: 5,
-			disableCookies: true
+			disableCookies: true,
+			preconnect: true,
 		}),
 	],
 	site: `https://docs.astro-breadcrumbs.kasimir.dev`,
