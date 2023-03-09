@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@algolia/client-search": "^4.15.0",
-		"@astrojs/mdx": "^0.17.2",
+		"@astrojs/mdx": "^0.18.0",
 		"@astrojs/preact": "^2.0.3",
 		"@astrojs/react": "^2.0.2",
 		"@astrojs/sitemap": "^1.1.0",
