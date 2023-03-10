@@ -18,6 +18,9 @@ Well configurable breadcrumb component for [Astro](https://astro.build/).
 This component comes with:
 
 - ✅ **Zero dependencies**
+- ✅ **Fully customizable**
+- ✅ **Dynamic or static mode**
+- ✅ **Completely optional styles**
 - ✅ **Choose between SCSS or CSS styles:**
   - **SCSS file with a lot of settings**
   - **CSS File with configurable CSS vars**

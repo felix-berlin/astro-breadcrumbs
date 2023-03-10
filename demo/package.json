@@ -12,7 +12,7 @@
 		"styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css"
 	},
 	"dependencies": {
-		"astro": "^2.0.17"
+		"astro": "^2.1.2"
 	},
 	"devDependencies": {
 		"sass": "^1.58.3"
