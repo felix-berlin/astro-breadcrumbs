@@ -11,17 +11,17 @@
 	},
 	"dependencies": {
 		"@algolia/client-search": "^4.15.0",
-		"@astrojs/mdx": "^0.18.0",
+		"@astrojs/mdx": "^0.18.1",
 		"@astrojs/preact": "^2.1.0",
 		"@astrojs/react": "^2.1.0",
-		"@astrojs/sitemap": "^1.2.0",
+		"@astrojs/sitemap": "^1.2.1",
 		"@docsearch/css": "^3.3.3",
 		"@docsearch/react": "^3.3.3",
 		"@fontsource/ibm-plex-mono": "^4.5.13",
-		"@types/node": "^18.15.0",
+		"@types/node": "^18.15.3",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.11",
-		"astro": "^2.1.2",
+		"astro": "^2.1.3",
 		"astro-breadcrumbs": "^1.6.0",
 		"astro-matomo": "^1.2.0",
 		"preact": "^10.13.1",
@@ -30,6 +30,6 @@
 	},
 	"devDependencies": {
 		"html-escaper": "^3.0.3",
-		"sass": "^1.58.3"
+		"sass": "^1.59.3"
 	}
 }
