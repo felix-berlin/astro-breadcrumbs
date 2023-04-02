@@ -10,5 +10,15 @@
   "timezone": "Europe/Berlin",
   "schedule": [
     "on friday and saturday"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    }
   ]
 }
