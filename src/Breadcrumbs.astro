@@ -46,6 +46,13 @@ if (crumbs.length === 0) {
   paths.forEach((text: string, index: number) => {
     const href = `/${paths.slice(0, index + 1).join("/")}`;
 
+    // strip out any file extensions
+    const matches = text.match(/^(.+?)(\.[a-z0-9]+)?$/i);
+
+    if (matches && matches[2]) {
+      text = matches[1];
+    }
+
     parts = [
       ...parts,
       {
