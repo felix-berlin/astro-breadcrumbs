@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.6.0...v1.6.1) (2023-07-15)
+
+
+### Bug Fixes
+
+* **zero config:** strip out any file extensions ([6ee9531](https://github.com/felix-berlin/astro-breadcrumbs/commit/6ee95315ee1b162646304c78172da7124fdfe4d2))
+
 # [1.6.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.5.1...v1.6.0) (2023-02-21)
 
 
