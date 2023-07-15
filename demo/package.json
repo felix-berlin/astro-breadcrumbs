@@ -1,20 +1,21 @@
 {
-	"name": "green-giant",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"styles:build": "sass ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
-		"styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css"
-	},
-	"dependencies": {
-		"astro": "^2.1.3"
-	},
-	"devDependencies": {
-		"sass": "^1.59.3"
-	}
+  "name": "green-giant",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "styles:build": "sass ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
+    "styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.19.7",
+    "astro": "^2.8.3"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
 }
