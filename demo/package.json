@@ -9,13 +9,14 @@
     "preview": "astro preview",
     "astro": "astro",
     "styles:build": "sass ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
-    "styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css"
+    "styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",
-    "astro": "^2.8.3"
+    "astro": "^2.10.7"
   },
   "devDependencies": {
-    "sass": "^1.63.6"
+    "sass": "^1.65.1"
   }
 }

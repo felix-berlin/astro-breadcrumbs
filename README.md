@@ -33,7 +33,14 @@ This component comes with:
 ## 📦 Installation
 
 ```bash
+# Uisng NPM
 npm install astro-breadcrumbs
+
+# Using Yarn
+yarn add astro-breadcrumbs
+
+# Using PNPM
+pnpm add astro-breadcrumbs
 ```
 
 ---

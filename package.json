@@ -14,7 +14,8 @@
     "docs"
   ],
   "scripts": {
-    "release": "semantic-release --branches main"
+    "release": "semantic-release --branches main",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": {
     "type": "git",
@@ -53,9 +54,9 @@
   },
   "homepage": "https://docs.astro-breadcrumbs.kasimir.dev",
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^21.0.0"
+    "semantic-release": "^21.0.7"
   },
   "peerDependencies": {
     "astro": "^2.0.0-beta.0"
