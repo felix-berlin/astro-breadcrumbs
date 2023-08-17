@@ -7,8 +7,9 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/felix-berlin/astro-breadcrumbs?label=github&logo=github&style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/felix-berlin/astro-breadcrumbs/release.yml?label=release&logo=github&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
-![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.css?label=CSS%20Size&logo=CSS&style=flat-square)
+![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.css?label=CSS%20Size&logo=CSS3&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.scss?label=SCSS%20Size&logo=SASS&style=flat-square)
+![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/npm/astro-breadcrumbs?style=flat-square)
 
 Well configurable breadcrumb component for [Astro](https://astro.build/).
 
@@ -45,8 +46,6 @@ pnpm add astro-breadcrumbs
 
 ---
 
-## Documentation
+## 📖 Documentation
 
-Please visit the [docs](https://docs.astro-breadcrumbs.kasimir.dev/) for more information.
-
-<a href="https://www.buymeacoffee.com/felixberlin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+Please visit the [documentation](https://docs.astro-breadcrumbs.kasimir.dev/) for detailed information about all features and styling.
