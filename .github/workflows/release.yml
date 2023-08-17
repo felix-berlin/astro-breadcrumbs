@@ -9,20 +9,19 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Setup pnpm 🛠️
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - name: Checkout ✅
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
+      - name: Setup pnpm 🛠️
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Setup Node.js 🛠️
         uses: actions/setup-node@v3
         with:
           node-version: "lts/*"
-          cache: "pnpm"
       - name: Install dependencies
         run: pnpm install --ignore-scripts
       - name: Release 🚀
