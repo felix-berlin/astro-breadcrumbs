@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.6.1...v1.7.0) (2023-08-30)
+
+
+### Features
+
+* makes sure astro breadcrumbs is still compatible with astro v3 ([6b69c9d](https://github.com/felix-berlin/astro-breadcrumbs/commit/6b69c9de1eddb67656ffbb3f21f91834c30daf9c))
+
 ## [1.6.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.6.0...v1.6.1) (2023-07-15)
 
 
