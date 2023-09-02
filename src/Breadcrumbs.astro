@@ -5,6 +5,7 @@ interface BreadcrumbsProps {
   ariaLabel?: string;
   crumbs?: Array<BreadcrumbItem>;
   schemaJsonScript?: boolean;
+  baseUrl?: string;
 }
 
 interface BreadcrumbItem {
@@ -19,7 +20,81 @@ const {
   ariaLabel = "breadcrumbs",
   crumbs = [],
   schemaJsonScript = true,
+  baseUrl,
 } = Astro.props as BreadcrumbsProps;
+
+/**
+ * Log a warning message to the console.
+ *
+ * @param message
+ */
+const coloredWarnLog = (message: string) => {
+  console.warn(
+    "\x1b[43m",
+    "Astro Breadcrumbs",
+    "\x1b[0m",
+    "\x1b[33m",
+    message,
+    "\x1b[0m"
+  );
+};
+
+/**
+ * Check if a URL is valid.
+ *
+ * @param url
+ */
+const isValidUrl = (url: string | undefined): boolean => {
+  if (!url) return false;
+
+  let urlToCheck;
+
+
+  try {
+    urlToCheck = new URL(url);
+
+  } catch (e) {
+    return false;
+  }
+
+  const checkProtocal =  urlToCheck.protocol === "http:" || urlToCheck.protocol === "https:";
+
+  if (!checkProtocal) {
+    coloredWarnLog("Astro Breadcrumbs");
+  }
+  return checkProtocal;
+};
+
+/**
+ * Check if a URL ends with a slash.
+ *
+ * @param url
+ */
+const endsWithSlash = (url: string | undefined): boolean => {
+  if (!url) return false;
+
+  return url.endsWith("/");
+};
+
+/**
+ * Get the base URL.
+ * If the base URL is not valid, return a relative URL.
+ *
+ */
+const getBaseUrl = (): string => {
+  if (endsWithSlash(baseUrl)) {
+    coloredWarnLog("Base URL should not end with a slash. Falling back to relative URL.");
+
+    return "/"
+  }
+  if (!isValidUrl(baseUrl)) {
+    coloredWarnLog("Base URL is not valid. Falling back to relative URL.");
+
+    return "/";
+  }
+
+  return  baseUrl ? baseUrl : "/";
+};
 
 let parts: Array<BreadcrumbItem> = [];
 
@@ -36,7 +111,7 @@ if (crumbs.length === 0) {
   parts = [
     {
       text: indexText,
-      href: "/",
+      href: getBaseUrl(),
     },
   ];
 
@@ -44,7 +119,7 @@ if (crumbs.length === 0) {
    * Loop through the paths and create a breadcrumb item for each.
    */
   paths.forEach((text: string, index: number) => {
-    const href = `/${paths.slice(0, index + 1).join("/")}`;
+    const href = `${getBaseUrl()}/${paths.slice(0, index + 1).join("/")}`;
 
     // strip out any file extensions
     const matches = text.match(/^(.+?)(\.[a-z0-9]+)?$/i);
