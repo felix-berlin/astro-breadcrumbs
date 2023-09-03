@@ -10,6 +10,10 @@ export default defineConfig({
       social: {
         github: "https://github.com/felix-berlin/astro-breadcrumbs",
       },
+      editLink: {
+        baseUrl:
+          "https://github.com/felix-berlin/astro-breadcrumbs/tree/main/docs/",
+      },
       logo: {
         light: "./src/assets/logo-light-simple.svg",
         dark: "./src/assets/logo-dark-simple.svg",
