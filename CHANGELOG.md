@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.7.0...v1.8.0) (2023-09-03)
+
+
+### Bug Fixes
+
+* leading slash missing ([729c3a5](https://github.com/felix-berlin/astro-breadcrumbs/commit/729c3a59ee37de8d1d212e25c22948d88173e878))
+
+
+### Features
+
+* **baseUrl:** add new property ([066820e](https://github.com/felix-berlin/astro-breadcrumbs/commit/066820e92fc854738202244804ea1ef80a36cc66))
+
 # [1.7.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.6.1...v1.7.0) (2023-08-30)
 
 
