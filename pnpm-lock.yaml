@@ -44,7 +44,7 @@ importers:
         specifier: ^3.0.7
         version: 3.0.7(sass@1.66.1)
       astro-breadcrumbs:
-        specifier: workspace:^1.7.0
+        specifier: ^1.7.0
         version: link:..
       astro-matomo:
         specifier: ^1.4.0
