@@ -1,0 +1,44 @@
+.c-breadcrumbs__link {
+  --color-link-breadcrumbs: var(--sl-color-text-accent);
+}
+
+.c-breadcrumbs .c-breadcrumbs__crumb {
+  margin-top: 0;
+}
+:root {
+  --accent: 124, 58, 237;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    #da62c4 30%,
+    white 60%
+  );
+}
+
+:is(.o-demo) {
+  background-image: var(--accent-gradient);
+  background-position: 0;
+  background-size: 400%;
+  padding: 0.25rem;
+}
+
+:is(.o-demo) .c-breadcrumbs__link {
+  color: var(--sl-color-accent);
+}
+
+:is(.o-demo) .c-breadcrumbs__link:hover {
+  color: var(--sl-color-accent-high);
+}
+
+:is(.o-demo) .c-breadcrumbs {
+  margin: 0;
+  background-color: white;
+  opacity: 0.8;
+  padding: 3rem;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+:is(.o-demo) .c-breadcrumbs__separator {
+  color: var(--sl-color-accent);
+}
