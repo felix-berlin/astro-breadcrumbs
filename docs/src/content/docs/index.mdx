@@ -1,0 +1,50 @@
+---
+title: Astro Breadcrumbs - Documentation
+description: Well configurable breadcrumb component for Astro.js
+template: splash
+hero:
+  tagline: Well configurable breadcrumb component for Astro
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Get started
+      link: /start-here/getting-started/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/felix-berlin/astro-breadcrumbs
+      icon: external
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Next steps
+
+<CardGrid stagger>
+  <Card title="Zero Config Mode." icon="star">
+    Just install and use!
+  </Card>
+  <Card title="A11y support" icon="information">
+    Accessible by default.
+  </Card>
+  <Card title="Structured data support" icon="document">
+    Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList)
+    script tag support
+  </Card>
+  <Card title="Fully customizable" icon="setting">
+    Learn more in [the Astro Breadcrumbs Docs](/start-here/getting-started/).
+  </Card>
+  <Card title="Completely optional styles" icon="pencil">
+    Choose between SCSS or CSS styles:
+		- SCSS file with a lot of settings
+    - CSS File with configurable CSS vars.
+
+    CSS classes are written in BEMIT style.
+
+  </Card>
+  <Card title="Zero dependencies" icon="star">
+		Its true! Here is the [proof](https://www.npmjs.com/package/astro-breadcrumbs?activeTab=dependencies).
+	</Card>
+  <Card title="Small size" icon="star"></Card>
+
+</CardGrid>
