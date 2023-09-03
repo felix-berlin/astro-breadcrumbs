@@ -23,6 +23,8 @@ const {
   baseUrl,
 } = Astro.props as BreadcrumbsProps;
 
+const hasBaseUrl = baseUrl?.length;
+
 /**
  * Log a warning message to the console.
  *
@@ -81,19 +83,15 @@ const endsWithSlash = (url: string | undefined): boolean => {
  * If the base URL is not valid, return a relative URL.
  *
  */
-const getBaseUrl = (): string => {
-  if (endsWithSlash(baseUrl)) {
+const getBaseUrl = (): string | undefined => {
+  if (endsWithSlash(baseUrl) && hasBaseUrl) {
     coloredWarnLog("Base URL should not end with a slash. Falling back to relative URL.");
-
-    return "/"
   }
-  if (!isValidUrl(baseUrl)) {
+  if (!isValidUrl(baseUrl) && hasBaseUrl) {
     coloredWarnLog("Base URL is not valid. Falling back to relative URL.");
-
-    return "/";
   }
 
-  return  baseUrl ? baseUrl : "/";
+  return baseUrl;
 };
 
 let parts: Array<BreadcrumbItem> = [];
@@ -111,7 +109,7 @@ if (crumbs.length === 0) {
   parts = [
     {
       text: indexText,
-      href: getBaseUrl(),
+      href: getBaseUrl() ?? "/",
     },
   ];
 
@@ -119,7 +117,8 @@ if (crumbs.length === 0) {
    * Loop through the paths and create a breadcrumb item for each.
    */
   paths.forEach((text: string, index: number) => {
-    const href = `${getBaseUrl()}/${paths.slice(0, index + 1).join("/")}`;
+    const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
+    const finalHref = getBaseUrl() ?? "" + generateHref
 
     // strip out any file extensions
     const matches = text.match(/^(.+?)(\.[a-z0-9]+)?$/i);
@@ -132,7 +131,7 @@ if (crumbs.length === 0) {
       ...parts,
       {
         text: text.replace(/[-_]/g, " "),
-        href,
+        href: finalHref,
       },
     ];
   });
