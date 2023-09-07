@@ -4,6 +4,7 @@ import matomo from "astro-matomo";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://docs.astro-breadcrumbs.kasimir.dev",
   integrations: [
     starlight({
       title: "Astro Breadcrumbs",

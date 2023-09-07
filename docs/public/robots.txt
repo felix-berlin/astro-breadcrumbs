@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.astro-breadcrumbs.kasimir.dev/sitemap-index.xml
