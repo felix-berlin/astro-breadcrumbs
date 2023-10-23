@@ -5,7 +5,7 @@ description: "API for the SCSS files of Astro Breadcrumbs."
 
 To keep the CSS file size as small as possible, many of the existing variables act as opt-ins for the CSS rule(s) behind them.
 
-In addition, a few variables set the initail value for the associated CSS variables. This way they don't have to be overwritten in the project.
+In addition, a few variables set the initial value for the associated CSS variables. This way they don't have to be overwritten in the project.
 
 ## $bem-root
 
@@ -19,7 +19,7 @@ Defines the basic BEM class. Attention, the class name must be the same as [main
 
 ```scss
 @use "astro-breadcrumbs/breadcrumbs.scss" with (
-  $bem-root: 'c-breadcrumbs'
+  $bem-root: "c-breadcrumbs"
 );
 ```
 
@@ -43,7 +43,7 @@ Select the behavior when the breadcrumbs become larger than the display area.
 
 ```scss
 @use "astro-breadcrumbs/breadcrumbs.scss" with (
-  $overflow-behavior: 'wrap'
+  $overflow-behavior: "wrap"
 );
 ```
 
@@ -51,7 +51,7 @@ Select the behavior when the breadcrumbs become larger than the display area.
 
 **Default:** `1rem`
 
-Depents on the value of `$overflow-behavior`. If `$overflow-behavior` is set to `'wrap'`, this variable sets the horizontal spacing between the breadcrumbs.
+Depends on the value of `$overflow-behavior`. If `$overflow-behavior` is set to `'wrap'`, this variable sets the horizontal spacing between the breadcrumbs.
 
 **Usage:**
 
@@ -163,7 +163,7 @@ Sets the font size of the breadcrumbs.
 
 Initial value for `--spacing-vertical-separator-breadcrumbs`.
 
-Controles the vertical spacing of the separator.
+Controls the vertical spacing of the separator.
 
 **Usage:**
 
@@ -185,7 +185,7 @@ Will set the max size of the icons to the same size as the font.
 
 ```scss
 @use "astro-breadcrumbs/breadcrumbs.scss" with (
- $icons-not-bigger-than-font-size: false
+  $icons-not-bigger-than-font-size: false
 );
 ```
 
@@ -199,6 +199,6 @@ Sets the transition for the link color. If `$color-hover-link` is not set, this 
 
 ```scss
 @use "astro-breadcrumbs/breadcrumbs.scss" with (
- $transition-link-breadcrumbs: all 0.3s ease
+  $transition-link-breadcrumbs: all 0.3s ease
 );
 ```

@@ -3,6 +3,8 @@ title: "Setup SCSS Config"
 description: "How to use the configurable SCSS file"
 ---
 
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
 ## How to use the configurable SCSS file
 
 It seems that there is currently no way to use the [SASS module system](https://sass-lang.com/documentation/modules) directly within Astro files.
@@ -13,9 +15,29 @@ _Please correct me if this should be different and open a [Github issue](https:/
 
 If already present this is optional.
 
-```bash
-npm add -D sass
-```
+<Tabs>
+  <TabItem label="npm">
+    ```bash
+      # Using NPM
+      npm install -D sass
+    ```
+
+  </TabItem>
+  <TabItem label="pnpm">
+    ```bash
+      # Using PNPM
+      pnpm add -D sass
+    ```
+
+  </TabItem>
+  <TabItem label="yarn">
+    ```bash
+      # Using Yarn
+      yarn add -D sass
+    ```
+
+  </TabItem>
+</Tabs>
 
 ### 2. Create a new SCSS file
 
