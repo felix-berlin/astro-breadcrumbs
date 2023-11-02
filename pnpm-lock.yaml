@@ -38,8 +38,8 @@ importers:
   docs:
     dependencies:
       '@astrojs/starlight':
-        specifier: ^0.11.1
-        version: 0.11.1(astro@3.3.3)
+        specifier: ^0.12.0
+        version: 0.12.0(astro@3.3.3)
       astro:
         specifier: ^3.3.3
         version: 3.3.3(sass@1.69.4)(typescript@4.9.5)
@@ -255,8 +255,8 @@ packages:
       zod: 3.21.1
     dev: false
 
-  /@astrojs/starlight@0.11.1(astro@3.3.3):
-    resolution: {integrity: sha512-R1kBYnAOqPznsXCPLpSrbFQlKAy7jl7VIw+IY0s4tLfK5A9X6/nuX3Asm/kay6GJ035e9PHTljM5qFcAdJnPDw==}
+  /@astrojs/starlight@0.12.0(astro@3.3.3):
+    resolution: {integrity: sha512-WPLpq82vbTznNfQjtdLBjKGuDsQE3tpPxFqosjxX+pSeMES/Cz5Dmzla78ej7xWIp7zjovPqkNytbC1EaeOMwA==}
     peerDependencies:
       astro: ^3.2.0
     dependencies:
@@ -1753,7 +1753,7 @@ packages:
   /@types/hast@2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.1
     dev: false
 
   /@types/hast@3.0.2:
@@ -1789,7 +1789,7 @@ packages:
   /@types/nlcst@1.0.0:
     resolution: {integrity: sha512-3TGCfOcy8R8mMQ4CNSNOe3PG66HttvjcLzCoOpvXvDtfWOTi+uT/rxeOKm/qEwbM4SNe1O/PjdiBK2YcTjU4OQ==}
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.1
     dev: false
 
   /@types/node@17.0.45:
@@ -6450,6 +6450,7 @@ packages:
   /uvu@0.5.6:
     resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}
     engines: {node: '>=8'}
+    hasBin: true
     dependencies:
       dequal: 2.0.3
       diff: 5.1.0
