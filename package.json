@@ -1,6 +1,6 @@
 {
   "name": "astro-breadcrumbs",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Well configurable breadcrumb component for Astro.js. Create breadcrumbs completely dynamically or specify exactly how they should look.",
   "type": "module",
   "exports": {

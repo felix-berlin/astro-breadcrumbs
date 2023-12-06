@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.8.0...v1.8.1) (2023-12-06)
+
+
+### Bug Fixes
+
+* make sure astro breadcrumb works with astro 4 ([11c820a](https://github.com/felix-berlin/astro-breadcrumbs/commit/11c820a94e57dab94f1665d7b3c36e816e83a486))
+* outdated lockfile ([f5dcac1](https://github.com/felix-berlin/astro-breadcrumbs/commit/f5dcac10f6163f5b359c10701c1d603a2da5b160))
+
 # [1.8.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.7.0...v1.8.0) (2023-09-03)
 
 
