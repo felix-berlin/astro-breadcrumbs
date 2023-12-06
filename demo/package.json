@@ -13,10 +13,10 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@astrojs/mdx": "^1.0.0",
-    "astro": "^3.0.7"
+    "@astrojs/mdx": "^2.0.0",
+    "astro": "^4.0.2"
   },
   "devDependencies": {
-    "sass": "^1.66.1"
+    "sass": "^1.69.5"
   }
 }

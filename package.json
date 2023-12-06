@@ -64,9 +64,9 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^22.0.5"
+    "semantic-release": "^22.0.10"
   },
   "peerDependencies": {
-    "astro": "^2.0.0-beta.0 || ^3.0.0"
+    "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0"
   }
 }
