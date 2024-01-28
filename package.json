@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "release": "semantic-release --branches main",
-    "preinstall": "npx only-allow pnpm"
+    "test:unit": "vitest --coverage",
+    "test:unit:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -64,7 +65,12 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^23.0.0"
+    "@vitest/coverage-v8": "^1.2.2",
+    "jsdom": "^24.0.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.13.0",
+    "semantic-release": "^23.0.0",
+    "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0"
