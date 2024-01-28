@@ -55,7 +55,7 @@ export const endsWithSlash = (url: string | undefined): boolean => {
  */
 export const getBaseUrl = (
   baseUrl: BreadcrumbsProps["baseUrl"],
-  hasBaseUrl: number | undefined,
+  hasBaseUrl: boolean,
 ): string | undefined | null => {
   if (endsWithSlash(baseUrl) && hasBaseUrl) {
     coloredWarnLog(
@@ -79,7 +79,7 @@ export const getBaseUrl = (
 export const getFirstCrumb = (
   trailingSlash: BreadcrumbsProps["trailingSlash"],
   baseUrl: BreadcrumbsProps["baseUrl"],
-  hasBaseUrl: number | undefined,
+  hasBaseUrl: boolean,
 ): string => {
   if (trailingSlash && getBaseUrl(baseUrl, hasBaseUrl))
     return `${getBaseUrl(baseUrl, hasBaseUrl)}/`;
