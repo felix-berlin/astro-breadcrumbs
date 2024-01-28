@@ -1,4 +1,6 @@
 .releaserc
+.prettierrc.cjs
+.vitest.config.ts
 renovate.json
 .github
 demo
