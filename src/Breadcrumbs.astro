@@ -6,6 +6,7 @@ interface BreadcrumbsProps {
   crumbs?: Array<BreadcrumbItem>;
   schemaJsonScript?: boolean;
   baseUrl?: string;
+  trailingSlash?: boolean;
 }
 
 interface BreadcrumbItem {
@@ -21,6 +22,7 @@ const {
   crumbs = [],
   schemaJsonScript = true,
   baseUrl,
+  trailingSlash = false,
 } = Astro.props as BreadcrumbsProps;
 
 const hasBaseUrl = baseUrl?.length;
@@ -110,7 +112,9 @@ if (crumbs.length === 0) {
    */
   paths.forEach((text: string, index: number) => {
     const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
-    const finalHref = getBaseUrl() ?? "" + generateHref
+    const chooseBaseUrl = getBaseUrl() ?? "" + generateHref;
+    const addTrailingSlash = trailingSlash ? `${chooseBaseUrl}/` : chooseBaseUrl;
+    const finalHref = addTrailingSlash;
 
     // strip out any file extensions
     const matches = text.match(/^(.+?)(\.[a-z0-9]+)?$/i);
