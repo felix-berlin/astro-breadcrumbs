@@ -1,0 +1,41 @@
+name: Unit tests
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - beta
+
+jobs:
+  lint:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup pnpm 🛠️
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Checkout ✅
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 🔧
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "pnpm"
+
+      - name: Install dependencies 🛠️
+        run: pnpm i
+
+      - name: Run Vitest 🧪
+        run: pnpm run test:unit
+
+      - name: Create coverage report 📝
+        run: pnpm run test:unit:coverage
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.5
+        with:
+          directory: ./coverage
