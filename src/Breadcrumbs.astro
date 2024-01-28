@@ -76,16 +76,31 @@ const endsWithSlash = (url: string | undefined): boolean => {
  * Get the base URL.
  * If the base URL is not valid, return a relative URL.
  *
+ * @returns string | undefined | null
+ *
  */
-const getBaseUrl = (): string | undefined => {
+const getBaseUrl = (): string | undefined | null => {
   if (endsWithSlash(baseUrl) && hasBaseUrl) {
-    coloredWarnLog("Base URL should not end with a slash. Falling back to relative URL.");
+    coloredWarnLog("Base URL should not have a trailing slash. Falling back to relative URL.");
+
+    return null;
   }
   if (!isValidUrl(baseUrl) && hasBaseUrl) {
     coloredWarnLog("Base URL is not valid. Falling back to relative URL.");
+
+    return null;
   }
 
   return baseUrl;
+};
+
+/**
+ * Get the first breadcrumb.
+ */
+const getFirstCrumb = (): string => {
+  if (trailingSlash && getBaseUrl()) return `${getBaseUrl()}/`;
+
+  return getBaseUrl() ?? "/";
 };
 
 let parts: Array<BreadcrumbItem> = [];
@@ -103,7 +118,7 @@ if (crumbs.length === 0) {
   parts = [
     {
       text: indexText,
-      href: getBaseUrl() ?? "/",
+      href: getFirstCrumb(),
     },
   ];
 
@@ -112,7 +127,7 @@ if (crumbs.length === 0) {
    */
   paths.forEach((text: string, index: number) => {
     const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
-    const chooseBaseUrl = getBaseUrl() ?? "" + generateHref;
+    const chooseBaseUrl = getBaseUrl() ? getBaseUrl() + generateHref : generateHref;
     const addTrailingSlash = trailingSlash ? `${chooseBaseUrl}/` : chooseBaseUrl;
     const finalHref = addTrailingSlash;
 
