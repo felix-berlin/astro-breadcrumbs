@@ -33,7 +33,15 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 **Default:** `c-breadcrumbs`
 
-BEM root.
+CSS BEM root class.
+
+:::caution
+If you use the optional SCSS file, make sure you set the same class name in you're SCSS config file. [$bem-root](/styling/scss-api/#bem-root) needs to be adjusted.
+:::
+
+:::danger
+If you use the optional CSS file, all styles will be broken. Please add your own CSS or use the SCSS styles with customized [$bem-root](/styling/scss-api/#bem-root) prop.
+:::
 
 **Usage:**
 
@@ -85,7 +93,11 @@ interface BreadcrumbItem {
 
 **Default:** `[]`
 
-This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute. If set dynamic creation will be disabled, [`indexText`](#indextext) and [`baseUrl`](#baseurl) will have no affect.
+This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute.
+
+:::note
+If set dynamic creation will be disabled, [`indexText`](#indextext) and [`baseUrl`](#baseurl) will have no affect.
+:::
 
 **Usage:**
 
@@ -144,7 +156,13 @@ const customCrumbs = [
 
 By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
 
+:::note
+Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
+:::
+
+:::caution
 If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
+:::
 
 **Usage:**
 
@@ -218,3 +236,25 @@ import { Breadcrumbs } from "astro-breadcrumbs";
   }
 </script>
 ```
+
+## trailingSlash
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+If set to `true` all links will have a trailing slash.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs trailingSlash={true} />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs trailingSlash={true} />
