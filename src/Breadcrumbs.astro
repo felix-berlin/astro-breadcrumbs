@@ -48,23 +48,15 @@ const coloredWarnLog = (message: string) => {
  */
 const isValidUrl = (url: string | undefined): boolean => {
   if (!url) return false;
+  if (!URL.canParse(url)) return false;
 
-  let urlToCheck;
+  const urlToCheck = new URL(url);
 
+  const checkProtocol =  urlToCheck.protocol === "http:" || urlToCheck.protocol === "https:";
 
-  try {
-    urlToCheck = new URL(url);
+  if (!checkProtocol) coloredWarnLog("Astro Breadcrumbs");
 
-  } catch (e) {
-    return false;
-  }
-
-  const checkProtocal =  urlToCheck.protocol === "http:" || urlToCheck.protocol === "https:";
-
-  if (!checkProtocal) {
-    coloredWarnLog("Astro Breadcrumbs");
-  }
-  return checkProtocal;
+  return checkProtocol;
 };
 
 /**
