@@ -6,6 +6,7 @@
 ![npm](https://img.shields.io/npm/v/astro-breadcrumbs?logo=npm&style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/felix-berlin/astro-breadcrumbs?label=github&logo=github&style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/felix-berlin/astro-breadcrumbs/release.yml?label=release&logo=github&style=flat-square)
+[![codecov](https://codecov.io/gh/felix-berlin/astro-breadcrumbs/graph/badge.svg?token=8GTWBCTPYZ)](https://codecov.io/gh/felix-berlin/astro-breadcrumbs)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.css?label=CSS%20Size&logo=CSS3&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.scss?label=SCSS%20Size&logo=SASS&style=flat-square)
