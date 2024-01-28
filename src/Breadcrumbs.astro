@@ -1,5 +1,8 @@
 ---
-interface BreadcrumbsProps {
+import { schemaJson } from "./lib/structuredData";
+import { getBaseUrl, getFirstCrumb } from "./lib/crumbUtils";
+
+export interface BreadcrumbsProps {
   indexText?: string;
   mainBemClass?: string;
   ariaLabel?: string;
@@ -9,7 +12,7 @@ interface BreadcrumbsProps {
   trailingSlash?: boolean;
 }
 
-interface BreadcrumbItem {
+export interface BreadcrumbItem {
   text: string;
   href: string;
   "aria-current"?: string;
@@ -27,82 +30,6 @@ const {
 
 const hasBaseUrl = baseUrl?.length;
 
-/**
- * Log a warning message to the console.
- *
- * @param message
- */
-const coloredWarnLog = (message: string) => {
-  console.warn(
-    "\x1b[43m",
-    "Astro Breadcrumbs",
-    "\x1b[0m",
-    "\x1b[33m",
-    message,
-    "\x1b[0m"
-  );
-};
-
-/**
- * Check if a URL is valid.
- *
- * @param url
- */
-const isValidUrl = (url: string | undefined): boolean => {
-  if (!url) return false;
-  if (!URL.canParse(url)) return false;
-
-  const urlToCheck = new URL(url);
-
-  const checkProtocol =  urlToCheck.protocol === "http:" || urlToCheck.protocol === "https:";
-
-  if (!checkProtocol) coloredWarnLog("Astro Breadcrumbs");
-
-  return checkProtocol;
-};
-
-/**
- * Check if a URL ends with a slash.
- *
- * @param url
- */
-const endsWithSlash = (url: string | undefined): boolean => {
-  if (!url) return false;
-
-  return url.endsWith("/");
-};
-
-/**
- * Get the base URL.
- * If the base URL is not valid, return a relative URL.
- *
- * @returns string | undefined | null
- *
- */
-const getBaseUrl = (): string | undefined | null => {
-  if (endsWithSlash(baseUrl) && hasBaseUrl) {
-    coloredWarnLog("Base URL should not have a trailing slash. Falling back to relative URL.");
-
-    return null;
-  }
-  if (!isValidUrl(baseUrl) && hasBaseUrl) {
-    coloredWarnLog("Base URL is not valid. Falling back to relative URL.");
-
-    return null;
-  }
-
-  return baseUrl;
-};
-
-/**
- * Get the first breadcrumb.
- */
-const getFirstCrumb = (): string => {
-  if (trailingSlash && getBaseUrl()) return `${getBaseUrl()}/`;
-
-  return getBaseUrl() ?? "/";
-};
-
 let parts: Array<BreadcrumbItem> = [];
 
 /**
@@ -118,7 +45,7 @@ if (crumbs.length === 0) {
   parts = [
     {
       text: indexText,
-      href: getFirstCrumb(),
+      href: getFirstCrumb(trailingSlash, baseUrl, hasBaseUrl),
     },
   ];
 
@@ -127,8 +54,12 @@ if (crumbs.length === 0) {
    */
   paths.forEach((text: string, index: number) => {
     const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
-    const chooseBaseUrl = getBaseUrl() ? getBaseUrl() + generateHref : generateHref;
-    const addTrailingSlash = trailingSlash ? `${chooseBaseUrl}/` : chooseBaseUrl;
+    const chooseBaseUrl = getBaseUrl(baseUrl, hasBaseUrl)
+      ? getBaseUrl(baseUrl, hasBaseUrl) + generateHref
+      : generateHref;
+    const addTrailingSlash = trailingSlash
+      ? `${chooseBaseUrl}/`
+      : chooseBaseUrl;
     const finalHref = addTrailingSlash;
 
     // strip out any file extensions
@@ -154,22 +85,6 @@ if (crumbs.length === 0) {
 if (crumbs.length > 0) {
   parts = crumbs;
 }
-
-/**
- * Generate the schema.org JSON.
- */
-const schemaJson = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: parts.map((part, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    item: {
-      "@id": part.href,
-      name: part.text,
-    },
-  })),
-});
 ---
 
 <nav aria-label={ariaLabel} class={mainBemClass}>
@@ -212,6 +127,6 @@ const schemaJson = JSON.stringify({
 </nav>
 {
   schemaJsonScript && (
-    <script type="application/ld+json" set:html={schemaJson} />
+    <script type="application/ld+json" set:html={schemaJson(parts)} />
   )
 }
