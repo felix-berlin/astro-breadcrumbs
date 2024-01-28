@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.8.1...v1.9.0) (2024-01-28)
+
+
+### Bug Fixes
+
+* **baseUrl:** fallback to relative urls ([eab9c73](https://github.com/felix-berlin/astro-breadcrumbs/commit/eab9c73d1431f8748fe707c8bc443b51f5831f34))
+
+
+### Features
+
+* **trailing slash:** add new prop trailingSlash ([61912c3](https://github.com/felix-berlin/astro-breadcrumbs/commit/61912c34b430977587e669b36c192c647f1c5f59))
+
 ## [1.8.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.8.0...v1.8.1) (2023-12-06)
 
 
