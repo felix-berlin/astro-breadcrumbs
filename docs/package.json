@@ -13,7 +13,7 @@
     "@astrojs/starlight": "^0.17.0",
     "astro": "^4.2.6",
     "astro-breadcrumbs": "^1.8.1",
-    "astro-matomo": "^1.4.1",
+    "astro-matomo": "^1.4.2",
     "sharp": "^0.33.2"
   },
   "devDependencies": {

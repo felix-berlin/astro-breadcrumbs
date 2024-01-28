@@ -47,8 +47,8 @@ importers:
         specifier: ^1.8.1
         version: link:..
       astro-matomo:
-        specifier: ^1.4.1
-        version: 1.4.1(astro@4.2.6)
+        specifier: ^1.4.2
+        version: 1.4.2(astro@4.2.6)
       sharp:
         specifier: ^0.33.2
         version: 0.33.2
@@ -1663,9 +1663,8 @@ packages:
       remark-expressive-code: 0.32.2
     dev: false
 
-  /astro-matomo@1.4.1(astro@4.2.6):
-    resolution: {integrity: sha512-N7LAWylD/2Oxixz1Wj/iS4FCUiFESVtu7EdGsxnX6HwbSjy9Yp7oEZk28WFx8c37pBUx0SoHfw+MyfymFnLV2g==}
-    requiresBuild: true
+  /astro-matomo@1.4.2(astro@4.2.6):
+    resolution: {integrity: sha512-65TtRKaNmGWSAaPAV84dTweOt/6aVMaPLQxJkkiSWdDFr8oScf3Sg0zzs+tE5Ca+VZdLT8QLZgdrcVJG4uX2KA==}
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
     dependencies:
