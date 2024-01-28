@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.15.0",
-    "astro": "^4.0.2",
-    "astro-breadcrumbs": "^1.8.0",
-    "astro-matomo": "^1.4.0",
-    "sharp": "^0.33.0"
+    "@astrojs/starlight": "^0.17.0",
+    "astro": "^4.2.6",
+    "astro-breadcrumbs": "^1.8.1",
+    "astro-matomo": "^1.4.1",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
-    "sass": "^1.69.5"
+    "sass": "^1.70.0"
   }
 }
