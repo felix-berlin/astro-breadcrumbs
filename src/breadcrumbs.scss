@@ -1,7 +1,7 @@
-@use 'sass:list';
+@use "sass:list";
 
-$bem-root: 'c-breadcrumbs' !default;
-$overflow-behavior: 'wrap' !default;
+$bem-root: "c-breadcrumbs" !default;
+$overflow-behavior: "wrap" !default;
 $overflow-wrap-horizontal-spacing: 1rem !default;
 $color-link: inherit !default;
 $color-hover-link: null !default;
@@ -13,10 +13,7 @@ $spacing-vertical-separator: 6px !default;
 $icons-not-bigger-than-font-size: true !default;
 $transition-link-breadcrumbs: color 0.2s ease-in-out !default;
 
-$valid-overflow-behaviors: (
-  'wrap',
-  'ellipsis'
-);
+$valid-overflow-behaviors: ("wrap", "ellipsis");
 
 @if not list.index($valid-overflow-behaviors, $overflow-behavior) {
   @error '❌  ===> #{$overflow-behavior} is not a valid option for $overflow-behavior. Please use: #{$valid-overflow-behaviors}';
@@ -27,21 +24,50 @@ $valid-overflow-behaviors: (
   --size-font-breadcrumbs: #{$size-font};
   --spacing-vertical-separator-breadcrumbs: #{$spacing-vertical-separator};
 
+  .has-truncated {
+    display: none;
+  }
+
+  &.is-truncated {
+    .has-truncated {
+      display: inline-flex;
+    }
+
+    .#{$bem-root}__crumb {
+      visibility: var(--visibility-truncated-breadcrumbs, hidden);
+      position: var(--position-truncated-breadcrumbs, absolute);
+
+      &:first-of-type,
+      &:last-of-type,
+      &.has-truncated {
+        --visibility-truncated-breadcrumbs: visible;
+        --position-truncated-breadcrumbs: relative;
+      }
+    }
+  }
+
+  &__truncated-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
   &__crumbs {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 
-
-    @if $overflow-behavior =='wrap' {
+    @if $overflow-behavior == "wrap" {
       flex-wrap: wrap;
     }
 
     &:where(.has-no-separators) {
       row-gap: var(--spacing-vertical-separator-breadcrumbs);
 
-      @if $overflow-behavior =='wrap' {
+      @if $overflow-behavior == "wrap" {
         column-gap: $overflow-wrap-horizontal-spacing;
       }
     }
@@ -51,14 +77,13 @@ $valid-overflow-behaviors: (
     display: flex;
     align-items: center;
 
-    @if $overflow-behavior == 'ellipsis' {
+    @if $overflow-behavior == "ellipsis" {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
 
     &:has(.#{$bem-root}__separator) {
-
       .#{$bem-root}__separator {
         display: flex;
         align-items: center;
@@ -72,7 +97,6 @@ $valid-overflow-behaviors: (
     }
 
     @if $icons-not-bigger-than-font-size {
-
       &:has(svg, image) :where(svg, image) {
         max-width: var(--size-font-breadcrumbs);
         max-height: var(--size-font-breadcrumbs);
@@ -87,11 +111,9 @@ $valid-overflow-behaviors: (
     line-height: 1;
 
     @if $color-hover-link {
-
       transition: $transition-link-breadcrumbs;
 
       @media (hover: hover) {
-
         &:hover {
           --color-link-breadcrumbs: #{$color-hover-link};
         }
@@ -99,14 +121,12 @@ $valid-overflow-behaviors: (
     }
 
     @if $color-is-current {
-
       &:where(.is-current) {
         --color-link-breadcrumbs: #{$color-is-current};
       }
     }
 
     @if $color-is-index {
-
       &:where(.is-index) {
         --color-link-breadcrumbs: #{$color-is-index};
       }
