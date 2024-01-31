@@ -24,13 +24,13 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
   --size-font-breadcrumbs: #{$size-font};
   --spacing-vertical-separator-breadcrumbs: #{$spacing-vertical-separator};
 
-  .has-truncated {
-    display: none;
+  .has-ellipsis {
+    display: var(--display-ellipsis-breadcrumbs, none);
   }
 
   &.is-truncated {
-    .has-truncated {
-      display: inline-flex;
+    .has-ellipsis {
+      --display-ellipsis-breadcrumbs: flex;
     }
 
     .#{$bem-root}__crumb {
@@ -39,7 +39,7 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
 
       &:first-of-type,
       &:last-of-type,
-      &.has-truncated {
+      &.has-ellipsis {
         --visibility-truncated-breadcrumbs: visible;
         --position-truncated-breadcrumbs: relative;
       }
@@ -52,6 +52,7 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
     padding: 0;
     margin: 0;
     cursor: pointer;
+    line-height: 1;
   }
 
   &__crumbs {
