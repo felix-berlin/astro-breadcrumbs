@@ -5,6 +5,148 @@ description: "Learn more about the properties of the Astro Breadcrumbs component
 
 import { Breadcrumbs } from "astro-breadcrumbs";
 
+## ariaLabel
+
+**Type:** `string`
+
+**Default:** `breadcrumbs`
+
+Controls the `aria-label` on the parent element (`<nav>`).
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs ariaLabel="a structured list of pages" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs ariaLabel="a structured list of pages" />
+
+## baseUrl
+
+**Type:** `string`
+
+**Default:** `undefined`
+
+By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
+
+:::note
+Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
+:::
+
+:::caution
+If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs baseUrl="https://base.url/page" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs baseUrl="https://base.url/page" />
+
+## crumbs
+
+**Type:**
+
+```ts
+interface BreadcrumbItem {
+  text: string;
+  href: string;
+  "aria-current"?: string;
+}
+```
+
+**Default:** `[]`
+
+This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute.
+
+:::note
+If set dynamic creation will be disabled, [`indexText`](#indextext) and [`baseUrl`](#baseurl) will have no affect.
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+const customCrumbs = [
+  {
+    text: "Custom Crumb 1",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 2 - I'm having custom title attribute",
+    href: "#",
+    title: "Part of the breadcrumb list",
+  },
+  {
+    text: "Custom Crumb 3 - I'm having custom data attribute",
+    href: "#",
+    "data-custom": "custom data attribute",
+  },
+];
+---
+
+<Breadcrumbs crumbs={customCrumbs} />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs
+  crumbs={[
+    {
+      text: "Custom Crumb 1",
+      href: "#",
+    },
+    {
+      text: "Custom Crumb 2 - I'm having custom title attribute",
+      href: "#",
+      title: "Part of the breadcrumb list",
+    },
+    {
+      text: "Custom Crumb 3 - I'm having custom data attribute",
+      href: "#",
+      "data-custom": "custom data attribute",
+    },
+  ]}
+/>
+
+## ellipsisAriaLabel
+
+**Type:** `string`
+
+**Default:** `Show hidden navigation`
+
+`aria-label` of the ellipsis button (`.c-breadcrumbs__truncated-button`).
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs ellipsisAriaLabel="a structured list of pages" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs ellipsisAriaLabel="Show nav" />
+
 ## indexText
 
 **Type:** `string`
@@ -56,127 +198,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 **Rendered Component:**
 
 <Breadcrumbs mainBemClass="o-bread-crumb" />
-
-## ariaLabel
-
-**Type:** `string`
-
-**Default:** `breadcrumbs`
-
-Controls the `aria-label` on the parent element (`<nav>`).
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
----
-
-<Breadcrumbs ariaLabel="a structured list of pages" />
-```
-
-**Rendered Component:**
-
-<Breadcrumbs ariaLabel="a structured list of pages" />
-
-## crumbs
-
-**Type:**
-
-```ts
-interface BreadcrumbItem {
-  text: string;
-  href: string;
-  "aria-current"?: string;
-}
-```
-
-**Default:** `[]`
-
-This property expects an array of objects that describe the breadcrumbs "manually". There are two required key value pairs: `text: ''` and `href: ''`, every additional pair will add an attribute to this specific element. For example: `title: 'Part of the breadcrumb list'`, will add an title attribute.
-
-:::note
-If set dynamic creation will be disabled, [`indexText`](#indextext) and [`baseUrl`](#baseurl) will have no affect.
-:::
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
-
-const customCrumbs = [
-  {
-    text: "Custom Crumb 1",
-    href: "#",
-  },
-  {
-    text: "Custom Crumb 2 - I'm having custom title attribute",
-    href: "#",
-    title: "Part of the breadcrumb list",
-  },
-  {
-    text: "Custom Crumb 3 - I'm having custom data attribute",
-    href: "#",
-    "data-custom": "custom data attribute",
-  },
-];
----
-
-<Breadcrumbs crumbs={customCrumbs} />
-
-```
-
-**Rendered Component:**
-
-<Breadcrumbs
-  crumbs={[
-    {
-      text: "Custom Crumb 1",
-      href: "#",
-    },
-    {
-      text: "Custom Crumb 2 - I'm having custom title attribute",
-      href: "#",
-      title: "Part of the breadcrumb list",
-    },
-    {
-      text: "Custom Crumb 3 - I'm having custom data attribute",
-      href: "#",
-      "data-custom": "custom data attribute",
-    },
-  ]}
-/>
-
-## baseUrl
-
-**Type:** `string`
-
-**Default:** `undefined`
-
-By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
-
-:::note
-Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
-:::
-
-:::caution
-If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
-:::
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
----
-
-<Breadcrumbs baseUrl="https://base.url/page" />
-```
-
-**Rendered Component:**
-
-<Breadcrumbs baseUrl="https://base.url/page" />
 
 ## schemaJsonScript
 
@@ -258,3 +279,33 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 **Rendered Component:**
 
 <Breadcrumbs trailingSlash={true} />
+
+## truncated
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+With the setting `true`, the breadcrumbs that no longer fit in a line are truncated and an ellipsis button is displayed.
+
+Only the first element and the last element are displayed, with the ellipsis button in between.
+
+A click on the ellipsis button shows all truncated elements.
+
+The calculation is carried out using ResizeObserver and is therefore responsive.
+
+The width of all elements is calculated together and compared with the available width. If the elements are larger than the available width, they are truncated.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs truncated={true} />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs truncated={true} />
