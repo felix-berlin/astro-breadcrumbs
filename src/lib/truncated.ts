@@ -2,6 +2,7 @@ export class Truncated extends HTMLElement {
   isManualToggle = false;
   breadcrumbs: HTMLElement | null = null;
   mainBemClass: string | null = null;
+  totalWidth = 0;
 
   constructor() {
     super();
@@ -21,25 +22,15 @@ export class Truncated extends HTMLElement {
     );
 
     // Calculate the total width of the crumb elements
-    let totalWidth = 0;
-
     crumbs?.forEach((crumb) => {
-      totalWidth += (crumb as HTMLElement).offsetWidth;
+      this.totalWidth += (crumb as HTMLElement).offsetWidth;
     });
 
     // Create a new ResizeObserver instance
     const resizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         // Check if the breadcrumbs are overflowing
-        if (totalWidth > entry.target.clientWidth && !this.isManualToggle) {
-          this.toggleTruncated(true);
-
-          console.warn("Breadcrumbs are overflowing");
-        } else {
-          this.toggleTruncated(false);
-          this.isManualToggle = false;
-          console.log("Breadcrumbs are not overflowing");
-        }
+        this.checkOverflow(entry.target.clientWidth);
       }
     });
 
@@ -76,5 +67,21 @@ export class Truncated extends HTMLElement {
       this.breadcrumbs?.classList.remove("is-truncated");
       this.isManualToggle = true;
     });
+  }
+
+  /**
+   * Check if the breadcrumbs are overflowing
+   *
+   * @param   {number}  clientWidth
+   *
+   * @return  {void}
+   */
+  checkOverflow(clientWidth: number): void {
+    if (this.totalWidth > clientWidth && !this.isManualToggle) {
+      this.toggleTruncated(true);
+    } else {
+      this.toggleTruncated(false);
+      this.isManualToggle = false;
+    }
   }
 }
