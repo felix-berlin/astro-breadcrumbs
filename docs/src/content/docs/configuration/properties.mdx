@@ -182,7 +182,7 @@ If you use the optional SCSS file, make sure you set the same class name in you'
 :::
 
 :::danger
-If you use the optional CSS file, all styles will be broken. Please add your own CSS or use the SCSS styles with customized [$bem-root](/styling/scss-api/#bem-root) prop.
+If you use the optional CSS file, all styles will be broken. Please add your own CSS or use the [SCSS styles](/styling/setup-scss-config/) with customized [$bem-root](/styling/scss-api/#bem-root) prop.
 :::
 
 **Usage:**
@@ -304,6 +304,17 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
 <Breadcrumbs truncated={true} />
+```
+
+:::caution
+If you use the SCSS style file, you need to opt-in `$truncated: true` within the [SCSS Style Api](/styling/scss-api/#truncated). (This does not apply to the CSS variant.)
+:::
+
+```scss
+// astro-breadcrumbs-config.scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $truncated: true
+);
 ```
 
 **Rendered Component:**
