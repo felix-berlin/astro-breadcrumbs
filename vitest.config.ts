@@ -8,9 +8,7 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     coverage: {
-      include: [
-        "./tests/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
-      ],
+      include: ["src/**"],
       reportsDirectory: "./tests/unit/coverage",
     },
   },

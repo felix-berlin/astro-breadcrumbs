@@ -10,6 +10,8 @@ export interface BreadcrumbsProps {
   schemaJsonScript?: boolean;
   baseUrl?: string;
   trailingSlash?: boolean;
+  ellipsisAriaLabel?: string;
+  truncated?: boolean;
 }
 
 export interface BreadcrumbItem {
@@ -26,11 +28,14 @@ const {
   schemaJsonScript = true,
   baseUrl,
   trailingSlash = false,
+  ellipsisAriaLabel = "Show hidden navigation",
+  truncated = false,
 } = Astro.props as BreadcrumbsProps;
 
 const hasBaseUrl = !!baseUrl?.length;
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
-console.log(paths);
+const pathLength = paths?.length;
+const UUID = crypto.randomUUID();
 
 const parts = generateCrumbs(
   baseUrl,
@@ -42,46 +47,75 @@ const parts = generateCrumbs(
 );
 ---
 
-<nav aria-label={ariaLabel} class={mainBemClass}>
-  <ol
-    class={`${mainBemClass}__crumbs${
-      Astro.slots.has("separator") ? " has-separators" : " has-no-separators"
-    }`}
-  >
-    {
-      parts.map(({ text, ...attrs }, index, array) => (
-        <li class={`${mainBemClass}__crumb`}>
-          {Astro.slots.has("index") && index === 0 && (
-            <a {...attrs} class={`${mainBemClass}__link is-index`}>
-              <slot name="index" />
-            </a>
-          )}
+<astro-breadcrumbs
+  data-main-bem-class={mainBemClass}
+  data-id={UUID}
+  data-path-length={pathLength}
+  data-truncated={truncated}
+>
+  <nav aria-label={ariaLabel} class={mainBemClass} id={UUID}>
+    <ol
+      class={`${mainBemClass}__crumbs${
+        Astro.slots.has("separator") ? " has-separators" : " has-no-separators"
+      }`}
+    >
+      {
+        parts.map(({ text, ...attrs }, index, array) => (
+          <>
+            {index === 1 && pathLength > 1 && truncated && (
+              <li class={`${mainBemClass}__crumb has-ellipsis`}>
+                <button
+                  type="button"
+                  aria-label={ellipsisAriaLabel}
+                  class={`${mainBemClass}__truncated-button`}
+                >
+                  <slot name="ellipsis">…</slot>
+                </button>
+                <span class="c-breadcrumbs__separator" aria-hidden="true">
+                  <slot name="separator" />
+                </span>
+              </li>
+            )}
+            <li class={`${mainBemClass}__crumb`}>
+              {Astro.slots.has("index") && index === 0 && (
+                <a {...attrs} class={`${mainBemClass}__link is-index`}>
+                  <slot name="index" />
+                </a>
+              )}
 
-          {(!Astro.slots.has("index") ||
-            (Astro.slots.has("index") && index !== 0)) && (
-            <a
-              {...attrs}
-              class={`${mainBemClass}__link${
-                index + 1 === array.length ? " is-current" : ""
-              }`}
-              aria-current={index + 1 === array.length ? "location" : false}
-            >
-              {text}
-            </a>
-          )}
+              {(!Astro.slots.has("index") ||
+                (Astro.slots.has("index") && index !== 0)) && (
+                <a
+                  {...attrs}
+                  class={`${mainBemClass}__link${
+                    index + 1 === array.length ? " is-current" : ""
+                  }`}
+                  aria-current={index + 1 === array.length ? "location" : false}
+                >
+                  {text}
+                </a>
+              )}
 
-          {Astro.slots.has("separator") && array.length - 1 !== index && (
-            <span class="c-breadcrumbs__separator" aria-hidden="true">
-              <slot name="separator" />
-            </span>
-          )}
-        </li>
-      ))
-    }
-  </ol>
-</nav>
+              {Astro.slots.has("separator") && array.length - 1 !== index && (
+                <span class="c-breadcrumbs__separator" aria-hidden="true">
+                  <slot name="separator" />
+                </span>
+              )}
+            </li>
+          </>
+        ))
+      }
+    </ol>
+  </nav>
+</astro-breadcrumbs>
 {
   schemaJsonScript && (
     <script type="application/ld+json" set:html={schemaJson(parts)} />
   )
 }
+
+<script>
+  import { Truncated } from "./lib/truncated";
+
+  customElements.define("astro-breadcrumbs", Truncated);
+</script>

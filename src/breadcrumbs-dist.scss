@@ -1,1 +1,1 @@
-@use 'breadcrumbs.scss';
+@use "breadcrumbs.scss" with($truncated: true);

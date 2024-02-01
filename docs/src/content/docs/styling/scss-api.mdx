@@ -206,3 +206,21 @@ Sets the transition for the link color. If `$color-hover-link` is not set, this 
   $transition-link-breadcrumbs: all 0.3s ease
 );
 ```
+
+## $truncated
+
+**Default:** `false`
+
+If `true`, truncated styles will be applied to the breadcrumbs.
+
+:::caution
+Make sure to also set `truncated` property to `true` in the [configuration](/configuration/properties/#truncated).
+:::
+
+**Usage:**
+
+```scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $truncated: true
+);
+```

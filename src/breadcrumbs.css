@@ -3,6 +3,28 @@
   --size-font-breadcrumbs: 1rem;
   --spacing-vertical-separator-breadcrumbs: 6px;
 }
+.c-breadcrumbs .has-ellipsis {
+  display: var(--display-ellipsis-breadcrumbs, none);
+}
+.c-breadcrumbs.is-truncated .has-ellipsis {
+  --display-ellipsis-breadcrumbs: flex;
+}
+.c-breadcrumbs.is-truncated .c-breadcrumbs__crumb {
+  visibility: var(--visibility-truncated-breadcrumbs, hidden);
+  position: var(--position-truncated-breadcrumbs, absolute);
+}
+.c-breadcrumbs.is-truncated .c-breadcrumbs__crumb:first-of-type, .c-breadcrumbs.is-truncated .c-breadcrumbs__crumb:last-of-type, .c-breadcrumbs.is-truncated .c-breadcrumbs__crumb.has-ellipsis {
+  --visibility-truncated-breadcrumbs: visible;
+  --position-truncated-breadcrumbs: relative;
+}
+.c-breadcrumbs__truncated-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  line-height: 1;
+}
 .c-breadcrumbs__crumbs {
   list-style-type: none;
   margin: 0;

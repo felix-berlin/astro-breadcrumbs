@@ -5,58 +5,6 @@ description: "Learn more about the properties of the Astro Breadcrumbs component
 
 import { Breadcrumbs } from "astro-breadcrumbs";
 
-## indexText
-
-**Type:** `string`
-
-**Default:** `Home`
-
-Label of the first nav element.
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
----
-
-<Breadcrumbs indexText="Home" />
-```
-
-**Rendered Component:**
-
-<Breadcrumbs indexText="Home" />
-
-## mainBemClass
-
-**Type:** `string`
-
-**Default:** `c-breadcrumbs`
-
-CSS BEM root class.
-
-:::caution
-If you use the optional SCSS file, make sure you set the same class name in you're SCSS config file. [$bem-root](/styling/scss-api/#bem-root) needs to be adjusted.
-:::
-
-:::danger
-If you use the optional CSS file, all styles will be broken. Please add your own CSS or use the SCSS styles with customized [$bem-root](/styling/scss-api/#bem-root) prop.
-:::
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
----
-
-<Breadcrumbs mainBemClass="o-bread-crumb" />
-```
-
-**Rendered Component:**
-
-<Breadcrumbs mainBemClass="o-bread-crumb" />
-
 ## ariaLabel
 
 **Type:** `string`
@@ -78,6 +26,36 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 **Rendered Component:**
 
 <Breadcrumbs ariaLabel="a structured list of pages" />
+
+## baseUrl
+
+**Type:** `string`
+
+**Default:** `undefined`
+
+By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
+
+:::note
+Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
+:::
+
+:::caution
+If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs baseUrl="https://base.url/page" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs baseUrl="https://base.url/page" />
 
 ## crumbs
 
@@ -124,7 +102,6 @@ const customCrumbs = [
 ---
 
 <Breadcrumbs crumbs={customCrumbs} />
-
 ```
 
 **Rendered Component:**
@@ -148,20 +125,64 @@ const customCrumbs = [
   ]}
 />
 
-## baseUrl
+## ellipsisAriaLabel
 
 **Type:** `string`
 
-**Default:** `undefined`
+**Default:** `Show hidden navigation`
 
-By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
+`aria-label` of the ellipsis button (`.c-breadcrumbs__truncated-button`).
 
-:::note
-Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
-:::
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs ellipsisAriaLabel="a structured list of pages" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs ellipsisAriaLabel="Show nav" />
+
+## indexText
+
+**Type:** `string`
+
+**Default:** `Home`
+
+Label of the first nav element.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs indexText="Home" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs indexText="Home" />
+
+## mainBemClass
+
+**Type:** `string`
+
+**Default:** `c-breadcrumbs`
+
+CSS BEM root class.
 
 :::caution
-If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
+If you use the optional SCSS file, make sure you set the same class name in you're SCSS config file. [$bem-root](/styling/scss-api/#bem-root) needs to be adjusted.
+:::
+
+:::danger
+If you use the optional CSS file, all styles will be broken. Please add your own CSS or use the [SCSS styles](/styling/setup-scss-config/) with customized [$bem-root](/styling/scss-api/#bem-root) prop.
 :::
 
 **Usage:**
@@ -171,12 +192,12 @@ If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
 import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
-<Breadcrumbs baseUrl="https://base.url/page" />
+<Breadcrumbs mainBemClass="o-bread-crumb" />
 ```
 
 **Rendered Component:**
 
-<Breadcrumbs baseUrl="https://base.url/page" />
+<Breadcrumbs mainBemClass="o-bread-crumb" />
 
 ## schemaJsonScript
 
@@ -258,3 +279,44 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 **Rendered Component:**
 
 <Breadcrumbs trailingSlash={true} />
+
+## truncated
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+With the setting `true`, the breadcrumbs that no longer fit in a line are truncated and an ellipsis button is displayed.
+
+Only the first element and the last element are displayed, with the ellipsis button in between.
+
+A click on the ellipsis button shows all truncated elements.
+
+The calculation is carried out using ResizeObserver and is therefore responsive.
+
+The width of all elements is calculated together and compared with the available width. If the elements are larger than the available width, they are truncated.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs truncated={true} />
+```
+
+:::caution
+If you use the SCSS style file, you need to opt-in `$truncated: true` within the [SCSS Style Api](/styling/scss-api/#truncated). (This does not apply to the CSS variant.)
+:::
+
+```scss
+// astro-breadcrumbs-config.scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $truncated: true
+);
+```
+
+**Rendered Component:**
+
+<Breadcrumbs truncated={true} />

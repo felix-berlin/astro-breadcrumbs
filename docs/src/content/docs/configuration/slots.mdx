@@ -5,24 +5,22 @@ description: "Learn how to use the slots of the Astro Breadcrumbs component."
 
 import { Breadcrumbs } from "astro-breadcrumbs";
 
+## ellipsis
 
-## separator
+**Default:** `…`
 
-**Default:** `-`
-
-Add custom elements like svg's or icons after the `<a>` tag.
+Content of the `.c-breadcrumbs__truncated-button`.
 
 **Usage:**
 
-```astro
+```astro {7}
 ---
 import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
 <Breadcrumbs>
-
   <svg
-    slot="separator"
+    slot="ellipsis"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -32,9 +30,9 @@ import { Breadcrumbs } from "astro-breadcrumbs";
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    ><polyline points="9 18 15 12 9 6"></polyline>
-  </svg>
-
+    ><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"
+    ></circle><circle cx="5" cy="12" r="1"></circle></svg
+  >
 </Breadcrumbs>
 ```
 
@@ -42,19 +40,22 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs>
 
-  <svg
-    slot="separator"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    ><polyline points="9 18 15 12 9 6"></polyline>
-  </svg>
+<svg
+  slot="ellipsis"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="1"></circle>
+  <circle cx="19" cy="12" r="1"></circle>
+  <circle cx="5" cy="12" r="1"></circle>
+</svg>
 
 </Breadcrumbs>
 
@@ -66,13 +67,12 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 **Usage:**
 
-```astro
+```astro {7}
 ---
 import { Breadcrumbs } from "astro-breadcrumbs";
 ---
 
 <Breadcrumbs>
-
   <svg
     slot="index"
     aria-label="Home Page"
@@ -85,10 +85,9 @@ import { Breadcrumbs } from "astro-breadcrumbs";
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    ><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
-    </path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+    ><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"> </path><polyline
+      points="9 22 9 12 15 12 15 22"></polyline>
   </svg>
-
 </Breadcrumbs>
 ```
 
@@ -96,9 +95,41 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs>
 
+<svg
+  slot="index"
+  aria-label="Home Page"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+
+</Breadcrumbs>
+
+## separator
+
+**Default:** `-`
+
+Add custom elements like svg's or icons after the `<a>` tag.
+
+**Usage:**
+
+```astro {7}
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs>
   <svg
-    slot="index"
-    aria-label="Home Page"
+    slot="separator"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -108,8 +139,27 @@ import { Breadcrumbs } from "astro-breadcrumbs";
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    ><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
-    </path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+    ><polyline points="9 18 15 12 9 6"></polyline>
   </svg>
+</Breadcrumbs>
+```
+
+**Rendered Component:**
+
+<Breadcrumbs>
+<svg
+  slot="separator"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <polyline points="9 18 15 12 9 6"></polyline>
+</svg>
 
 </Breadcrumbs>
