@@ -40,11 +40,11 @@ importers:
   demo:
     dependencies:
       '@astrojs/mdx':
-        specifier: ^2.1.0
-        version: 2.1.0(astro@4.2.6)
+        specifier: ^2.1.1
+        version: 2.1.1(astro@4.3.0)
       astro:
-        specifier: ^4.2.6
-        version: 4.2.6(sass@1.70.0)
+        specifier: ^4.3.0
+        version: 4.3.0(sass@1.70.0)
     devDependencies:
       sass:
         specifier: ^1.70.0
@@ -53,20 +53,23 @@ importers:
   docs:
     dependencies:
       '@astrojs/starlight':
-        specifier: ^0.17.0
-        version: 0.17.0(astro@4.2.6)
+        specifier: ^0.17.2
+        version: 0.17.2(astro@4.3.0)
       astro:
-        specifier: ^4.2.6
-        version: 4.2.6(sass@1.70.0)
+        specifier: ^4.3.0
+        version: 4.3.0(sass@1.70.0)
       astro-breadcrumbs:
         specifier: ^1.9.0
         version: link:..
       astro-matomo:
         specifier: ^1.4.2
-        version: 1.4.2(astro@4.2.6)
+        version: 1.4.2(astro@4.3.0)
       sharp:
         specifier: ^0.33.2
         version: 0.33.2
+      starlight-links-validator:
+        specifier: ^0.5.2
+        version: 0.5.2(@astrojs/starlight@0.17.2)(astro@4.3.0)
     devDependencies:
       sass:
         specifier: ^1.70.0
@@ -130,8 +133,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/markdown-remark@4.2.0:
-    resolution: {integrity: sha512-qQB+LoxmIqzkhLXaQAzfzlBxZU1jeQYailsifurz89WeY0Q8ywIj8uQQSyqxb7rPPg3ZfdNdxsN9lF5UaCRn0w==}
+  /@astrojs/markdown-remark@4.2.1:
+    resolution: {integrity: sha512-2RQBIwrq+2qPYtp99bH+eL5hfbK0BoxXla85lHsRpIX/IsGqFrPX6pXI2cbWPihBwGbKCdxS6uZNX2QerZWwpQ==}
     dependencies:
       '@astrojs/prism': 3.0.0
       github-slugger: 2.0.0
@@ -151,16 +154,16 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@2.1.0(astro@4.2.6):
-    resolution: {integrity: sha512-QIH2BLYWz2/QVChE4W7Z8a2SOhDmMDvL89rOoZkZ8CnSneu03+VvUse1K8ObrC877SPSct9cNWe55K05vgQ+VQ==}
+  /@astrojs/mdx@2.1.1(astro@4.3.0):
+    resolution: {integrity: sha512-AgGFdE7HOGmoFooGvMSatkA9FiSKwyVW7ImHot/bXJ6uAbFfu6iG2ht18Cf1pT22Hda/6iSCGWusFvBv0/EnKQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
-      '@astrojs/markdown-remark': 4.2.0
+      '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.0
-      acorn: 8.11.2
-      astro: 4.2.6(sass@1.70.0)
+      acorn: 8.11.3
+      astro: 4.3.0(sass@1.70.0)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -191,18 +194,18 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/starlight@0.17.0(astro@4.2.6):
-    resolution: {integrity: sha512-a2s+x/5r0v7S5jERC91IuEqV+PXDUlFNVDJPrcbpjx0xaqvg4TezL1K3gWCptfHO1mUE9ikQ8vaArbNbgFVb/g==}
+  /@astrojs/starlight@0.17.2(astro@4.3.0):
+    resolution: {integrity: sha512-2Zme8DobPaocbALX6LqkR8thDxa0RK3qikNccvwzowuYjGMzGvldt524RimFaVB0zTNrtrw2Sp1jamF1KJae8w==}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
-      '@astrojs/mdx': 2.1.0(astro@4.2.6)
+      '@astrojs/mdx': 2.1.1(astro@4.3.0)
       '@astrojs/sitemap': 3.0.5
       '@pagefind/default-ui': 1.0.3
       '@types/hast': 3.0.3
       '@types/mdast': 4.0.3
-      astro: 4.2.6(sass@1.70.0)
-      astro-expressive-code: 0.32.2(astro@4.2.6)
+      astro: 4.3.0(sass@1.70.0)
+      astro-expressive-code: 0.32.2(astro@4.3.0)
       bcp-47: 2.1.0
       hast-util-select: 6.0.2
       hastscript: 8.0.0
@@ -420,7 +423,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.23.9
-    dev: true
 
   /@babel/plugin-syntax-jsx@7.22.5(@babel/core@7.23.5):
     resolution: {integrity: sha512-gvyP4hZrgrs/wWMaocvxZ44Hw0b3W8Pe+cMxc8V1ULQ07oh8VNbIRaoD1LRZVTvD+0nieDKjfgKg89sD7rrKrg==}
@@ -465,8 +467,8 @@ packages:
       '@babel/helper-function-name': 7.23.0
       '@babel/helper-hoist-variables': 7.22.5
       '@babel/helper-split-export-declaration': 7.22.6
-      '@babel/parser': 7.23.5
-      '@babel/types': 7.23.5
+      '@babel/parser': 7.23.9
+      '@babel/types': 7.23.9
       debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
@@ -498,7 +500,6 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
-    dev: true
 
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
@@ -1607,12 +1608,12 @@ packages:
       through: 2.3.8
     dev: true
 
-  /acorn-jsx@5.3.2(acorn@8.11.2):
+  /acorn-jsx@5.3.2(acorn@8.11.3):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      acorn: 8.11.2
+      acorn: 8.11.3
     dev: false
 
   /acorn-walk@8.3.2:
@@ -1629,7 +1630,6 @@ packages:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /agent-base@7.1.0:
     resolution: {integrity: sha512-o/zjMZRhJxny7OyEF+Op8X+efiELC7k7yOjMzgfzVqOzXqkBkWI79YoTdOtsuWd5BWhAGAuOY/Xa6xpiaWXiNg==}
@@ -1760,22 +1760,22 @@ packages:
     hasBin: true
     dev: false
 
-  /astro-expressive-code@0.32.2(astro@4.2.6):
+  /astro-expressive-code@0.32.2(astro@4.3.0):
     resolution: {integrity: sha512-uJbgSCl9F9NGjdfTmBHci5Ws0/zMUNk9dWfOl6rvYaOL6NZha+NNjnmB3Aza7GnxP+NvQt3RV8M2vpcZnaudSw==}
     peerDependencies:
       astro: ^3.3.0 || ^4.0.0-beta
     dependencies:
-      astro: 4.2.6(sass@1.70.0)
+      astro: 4.3.0(sass@1.70.0)
       hast-util-to-html: 8.0.4
       remark-expressive-code: 0.32.2
     dev: false
 
-  /astro-matomo@1.4.2(astro@4.2.6):
+  /astro-matomo@1.4.2(astro@4.3.0):
     resolution: {integrity: sha512-65TtRKaNmGWSAaPAV84dTweOt/6aVMaPLQxJkkiSWdDFr8oScf3Sg0zzs+tE5Ca+VZdLT8QLZgdrcVJG4uX2KA==}
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
     dependencies:
-      astro: 4.2.6(sass@1.70.0)
+      astro: 4.3.0(sass@1.70.0)
     dev: false
 
   /astro@4.0.2:
@@ -1858,23 +1858,23 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.2.6(sass@1.70.0):
-    resolution: {integrity: sha512-k5i8pEI2r45JTkoE0I4JyhOH/dZFpjUA4AONbRd9Gr1LtnGOhKHDftiYOrRLUGx91q7BzoW3DOk+h4yZM4yC3g==}
+  /astro@4.3.0(sass@1.70.0):
+    resolution: {integrity: sha512-DSn7q7KJ9lmA7B3faz6uaIIRTzJduKNYRAsgXDn+wH1Jso33PFOU3ZcI4knlMAqhFW3MX8WorB8Hg6kR+waQXg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.5.1
       '@astrojs/internal-helpers': 0.2.1
-      '@astrojs/markdown-remark': 4.2.0
+      '@astrojs/markdown-remark': 4.2.1
       '@astrojs/telemetry': 3.0.4
       '@babel/core': 7.23.5
       '@babel/generator': 7.23.5
-      '@babel/parser': 7.23.5
+      '@babel/parser': 7.23.9
       '@babel/plugin-transform-react-jsx': 7.22.5(@babel/core@7.23.5)
       '@babel/traverse': 7.23.5
-      '@babel/types': 7.23.5
+      '@babel/types': 7.23.9
       '@types/babel__core': 7.20.5
-      acorn: 8.11.2
+      acorn: 8.11.3
       aria-query: 5.3.0
       axobject-query: 4.0.0
       boxen: 7.1.1
@@ -1902,7 +1902,7 @@ packages:
       http-cache-semantics: 4.1.1
       js-yaml: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.30.3
+      magic-string: 0.30.5
       mdast-util-to-hast: 13.0.2
       mime: 3.0.0
       ora: 7.0.1
@@ -3911,7 +3911,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /magicast@0.3.3:
     resolution: {integrity: sha512-ZbrP1Qxnpoes8sz47AM0z08U+jW6TyRgZzcWy3Ma3vDhJttwMwAFDMMQFobwdBxByBD46JYmxRzeF7w2+wJEuw==}
@@ -4343,8 +4342,8 @@ packages:
   /micromark-extension-mdxjs@3.0.0:
     resolution: {integrity: sha512-A873fJfhnJ2siZyUrJ31l34Uqwy4xIFmvPY1oj+Ean5PHcPBYzEsvqvWGaWcfEIr11O5Dlw3p2y0tZWpKHDejQ==}
     dependencies:
-      acorn: 8.11.2
-      acorn-jsx: 5.3.2(acorn@8.11.2)
+      acorn: 8.11.3
+      acorn-jsx: 5.3.2(acorn@8.11.3)
       micromark-extension-mdx-expression: 3.0.0
       micromark-extension-mdx-jsx: 3.0.0
       micromark-extension-mdx-md: 2.0.0
@@ -5934,6 +5933,23 @@ packages:
   /stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
     dev: true
+
+  /starlight-links-validator@0.5.2(@astrojs/starlight@0.17.2)(astro@4.3.0):
+    resolution: {integrity: sha512-0zI4QdbuGmguzJl/3ToMwWlbjVa/6BGthMYi68eQcd7ujqa3EUeIwCtUa+ZzG4YcjzIr+uFBfAphQGspj3XPLg==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.15.0'
+      astro: '>=4.0.0'
+    dependencies:
+      '@astrojs/starlight': 0.17.2(astro@4.3.0)
+      astro: 4.3.0(sass@1.70.0)
+      github-slugger: 2.0.0
+      hast-util-from-html: 2.0.1
+      hast-util-has-property: 3.0.0
+      kleur: 4.1.5
+      mdast-util-to-string: 4.0.0
+      unist-util-visit: 5.0.0
+    dev: false
 
   /std-env@3.7.0:
     resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}

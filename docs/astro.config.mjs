@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import matomo from "astro-matomo";
+import starlightLinksValidator from "starlight-links-validator";
 
 // https://astro.build/config
 export default defineConfig({
@@ -50,6 +51,7 @@ export default defineConfig({
           ],
         },
       ],
+      plugins: [starlightLinksValidator()],
     }),
     matomo({
       enabled: import.meta.env.PROD,
