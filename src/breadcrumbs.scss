@@ -12,6 +12,7 @@ $size-font: 1rem !default;
 $spacing-vertical-separator: 6px !default;
 $icons-not-bigger-than-font-size: true !default;
 $transition-link-breadcrumbs: color 0.2s ease-in-out !default;
+$truncated: false !default;
 
 $valid-overflow-behaviors: ("wrap", "ellipsis");
 
@@ -24,35 +25,37 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
   --size-font-breadcrumbs: #{$size-font};
   --spacing-vertical-separator-breadcrumbs: #{$spacing-vertical-separator};
 
-  .has-ellipsis {
-    display: var(--display-ellipsis-breadcrumbs, none);
-  }
-
-  &.is-truncated {
+  @if $truncated {
     .has-ellipsis {
-      --display-ellipsis-breadcrumbs: flex;
+      display: var(--display-ellipsis-breadcrumbs, none);
     }
 
-    .#{$bem-root}__crumb {
-      visibility: var(--visibility-truncated-breadcrumbs, hidden);
-      position: var(--position-truncated-breadcrumbs, absolute);
+    &.is-truncated {
+      .has-ellipsis {
+        --display-ellipsis-breadcrumbs: flex;
+      }
 
-      &:first-of-type,
-      &:last-of-type,
-      &.has-ellipsis {
-        --visibility-truncated-breadcrumbs: visible;
-        --position-truncated-breadcrumbs: relative;
+      .#{$bem-root}__crumb {
+        visibility: var(--visibility-truncated-breadcrumbs, hidden);
+        position: var(--position-truncated-breadcrumbs, absolute);
+
+        &:first-of-type,
+        &:last-of-type,
+        &.has-ellipsis {
+          --visibility-truncated-breadcrumbs: visible;
+          --position-truncated-breadcrumbs: relative;
+        }
       }
     }
-  }
 
-  &__truncated-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    line-height: 1;
+    &__truncated-button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1;
+    }
   }
 
   &__crumbs {
