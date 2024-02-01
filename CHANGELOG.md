@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.9.0...v1.10.0) (2024-02-01)
+
+
+### Features
+
+* if to long on mobile activate truncated area ([ebc1917](https://github.com/felix-berlin/astro-breadcrumbs/commit/ebc1917a129888a2ec858cd1afb99c43cb086d9a))
+* make truncated styles optional ([7020927](https://github.com/felix-berlin/astro-breadcrumbs/commit/702092702ed0dbffb6be3bc88046964419136a44))
+* **truncated:** better overflow calc ([5664bc6](https://github.com/felix-berlin/astro-breadcrumbs/commit/5664bc6fe35e716b04c71457c6433be882de7c38))
+
 # [1.9.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.8.1...v1.9.0) (2024-01-28)
 
 
