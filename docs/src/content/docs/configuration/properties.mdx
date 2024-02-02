@@ -29,6 +29,29 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 ## baseUrl
 
+:::danger
+Starting from **version 2.0.0** the `baseUrl` property is deprecated.
+
+Instead of the `baseUrl` property, `base` from the [Astro Config](https://docs.astro.build/en/reference/configuration-reference/#base) is now used.
+
+You can migrate like this:
+
+```diff lang="astro"
+- <Breadcrumbs baseUrl="/page" />
++ <Breadcrumbs />
+```
+
+```diff lang="js"
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
++  base: "/page",
+});
+```
+
+:::
+
 **Type:** `string`
 
 **Default:** `undefined`
@@ -52,10 +75,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs baseUrl="https://base.url/page" />
 ```
-
-**Rendered Component:**
-
-<Breadcrumbs baseUrl="https://base.url/page" />
 
 ## crumbs
 
@@ -260,6 +279,29 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 ## trailingSlash
 
+:::danger
+Starting from **version 2.0.0** the `trailingSlash` property is deprecated.
+
+Instead of the `trailingSlash` property, `trailingSlash` from the [Astro Config](https://docs.astro.build/en/reference/configuration-reference/#trailingslash) is now used.
+
+You can migrate like this:
+
+```diff lang="astro"
+- <Breadcrumbs trailingSlash={true} />
++ <Breadcrumbs />
+```
+
+```diff lang="js"
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
++  trailingSlash: "always",
+});
+```
+
+:::
+
 **Type:** `boolean`
 
 **Default:** `false`
@@ -275,10 +317,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs trailingSlash={true} />
 ```
-
-**Rendered Component:**
-
-<Breadcrumbs trailingSlash={true} />
 
 ## truncated
 
@@ -321,6 +359,6 @@ If you use the SCSS style file, you need to opt-in `$truncated: true` within the
 
 <Breadcrumbs truncated={true} />
 
-:::note
-Resize or browser until the breadcrumbs are truncated.
+:::tip
+Resize your browser until the breadcrumbs are truncated.
 :::
