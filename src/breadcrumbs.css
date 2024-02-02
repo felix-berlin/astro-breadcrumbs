@@ -24,6 +24,7 @@
   margin: 0;
   cursor: pointer;
   line-height: 1;
+  color: var(--color-truncated-button, var(--color-link-breadcrumbs));
 }
 .c-breadcrumbs__crumbs {
   list-style-type: none;
