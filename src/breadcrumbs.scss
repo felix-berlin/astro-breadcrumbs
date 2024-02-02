@@ -54,7 +54,6 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
       padding: 0;
       margin: 0;
       cursor: pointer;
-      line-height: 1;
       color: var(--color-truncated-button, var(--color-link-breadcrumbs));
     }
   }
@@ -109,7 +108,8 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
     }
   }
 
-  &__link {
+  &__link,
+  &__truncated-button {
     font-size: var(--size-font-breadcrumbs);
     text-decoration: none;
     color: var(--color-link-breadcrumbs);
