@@ -8,8 +8,6 @@ export interface BreadcrumbsProps {
   ariaLabel?: string;
   crumbs?: Array<BreadcrumbItem>;
   schemaJsonScript?: boolean;
-  baseUrl?: string;
-  trailingSlash?: boolean;
   ellipsisAriaLabel?: string;
   truncated?: boolean;
 }
@@ -26,25 +24,21 @@ const {
   ariaLabel = "breadcrumbs",
   crumbs = [],
   schemaJsonScript = true,
-  baseUrl,
-  trailingSlash = false,
   ellipsisAriaLabel = "Show hidden navigation",
   truncated = false,
 } = Astro.props as BreadcrumbsProps;
 
-const hasBaseUrl = !!baseUrl?.length;
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
+const hasTrailingSlash = Astro.url.pathname.endsWith("/");
 const pathLength = paths?.length;
 const UUID = crypto.randomUUID();
 
-const parts = generateCrumbs(
-  baseUrl,
+const parts = generateCrumbs({
   crumbs,
   paths,
-  hasBaseUrl,
-  trailingSlash,
   indexText,
-);
+  hasTrailingSlash,
+});
 ---
 
 <astro-breadcrumbs

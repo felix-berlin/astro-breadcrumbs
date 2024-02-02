@@ -10,6 +10,7 @@
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/Breadcrumbs.astro?label=component%20size&logo=astro&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.css?label=CSS%20Size&logo=CSS3&style=flat-square)
 ![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/breadcrumbs.scss?label=SCSS%20Size&logo=SASS&style=flat-square)
+![GitHub file size in bytes](https://img.shields.io/github/size/felix-berlin/astro-breadcrumbs/src/lib/truncated.ts?label=Client%20JS%20size&logo=JS&style=flat-square)
 ![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/npm/astro-breadcrumbs?style=flat-square)
 
 Well configurable breadcrumb component for [Astro](https://astro.build/).
