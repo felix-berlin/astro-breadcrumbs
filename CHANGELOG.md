@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.10.0...v2.0.0) (2024-02-02)
+
+
+### Code Refactoring
+
+* crumb generation ([158df4d](https://github.com/felix-berlin/astro-breadcrumbs/commit/158df4d34a26b36881eb1bcbc8b500a563d87478))
+
+
+### BREAKING CHANGES
+
+* baseUrl and trailingSlash properties are now deprecated. Both values are now obtained directly from Astro Config.
+
 # [1.10.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v1.9.0...v1.10.0) (2024-02-01)
 
 
