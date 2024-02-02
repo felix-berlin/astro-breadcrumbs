@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.0.1...v2.0.2) (2024-02-02)
+
+
+### Bug Fixes
+
+* **truncated-button:** missing styles ([80ed6cc](https://github.com/felix-berlin/astro-breadcrumbs/commit/80ed6cc18bba7ce0223f4c77aac83f02d9261ea6))
+
 ## [2.0.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.0.0...v2.0.1) (2024-02-02)
 
 
