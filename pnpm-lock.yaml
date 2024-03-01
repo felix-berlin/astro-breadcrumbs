@@ -44,11 +44,11 @@ importers:
         version: 2.1.1(astro@4.4.7)
       astro:
         specifier: ^4.3.0
-        version: 4.4.7(sass@1.70.0)
+        version: 4.4.7(sass@1.71.1)
     devDependencies:
       sass:
         specifier: ^1.70.0
-        version: 1.70.0
+        version: 1.71.1
 
   docs:
     dependencies:
@@ -57,7 +57,7 @@ importers:
         version: 0.17.2(astro@4.4.7)
       astro:
         specifier: ^4.3.1
-        version: 4.4.7(sass@1.70.0)
+        version: 4.4.7(sass@1.71.1)
       astro-breadcrumbs:
         specifier: ^2.0.2
         version: link:..
@@ -73,7 +73,7 @@ importers:
     devDependencies:
       sass:
         specifier: ^1.70.0
-        version: 1.70.0
+        version: 1.71.1
 
 packages:
 
@@ -171,7 +171,7 @@ packages:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.3
-      astro: 4.4.7(sass@1.70.0)
+      astro: 4.4.7(sass@1.71.1)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -212,7 +212,7 @@ packages:
       '@pagefind/default-ui': 1.0.3
       '@types/hast': 3.0.3
       '@types/mdast': 4.0.3
-      astro: 4.4.7(sass@1.70.0)
+      astro: 4.4.7(sass@1.71.1)
       astro-expressive-code: 0.32.2(astro@4.4.7)
       bcp-47: 2.1.0
       hast-util-select: 6.0.2
@@ -2238,7 +2238,7 @@ packages:
     peerDependencies:
       astro: ^3.3.0 || ^4.0.0-beta
     dependencies:
-      astro: 4.4.7(sass@1.70.0)
+      astro: 4.4.7(sass@1.71.1)
       hast-util-to-html: 8.0.4
       remark-expressive-code: 0.32.2
     dev: false
@@ -2248,7 +2248,7 @@ packages:
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
     dependencies:
-      astro: 4.4.7(sass@1.70.0)
+      astro: 4.4.7(sass@1.71.1)
     dev: false
 
   /astro@4.0.2:
@@ -2331,7 +2331,7 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.4.7(sass@1.70.0):
+  /astro@4.4.7(sass@1.71.1):
     resolution: {integrity: sha512-qzMCqCm9x4PZmZaCfVCVyTRKXNJe7FWE8BPLcLlJMmJzoPssqcVR3jtJnIBrx5uhGTLi5hsnwqVm0AMwpsId9Q==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -2395,7 +2395,7 @@ packages:
       tsconfck: 3.0.2
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.1.4(sass@1.70.0)
+      vite: 5.1.4(sass@1.71.1)
       vitefu: 0.2.5(vite@5.1.4)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -2687,6 +2687,7 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+    dev: false
 
   /chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -2701,7 +2702,6 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
-    dev: false
 
   /chownr@1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
@@ -4005,8 +4005,8 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@4.3.4:
-    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
 
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -6292,13 +6292,13 @@ packages:
       suf-log: 2.5.3
     dev: true
 
-  /sass@1.70.0:
-    resolution: {integrity: sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==}
+  /sass@1.71.1:
+    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
-      immutable: 4.3.4
+      chokidar: 3.6.0
+      immutable: 4.3.5
       source-map-js: 1.0.2
 
   /sax@1.2.4:
@@ -6614,7 +6614,7 @@ packages:
       astro: '>=4.0.0'
     dependencies:
       '@astrojs/starlight': 0.17.2(astro@4.4.7)
-      astro: 4.4.7(sass@1.70.0)
+      astro: 4.4.7(sass@1.71.1)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
       hast-util-has-property: 3.0.0
@@ -7389,7 +7389,7 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vite@5.1.4(sass@1.70.0):
+  /vite@5.1.4(sass@1.71.1):
     resolution: {integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -7420,7 +7420,7 @@ packages:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.12.0
-      sass: 1.70.0
+      sass: 1.71.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
@@ -7444,7 +7444,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.1.4(sass@1.70.0)
+      vite: 5.1.4(sass@1.71.1)
     dev: false
 
   /vitest@1.2.2(jsdom@24.0.0):
