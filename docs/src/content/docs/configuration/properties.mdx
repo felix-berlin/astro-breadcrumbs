@@ -145,11 +145,15 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 **Default:** `null`
 
-Controls the text transformation of the link text.
+Controls the text transformation of all link texts.
 
 - `lower`: Transforms the link text to lower case (astro-breadcrumbs => astro breadcrumbs).
 - `capitalized`: Transforms the link text to capitalized case (astro-breadcrumbs => Astro Breadcrumbs).
 - `sentence`: Transforms the link text to sentence case (astro-breadcrumbs => Astro breadcrumbs).
+
+:::note
+This does not effects [`indexText`](#indextext).
+:::
 
 **Usage:**
 
@@ -163,7 +167,7 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 **Rendered Component:**
 
-<Breadcrumbs indexText="Home" />
+<Breadcrumbs linkTextFormat="capitalized" />
 
 ## mainBemClass
 
