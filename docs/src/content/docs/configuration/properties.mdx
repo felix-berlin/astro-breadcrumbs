@@ -27,7 +27,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs ariaLabel="a structured list of pages" />
 
-
 ## crumbs
 
 **Type:**
@@ -140,6 +139,32 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs indexText="Home" />
 
+## linkTextFormat
+
+**Type:** `"lower" | "capitalized" | "sentence"`
+
+**Default:** `null`
+
+Controls the text transformation of the link text.
+
+- `lower`: Transforms the link text to lower case (astro-breadcrumbs => astro breadcrumbs).
+- `capitalized`: Transforms the link text to capitalized case (astro-breadcrumbs => Astro Breadcrumbs).
+- `sentence`: Transforms the link text to sentence case (astro-breadcrumbs => Astro breadcrumbs).
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs linkTextFormat="capitalized" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs indexText="Home" />
+
 ## mainBemClass
 
 **Type:** `string`
@@ -228,8 +253,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
   }
 </script>
 ```
-
-
 
 ## truncated
 
