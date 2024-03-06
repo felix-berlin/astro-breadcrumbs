@@ -29,13 +29,10 @@ jobs:
       - name: Install dependencies 🛠️
         run: pnpm i
 
-      - name: Run Vitest 🧪
+      - name: Run Vitest (with coverage report) 🧪
         run: pnpm run test:unit
 
-      - name: Create coverage report 📝
-        run: pnpm run test:unit:coverage
-
-      - name: Codecov
+      - name: Codecov 📝
         uses: codecov/codecov-action@v4
         with:
           directory: ./tests/unit/coverage

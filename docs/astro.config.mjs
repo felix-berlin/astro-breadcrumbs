@@ -24,6 +24,16 @@ export default defineConfig({
         "./node_modules/astro-breadcrumbs/src/breadcrumbs.css",
         "./src/styles/custom.css",
       ],
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            src: "https://static.cloudflareinsights.com/beacon.min.js",
+            "data-cf-beacon": "{'token': '035cea6d8dc24876a0370ca25ea26b3a'}",
+            defer: true,
+          },
+        },
+      ],
       sidebar: [
         {
           label: "Start here",
