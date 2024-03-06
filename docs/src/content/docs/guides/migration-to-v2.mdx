@@ -1,0 +1,63 @@
+---
+title: "Migration to v2"
+description: "A guide to help you migrate from v1 to v2 of the Astro Breadcrumbs."
+---
+import { LinkCard } from '@astrojs/starlight/components';
+
+## Deprecated Properties
+
+### baseUrl
+
+
+Starting from **version 2.0.0** the `baseUrl` property is deprecated.
+
+Instead of the `baseUrl` property, `base` from the [Astro Config](https://docs.astro.build/en/reference/configuration-reference/#base) is now used.
+
+You can migrate like this:
+
+```diff lang="astro"
+- <Breadcrumbs baseUrl="/page" />
++ <Breadcrumbs />
+```
+
+```diff lang="js"
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
++  base: "/page",
+});
+```
+
+<LinkCard
+  title="v1 Documentation"
+  href="/configuration/properties/#baseurl"
+/>
+
+### trailingSlash
+
+
+Starting from **version 2.0.0** the `trailingSlash` property is deprecated.
+
+Instead of the `trailingSlash` property, `trailingSlash` from the [Astro Config](https://docs.astro.build/en/reference/configuration-reference/#trailingslash) is now used.
+
+You can migrate like this:
+
+```diff lang="astro"
+- <Breadcrumbs trailingSlash={true} />
++ <Breadcrumbs />
+```
+
+```diff lang="js"
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
++  trailingSlash: "always",
+});
+```
+
+<LinkCard
+  title="v1 Documentation"
+  href="/configuration/properties/#trailingslash"
+/>

@@ -27,54 +27,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs ariaLabel="a structured list of pages" />
 
-## baseUrl
-
-:::danger
-Starting from **version 2.0.0** the `baseUrl` property is deprecated.
-
-Instead of the `baseUrl` property, `base` from the [Astro Config](https://docs.astro.build/en/reference/configuration-reference/#base) is now used.
-
-You can migrate like this:
-
-```diff lang="astro"
-- <Breadcrumbs baseUrl="/page" />
-+ <Breadcrumbs />
-```
-
-```diff lang="js"
-// astro.config.mjs
-import { defineConfig } from "astro/config";
-
-export default defineConfig({
-+  base: "/page",
-});
-```
-
-:::
-
-**Type:** `string`
-
-**Default:** `undefined`
-
-By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
-
-:::note
-Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
-:::
-
-:::caution
-If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
-:::
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
----
-
-<Breadcrumbs baseUrl="https://base.url/page" />
-```
 
 ## crumbs
 
@@ -277,46 +229,7 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 </script>
 ```
 
-## trailingSlash
 
-:::danger
-Starting from **version 2.0.0** the `trailingSlash` property is deprecated.
-
-Instead of the `trailingSlash` property, `trailingSlash` from the [Astro Config](https://docs.astro.build/en/reference/configuration-reference/#trailingslash) is now used.
-
-You can migrate like this:
-
-```diff lang="astro"
-- <Breadcrumbs trailingSlash={true} />
-+ <Breadcrumbs />
-```
-
-```diff lang="js"
-// astro.config.mjs
-import { defineConfig } from "astro/config";
-
-export default defineConfig({
-+  trailingSlash: "always",
-});
-```
-
-:::
-
-**Type:** `boolean`
-
-**Default:** `false`
-
-If set to `true` all links will have a trailing slash.
-
-**Usage:**
-
-```astro
----
-import { Breadcrumbs } from "astro-breadcrumbs";
----
-
-<Breadcrumbs trailingSlash={true} />
-```
 
 ## truncated
 
@@ -362,3 +275,61 @@ If you use the SCSS style file, you need to opt-in `$truncated: true` within the
 :::tip
 Resize your browser until the breadcrumbs are truncated.
 :::
+
+## Deprecated Properties
+
+### baseUrl
+
+:::note
+See [migration to v2](/guides/migration-to-v2/#baseurl)
+:::
+
+**Deprecated:** `v2.0.0`
+
+**Type:** `string`
+
+**Default:** `undefined`
+
+By default Astro-Breadcrumbs creates all links with relative urls. If you have other requirements you can use this property to customize the start of the url.
+
+:::note
+Make sure you pass the the URL without a trailing slash. Otherwise you get an console warning and the URLs will be fallback to relative.
+:::
+
+:::caution
+If you use custom [`crumbs`](#crumbs), [`baseUrl`](#baseurl) will be disabled.
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs baseUrl="https://base.url/page" />
+```
+
+### trailingSlash
+
+:::note
+See [migration to v2](/guides/migration-to-v2/#trailingSlash)
+:::
+
+**Deprecated:** `v2.0.0`
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+If set to `true` all links will have a trailing slash.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs trailingSlash={true} />
+```

@@ -46,7 +46,6 @@ export default defineConfig({
         {
           label: "Configuration",
           items: [
-            // Each item here is one entry in the navigation menu.
             { label: "Properties", link: "/configuration/properties/" },
             { label: "Slots", link: "/configuration/slots/" },
           ],
@@ -54,10 +53,15 @@ export default defineConfig({
         {
           label: "Styling",
           items: [
-            // Each item here is one entry in the navigation menu.
             { label: "Setup SCSS Config", link: "/styling/setup-scss-config/" },
             { label: "SCSS Style API", link: "/styling/scss-api/" },
             { label: "CSS Styles", link: "/styling/css-api/" },
+          ],
+        },
+        {
+          label: "Guides",
+          items: [
+            { label: "Migration to v2", link: "/guides/migration-to-v2/" },
           ],
         },
       ],
