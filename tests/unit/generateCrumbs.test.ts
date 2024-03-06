@@ -7,6 +7,7 @@ test("generateCrumbs - no crumbs passed", () => {
     paths: ["path1", "path2"],
     indexText: "Home",
     hasTrailingSlash: true,
+    linkTextFormat: "lower",
   });
 
   // Check if the first crumb is the index page
@@ -34,6 +35,7 @@ test("generateCrumbs - with crumbs passed", () => {
     paths: ["path1", "path2"],
     indexText: "Home",
     hasTrailingSlash: true,
+    linkTextFormat: "capitalized",
   });
 
   // Check if the first crumb is the custom crumb
@@ -52,6 +54,7 @@ test("generateCrumbs - no trailing slash", () => {
     paths: ["path1", "path2"],
     indexText: "Home",
     hasTrailingSlash: false,
+    linkTextFormat: "capitalized",
   });
 
   // Check if the first crumb is the index page
@@ -62,13 +65,13 @@ test("generateCrumbs - no trailing slash", () => {
 
   // Check if the second crumb is correct
   expect(result[1]).toEqual({
-    text: "path1",
+    text: "Path1",
     href: "/path1",
   });
 
   // Check if the third crumb is correct
   expect(result[2]).toEqual({
-    text: "path2",
+    text: "Path2",
     href: "/path1/path2",
   });
 });
@@ -79,6 +82,7 @@ test("generateCrumbs - paths with file extensions", () => {
     paths: ["path1.html", "path2.js"],
     indexText: "Home",
     hasTrailingSlash: true,
+    linkTextFormat: "capitalized",
   });
 
   // Check if the first crumb is the index page
@@ -89,13 +93,13 @@ test("generateCrumbs - paths with file extensions", () => {
 
   // Check if the second crumb is correct
   expect(result[1]).toEqual({
-    text: "path1",
+    text: "Path1",
     href: "/path1.html/",
   });
 
   // Check if the third crumb is correct
   expect(result[2]).toEqual({
-    text: "path2",
+    text: "Path2",
     href: "/path1.html/path2.js/",
   });
 });
@@ -106,6 +110,7 @@ test("generateCrumbs - paths with hyphens and underscores", () => {
     paths: ["path-1", "path_2"],
     indexText: "Home",
     hasTrailingSlash: true,
+    linkTextFormat: "capitalized",
   });
 
   // Check if the first crumb is the index page
@@ -116,13 +121,13 @@ test("generateCrumbs - paths with hyphens and underscores", () => {
 
   // Check if the second crumb is correct
   expect(result[1]).toEqual({
-    text: "path-1",
+    text: "Path 1",
     href: "/path-1/",
   });
 
   // Check if the third crumb is correct
   expect(result[2]).toEqual({
-    text: "path_2",
+    text: "Path 2",
     href: "/path-1/path_2/",
   });
 });
