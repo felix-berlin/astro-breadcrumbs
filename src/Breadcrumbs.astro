@@ -10,6 +10,7 @@ export interface BreadcrumbsProps {
   schemaJsonScript?: boolean;
   ellipsisAriaLabel?: string;
   truncated?: boolean;
+  linkTextFormat?: "lower" | "capitalized" | "sentence";
 }
 
 export interface BreadcrumbItem {
@@ -26,6 +27,7 @@ const {
   schemaJsonScript = true,
   ellipsisAriaLabel = "Show hidden navigation",
   truncated = false,
+  linkTextFormat,
 } = Astro.props as BreadcrumbsProps;
 
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
@@ -38,6 +40,7 @@ const parts = generateCrumbs({
   paths,
   indexText,
   hasTrailingSlash,
+  linkTextFormat,
 });
 ---
 

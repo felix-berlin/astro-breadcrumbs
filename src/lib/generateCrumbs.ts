@@ -1,3 +1,4 @@
+import { formatLinkText } from "./formatLinkText";
 import type { BreadcrumbItem, BreadcrumbsProps } from "../Breadcrumbs.astro";
 
 type GenerateCrumbs = {
@@ -5,6 +6,7 @@ type GenerateCrumbs = {
   paths: string[];
   indexText: BreadcrumbsProps["indexText"];
   hasTrailingSlash: boolean;
+  linkTextFormat: BreadcrumbsProps["linkTextFormat"];
 };
 
 export const generateCrumbs = ({
@@ -12,6 +14,7 @@ export const generateCrumbs = ({
   paths,
   indexText,
   hasTrailingSlash,
+  linkTextFormat,
 }: GenerateCrumbs) => {
   /**
    * If crumbs are passed, use them.
@@ -42,7 +45,7 @@ export const generateCrumbs = ({
     }
 
     parts.push({
-      text: text,
+      text: formatLinkText(text, linkTextFormat),
       href: finalHref,
     });
   });
@@ -52,7 +55,10 @@ export const generateCrumbs = ({
    * Add it to the start of the array.
    */
   if (!hasBaseUrl) {
-    parts.unshift({ text: indexText!, href: baseUrl });
+    parts.unshift({
+      text: indexText!,
+      href: baseUrl,
+    });
   }
 
   /**
