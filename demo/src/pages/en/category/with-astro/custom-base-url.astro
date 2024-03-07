@@ -1,0 +1,111 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../../../src/Breadcrumbs.astro";
+// import "../../../../styles/styles.scss";
+
+const customCrumbs = [
+  {
+    text: "Custom Crumb 1",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 2",
+    href: "#",
+  },
+  {
+    text: "Custom Crumb 3",
+    href: "#",
+  },
+];
+
+const crumbsWithCustomAttributes = [
+  {
+    text: "Crumb with custom title",
+    href: "#",
+    title: "Custom title",
+  },
+  {
+    text: "Crumb with custom data attribute",
+    href: "#",
+    "data-custom": "Custom data attribute",
+  },
+  {
+    text: "Custom Crumb 3",
+    href: "#",
+  },
+];
+---
+
+<Layout title="Welcome to Astro Breadcrumbs.">
+  <main>
+    <h1><span class="text-gradient">Astro</span> Breadcrumbs Examples</h1>
+    <h2>Example 1 - No custom base url</h2>
+    <Breadcrumbs />
+    <h2>Example 2 - Custom base url</h2>
+    <Breadcrumbs customBaseUrl="my-new-base" />
+  </main>
+
+  <style lang="scss">
+    // <style lang="scss" define:vars={{ "color-breadcrumbs": "green" }}>
+    // --color-breadcrumbs: blue;
+    // @import "../../../../styles/styles.scss";
+
+    :root {
+      --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+    }
+
+    h1 {
+      margin: 2rem 0;
+    }
+
+    main {
+      margin: auto;
+      padding: 1em;
+      max-width: 60ch;
+    }
+
+    .text-gradient {
+      font-weight: 900;
+      background-image: var(--astro-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 100% 200%;
+      background-position-y: 100%;
+      border-radius: 0.4rem;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        background-position-y: 0%;
+      }
+      50% {
+        background-position-y: 80%;
+      }
+    }
+
+    .instructions {
+      line-height: 1.6;
+      margin: 1rem 0;
+      background: #4f39fa;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      color: var(--color-bg);
+    }
+
+    .instructions code {
+      font-size: 0.875em;
+      border: 0.1em solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.15em 0.25em;
+    }
+
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+      gap: 1rem;
+      padding: 0;
+    }
+  </style>
+</Layout>
