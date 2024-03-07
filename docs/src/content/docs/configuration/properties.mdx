@@ -35,16 +35,6 @@ In most cases it is not necessary to enter the base url, as this value is taken 
 
 If your project has special requirements that make it impossible to use [`base`](https://docs.astro.build/en/reference/configuration-reference/#base), you can use `customBaseUrl` to **overwrite** the base url used by Astro.
 
-The property is validated and should follow this scheme:
-
-```
-^[\p{Alphabetic}\p{Numeric}].*[\p{Alphabetic}\p{Numeric}]$
-```
-
-_This regular expression matches any string that starts and ends with an alphanumeric character, including both Latin and non-Latin alphabets and numbers._
-
-If customBaseUrl is not valid, a warning appears and customBaseUrl is not used.
-
 **Usage:**
 
 ```astro

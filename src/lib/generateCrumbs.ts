@@ -1,5 +1,4 @@
 import { formatLinkText } from "./formatLinkText";
-import { coloredWarnLog, checkStringStartAndEnd } from "./helper.ts";
 import type { BreadcrumbItem, BreadcrumbsProps } from "../Breadcrumbs.astro";
 
 type GenerateCrumbs = {
@@ -30,23 +29,15 @@ export const generateCrumbs = ({
   const baseUrl = import.meta.env.BASE_URL;
 
   const hasBaseUrl = baseUrl !== "/";
-  const validCustomBaseUrl =
-    customBaseUrl && checkStringStartAndEnd(customBaseUrl);
-
-  if (customBaseUrl && !checkStringStartAndEnd(customBaseUrl)) {
-    coloredWarnLog(
-      "The customBaseUrl should start and end with an letter. 'customBaseUrl' was not applied.",
-    );
-  }
 
   // If both Astro baseUrl and customBaseUrl are present, remove the first item from the paths array
   // This is because the first item is the Astro base url and we don't want to duplicate it
-  if (hasBaseUrl && validCustomBaseUrl) {
+  if (hasBaseUrl && customBaseUrl) {
     paths = paths.slice(1);
   }
 
   // Set the custom base url as the first item in the paths array
-  if (validCustomBaseUrl) {
+  if (customBaseUrl) {
     paths.unshift(customBaseUrl);
   }
   /**
@@ -82,7 +73,7 @@ export const generateCrumbs = ({
    * If there is NO base URL, the index item is missing.
    * Add it to the start of the array.
    */
-  if (!hasBaseUrl && !validCustomBaseUrl) {
+  if (!hasBaseUrl && !customBaseUrl) {
     parts.unshift({
       text: indexText!,
       href: baseUrl,

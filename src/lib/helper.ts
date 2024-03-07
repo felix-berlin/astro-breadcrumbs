@@ -16,15 +16,3 @@ export const coloredWarnLog = (
     "\x1b[0m",
   );
 };
-
-/**
- * String starts and ends with a letter.
- *
- * @param   {string}  str
- *
- * @return  {boolean}
- */
-export const checkStringStartAndEnd = (str?: string) => {
-  if (!str) return false;
-  return /^[\p{Alphabetic}\p{Numeric}].*[\p{Alphabetic}\p{Numeric}]$/.test(str);
-};

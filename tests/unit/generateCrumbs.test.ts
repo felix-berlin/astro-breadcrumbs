@@ -137,7 +137,7 @@ test("generateCrumbs - paths with hyphens and underscores", () => {
   });
 });
 
-test("generateCrumbs - with valid customBaseUrl", () => {
+test("generateCrumbs - with customBaseUrl", () => {
   const result = generateCrumbs({
     crumbs: [],
     paths: ["path1", "path2"],
@@ -166,36 +166,7 @@ test("generateCrumbs - with valid customBaseUrl", () => {
   });
 });
 
-test("generateCrumbs - with invalid customBaseUrl", () => {
-  const result = generateCrumbs({
-    crumbs: [],
-    paths: ["path1", "path2"],
-    indexText: "Home",
-    hasTrailingSlash: true,
-    linkTextFormat: "lower",
-    customBaseUrl: "#custom",
-  });
-
-  // Check if the first crumb is the index page
-  expect(result[0]).toEqual({
-    text: "Home",
-    href: "/",
-  });
-
-  // Check if the second crumb is correct
-  expect(result[1]).toEqual({
-    text: "path1",
-    href: "/path1/",
-  });
-
-  // Check if the third crumb is correct
-  expect(result[2]).toEqual({
-    text: "path2",
-    href: "/path1/path2/",
-  });
-});
-
-test("generateCrumbs - with Astro baseUrl and valid customBaseUrl", () => {
+test("generateCrumbs - with Astro baseUrl and customBaseUrl", () => {
   // Mock the Astro baseUrl
   import.meta.env.BASE_URL = "/astro-base-url";
 
