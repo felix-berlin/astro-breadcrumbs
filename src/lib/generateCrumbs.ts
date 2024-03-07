@@ -1,4 +1,5 @@
 import { formatLinkText } from "./formatLinkText";
+import { coloredWarnLog, stringStartsAndEndsWithLetter } from "./helper.ts";
 import type { BreadcrumbItem, BreadcrumbsProps } from "../Breadcrumbs.astro";
 
 type GenerateCrumbs = {
@@ -8,11 +9,6 @@ type GenerateCrumbs = {
   hasTrailingSlash: boolean;
   linkTextFormat: BreadcrumbsProps["linkTextFormat"];
   customBaseUrl: BreadcrumbsProps["customBaseUrl"];
-};
-
-const stringStartsAndEndsWithSlash = (str?: string) => {
-  if (!str) return false;
-  return str.startsWith("/") && str.endsWith("/");
 };
 
 export const generateCrumbs = ({
@@ -34,8 +30,19 @@ export const generateCrumbs = ({
   const baseUrl = import.meta.env.BASE_URL;
   console.log("baseUrl: ", baseUrl);
   const hasBaseUrl = baseUrl !== "/";
-  const validCustomBaseUrl = !!customBaseUrl;
+  const validCustomBaseUrl =
+    customBaseUrl && stringStartsAndEndsWithLetter(customBaseUrl);
+  console.log(
+    !!customBaseUrl?.length,
+    !!customBaseUrl,
+    stringStartsAndEndsWithLetter(customBaseUrl),
+  );
 
+  if (customBaseUrl && !stringStartsAndEndsWithLetter(customBaseUrl)) {
+    coloredWarnLog(
+      "The customBaseUrl should start and end with an letter. 'customBaseUrl' was not applied.",
+    );
+  }
   // if (hasBaseUrl && validCustomBaseUrl) {
   //   baseUrl = customBaseUrl;
   //   hasBaseUrl = true;
