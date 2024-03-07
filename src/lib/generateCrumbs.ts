@@ -7,6 +7,7 @@ type GenerateCrumbs = {
   indexText: BreadcrumbsProps["indexText"];
   hasTrailingSlash: boolean;
   linkTextFormat: BreadcrumbsProps["linkTextFormat"];
+  customBaseUrl: BreadcrumbsProps["customBaseUrl"];
 };
 
 export const generateCrumbs = ({
@@ -15,6 +16,7 @@ export const generateCrumbs = ({
   indexText,
   hasTrailingSlash,
   linkTextFormat,
+  customBaseUrl,
 }: GenerateCrumbs) => {
   /**
    * If crumbs are passed, use them.
@@ -25,16 +27,33 @@ export const generateCrumbs = ({
 
   const parts: Array<BreadcrumbItem> = [];
   const baseUrl = import.meta.env.BASE_URL;
+
   const hasBaseUrl = baseUrl !== "/";
 
+  // If both Astro baseUrl and customBaseUrl are present, remove the first item from the paths array
+  // This is because the first item is the Astro base url and we don't want to duplicate it
+  if (hasBaseUrl && customBaseUrl) {
+    paths = paths.slice(1);
+  }
+
+  // Set the custom base url as the first item in the paths array
+  if (customBaseUrl) {
+    paths.unshift(customBaseUrl);
+  }
   /**
    * Loop through the paths and create a breadcrumb item for each.
    */
   paths.forEach((text: string, index: number) => {
+    /**
+     * generateHref will create the href out of the paths array.
+     * Example: ["path1", "path2"] => /path1/path2
+     */
     const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
+
     const addTrailingSlash = hasTrailingSlash
       ? `${generateHref}/`
       : generateHref;
+
     const finalHref = addTrailingSlash;
 
     // strip out any file extensions
@@ -54,7 +73,7 @@ export const generateCrumbs = ({
    * If there is NO base URL, the index item is missing.
    * Add it to the start of the array.
    */
-  if (!hasBaseUrl) {
+  if (!hasBaseUrl && !customBaseUrl) {
     parts.unshift({
       text: indexText!,
       href: baseUrl,

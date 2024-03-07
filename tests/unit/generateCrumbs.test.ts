@@ -8,6 +8,7 @@ test("generateCrumbs - no crumbs passed", () => {
     indexText: "Home",
     hasTrailingSlash: true,
     linkTextFormat: "lower",
+    customBaseUrl: undefined,
   });
 
   // Check if the first crumb is the index page
@@ -36,6 +37,7 @@ test("generateCrumbs - with crumbs passed", () => {
     indexText: "Home",
     hasTrailingSlash: true,
     linkTextFormat: "capitalized",
+    customBaseUrl: undefined,
   });
 
   // Check if the first crumb is the custom crumb
@@ -55,6 +57,7 @@ test("generateCrumbs - no trailing slash", () => {
     indexText: "Home",
     hasTrailingSlash: false,
     linkTextFormat: "capitalized",
+    customBaseUrl: undefined,
   });
 
   // Check if the first crumb is the index page
@@ -83,6 +86,7 @@ test("generateCrumbs - paths with file extensions", () => {
     indexText: "Home",
     hasTrailingSlash: true,
     linkTextFormat: "capitalized",
+    customBaseUrl: undefined,
   });
 
   // Check if the first crumb is the index page
@@ -111,6 +115,7 @@ test("generateCrumbs - paths with hyphens and underscores", () => {
     indexText: "Home",
     hasTrailingSlash: true,
     linkTextFormat: "capitalized",
+    customBaseUrl: undefined,
   });
 
   // Check if the first crumb is the index page
@@ -130,4 +135,68 @@ test("generateCrumbs - paths with hyphens and underscores", () => {
     text: "Path 2",
     href: "/path-1/path_2/",
   });
+});
+
+test("generateCrumbs - with customBaseUrl", () => {
+  const result = generateCrumbs({
+    crumbs: [],
+    paths: ["path1", "path2"],
+    indexText: "Home",
+    hasTrailingSlash: true,
+    linkTextFormat: "lower",
+    customBaseUrl: "custom",
+  });
+
+  // Check if the first crumb is the custom base url
+  expect(result[0]).toEqual({
+    text: "Home",
+    href: "/custom/",
+  });
+
+  // Check if the second crumb is correct
+  expect(result[1]).toEqual({
+    text: "path1",
+    href: "/custom/path1/",
+  });
+
+  // Check if the third crumb is correct
+  expect(result[2]).toEqual({
+    text: "path2",
+    href: "/custom/path1/path2/",
+  });
+});
+
+test("generateCrumbs - with Astro baseUrl and customBaseUrl", () => {
+  // Mock the Astro baseUrl
+  import.meta.env.BASE_URL = "/astro-base-url";
+
+  const result = generateCrumbs({
+    crumbs: [],
+    paths: ["astro-base-url", "path1", "path2"],
+    indexText: "Home",
+    hasTrailingSlash: true,
+    linkTextFormat: "lower",
+    customBaseUrl: "custom",
+  });
+
+  // Check if the first crumb is the custom base url
+  expect(result[0]).toEqual({
+    text: "Home",
+    href: "/custom/",
+  });
+
+  // Check if the second crumb is correct
+  expect(result[1]).toEqual({
+    text: "path1",
+    href: "/custom/path1/",
+  });
+
+  // Check if the third crumb is correct
+  expect(result[2]).toEqual({
+    text: "path2",
+    href: "/custom/path1/path2/",
+  });
+
+  // Reset the Astro baseUrl
+  import.meta.env.BASE_URL = "/";
 });

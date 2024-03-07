@@ -1,6 +1,8 @@
 ---
 import { schemaJson } from "./lib/structuredData";
 import { generateCrumbs } from "./lib/generateCrumbs";
+import BreadcrumbLink from "./BreadcrumbLink.astro";
+import BreadcrumbSeparator from "./BreadcrumbSeparator.astro";
 
 export interface BreadcrumbsProps {
   indexText?: string;
@@ -11,6 +13,7 @@ export interface BreadcrumbsProps {
   ellipsisAriaLabel?: string;
   truncated?: boolean;
   linkTextFormat?: "lower" | "capitalized" | "sentence";
+  customBaseUrl?: string;
 }
 
 export interface BreadcrumbItem {
@@ -28,6 +31,7 @@ const {
   ellipsisAriaLabel = "Show hidden navigation",
   truncated = false,
   linkTextFormat,
+  customBaseUrl,
 } = Astro.props as BreadcrumbsProps;
 
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
@@ -41,7 +45,11 @@ const parts = generateCrumbs({
   indexText,
   hasTrailingSlash,
   linkTextFormat,
+  customBaseUrl,
 });
+
+const isLastElement = (index: number, array: any[]) =>
+  index + 1 === array.length;
 ---
 
 <astro-breadcrumbs
@@ -57,50 +65,47 @@ const parts = generateCrumbs({
       }`}
     >
       {
-        parts.map(({ text, ...attrs }, index, array) => (
-          <>
-            {index === 1 && pathLength > 1 && truncated && (
-              <li class={`${mainBemClass}__crumb has-ellipsis`}>
-                <button
-                  type="button"
-                  aria-label={ellipsisAriaLabel}
-                  class={`${mainBemClass}__truncated-button`}
+        parts.map(({ text, ...attrs }, index, array) => {
+          const lastElement = isLastElement(index, array);
+          return (
+            <>
+              {index === 1 && pathLength > 1 && truncated && (
+                <li class={`${mainBemClass}__crumb has-ellipsis`}>
+                  <button
+                    type="button"
+                    aria-label={ellipsisAriaLabel}
+                    class={`${mainBemClass}__truncated-button`}
+                  >
+                    <slot name="ellipsis">…</slot>
+                  </button>
+                  <BreadcrumbSeparator>
+                    <slot name="separator" slot="seperator" />
+                  </BreadcrumbSeparator>
+                </li>
+              )}
+              <li class={`${mainBemClass}__crumb`}>
+                <BreadcrumbLink
+                  attrs={attrs}
+                  mainBemClass={mainBemClass}
+                  isIndex={index === 0}
+                  isCurrent={lastElement}
                 >
-                  <slot name="ellipsis">…</slot>
-                </button>
-                <span class="c-breadcrumbs__separator" aria-hidden="true">
-                  <slot name="separator" />
-                </span>
+                  {Astro.slots.has("index") && index === 0 ? (
+                    <slot name="index" slot="index" />
+                  ) : (
+                    text
+                  )}
+                </BreadcrumbLink>
+
+                {Astro.slots.has("separator") && !lastElement && (
+                  <BreadcrumbSeparator>
+                    <slot name="separator" slot="separator" />
+                  </BreadcrumbSeparator>
+                )}
               </li>
-            )}
-            <li class={`${mainBemClass}__crumb`}>
-              {Astro.slots.has("index") && index === 0 && (
-                <a {...attrs} class={`${mainBemClass}__link is-index`}>
-                  <slot name="index" />
-                </a>
-              )}
-
-              {(!Astro.slots.has("index") ||
-                (Astro.slots.has("index") && index !== 0)) && (
-                <a
-                  {...attrs}
-                  class={`${mainBemClass}__link${
-                    index + 1 === array.length ? " is-current" : ""
-                  }`}
-                  aria-current={index + 1 === array.length ? "location" : false}
-                >
-                  {text}
-                </a>
-              )}
-
-              {Astro.slots.has("separator") && array.length - 1 !== index && (
-                <span class="c-breadcrumbs__separator" aria-hidden="true">
-                  <slot name="separator" />
-                </span>
-              )}
-            </li>
-          </>
-        ))
+            </>
+          );
+        })
       }
     </ol>
   </nav>

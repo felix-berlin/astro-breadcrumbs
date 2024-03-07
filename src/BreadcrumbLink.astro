@@ -1,0 +1,18 @@
+---
+interface BreadcrumbLinkProps {
+  attrs: Record<string, any>;
+  mainBemClass: string;
+  isIndex: boolean;
+  isCurrent: boolean;
+}
+const { attrs, mainBemClass, isIndex, isCurrent } =
+  Astro.props as BreadcrumbLinkProps;
+---
+
+<a
+  {...attrs}
+  class={`${mainBemClass}__link${isCurrent ? " is-current" : ""}${isIndex ? " is-index" : ""}`}
+  aria-current={isCurrent ? "location" : false}
+>
+  <slot name="index" />
+</a>
