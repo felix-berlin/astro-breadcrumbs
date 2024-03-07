@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.1.0...v2.2.0) (2024-03-07)
+
+
+### Bug Fixes
+
+* checkStringStartAndEnd regex ([b75eb48](https://github.com/felix-berlin/astro-breadcrumbs/commit/b75eb48350d9f01267a68a5e6e4ec1dec96aae3f))
+* remove customBaseUrl validation ([8b465d5](https://github.com/felix-berlin/astro-breadcrumbs/commit/8b465d52ddd82b183dc54369dbf3c210c217e0fa))
+
+
+### Features
+
+* add new prop customBaseUrl ([73ab93e](https://github.com/felix-berlin/astro-breadcrumbs/commit/73ab93e1dd059456f5bf747d56c8b8bc5a6e2a97))
+* **customBaseUrl:** show warning if invalid customBaseUrl is set ([b24909a](https://github.com/felix-berlin/astro-breadcrumbs/commit/b24909acd28f0bda1e8b2235f15b9653c7eeec69))
+
 # [2.1.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.0.2...v2.1.0) (2024-03-06)
 
 
