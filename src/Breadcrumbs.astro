@@ -13,6 +13,7 @@ export interface BreadcrumbsProps {
   ellipsisAriaLabel?: string;
   truncated?: boolean;
   linkTextFormat?: "lower" | "capitalized" | "sentence";
+  customBaseUrl?: string;
 }
 
 export interface BreadcrumbItem {
@@ -30,6 +31,7 @@ const {
   ellipsisAriaLabel = "Show hidden navigation",
   truncated = false,
   linkTextFormat,
+  customBaseUrl,
 } = Astro.props as BreadcrumbsProps;
 
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
@@ -43,6 +45,7 @@ const parts = generateCrumbs({
   indexText,
   hasTrailingSlash,
   linkTextFormat,
+  customBaseUrl,
 });
 
 const isLastElement = (index: number, array: any[]) =>

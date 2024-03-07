@@ -7,6 +7,12 @@ type GenerateCrumbs = {
   indexText: BreadcrumbsProps["indexText"];
   hasTrailingSlash: boolean;
   linkTextFormat: BreadcrumbsProps["linkTextFormat"];
+  customBaseUrl: BreadcrumbsProps["customBaseUrl"];
+};
+
+const stringStartsAndEndsWithSlash = (str?: string) => {
+  if (!str) return false;
+  return str.startsWith("/") && str.endsWith("/");
 };
 
 export const generateCrumbs = ({
@@ -15,6 +21,7 @@ export const generateCrumbs = ({
   indexText,
   hasTrailingSlash,
   linkTextFormat,
+  customBaseUrl,
 }: GenerateCrumbs) => {
   /**
    * If crumbs are passed, use them.
@@ -25,16 +32,43 @@ export const generateCrumbs = ({
 
   const parts: Array<BreadcrumbItem> = [];
   const baseUrl = import.meta.env.BASE_URL;
+  console.log("baseUrl: ", baseUrl);
   const hasBaseUrl = baseUrl !== "/";
+  const validCustomBaseUrl = !!customBaseUrl;
 
+  // if (hasBaseUrl && validCustomBaseUrl) {
+  //   baseUrl = customBaseUrl;
+  //   hasBaseUrl = true;
+  // }
+
+  console.log("customBaseUrl: ", customBaseUrl);
+  // console.log("valid customBaseUrl: ", validCustomBaseUrl);
+
+  // If both Astro baseUrl and customBaseUrl are present, remove the first item from the paths array
+  // This is because the first item is the Astro base url and we don't want to duplicate it
+  if (hasBaseUrl && validCustomBaseUrl) {
+    paths = paths.slice(1);
+  }
+  console.log(paths);
+
+  // Set the custom base url as the first item in the paths array
+  if (validCustomBaseUrl) {
+    paths.unshift(customBaseUrl);
+  }
   /**
    * Loop through the paths and create a breadcrumb item for each.
    */
   paths.forEach((text: string, index: number) => {
+    /**
+     * generateHref will create the href out of the paths array.
+     * Example: ["path1", "path2"] => /path1/path2
+     */
     const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
+
     const addTrailingSlash = hasTrailingSlash
       ? `${generateHref}/`
       : generateHref;
+
     const finalHref = addTrailingSlash;
 
     // strip out any file extensions
@@ -54,7 +88,7 @@ export const generateCrumbs = ({
    * If there is NO base URL, the index item is missing.
    * Add it to the start of the array.
    */
-  if (!hasBaseUrl) {
+  if (!hasBaseUrl && !validCustomBaseUrl) {
     parts.unshift({
       text: indexText!,
       href: baseUrl,
