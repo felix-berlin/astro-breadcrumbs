@@ -1,5 +1,5 @@
 import { formatLinkText } from "./formatLinkText";
-import { coloredWarnLog, stringStartsAndEndsWithLetter } from "./helper.ts";
+import { coloredWarnLog, checkStringStartAndEnd } from "./helper.ts";
 import type { BreadcrumbItem, BreadcrumbsProps } from "../Breadcrumbs.astro";
 
 type GenerateCrumbs = {
@@ -28,35 +28,22 @@ export const generateCrumbs = ({
 
   const parts: Array<BreadcrumbItem> = [];
   const baseUrl = import.meta.env.BASE_URL;
-  console.log("baseUrl: ", baseUrl);
+
   const hasBaseUrl = baseUrl !== "/";
   const validCustomBaseUrl =
-    customBaseUrl && stringStartsAndEndsWithLetter(customBaseUrl);
-  console.log(
-    !!customBaseUrl?.length,
-    !!customBaseUrl,
-    stringStartsAndEndsWithLetter(customBaseUrl),
-  );
+    customBaseUrl && checkStringStartAndEnd(customBaseUrl);
 
-  if (customBaseUrl && !stringStartsAndEndsWithLetter(customBaseUrl)) {
+  if (customBaseUrl && !checkStringStartAndEnd(customBaseUrl)) {
     coloredWarnLog(
       "The customBaseUrl should start and end with an letter. 'customBaseUrl' was not applied.",
     );
   }
-  // if (hasBaseUrl && validCustomBaseUrl) {
-  //   baseUrl = customBaseUrl;
-  //   hasBaseUrl = true;
-  // }
-
-  console.log("customBaseUrl: ", customBaseUrl);
-  // console.log("valid customBaseUrl: ", validCustomBaseUrl);
 
   // If both Astro baseUrl and customBaseUrl are present, remove the first item from the paths array
   // This is because the first item is the Astro base url and we don't want to duplicate it
   if (hasBaseUrl && validCustomBaseUrl) {
     paths = paths.slice(1);
   }
-  console.log(paths);
 
   // Set the custom base url as the first item in the paths array
   if (validCustomBaseUrl) {

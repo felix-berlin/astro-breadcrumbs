@@ -24,7 +24,7 @@ export const coloredWarnLog = (
  *
  * @return  {boolean}
  */
-export const stringStartsAndEndsWithLetter = (str?: string) => {
+export const checkStringStartAndEnd = (str?: string) => {
   if (!str) return false;
-  return /^[a-zA-Z].*[a-zA-Z]$/.test(str);
+  return /^[a-zA-Z-9].*[a-zA-Z-9]$/.test(str);
 };
