@@ -26,5 +26,5 @@ export const coloredWarnLog = (
  */
 export const checkStringStartAndEnd = (str?: string) => {
   if (!str) return false;
-  return /^[a-zA-Z-9].*[a-zA-Z-9]$/.test(str);
+  return /^[\p{Alphabetic}\p{Numeric}].*[\p{Alphabetic}\p{Numeric}]$/.test(str);
 };
