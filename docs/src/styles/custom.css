@@ -36,7 +36,6 @@
   opacity: 0.8;
   padding: 3rem;
   width: 100%;
-  text-transform: capitalize;
 }
 
 :is(.o-demo) .c-breadcrumbs__separator {

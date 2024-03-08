@@ -5,10 +5,29 @@ description: "Astro-Breadcrumbs Demo."
 
 import { Breadcrumbs } from "astro-breadcrumbs";
 
+export const customCrumbs = [
+  {
+    text: "Start",
+    href: "#",
+  },
+  {
+    text: "Well configurable",
+    href: "#",
+  },
+  {
+    text: "breadcrumb component",
+    href: "#",
+  },
+  {
+    text: "for Astro.js",
+    href: "#",
+  },
+];
+
 ## Demo
 
 <div class="o-demo">
-  <Breadcrumbs truncated={true}>
+  <Breadcrumbs truncated={true} crumbs={customCrumbs}>
 
     <svg
       slot="index"
@@ -41,8 +60,11 @@ import { Breadcrumbs } from "astro-breadcrumbs";
     </svg>
 
   </Breadcrumbs>
-</div>
 
+</div>
+:::tip
+Resize your browser until the breadcrumbs are truncated.
+:::
 ## Astro-Breadcrumbs on production ready sites
 
 - [Berliner Schnauze](https://berliner-schnauze.wtf/wort/knorke/)
