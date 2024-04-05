@@ -54,7 +54,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.21.1
-        version: 0.21.2(astro@4.5.16)
+        version: 0.21.3(astro@4.5.16)
       astro:
         specifier: ^4.4.15
         version: 4.5.16(sass@1.74.1)
@@ -69,7 +69,7 @@ importers:
         version: 0.33.3
       starlight-links-validator:
         specifier: ^0.6.0
-        version: 0.6.0(@astrojs/starlight@0.21.2)(astro@4.5.16)
+        version: 0.6.0(@astrojs/starlight@0.21.3)(astro@4.5.16)
     devDependencies:
       sass:
         specifier: ^1.71.1
@@ -194,21 +194,21 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/sitemap@3.1.1:
-    resolution: {integrity: sha512-qPgdBIcDUaea98mTtLfi5z9oXZpzSjEn/kes70/Ex8FOZZ+DIHVKRYOLOtvy8p+FTXr/9oc7BjmIbTYmYLLJVg==}
+  /@astrojs/sitemap@3.1.2:
+    resolution: {integrity: sha512-FxOJldIl5ltZ5CNjocQxHkAO9orwHBjqtaU28o4smobp9vowS0nbGp+I9CrPxkzWdl1crSDm9vjL9tnvG1DSug==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.22.4
     dev: false
 
-  /@astrojs/starlight@0.21.2(astro@4.5.16):
-    resolution: {integrity: sha512-ziDfrbhBjw/+HwMITk6yz7SbkQKQJZY9GlaPHntSPq4kYs+b2ru3toIxj2l3T9LUFtUpNWHkj+C1wJTmfLZfaw==}
+  /@astrojs/starlight@0.21.3(astro@4.5.16):
+    resolution: {integrity: sha512-SvIKB8ECR+RhYdTg3bKsTL2e5Yac75eTatfOMGjkp3ced9Bx34xXMSURuKx/AHBWo1X/+WoWzKT3Y3d2y7kkVg==}
     peerDependencies:
       astro: ^4.2.7
     dependencies:
       '@astrojs/mdx': 2.2.4(astro@4.5.16)
-      '@astrojs/sitemap': 3.1.1
-      '@pagefind/default-ui': 1.0.4
+      '@astrojs/sitemap': 3.1.2
+      '@pagefind/default-ui': 1.1.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
       astro: 4.5.16(sass@1.74.1)
@@ -220,7 +220,7 @@ packages:
       hastscript: 8.0.0
       mdast-util-directive: 3.0.0
       mdast-util-to-markdown: 2.1.0
-      pagefind: 1.0.4
+      pagefind: 1.1.0
       rehype: 13.0.1
       remark-directive: 3.0.0
       unified: 11.0.4
@@ -1758,44 +1758,44 @@ packages:
       '@octokit/openapi-types': 21.2.0
     dev: true
 
-  /@pagefind/darwin-arm64@1.0.4:
-    resolution: {integrity: sha512-2OcthvceX2xhm5XbgOmW+lT45oLuHqCmvFeFtxh1gsuP5cO8vcD8ZH8Laj4pXQFCcK6eAdSShx+Ztx/LsQWZFQ==}
+  /@pagefind/darwin-arm64@1.1.0:
+    resolution: {integrity: sha512-SLsXNLtSilGZjvqis8sX42fBWsWAVkcDh1oerxwqbac84HbiwxpxOC2jm8hRwcR0Z55HPZPWO77XeRix/8GwTg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@pagefind/darwin-x64@1.0.4:
-    resolution: {integrity: sha512-xkdvp0D9Ld/ZKsjo/y1bgfhTEU72ITimd2PMMQtts7jf6JPIOJbsiErCvm37m/qMFuPGEq/8d+fZ4pydOj08HQ==}
+  /@pagefind/darwin-x64@1.1.0:
+    resolution: {integrity: sha512-QjQSE/L5oS1C8N8GdljGaWtjCBMgMtfrPAoiCmINTu9Y9dp0ggAyXvF8K7Qg3VyIMYJ6v8vg2PN7Z3b+AaAqUA==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@pagefind/default-ui@1.0.4:
-    resolution: {integrity: sha512-edkcaPSKq67C49Vehjo+LQCpT615v4d7JRhfGzFPccePvdklaL+VXrfghN/uIfsdoG+HoLI1PcYy2iFcB9CTkw==}
+  /@pagefind/default-ui@1.1.0:
+    resolution: {integrity: sha512-+XiAJAK++C64nQcD7s3Prdmd5S92lT05fwjOxm0L1jj80jbL+tmvcqkkFnPpoqhnicIPgcAX/Y5W0HRZnBt35w==}
     dev: false
 
-  /@pagefind/linux-arm64@1.0.4:
-    resolution: {integrity: sha512-jGBrcCzIrMnNxLKVtogaQyajVfTAXM59KlBEwg6vTn8NW4fQ6nuFbbhlG4dTIsaamjEM5e8ZBEAKZfTB/qd9xw==}
+  /@pagefind/linux-arm64@1.1.0:
+    resolution: {integrity: sha512-8zjYCa2BtNEL7KnXtysPtBELCyv5DSQ4yHeK/nsEq6w4ToAMTBl0K06khqxdSGgjMSwwrxvLzq3so0LC5Q14dA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@pagefind/linux-x64@1.0.4:
-    resolution: {integrity: sha512-LIn/QcvcEtLEBqKe5vpSbSC2O3fvqbRCWOTIklslqSORisCsvzsWbP6j+LYxE9q0oWIfkdMoWV1vrE/oCKRxHg==}
+  /@pagefind/linux-x64@1.1.0:
+    resolution: {integrity: sha512-4lsg6VB7A6PWTwaP8oSmXV4O9H0IHX7AlwTDcfyT+YJo/sPXOVjqycD5cdBgqNLfUk8B9bkWcTDCRmJbHrKeCw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@pagefind/windows-x64@1.0.4:
-    resolution: {integrity: sha512-QlBCVeZfj9fc9sbUgdOz76ZDbeK4xZihOBAFqGuRJeChfM8pnVeH9iqSnXgO3+m9oITugTf7PicyRUFAG76xeQ==}
+  /@pagefind/windows-x64@1.1.0:
+    resolution: {integrity: sha512-OboCM76BcMKT9IoSfZuFhiqMRgTde8x4qDDvKulFmycgiJrlL5WnIqBHJLQxZq+o2KyZpoHF97iwsGAm8c32sQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -6084,15 +6084,15 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /pagefind@1.0.4:
-    resolution: {integrity: sha512-oRIizYe+zSI2Jw4zcMU0ebDZm27751hRFiSOBLwc1OIYMrsZKk+3m8p9EVaOmc6zZdtqwwdilNUNxXvBeHcP9w==}
+  /pagefind@1.1.0:
+    resolution: {integrity: sha512-1nmj0/vfYcMxNEQj0YDRp6bTVv9hI7HLdPhK/vBBYlrnwjATndQvHyicj5Y7pUHrpCFZpFnLVQXIF829tpFmaw==}
     hasBin: true
     optionalDependencies:
-      '@pagefind/darwin-arm64': 1.0.4
-      '@pagefind/darwin-x64': 1.0.4
-      '@pagefind/linux-arm64': 1.0.4
-      '@pagefind/linux-x64': 1.0.4
-      '@pagefind/windows-x64': 1.0.4
+      '@pagefind/darwin-arm64': 1.1.0
+      '@pagefind/darwin-x64': 1.1.0
+      '@pagefind/linux-arm64': 1.1.0
+      '@pagefind/linux-x64': 1.1.0
+      '@pagefind/windows-x64': 1.1.0
     dev: false
 
   /parent-module@1.0.1:
@@ -7130,14 +7130,14 @@ packages:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
     dev: true
 
-  /starlight-links-validator@0.6.0(@astrojs/starlight@0.21.2)(astro@4.5.16):
+  /starlight-links-validator@0.6.0(@astrojs/starlight@0.21.3)(astro@4.5.16):
     resolution: {integrity: sha512-YXzKKZHM79ccBTO61l2WSmgdCG3406gldpVM6J2LhqZ5CeXsOgj6lho2xMLkc/p5nWcNSuYI2qNzsNUrLTmR5w==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.15.0'
       astro: '>=4.0.0'
     dependencies:
-      '@astrojs/starlight': 0.21.2(astro@4.5.16)
+      '@astrojs/starlight': 0.21.3(astro@4.5.16)
       astro: 4.5.16(sass@1.74.1)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
