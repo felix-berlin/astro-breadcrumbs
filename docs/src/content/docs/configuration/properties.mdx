@@ -139,6 +139,32 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs ellipsisAriaLabel="Show nav" />
 
+## excludeCurrentPage
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+If set to `true`, the current page will not be displayed in the breadcrumbs.
+
+:::note
+This will not affect the [schema.org JSON-LD script tag generation](#schemajsonscript).
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs excludeCurrentPage={true} />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs excludeCurrentPage={true} />
+
 ## indexText
 
 **Type:** `string`
