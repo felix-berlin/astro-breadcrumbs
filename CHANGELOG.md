@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.2.0...v2.3.0) (2024-04-12)
+
+
+### Features
+
+* **Breadcrumbs:** add new prop excludeCurrentPage prop ([b08d9fa](https://github.com/felix-berlin/astro-breadcrumbs/commit/b08d9fa55906927ec62110f8c3c8a8e7d36d40cb))
+
 # [2.2.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.1.0...v2.2.0) (2024-03-07)
 
 
