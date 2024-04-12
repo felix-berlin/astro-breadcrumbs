@@ -7,11 +7,17 @@ interface BreadcrumbLinkProps {
 }
 const { attrs, mainBemClass, isIndex, isCurrent } =
   Astro.props as BreadcrumbLinkProps;
+
+const cssClasses = [
+  `${mainBemClass}__link`,
+  { "is-current": isCurrent },
+  { "is-index": isIndex },
+];
 ---
 
 <a
   {...attrs}
-  class={`${mainBemClass}__link${isCurrent ? " is-current" : ""}${isIndex ? " is-index" : ""}`}
+  class:list={cssClasses}
   aria-current={isCurrent ? "location" : false}
 >
   <slot name="index" />
