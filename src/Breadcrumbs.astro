@@ -14,6 +14,7 @@ export interface BreadcrumbsProps {
   truncated?: boolean;
   linkTextFormat?: "lower" | "capitalized" | "sentence";
   customBaseUrl?: string;
+  excludeCurrentPage?: boolean;
 }
 
 export interface BreadcrumbItem {
@@ -32,6 +33,7 @@ const {
   truncated = false,
   linkTextFormat,
   customBaseUrl,
+  excludeCurrentPage = false,
 } = Astro.props as BreadcrumbsProps;
 
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
@@ -46,6 +48,7 @@ const parts = generateCrumbs({
   hasTrailingSlash,
   linkTextFormat,
   customBaseUrl,
+  excludeCurrentPage,
 });
 
 const isLastElement = (index: number, array: any[]) =>
@@ -67,6 +70,11 @@ const isLastElement = (index: number, array: any[]) =>
       {
         parts.map(({ text, ...attrs }, index, array) => {
           const lastElement = isLastElement(index, array);
+
+          if (excludeCurrentPage && lastElement) {
+            return null;
+          }
+
           return (
             <>
               {index === 1 && pathLength > 1 && truncated && (
