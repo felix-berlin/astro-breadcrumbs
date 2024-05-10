@@ -63,7 +63,7 @@ importers:
         version: 2.3.0(astro@4.8.2(sass@1.76.0))
       astro-matomo:
         specifier: ^1.4.2
-        version: 1.4.2(astro@4.8.2(sass@1.76.0))
+        version: 1.5.0(astro@4.8.2(sass@1.76.0))
       sharp:
         specifier: ^0.33.3
         version: 0.33.3
@@ -1451,8 +1451,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^3.3.0
 
-  astro-matomo@1.4.2:
-    resolution: {integrity: sha512-65TtRKaNmGWSAaPAV84dTweOt/6aVMaPLQxJkkiSWdDFr8oScf3Sg0zzs+tE5Ca+VZdLT8QLZgdrcVJG4uX2KA==}
+  astro-matomo@1.5.0:
+    resolution: {integrity: sha512-wy3CVrYTFC9bJ4jWvL9DLnJ5w9DOuVpdes3+7EOCplFV0cxBnzXv8aHP1eAHbxBMYfAhju2Kkov0OH7ptxAZXg==}
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
 
@@ -5856,7 +5856,7 @@ snapshots:
       hast-util-to-html: 8.0.4
       remark-expressive-code: 0.33.5
 
-  astro-matomo@1.4.2(astro@4.8.2(sass@1.76.0)):
+  astro-matomo@1.5.0(astro@4.8.2(sass@1.76.0)):
     dependencies:
       astro: 4.8.2(sass@1.76.0)
 
