@@ -208,6 +208,79 @@ test("generateCrumbs - with Astro baseUrl and customBaseUrl", () => {
   import.meta.env.BASE_URL = "/";
 });
 
+test("generateCrumbs - with multipart Astro baseUrl", () => {
+  // Mock the Astro baseUrl
+  import.meta.env.BASE_URL = "/astro-base-url/sub-base-url";
+
+  const result = generateCrumbs({
+    crumbs: [],
+    paths: ["astro-base-url", "sub-base-url", "path1", "path2"],
+    indexText: "Home",
+    hasTrailingSlash: true,
+    linkTextFormat: "lower",
+    customBaseUrl: undefined,
+    excludeCurrentPage: false,
+  });
+
+  // Check if the first crumb is the custom base url
+  expect(result[0]).toEqual({
+    text: "Home",
+    href: "/astro-base-url/sub-base-url/",
+  });
+
+  // Check if the second crumb is correct
+  expect(result[1]).toEqual({
+    text: "path1",
+    href: "/astro-base-url/sub-base-url/path1/",
+  });
+
+  // Check if the third crumb is correct
+  expect(result[2]).toEqual({
+    text: "path2",
+    href: "/astro-base-url/sub-base-url/path1/path2/",
+  });
+
+  // Reset the Astro baseUrl
+  import.meta.env.BASE_URL = "/";
+});
+
+test("generateCrumbs - with multipart Astro baseUrl and customBaseUrl", () => {
+  // Mock the Astro baseUrl
+  import.meta.env.BASE_URL = "/astro-base-url/sub-base-url";
+
+  const result = generateCrumbs({
+    crumbs: [],
+    paths: ["astro-base-url", "sub-base-url", "path1", "path2"],
+    indexText: "Home",
+    hasTrailingSlash: true,
+    linkTextFormat: "lower",
+    customBaseUrl: "custom",
+    excludeCurrentPage: false,
+  });
+
+  // Check if the first crumb is the custom base url
+  expect(result[0]).toEqual({
+    text: "Home",
+    href: "/custom/",
+  });
+
+  // Check if the second crumb is correct
+  expect(result[1]).toEqual({
+    text: "path1",
+    href: "/custom/path1/",
+  });
+
+  // Check if the third crumb is correct
+  expect(result[2]).toEqual({
+    text: "path2",
+    href: "/custom/path1/path2/",
+  });
+
+  // Reset the Astro baseUrl
+  import.meta.env.BASE_URL = "/";
+});
+
+
 test("generateCrumbs - exclude current page", () => {
   const result = generateCrumbs({
     crumbs: [],

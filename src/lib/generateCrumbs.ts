@@ -30,12 +30,16 @@ export const generateCrumbs = ({
   const parts: Array<BreadcrumbItem> = [];
   const baseUrl = import.meta.env.BASE_URL;
 
+  const basePartCount = baseUrl.split("/").filter(s => s).length;
+
   const hasBaseUrl = baseUrl !== "/";
 
-  // If both Astro baseUrl and customBaseUrl are present, remove the first item from the paths array
-  // This is because the first item is the Astro base url and we don't want to duplicate it
+  /**
+   * If both Astro baseUrl and customBaseUrl are present, remove the items from the paths array
+   * that correspond with the Astro base url. They will be replaced with the customBaseUrl.
+   */
   if (hasBaseUrl && customBaseUrl) {
-    paths = paths.slice(1);
+    paths = paths.slice(basePartCount);
   }
 
   // Set the custom base url as the first item in the paths array
@@ -80,6 +84,17 @@ export const generateCrumbs = ({
       text: indexText!,
       href: baseUrl,
     });
+  }
+
+  /**
+   * If there is no customBaseUrl and there is more than one part in the base URL,
+   * we have to remove all those extra parts at the start.
+   */
+  if (!customBaseUrl && basePartCount > 1) {
+    let toRemove = basePartCount - 1;
+    while (toRemove--) {
+      parts.shift();
+    }
   }
 
   /**
