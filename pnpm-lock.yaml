@@ -10,7 +10,7 @@ importers:
     dependencies:
       astro:
         specifier: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
-        version: 4.0.2(@types/node@17.0.45)(sass@1.75.0)
+        version: 4.0.2(sass@1.77.4)
     devDependencies:
       '@semantic-release/changelog':
         specifier: ^6.0.3
@@ -28,8 +28,8 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
       prettier-plugin-astro:
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.14.0
+        version: 0.14.0
       semantic-release:
         specifier: ^23.0.8
         version: 23.1.1
@@ -1685,6 +1685,7 @@ packages:
   browserslist@4.21.9:
     resolution: {integrity: sha512-M0MFoZzbUrRU4KNfCrDLnvyE7gub+peetoTid3TBIqtunaDJyXlwhakT+/VkvSXcfIzFfK/nkCs4nmyTmxdNSg==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
 
   browserslist@4.23.0:
     resolution: {integrity: sha512-QW8HiM1shhT2GuzkvklfjcKDiWFXHOeFCIA/huJPwHsslwcydgk7X+z2zXpEijP98UCY7HbubZt5J2Zgvf0CaQ==}
@@ -2564,9 +2565,6 @@ packages:
   ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
-
-  immutable@4.3.5:
-    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
 
   immutable@4.3.6:
     resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
@@ -3635,8 +3633,8 @@ packages:
     resolution: {integrity: sha512-MkXsENfftWSRpzCzImcp4FRsCc3y1opwB73CfCNWyzMqArju2CrlMHlqB7VexKiPEOjGMbttv1r9fSCn5S610w==}
     engines: {node: '>=10'}
 
-  prettier-plugin-astro@0.13.0:
-    resolution: {integrity: sha512-5HrJNnPmZqTUNoA97zn4gNQv9BgVhv+et03314WpQ9H9N8m2L9OSV798olwmG2YLXPl1iSstlJCR1zB3x5xG4g==}
+  prettier-plugin-astro@0.14.0:
+    resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
   prettier@3.2.5:
@@ -3856,11 +3854,6 @@ packages:
 
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
-
-  sass@1.75.0:
-    resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
-    engines: {node: '>=14.0.0'}
-    hasBin: true
 
   sass@1.77.4:
     resolution: {integrity: sha512-vcF3Ckow6g939GMA4PeU7b2K/9FALXk2KF9J87txdHzXbUF9XRQRwSxcAs/fGaTnJeBFd7UoV22j3lzMLdM0Pw==}
@@ -4734,10 +4727,10 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.0': {}
 
-  '@astrojs/markdown-remark@4.0.0(astro@4.0.2(@types/node@17.0.45)(sass@1.75.0))':
+  '@astrojs/markdown-remark@4.0.0(astro@4.0.2(sass@1.77.4))':
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 4.0.2(@types/node@17.0.45)(sass@1.75.0)
+      astro: 4.0.2(sass@1.77.4)
       github-slugger: 2.0.0
       import-meta-resolve: 4.0.0
       mdast-util-definitions: 6.0.0
@@ -6183,11 +6176,11 @@ snapshots:
     dependencies:
       astro: 4.9.2(sass@1.77.4)
 
-  astro@4.0.2(@types/node@17.0.45)(sass@1.75.0):
+  astro@4.0.2(sass@1.77.4):
     dependencies:
       '@astrojs/compiler': 2.3.2
       '@astrojs/internal-helpers': 0.2.1
-      '@astrojs/markdown-remark': 4.0.0(astro@4.0.2(@types/node@17.0.45)(sass@1.75.0))
+      '@astrojs/markdown-remark': 4.0.0(astro@4.0.2(sass@1.77.4))
       '@astrojs/telemetry': 3.0.4
       '@babel/core': 7.23.5
       '@babel/generator': 7.23.5
@@ -6241,8 +6234,8 @@ snapshots:
       tsconfck: 3.0.0
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.0.6(@types/node@17.0.45)(sass@1.75.0)
-      vitefu: 0.2.5(vite@5.0.6(@types/node@17.0.45)(sass@1.75.0))
+      vite: 5.0.6(sass@1.77.4)
+      vitefu: 0.2.5(vite@5.0.6(sass@1.77.4))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -7595,9 +7588,6 @@ snapshots:
 
   ignore@5.3.1: {}
 
-  immutable@4.3.5:
-    optional: true
-
   immutable@4.3.6: {}
 
   import-fresh@3.3.0:
@@ -8875,7 +8865,7 @@ snapshots:
       path-exists: 4.0.0
       which-pm: 2.0.0
 
-  prettier-plugin-astro@0.13.0:
+  prettier-plugin-astro@0.14.0:
     dependencies:
       '@astrojs/compiler': 1.8.2
       prettier: 3.2.5
@@ -9230,13 +9220,6 @@ snapshots:
   sass-formatter@0.7.9:
     dependencies:
       suf-log: 2.5.3
-
-  sass@1.75.0:
-    dependencies:
-      chokidar: 3.6.0
-      immutable: 4.3.5
-      source-map-js: 1.2.0
-    optional: true
 
   sass@1.77.4:
     dependencies:
@@ -9980,15 +9963,14 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.0.6(@types/node@17.0.45)(sass@1.75.0):
+  vite@5.0.6(sass@1.77.4):
     dependencies:
       esbuild: 0.19.8
       postcss: 8.4.32
       rollup: 4.6.1
     optionalDependencies:
-      '@types/node': 17.0.45
       fsevents: 2.3.3
-      sass: 1.75.0
+      sass: 1.77.4
 
   vite@5.2.11(sass@1.77.4):
     dependencies:
@@ -10008,9 +9990,9 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.4
 
-  vitefu@0.2.5(vite@5.0.6(@types/node@17.0.45)(sass@1.75.0)):
+  vitefu@0.2.5(vite@5.0.6(sass@1.77.4)):
     optionalDependencies:
-      vite: 5.0.6(@types/node@17.0.45)(sass@1.75.0)
+      vite: 5.0.6(sass@1.77.4)
 
   vitefu@0.2.5(vite@5.2.12(sass@1.77.4)):
     optionalDependencies:
