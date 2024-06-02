@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.0...v2.3.1) (2024-06-02)
+
+
+### Bug Fixes
+
+* **base url:** multipart base url was breaking breadcrumbs ([4894a29](https://github.com/felix-berlin/astro-breadcrumbs/commit/4894a2906511c95305416ce0feea128cb342840b)), closes [#262](https://github.com/felix-berlin/astro-breadcrumbs/issues/262)
+
 # [2.3.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.2.0...v2.3.0) (2024-04-12)
 
 
