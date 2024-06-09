@@ -53,8 +53,8 @@ importers:
   docs:
     dependencies:
       '@astrojs/starlight':
-        specifier: ^0.23.2
-        version: 0.23.2(astro@4.10.1(sass@1.77.4))
+        specifier: ^0.24.0
+        version: 0.24.0(astro@4.10.1(sass@1.77.4))
       astro:
         specifier: ^4.9.2
         version: 4.10.1(sass@1.77.4)
@@ -69,7 +69,7 @@ importers:
         version: 0.33.4
       starlight-links-validator:
         specifier: ^0.9.0
-        version: 0.9.0(@astrojs/starlight@0.23.2(astro@4.10.1(sass@1.77.4)))(astro@4.10.1(sass@1.77.4))
+        version: 0.9.0(@astrojs/starlight@0.24.0(astro@4.10.1(sass@1.77.4)))(astro@4.10.1(sass@1.77.4))
     devDependencies:
       sass:
         specifier: ^1.77.4
@@ -121,8 +121,8 @@ packages:
   '@astrojs/sitemap@3.1.2':
     resolution: {integrity: sha512-FxOJldIl5ltZ5CNjocQxHkAO9orwHBjqtaU28o4smobp9vowS0nbGp+I9CrPxkzWdl1crSDm9vjL9tnvG1DSug==}
 
-  '@astrojs/starlight@0.23.2':
-    resolution: {integrity: sha512-j8odYR744qCilip9s0UXNzDQ66uu1klD24zRI5Aqzxoj01eVnAsEgDPC8rU/gDTvydKWhF5diBRC1QVDN5JIYw==}
+  '@astrojs/starlight@0.24.0':
+    resolution: {integrity: sha512-YUBf7TgDUMRcyoZ8S8hlnPuEvgqFuB5F7tQUwPK5GwkTC1E+gMW8zx9J/RgJAXNjQSi19s73nuF19zw/QSy5tw==}
     peerDependencies:
       astro: ^4.8.6
 
@@ -1331,9 +1331,6 @@ packages:
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
-
-  '@types/mdast@4.0.3':
-    resolution: {integrity: sha512-LsjtqsyF+d2/yFOYaN22dHZI1Cpwkrj+g06G8+qtUKlhovPW89YhqSnfKtMbkgmEtYpH2gydRNULd6y8mciAFg==}
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
@@ -2902,9 +2899,6 @@ packages:
   mdast-util-find-and-replace@3.0.1:
     resolution: {integrity: sha512-SG21kZHGC3XRTSUhtofZkBzZTJNM5ecCi0SK2IMKmSXR8vO3peL+kb1O0z7Zl83jKtutG4k5Wv/W7V3/YHvzPA==}
 
-  mdast-util-from-markdown@2.0.0:
-    resolution: {integrity: sha512-n7MTOr/z+8NAX/wmhhDji8O3bRvPTV/U0oTCaZJkjhPSKTPhS3xufVhKGF8s1pJ7Ox4QgoIU7KHseh09S+9rTA==}
-
   mdast-util-from-markdown@2.0.1:
     resolution: {integrity: sha512-aJEUyzZ6TzlsX2s5B4Of7lN7EQtAxvtradMMglCQDyaTFgse6CmtmdJ15ElnVRlCg1vpNyVtbem0PWzlNieZsA==}
 
@@ -2963,9 +2957,6 @@ packages:
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
-
-  micromark-core-commonmark@2.0.0:
-    resolution: {integrity: sha512-jThOz/pVmAYUtkroV3D5c1osFXAMv9e0ypGDOIZuCeAe91/sD6BoE2Sjzt30yuXtwOYUmySOhMas/PVyh02itA==}
 
   micromark-core-commonmark@2.0.1:
     resolution: {integrity: sha512-CUQyKr1e///ZODyD1U3xit6zXwy1a8q2a1S1HKtIlmgvurrEpaw/Y9y6KSIbF8P59cn/NjzHyO+Q2fAyYLQrAA==}
@@ -3062,9 +3053,6 @@ packages:
 
   micromark-util-sanitize-uri@2.0.0:
     resolution: {integrity: sha512-WhYv5UEcZrbAtlsnPuChHUAsu/iBPOVaEVsntLBIdpibO0ddy8OzavZz3iL2xVvBZOpolujSliP65Kq0/7KIYw==}
-
-  micromark-util-subtokenize@2.0.0:
-    resolution: {integrity: sha512-vc93L1t+gpR3p8jxeVdaYlbV2jTYteDje19rNSS/H5dlhxUYll5Fy6vJ2cDwP8RnsXi818yGty1ayP55y3W6fg==}
 
   micromark-util-subtokenize@2.0.1:
     resolution: {integrity: sha512-jZNtiFl/1aY73yS3UGQkutD0UbhTt68qnRpw2Pifmz5wV9h8gOVsN70v+Lq/f1rKaU/W8pxRe8y8Q9FX1AOe1Q==}
@@ -4750,7 +4738,7 @@ snapshots:
       sitemap: 7.1.1
       zod: 3.23.8
 
-  '@astrojs/starlight@0.23.2(astro@4.10.1(sass@1.77.4))':
+  '@astrojs/starlight@0.24.0(astro@4.10.1(sass@1.77.4))':
     dependencies:
       '@astrojs/mdx': 3.1.0(astro@4.10.1(sass@1.77.4))
       '@astrojs/sitemap': 3.1.2
@@ -5885,10 +5873,6 @@ snapshots:
   '@types/estree@1.0.5': {}
 
   '@types/hast@3.0.4':
-    dependencies:
-      '@types/unist': 3.0.2
-
-  '@types/mdast@4.0.3':
     dependencies:
       '@types/unist': 3.0.2
 
@@ -7850,7 +7834,7 @@ snapshots:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.2
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.0
+      mdast-util-from-markdown: 2.0.1
       mdast-util-to-markdown: 2.1.0
       parse-entities: 4.0.1
       stringify-entities: 4.0.4
@@ -7864,23 +7848,6 @@ snapshots:
       escape-string-regexp: 5.0.0
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
-
-  mdast-util-from-markdown@2.0.0:
-    dependencies:
-      '@types/mdast': 4.0.4
-      '@types/unist': 3.0.2
-      decode-named-character-reference: 1.0.2
-      devlop: 1.1.0
-      mdast-util-to-string: 4.0.0
-      micromark: 4.0.0
-      micromark-util-decode-numeric-character-reference: 2.0.1
-      micromark-util-decode-string: 2.0.0
-      micromark-util-normalize-identifier: 2.0.0
-      micromark-util-symbol: 2.0.0
-      micromark-util-types: 2.0.0
-      unist-util-stringify-position: 4.0.0
-    transitivePeerDependencies:
-      - supports-color
 
   mdast-util-from-markdown@2.0.1:
     dependencies:
@@ -8014,7 +7981,7 @@ snapshots:
   mdast-util-to-hast@13.0.2:
     dependencies:
       '@types/hast': 3.0.4
-      '@types/mdast': 4.0.3
+      '@types/mdast': 4.0.4
       '@ungap/structured-clone': 1.2.0
       devlop: 1.1.0
       micromark-util-sanitize-uri: 2.0.0
@@ -8036,7 +8003,7 @@ snapshots:
 
   mdast-util-to-markdown@2.1.0:
     dependencies:
-      '@types/mdast': 4.0.3
+      '@types/mdast': 4.0.4
       '@types/unist': 3.0.2
       longest-streak: 3.1.0
       mdast-util-phrasing: 4.1.0
@@ -8047,32 +8014,13 @@ snapshots:
 
   mdast-util-to-string@4.0.0:
     dependencies:
-      '@types/mdast': 4.0.3
+      '@types/mdast': 4.0.4
 
   meow@12.1.1: {}
 
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
-
-  micromark-core-commonmark@2.0.0:
-    dependencies:
-      decode-named-character-reference: 1.0.2
-      devlop: 1.1.0
-      micromark-factory-destination: 2.0.0
-      micromark-factory-label: 2.0.0
-      micromark-factory-space: 2.0.0
-      micromark-factory-title: 2.0.0
-      micromark-factory-whitespace: 2.0.0
-      micromark-util-character: 2.1.0
-      micromark-util-chunked: 2.0.0
-      micromark-util-classify-character: 2.0.0
-      micromark-util-html-tag-name: 2.0.0
-      micromark-util-normalize-identifier: 2.0.0
-      micromark-util-resolve-all: 2.0.0
-      micromark-util-subtokenize: 2.0.1
-      micromark-util-symbol: 2.0.0
-      micromark-util-types: 2.0.0
 
   micromark-core-commonmark@2.0.1:
     dependencies:
@@ -8315,13 +8263,6 @@ snapshots:
       micromark-util-encode: 2.0.0
       micromark-util-symbol: 2.0.0
 
-  micromark-util-subtokenize@2.0.0:
-    dependencies:
-      devlop: 1.1.0
-      micromark-util-chunked: 2.0.0
-      micromark-util-symbol: 2.0.0
-      micromark-util-types: 2.0.0
-
   micromark-util-subtokenize@2.0.1:
     dependencies:
       devlop: 1.1.0
@@ -8339,7 +8280,7 @@ snapshots:
       debug: 4.3.5
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
-      micromark-core-commonmark: 2.0.0
+      micromark-core-commonmark: 2.0.1
       micromark-factory-space: 2.0.0
       micromark-util-character: 2.1.0
       micromark-util-chunked: 2.0.0
@@ -8349,7 +8290,7 @@ snapshots:
       micromark-util-normalize-identifier: 2.0.0
       micromark-util-resolve-all: 2.0.0
       micromark-util-sanitize-uri: 2.0.0
-      micromark-util-subtokenize: 2.0.0
+      micromark-util-subtokenize: 2.0.1
       micromark-util-symbol: 2.0.0
       micromark-util-types: 2.0.0
     transitivePeerDependencies:
@@ -8976,7 +8917,7 @@ snapshots:
   remark-rehype@11.0.0:
     dependencies:
       '@types/hast': 3.0.4
-      '@types/mdast': 4.0.3
+      '@types/mdast': 4.0.4
       mdast-util-to-hast: 13.1.0
       unified: 11.0.4
       vfile: 6.0.1
@@ -9383,9 +9324,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.9.0(@astrojs/starlight@0.23.2(astro@4.10.1(sass@1.77.4)))(astro@4.10.1(sass@1.77.4)):
+  starlight-links-validator@0.9.0(@astrojs/starlight@0.24.0(astro@4.10.1(sass@1.77.4)))(astro@4.10.1(sass@1.77.4)):
     dependencies:
-      '@astrojs/starlight': 0.23.2(astro@4.10.1(sass@1.77.4))
+      '@astrojs/starlight': 0.24.0(astro@4.10.1(sass@1.77.4))
       astro: 4.10.1(sass@1.77.4)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
