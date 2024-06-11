@@ -9,6 +9,7 @@ type GenerateCrumbs = {
   linkTextFormat: BreadcrumbsProps["linkTextFormat"];
   customBaseUrl: BreadcrumbsProps["customBaseUrl"];
   excludeCurrentPage: BreadcrumbsProps["excludeCurrentPage"];
+  lastText: BreadcrumbsProps["lastText"];
 };
 
 export const generateCrumbs = ({
@@ -19,6 +20,7 @@ export const generateCrumbs = ({
   linkTextFormat,
   customBaseUrl,
   excludeCurrentPage,
+  lastText,
 }: GenerateCrumbs) => {
   /**
    * If crumbs are passed, use them.
@@ -111,6 +113,12 @@ export const generateCrumbs = ({
    */
   if (excludeCurrentPage) {
     parts.pop();
+  }
+  /**
+   * If lastText has value, replace the last item's text with it.
+   */
+  if (lastText) {
+    parts[parts.length - 1].text = lastText;
   }
 
   return parts;

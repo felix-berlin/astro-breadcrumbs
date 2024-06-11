@@ -13,6 +13,7 @@ export interface BreadcrumbsProps {
   ellipsisAriaLabel?: string;
   truncated?: boolean;
   linkTextFormat?: "lower" | "capitalized" | "sentence";
+  lastText?: string;
   customBaseUrl?: string;
   excludeCurrentPage?: boolean;
 }
@@ -32,6 +33,7 @@ const {
   ellipsisAriaLabel = "Show hidden navigation",
   truncated = false,
   linkTextFormat,
+  lastText,
   customBaseUrl,
   excludeCurrentPage = false,
 } = Astro.props as BreadcrumbsProps;
@@ -49,6 +51,7 @@ const parts = generateCrumbs({
   linkTextFormat,
   customBaseUrl,
   excludeCurrentPage,
+  lastText,
 });
 
 const isLastElement = (index: number, array: any[]) =>

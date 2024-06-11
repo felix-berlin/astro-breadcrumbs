@@ -317,3 +317,23 @@ test("generateCrumbs - don't exclude current page", () => {
     { text: "Path 3", href: "/path-1/path-2/path-3" },
   ]);
 });
+
+test("generateCrumbs - replace last item text with custom text", () => {
+  const result = generateCrumbs({
+    crumbs: [],
+    paths: ["path-1", "path-2", "path-3"],
+    indexText: "Home",
+    hasTrailingSlash: false,
+    linkTextFormat: "sentence",
+    customBaseUrl: undefined,
+    excludeCurrentPage: false,
+    lastText: "Last Path",
+  });
+
+  expect(result).toEqual([
+    { text: "Home", href: "/" },
+    { text: "Path 1", href: "/path-1" },
+    { text: "Path 2", href: "/path-1/path-2" },
+    { text: "Last Path", href: "/path-1/path-2/path-3" },
+  ]);
+});
