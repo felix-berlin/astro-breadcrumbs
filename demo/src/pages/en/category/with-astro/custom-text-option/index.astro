@@ -1,0 +1,27 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../../../../src/Breadcrumbs.astro";
+
+const replaceLinkTextArray = [
+  { text: 'en', replaceText: 'cu-en' },
+  { text: 'category', replaceText: 'cu-category' },
+  { text: 'with-astro', replaceText: 'cu-with-astro' },
+  { text: 'custom-text-option', replaceText: 'cu-custom-text-option' },
+];
+---
+
+<Layout title="Welcome to Astro Breadcrumbs.">
+  <main>
+    <h2>
+      Example - custom text options
+      <Breadcrumbs replaceLinkTextArray={replaceLinkTextArray}/>
+    </h2>
+  </main>
+</Layout>
+<style>
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 60ch;
+  }
+</style>
