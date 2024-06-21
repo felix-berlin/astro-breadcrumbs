@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-beta.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2024-06-21)
+
+
+### Features
+
+* "is-last" special key for customizeLinks ([18955d8](https://github.com/felix-berlin/astro-breadcrumbs/commit/18955d88db7ee3fdfdfe6151e2de36a6bbb4b5bd))
+
 # [3.0.0-beta.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.1...v3.0.0-beta.1) (2024-06-21)
 
 
