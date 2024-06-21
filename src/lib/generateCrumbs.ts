@@ -30,7 +30,7 @@ export const generateCrumbs = ({
   const parts: Array<BreadcrumbItem> = [];
   const baseUrl = import.meta.env.BASE_URL;
 
-  const basePartCount = baseUrl.split("/").filter(s => s).length;
+  const basePartCount = baseUrl.split("/").filter((s) => s).length;
 
   const hasBaseUrl = baseUrl !== "/";
 
@@ -65,7 +65,7 @@ export const generateCrumbs = ({
     // strip out any file extensions
     const matches = text.match(/^(.+?)(\.[a-z0-9]+)?\/?$/i);
 
-    if (matches && matches[2]) {
+    if (matches?.[2]) {
       text = matches[1];
     }
 
