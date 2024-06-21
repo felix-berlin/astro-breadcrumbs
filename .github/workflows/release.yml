@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Install dependencies
+      - name: Install dependencies 🔧
         run: pnpm install --ignore-scripts
 
       - name: Release 🚀
