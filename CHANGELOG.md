@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-beta.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.1...v3.0.0-beta.1) (2024-06-21)
+
+
+* feat(customizeLinks)!: add new prop customizeLinks ([2cb7ac7](https://github.com/felix-berlin/astro-breadcrumbs/commit/2cb7ac7ef7d04096267668ebea4b342db977a4a6))
+
+
+### BREAKING CHANGES
+
+* customize every attribute of the breadcrumb link including the text, therefore you can define an array of objects. Each entry will be merged with the original generated crumbs array.
+
 ## [2.3.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.0...v2.3.1) (2024-06-02)
 
 
