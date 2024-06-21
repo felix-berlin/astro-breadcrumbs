@@ -54,7 +54,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.24.0
-        version: 0.24.2(astro@4.11.0(sass@1.77.6))
+        version: 0.24.4(astro@4.11.0(sass@1.77.6))
       astro:
         specifier: ^4.9.2
         version: 4.11.0(sass@1.77.6)
@@ -69,7 +69,7 @@ importers:
         version: 0.33.4
       starlight-links-validator:
         specifier: ^0.9.0
-        version: 0.9.0(@astrojs/starlight@0.24.2(astro@4.11.0(sass@1.77.6)))(astro@4.11.0(sass@1.77.6))
+        version: 0.9.0(@astrojs/starlight@0.24.4(astro@4.11.0(sass@1.77.6)))(astro@4.11.0(sass@1.77.6))
     devDependencies:
       sass:
         specifier: ^1.77.4
@@ -118,11 +118,11 @@ packages:
     resolution: {integrity: sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
 
-  '@astrojs/sitemap@3.1.5':
-    resolution: {integrity: sha512-GLdzJ01387Uzb8RKYpsYLlg/GzoPnGbmDeQNkarSE11i2+l9Qp8Nj/WoTEy9nkTS25fxxy0kxDfJmreeVleCqg==}
+  '@astrojs/sitemap@3.1.6':
+    resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
-  '@astrojs/starlight@0.24.2':
-    resolution: {integrity: sha512-hXFVBHcr2a4UwX5GDCNQEZsRXdgVlNzZ7txpI2jlMvtzbgfoLEGOHjaHpB5QTW/OCrRAMjcx9Zx0HxRliohaxQ==}
+  '@astrojs/starlight@0.24.4':
+    resolution: {integrity: sha512-rED8LPQwsXlgclfdHO+okUGcirof1prrxZLuKWp380xC/T7u2qQ5b1gnKqpM+92x+vhs8GYT7mHGKz9VctwdUg==}
     peerDependencies:
       astro: ^4.8.6
 
@@ -4748,16 +4748,16 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/sitemap@3.1.5':
+  '@astrojs/sitemap@3.1.6':
     dependencies:
       sitemap: 7.1.2
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.24.2(astro@4.11.0(sass@1.77.6))':
+  '@astrojs/starlight@0.24.4(astro@4.11.0(sass@1.77.6))':
     dependencies:
       '@astrojs/mdx': 3.1.1(astro@4.11.0(sass@1.77.6))
-      '@astrojs/sitemap': 3.1.5
+      '@astrojs/sitemap': 3.1.6
       '@pagefind/default-ui': 1.1.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
@@ -4774,7 +4774,7 @@ snapshots:
       rehype: 13.0.1
       rehype-format: 5.0.0
       remark-directive: 3.0.0
-      unified: 11.0.4
+      unified: 11.0.5
       unist-util-visit: 5.0.0
       vfile: 6.0.1
     transitivePeerDependencies:
@@ -8911,7 +8911,7 @@ snapshots:
       '@types/mdast': 4.0.4
       mdast-util-directive: 3.0.0
       micromark-extension-directive: 3.0.0
-      unified: 11.0.4
+      unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
 
@@ -9359,9 +9359,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.9.0(@astrojs/starlight@0.24.2(astro@4.11.0(sass@1.77.6)))(astro@4.11.0(sass@1.77.6)):
+  starlight-links-validator@0.9.0(@astrojs/starlight@0.24.4(astro@4.11.0(sass@1.77.6)))(astro@4.11.0(sass@1.77.6)):
     dependencies:
-      '@astrojs/starlight': 0.24.2(astro@4.11.0(sass@1.77.6))
+      '@astrojs/starlight': 0.24.4(astro@4.11.0(sass@1.77.6))
       astro: 4.11.0(sass@1.77.6)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
