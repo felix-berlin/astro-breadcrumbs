@@ -1,5 +1,9 @@
 import { formatLinkText } from "./formatLinkText";
-import type { BreadcrumbItem, BreadcrumbsProps } from "../Breadcrumbs.astro";
+import type {
+  BreadcrumbItem,
+  BreadcrumbsProps,
+  CustomizeLink,
+} from "../breadcrumbs.types.ts";
 
 type GenerateCrumbs = {
   crumbs: BreadcrumbsProps["crumbs"];
@@ -112,6 +116,37 @@ export const generateCrumbs = ({
   if (excludeCurrentPage) {
     parts.pop();
   }
+
+  return parts;
+};
+
+/**
+ * Merge the parts array with the customizeLinks array.
+ */
+export const mergeCustomizedLinks = (
+  parts: BreadcrumbItem[],
+  customizeLinks: CustomizeLink[],
+) => {
+  const partsLength = parts.length;
+
+  customizeLinks.forEach((customLink, arrayIndex) => {
+    let targetIndex =
+      customLink.index !== undefined ? customLink.index : arrayIndex;
+
+    if (customLink["is-last"]) {
+      targetIndex = partsLength - 1;
+    }
+
+    // Validate targetIndex within parts array bounds
+    if (!(targetIndex >= 0 && targetIndex < partsLength)) {
+      return;
+    }
+    // Merge customLink properties into the target part
+    Object.assign(parts[targetIndex], customLink);
+    // Clean up properties that shouldn't be in the final object
+    delete parts[targetIndex].index;
+    delete parts[targetIndex]["is-last"];
+  });
 
   return parts;
 };

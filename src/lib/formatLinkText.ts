@@ -1,4 +1,4 @@
-import type { BreadcrumbsProps } from "../Breadcrumbs.astro";
+import type { BreadcrumbsProps } from "../breadcrumbs.types.ts";
 
 /**
  * Find the separator in a slug.
