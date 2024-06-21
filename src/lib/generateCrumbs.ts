@@ -127,7 +127,9 @@ export const mergeCustomizedLinks = (
   parts: BreadcrumbItem[],
   customizeLinks: CustomizeLink[],
 ) => {
-  const partsLength = parts.length;
+  // Clone the parts array to avoid direct modification
+  const clonedParts = parts.map((part) => ({ ...part }));
+  const partsLength = clonedParts.length;
 
   customizeLinks.forEach((customLink, arrayIndex) => {
     let targetIndex =
@@ -137,16 +139,18 @@ export const mergeCustomizedLinks = (
       targetIndex = partsLength - 1;
     }
 
-    // Validate targetIndex within parts array bounds
+    // Validate targetIndex within clonedParts array bounds
     if (!(targetIndex >= 0 && targetIndex < partsLength)) {
       return;
     }
-    // Merge customLink properties into the target part
-    Object.assign(parts[targetIndex], customLink);
+
+    // Merge customLink properties into the cloned target item
+    Object.assign(clonedParts[targetIndex], customLink);
+
     // Clean up properties that shouldn't be in the final object
-    delete parts[targetIndex].index;
-    delete parts[targetIndex]["is-last"];
+    delete clonedParts[targetIndex].index;
+    delete clonedParts[targetIndex]["is-last"];
   });
 
-  return parts;
+  return clonedParts;
 };
