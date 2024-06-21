@@ -15,16 +15,18 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
+
       - name: Setup pnpm 🛠️
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
+
       - name: Setup Node.js 🛠️
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
+
       - name: Install dependencies
         run: pnpm install --ignore-scripts
+
       - name: Release 🚀
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
