@@ -24,3 +24,5 @@ export interface BreadcrumbItem {
   href: string;
   "aria-current"?: string;
 }
+
+export type MergedParts = CustomizeLink & BreadcrumbItem;

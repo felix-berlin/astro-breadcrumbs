@@ -3,6 +3,7 @@ import type {
   BreadcrumbItem,
   BreadcrumbsProps,
   CustomizeLink,
+  MergedParts,
 } from "../breadcrumbs.types.ts";
 
 type GenerateCrumbs = {
@@ -128,7 +129,7 @@ export const mergeCustomizedLinks = (
   customizeLinks: CustomizeLink[],
 ) => {
   // Clone the parts array to avoid direct modification
-  const clonedParts = parts.map((part) => ({ ...part }));
+  const clonedParts: MergedParts[] = parts.map((part) => ({ ...part }));
   const partsLength = clonedParts.length;
 
   customizeLinks.forEach((customLink, arrayIndex) => {
