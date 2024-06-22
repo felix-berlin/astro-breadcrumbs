@@ -2,7 +2,7 @@ import { formatLinkText } from "./formatLinkText";
 import type {
   BreadcrumbItem,
   BreadcrumbsProps,
-  CustomizeLink,
+  CustomizeElement,
   MergedParts,
 } from "../breadcrumbs.types.ts";
 
@@ -126,7 +126,7 @@ export const generateCrumbs = ({
  */
 export const mergeCustomizedLinks = (
   parts: BreadcrumbItem[],
-  customizeLinks: CustomizeLink[],
+  customizeLinks: CustomizeElement[],
 ) => {
   // Clone the parts array to avoid direct modification
   const clonedParts: MergedParts[] = parts.map((part) => ({ ...part }));
