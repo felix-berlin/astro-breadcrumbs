@@ -133,24 +133,21 @@ export const mergeCustomizedLinks = (
   const partsLength = clonedParts.length;
 
   customizeLinks.forEach((customLink, arrayIndex) => {
-    let targetIndex =
-      customLink.index !== undefined ? customLink.index : arrayIndex;
+    let targetIndex = arrayIndex;
 
-    if (customLink["is-last"]) {
+    if (typeof customLink.index === "number") {
+      targetIndex = customLink.index;
+    } else if (customLink.index === "last") {
       targetIndex = partsLength - 1;
     }
 
-    // Validate targetIndex within clonedParts array bounds
     if (!(targetIndex >= 0 && targetIndex < partsLength)) {
       return;
     }
 
-    // Merge customLink properties into the cloned target item
     Object.assign(clonedParts[targetIndex], customLink);
 
-    // Clean up properties that shouldn't be in the final object
     delete clonedParts[targetIndex].index;
-    delete clonedParts[targetIndex]["is-last"];
   });
 
   return clonedParts;

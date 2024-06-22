@@ -14,8 +14,7 @@ export interface BreadcrumbsProps {
 }
 
 export interface CustomizeLink {
-  "is-last"?: boolean;
-  index?: number;
+  index?: number | "last";
   [key: string]: any; // Allows for any other properties
 }
 
