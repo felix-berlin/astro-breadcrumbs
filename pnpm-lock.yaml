@@ -41,10 +41,10 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^3.0.1
-        version: 3.1.2(astro@4.11.3(sass@1.77.6))
+        version: 3.1.2(astro@4.11.5(sass@1.77.6))
       astro:
         specifier: ^4.9.2
-        version: 4.11.3(sass@1.77.6)
+        version: 4.11.5(sass@1.77.6)
     devDependencies:
       sass:
         specifier: ^1.77.4
@@ -54,22 +54,22 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.25.0
-        version: 0.25.0(astro@4.11.3(sass@1.77.6))
+        version: 0.25.0(astro@4.11.5(sass@1.77.6))
       astro:
         specifier: ^4.9.2
-        version: 4.11.3(sass@1.77.6)
+        version: 4.11.5(sass@1.77.6)
       astro-breadcrumbs:
         specifier: ^2.3.1
-        version: 2.3.1(astro@4.11.3(sass@1.77.6))
+        version: 2.3.1(astro@4.11.5(sass@1.77.6))
       astro-matomo:
         specifier: ^1.6.0
-        version: 1.6.0(astro@4.11.3(sass@1.77.6))
+        version: 1.6.0(astro@4.11.5(sass@1.77.6))
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
       starlight-links-validator:
         specifier: ^0.9.0
-        version: 0.9.1(@astrojs/starlight@0.25.0(astro@4.11.3(sass@1.77.6)))(astro@4.11.3(sass@1.77.6))
+        version: 0.9.1(@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.6)))(astro@4.11.5(sass@1.77.6))
     devDependencies:
       sass:
         specifier: ^1.77.4
@@ -1284,11 +1284,8 @@ packages:
     peerDependencies:
       semantic-release: '>=20.1.0'
 
-  '@shikijs/core@1.10.0':
-    resolution: {integrity: sha512-BZcr6FCmPfP6TXaekvujZcnkFmJHZ/Yglu97r/9VjzVndQA56/F4WjUKtJRQUnK59Wi7p/UTAOekMfCJv7jnYg==}
-
-  '@shikijs/core@1.9.1':
-    resolution: {integrity: sha512-EmUful2MQtY8KgCF1OkBtOuMcvaZEvmdubhW0UHCGXi21O9dRLeADVCj+k6ZS+de7Mz9d2qixOXJ+GLhcK3pXg==}
+  '@shikijs/core@1.10.1':
+    resolution: {integrity: sha512-qdiJS5a/QGCff7VUFIqd0hDdWly9rDp8lhVmXVrS11aazX8LOTRLHAXkkEeONNsS43EcCd7gax9LLoOz4vlFQA==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -1411,6 +1408,11 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
   agent-base@7.1.1:
     resolution: {integrity: sha512-H0TSyFNDMomMNJQBn8wFV5YC/2eJ+VXECwOadZJT554xP6cODZHPX3H9QMQECxvrgiSOP1pHjy1sMWQVYJOUOA==}
     engines: {node: '>= 14'}
@@ -1517,8 +1519,8 @@ packages:
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
 
-  astro@4.11.3:
-    resolution: {integrity: sha512-SuZbB/71XVn+WqWNCe7XOfHuqhS+k4gj8+A3wluTZQrORGaHUFRn/f8F9Tu5yESQZB1q8UKhahvHwkTV3AdVsg==}
+  astro@4.11.5:
+    resolution: {integrity: sha512-TCRhuaLwrxwMhS8S1GG+ZTdrAXigX9C8E/YUTs/r2t+owHxDgwl86IV9xH1IHrCPoqhK6civyAQNOT+GKmkb0A==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1634,8 +1636,8 @@ packages:
   caniuse-lite@1.0.30001507:
     resolution: {integrity: sha512-SFpUDoSLCaE5XYL2jfqe9ova/pbQHEmbheDf5r4diNwbAgR3qxM9NQtfsiSscjqoya5K7kFcHPUQ+VsUkIJR4A==}
 
-  caniuse-lite@1.0.30001638:
-    resolution: {integrity: sha512-5SuJUJ7cZnhPpeLHaH0c/HPAnAHZvS6ElWyHK9GSIbVOQABLzowiI2pjmpvZ1WEbkyz46iFd4UXlOHR5SqgfMQ==}
+  caniuse-lite@1.0.30001640:
+    resolution: {integrity: sha512-lA4VMpW0PSUrFnkmVuEKBUovSWKhj7puyCg8StBChgu298N1AtuF1sKWEvfDuimSEDbhlb/KqPKC3fs1HbuQUA==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1985,8 +1987,8 @@ packages:
   electron-to-chromium@1.4.439:
     resolution: {integrity: sha512-BHpErPSNhb9FB25+OwQP6mCAf3ZXfGbmuvc4LzBNVJwpCcXQJm++LerimocYRG9FRxUVRKZqaB7d0+pImSTPSg==}
 
-  electron-to-chromium@1.4.813:
-    resolution: {integrity: sha512-VyJ4tS2uD5iXFBz30wD2c0KtKZoiSQEfRuhrgfsDBbRMDiQCH+ki+nqe8jVR2miEeLTbZ5dNbSt88fHO01Vc9A==}
+  electron-to-chromium@1.4.816:
+    resolution: {integrity: sha512-EKH5X5oqC6hLmiS7/vYtZHZFTNdhsYG5NVPRN6Yn0kQHNBlT59+xSM8HBy66P5fxWpKgZbPqb+diC64ng295Jw==}
 
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -3537,6 +3539,10 @@ packages:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.4.39:
+    resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
+    engines: {node: ^10 || ^12 || >=14}
+
   prebuild-install@7.1.2:
     resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
     engines: {node: '>=10'}
@@ -3546,8 +3552,8 @@ packages:
     resolution: {integrity: sha512-nk7dKrcW8hfCZ4H6klWcdRknBOXWzNQByJ0oJyX97BOupsYD+FzLS4hflgEu/uPUEHZCuRfMxzCBsuWd7OzT8Q==}
     engines: {node: '>=10'}
 
-  preferred-pm@3.1.3:
-    resolution: {integrity: sha512-MkXsENfftWSRpzCzImcp4FRsCc3y1opwB73CfCNWyzMqArju2CrlMHlqB7VexKiPEOjGMbttv1r9fSCn5S610w==}
+  preferred-pm@3.1.4:
+    resolution: {integrity: sha512-lEHd+yEm22jXdCphDrkvIJQU66EuLojPPtvZkpKIkiD+l0DMThF/niqZKJSoU8Vl7iuvtmzyMhir9LdVy5WMnA==}
     engines: {node: '>=10'}
 
   prettier-plugin-astro@0.14.0:
@@ -3866,11 +3872,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.10.0:
-    resolution: {integrity: sha512-YD2sXQ+TMD/F9BimV9Jn0wj35pqOvywvOG/3PB6hGHyGKlM7TJ9tyJ02jOb2kF8F0HfJwKNYrh3sW7jEcuRlXA==}
-
-  shiki@1.9.1:
-    resolution: {integrity: sha512-8PDkgb5ja3nfujTjvC4VytL6wGOGCtFAClUb2r3QROevYXxcq+/shVJK5s6gy0HZnjaJgFxd6BpPqpRfqne5rA==}
+  shiki@1.10.1:
+    resolution: {integrity: sha512-uafV7WCgN4YYrccH6yxpnps6k38sSTlFRrwc4jycWmhWxJIm9dPrk+XkY1hZ2t0I7jmacMNb15Lf2fspa/Y3lg==}
 
   shikiji@0.6.13:
     resolution: {integrity: sha512-4T7X39csvhT0p7GDnq9vysWddf2b6BeioiN3Ymhnt3xcy9tXmDcnsEFVxX18Z4YcQgEE/w48dLJ4pPPUcG9KkA==}
@@ -4007,8 +4010,8 @@ packages:
     resolution: {integrity: sha512-GPQHj7row82Hjo9hKZieKcHIhaAIKOJvFSIZXuCU9OASVZrMNUaZuz++SPVrBjnLsnk4k+z9f2EIypgxf2vNFw==}
     engines: {node: '>=18'}
 
-  string-width@7.1.0:
-    resolution: {integrity: sha512-SEIJCWiX7Kg4c129n48aDRwLbFb2LJmXXFrWBG4NGaRtMQ3myKPKbwrD1BKqQn74oCoNMBVrfDEr5M9YxCsrkw==}
+  string-width@7.2.0:
+    resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
     engines: {node: '>=18'}
 
   string.prototype.trim@1.2.9:
@@ -4223,8 +4226,8 @@ packages:
     resolution: {integrity: sha512-+suCYpfJLAe4OXS6+PPXjW3urOS4IoP9waSiLuXfLgqZODKw/aWwASvzqE886wA0kQgGy0mIWyhd87VpqIy6Xg==}
     engines: {node: '>=16'}
 
-  type-fest@4.20.1:
-    resolution: {integrity: sha512-R6wDsVsoS9xYOpy8vgeBlqpdOyzJ12HNfQhC/aAKWM3YoCV9TtunJzh/QpkMgeDhkoynDcw5f1y+qF9yc/HHyg==}
+  type-fest@4.21.0:
+    resolution: {integrity: sha512-ADn2w7hVPcK6w1I0uWnM//y1rLXZhzB9mr0a3OirzclKF1Wp6VzevUmzz/NRAWunOT6E8HrnpGY7xOfc6K57fA==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
@@ -4351,8 +4354,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  update-browserslist-db@1.0.16:
-    resolution: {integrity: sha512-KVbTxlBYlckhF5wgfyZXTWnMn7MMZjMu9XG8bPlliUOP9ThaF4QnhP8qrjrH7DRzHfSk0oQv1wToW+iA5GajEQ==}
+  update-browserslist-db@1.1.0:
+    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -4446,8 +4449,8 @@ packages:
       terser:
         optional: true
 
-  vite@5.3.2:
-    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
+  vite@5.3.3:
+    resolution: {integrity: sha512-NPQdeCU0Dv2z5fu+ULotpuq5yfCS1BzKUIPhNbP3YBfAMGJXbt2nS+sbTFu+qchaqWTD+H3JK++nRwr6XIcp6A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -4634,8 +4637,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  yocto-queue@1.0.0:
-    resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
+  yocto-queue@1.1.1:
+    resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
 
   yoctocolors@2.0.2:
@@ -4707,7 +4710,7 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.0
       remark-smartypants: 3.0.1
-      shiki: 1.9.1
+      shiki: 1.10.1
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -4716,12 +4719,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.2(astro@4.11.3(sass@1.77.6))':
+  '@astrojs/mdx@3.1.2(astro@4.11.5(sass@1.77.6))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.12.0
-      astro: 4.11.3(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.6)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -4751,15 +4754,15 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.25.0(astro@4.11.3(sass@1.77.6))':
+  '@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.6))':
     dependencies:
-      '@astrojs/mdx': 3.1.2(astro@4.11.3(sass@1.77.6))
+      '@astrojs/mdx': 3.1.2(astro@4.11.5(sass@1.77.6))
       '@astrojs/sitemap': 3.1.6
       '@pagefind/default-ui': 1.1.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      astro: 4.11.3(sass@1.77.6)
-      astro-expressive-code: 0.35.3(astro@4.11.3(sass@1.77.6))
+      astro: 4.11.5(sass@1.77.6)
+      astro-expressive-code: 0.35.3(astro@4.11.5(sass@1.77.6))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.1
       hast-util-select: 6.0.2
@@ -5400,8 +5403,8 @@ snapshots:
       hast-util-to-html: 9.0.1
       hast-util-to-text: 4.0.2
       hastscript: 9.0.0
-      postcss: 8.4.38
-      postcss-nested: 6.0.1(postcss@8.4.38)
+      postcss: 8.4.39
+      postcss-nested: 6.0.1(postcss@8.4.39)
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
 
@@ -5412,7 +5415,7 @@ snapshots:
   '@expressive-code/plugin-shiki@0.35.3':
     dependencies:
       '@expressive-code/core': 0.35.3
-      shiki: 1.10.0
+      shiki: 1.10.1
 
   '@expressive-code/plugin-text-markers@0.35.3':
     dependencies:
@@ -5838,9 +5841,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@shikijs/core@1.10.0': {}
-
-  '@shikijs/core@1.9.1': {}
+  '@shikijs/core@1.10.1': {}
 
   '@sinclair/typebox@0.27.8': {}
 
@@ -5984,6 +5985,8 @@ snapshots:
 
   acorn@8.12.0: {}
 
+  acorn@8.12.1: {}
+
   agent-base@7.1.1:
     dependencies:
       debug: 4.3.5
@@ -6067,18 +6070,18 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-breadcrumbs@2.3.1(astro@4.11.3(sass@1.77.6)):
+  astro-breadcrumbs@2.3.1(astro@4.11.5(sass@1.77.6)):
     dependencies:
-      astro: 4.11.3(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.6)
 
-  astro-expressive-code@0.35.3(astro@4.11.3(sass@1.77.6)):
+  astro-expressive-code@0.35.3(astro@4.11.5(sass@1.77.6)):
     dependencies:
-      astro: 4.11.3(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.6)
       rehype-expressive-code: 0.35.3
 
-  astro-matomo@1.6.0(astro@4.11.3(sass@1.77.6)):
+  astro-matomo@1.6.0(astro@4.11.5(sass@1.77.6)):
     dependencies:
-      astro: 4.11.3(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.6)
 
   astro@4.0.2(sass@1.77.6):
     dependencies:
@@ -6156,7 +6159,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.11.3(sass@1.77.6):
+  astro@4.11.5(sass@1.77.6):
     dependencies:
       '@astrojs/compiler': 2.8.1
       '@astrojs/internal-helpers': 0.4.1
@@ -6170,7 +6173,7 @@ snapshots:
       '@babel/types': 7.24.7
       '@types/babel__core': 7.20.5
       '@types/cookie': 0.6.0
-      acorn: 8.12.0
+      acorn: 8.12.1
       aria-query: 5.3.0
       axobject-query: 4.0.0
       boxen: 7.1.1
@@ -6204,18 +6207,18 @@ snapshots:
       p-limit: 5.0.0
       p-queue: 8.0.1
       path-to-regexp: 6.2.2
-      preferred-pm: 3.1.3
+      preferred-pm: 3.1.4
       prompts: 2.4.2
       rehype: 13.0.1
       semver: 7.6.2
-      shiki: 1.9.1
-      string-width: 7.1.0
+      shiki: 1.10.1
+      string-width: 7.2.0
       strip-ansi: 7.1.0
       tsconfck: 3.1.1
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.3.2(sass@1.77.6)
-      vitefu: 0.2.5(vite@5.3.2(sass@1.77.6))
+      vite: 5.3.3(sass@1.77.6)
+      vitefu: 0.2.5(vite@5.3.3(sass@1.77.6))
       which-pm: 2.2.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -6334,10 +6337,10 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001638
-      electron-to-chromium: 1.4.813
+      caniuse-lite: 1.0.30001640
+      electron-to-chromium: 1.4.816
       node-releases: 2.0.14
-      update-browserslist-db: 1.0.16(browserslist@4.23.1)
+      update-browserslist-db: 1.1.0(browserslist@4.23.1)
 
   buffer@5.7.1:
     dependencies:
@@ -6366,7 +6369,7 @@ snapshots:
 
   caniuse-lite@1.0.30001507: {}
 
-  caniuse-lite@1.0.30001638: {}
+  caniuse-lite@1.0.30001640: {}
 
   ccount@2.0.1: {}
 
@@ -6698,7 +6701,7 @@ snapshots:
 
   electron-to-chromium@1.4.439: {}
 
-  electron-to-chromium@1.4.813: {}
+  electron-to-chromium@1.4.816: {}
 
   emoji-regex@10.3.0: {}
 
@@ -8360,7 +8363,7 @@ snapshots:
 
   mlly@1.7.0:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
       pathe: 1.1.2
       pkg-types: 1.1.0
       ufo: 1.5.3
@@ -8496,7 +8499,7 @@ snapshots:
       is-unicode-supported: 2.0.0
       log-symbols: 6.0.0
       stdin-discarder: 0.2.2
-      string-width: 7.1.0
+      string-width: 7.2.0
       strip-ansi: 7.1.0
 
   p-each-series@3.0.0: {}
@@ -8521,7 +8524,7 @@ snapshots:
 
   p-limit@5.0.0:
     dependencies:
-      yocto-queue: 1.0.0
+      yocto-queue: 1.1.1
 
   p-locate@2.0.0:
     dependencies:
@@ -8688,9 +8691,9 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-nested@6.0.1(postcss@8.4.38):
+  postcss-nested@6.0.1(postcss@8.4.39):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
       postcss-selector-parser: 6.1.0
 
   postcss-selector-parser@6.1.0:
@@ -8705,6 +8708,12 @@ snapshots:
       source-map-js: 1.2.0
 
   postcss@8.4.38:
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.0.1
+      source-map-js: 1.2.0
+
+  postcss@8.4.39:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
@@ -8733,12 +8742,12 @@ snapshots:
       path-exists: 4.0.0
       which-pm: 2.0.0
 
-  preferred-pm@3.1.3:
+  preferred-pm@3.1.4:
     dependencies:
       find-up: 5.0.0
       find-yarn-workspace-root2: 1.2.16
       path-exists: 4.0.0
-      which-pm: 2.0.0
+      which-pm: 2.2.0
 
   prettier-plugin-astro@0.14.0:
     dependencies:
@@ -8815,7 +8824,7 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.0
       read-pkg: 9.0.1
-      type-fest: 4.20.1
+      type-fest: 4.21.0
 
   read-pkg@9.0.1:
     dependencies:
@@ -9254,13 +9263,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.10.0:
+  shiki@1.10.1:
     dependencies:
-      '@shikijs/core': 1.10.0
-
-  shiki@1.9.1:
-    dependencies:
-      '@shikijs/core': 1.9.1
+      '@shikijs/core': 1.10.1
 
   shikiji@0.6.13:
     dependencies:
@@ -9348,10 +9353,10 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.9.1(@astrojs/starlight@0.25.0(astro@4.11.3(sass@1.77.6)))(astro@4.11.3(sass@1.77.6)):
+  starlight-links-validator@0.9.1(@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.6)))(astro@4.11.5(sass@1.77.6)):
     dependencies:
-      '@astrojs/starlight': 0.25.0(astro@4.11.3(sass@1.77.6))
-      astro: 4.11.3(sass@1.77.6)
+      '@astrojs/starlight': 0.25.0(astro@4.11.5(sass@1.77.6))
+      astro: 4.11.5(sass@1.77.6)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
       hast-util-has-property: 3.0.0
@@ -9414,7 +9419,7 @@ snapshots:
       get-east-asian-width: 1.2.0
       strip-ansi: 7.1.0
 
-  string-width@7.1.0:
+  string-width@7.2.0:
     dependencies:
       emoji-regex: 10.3.0
       get-east-asian-width: 1.2.0
@@ -9632,7 +9637,7 @@ snapshots:
 
   type-fest@4.18.2: {}
 
-  type-fest@4.20.1: {}
+  type-fest@4.21.0: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
@@ -9815,7 +9820,7 @@ snapshots:
       escalade: 3.1.2
       picocolors: 1.0.0
 
-  update-browserslist-db@1.0.16(browserslist@4.23.1):
+  update-browserslist-db@1.1.0(browserslist@4.23.1):
     dependencies:
       browserslist: 4.23.1
       escalade: 3.1.2
@@ -9898,10 +9903,10 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.6
 
-  vite@5.3.2(sass@1.77.6):
+  vite@5.3.3(sass@1.77.6):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.38
+      postcss: 8.4.39
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
@@ -9911,9 +9916,9 @@ snapshots:
     optionalDependencies:
       vite: 5.0.6(sass@1.77.6)
 
-  vitefu@0.2.5(vite@5.3.2(sass@1.77.6)):
+  vitefu@0.2.5(vite@5.3.3(sass@1.77.6)):
     optionalDependencies:
-      vite: 5.3.2(sass@1.77.6)
+      vite: 5.3.3(sass@1.77.6)
 
   vitest@1.6.0(jsdom@24.1.0)(sass@1.77.6):
     dependencies:
@@ -10069,7 +10074,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  yocto-queue@1.0.0: {}
+  yocto-queue@1.1.1: {}
 
   yoctocolors@2.0.2: {}
 
