@@ -20,7 +20,7 @@ importers:
         version: 10.0.1(semantic-release@23.1.1)
       '@vitest/coverage-v8':
         specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(jsdom@24.1.0)(sass@1.77.6))
+        version: 1.6.0(vitest@1.6.0(jsdom@24.1.0)(sass@1.77.8))
       jsdom:
         specifier: ^24.1.0
         version: 24.1.0
@@ -35,45 +35,45 @@ importers:
         version: 23.1.1
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(jsdom@24.1.0)(sass@1.77.6)
+        version: 1.6.0(jsdom@24.1.0)(sass@1.77.8)
 
   demo:
     dependencies:
       '@astrojs/mdx':
         specifier: ^3.0.1
-        version: 3.1.2(astro@4.11.5(sass@1.77.6))
+        version: 3.1.2(astro@4.11.5(sass@1.77.8))
       astro:
         specifier: ^4.9.2
-        version: 4.11.5(sass@1.77.6)
+        version: 4.11.5(sass@1.77.8)
     devDependencies:
       sass:
         specifier: ^1.77.4
-        version: 1.77.6
+        version: 1.77.8
 
   docs:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.25.0
-        version: 0.25.0(astro@4.11.5(sass@1.77.6))
+        version: 0.25.0(astro@4.11.5(sass@1.77.8))
       astro:
         specifier: ^4.9.2
-        version: 4.11.5(sass@1.77.6)
+        version: 4.11.5(sass@1.77.8)
       astro-breadcrumbs:
         specifier: ^2.3.1
-        version: 2.3.1(astro@4.11.5(sass@1.77.6))
+        version: 2.3.1(astro@4.11.5(sass@1.77.8))
       astro-matomo:
         specifier: ^1.6.0
-        version: 1.6.0(astro@4.11.5(sass@1.77.6))
+        version: 1.6.0(astro@4.11.5(sass@1.77.8))
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
       starlight-links-validator:
         specifier: ^0.9.0
-        version: 0.9.1(@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.6)))(astro@4.11.5(sass@1.77.6))
+        version: 0.9.1(@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.8)))(astro@4.11.5(sass@1.77.8))
     devDependencies:
       sass:
         specifier: ^1.77.4
-        version: 1.77.6
+        version: 1.77.8
 
 packages:
 
@@ -3799,6 +3799,11 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  sass@1.77.8:
+    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
   sax@1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
 
@@ -4719,12 +4724,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.2(astro@4.11.5(sass@1.77.6))':
+  '@astrojs/mdx@3.1.2(astro@4.11.5(sass@1.77.8))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.12.0
-      astro: 4.11.5(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.8)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -4754,15 +4759,15 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.6))':
+  '@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.8))':
     dependencies:
-      '@astrojs/mdx': 3.1.2(astro@4.11.5(sass@1.77.6))
+      '@astrojs/mdx': 3.1.2(astro@4.11.5(sass@1.77.8))
       '@astrojs/sitemap': 3.1.6
       '@pagefind/default-ui': 1.1.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      astro: 4.11.5(sass@1.77.6)
-      astro-expressive-code: 0.35.3(astro@4.11.5(sass@1.77.6))
+      astro: 4.11.5(sass@1.77.8)
+      astro-expressive-code: 0.35.3(astro@4.11.5(sass@1.77.8))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.1
       hast-util-select: 6.0.2
@@ -5922,7 +5927,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(jsdom@24.1.0)(sass@1.77.6))':
+  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(jsdom@24.1.0)(sass@1.77.8))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -5937,7 +5942,7 @@ snapshots:
       std-env: 3.7.0
       strip-literal: 2.1.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(jsdom@24.1.0)(sass@1.77.6)
+      vitest: 1.6.0(jsdom@24.1.0)(sass@1.77.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -6070,18 +6075,18 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-breadcrumbs@2.3.1(astro@4.11.5(sass@1.77.6)):
+  astro-breadcrumbs@2.3.1(astro@4.11.5(sass@1.77.8)):
     dependencies:
-      astro: 4.11.5(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.8)
 
-  astro-expressive-code@0.35.3(astro@4.11.5(sass@1.77.6)):
+  astro-expressive-code@0.35.3(astro@4.11.5(sass@1.77.8)):
     dependencies:
-      astro: 4.11.5(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.8)
       rehype-expressive-code: 0.35.3
 
-  astro-matomo@1.6.0(astro@4.11.5(sass@1.77.6)):
+  astro-matomo@1.6.0(astro@4.11.5(sass@1.77.8)):
     dependencies:
-      astro: 4.11.5(sass@1.77.6)
+      astro: 4.11.5(sass@1.77.8)
 
   astro@4.0.2(sass@1.77.6):
     dependencies:
@@ -6159,7 +6164,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.11.5(sass@1.77.6):
+  astro@4.11.5(sass@1.77.8):
     dependencies:
       '@astrojs/compiler': 2.8.1
       '@astrojs/internal-helpers': 0.4.1
@@ -6217,8 +6222,8 @@ snapshots:
       tsconfck: 3.1.1
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.3.3(sass@1.77.6)
-      vitefu: 0.2.5(vite@5.3.3(sass@1.77.6))
+      vite: 5.3.3(sass@1.77.8)
+      vitefu: 0.2.5(vite@5.3.3(sass@1.77.8))
       which-pm: 2.2.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -9133,6 +9138,13 @@ snapshots:
       chokidar: 3.6.0
       immutable: 4.3.6
       source-map-js: 1.2.0
+    optional: true
+
+  sass@1.77.8:
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
 
   sax@1.2.4: {}
 
@@ -9353,10 +9365,10 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.9.1(@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.6)))(astro@4.11.5(sass@1.77.6)):
+  starlight-links-validator@0.9.1(@astrojs/starlight@0.25.0(astro@4.11.5(sass@1.77.8)))(astro@4.11.5(sass@1.77.8)):
     dependencies:
-      '@astrojs/starlight': 0.25.0(astro@4.11.5(sass@1.77.6))
-      astro: 4.11.5(sass@1.77.6)
+      '@astrojs/starlight': 0.25.0(astro@4.11.5(sass@1.77.8))
+      astro: 4.11.5(sass@1.77.8)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
       hast-util-has-property: 3.0.0
@@ -9868,13 +9880,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-node@1.6.0(sass@1.77.6):
+  vite-node@1.6.0(sass@1.77.8):
     dependencies:
       cac: 6.7.14
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.2.12(sass@1.77.6)
+      vite: 5.2.12(sass@1.77.8)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -9894,33 +9906,33 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.6
 
-  vite@5.2.12(sass@1.77.6):
+  vite@5.2.12(sass@1.77.8):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.77.6
+      sass: 1.77.8
 
-  vite@5.3.3(sass@1.77.6):
+  vite@5.3.3(sass@1.77.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.77.6
+      sass: 1.77.8
 
   vitefu@0.2.5(vite@5.0.6(sass@1.77.6)):
     optionalDependencies:
       vite: 5.0.6(sass@1.77.6)
 
-  vitefu@0.2.5(vite@5.3.3(sass@1.77.6)):
+  vitefu@0.2.5(vite@5.3.3(sass@1.77.8)):
     optionalDependencies:
-      vite: 5.3.3(sass@1.77.6)
+      vite: 5.3.3(sass@1.77.8)
 
-  vitest@1.6.0(jsdom@24.1.0)(sass@1.77.6):
+  vitest@1.6.0(jsdom@24.1.0)(sass@1.77.8):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -9939,8 +9951,8 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.2.12(sass@1.77.6)
-      vite-node: 1.6.0(sass@1.77.6)
+      vite: 5.2.12(sass@1.77.8)
+      vite-node: 1.6.0(sass@1.77.8)
       why-is-node-running: 2.2.2
     optionalDependencies:
       jsdom: 24.1.0
