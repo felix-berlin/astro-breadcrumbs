@@ -41,10 +41,10 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^3.0.1
-        version: 3.1.3(astro@4.12.1(sass@1.77.8))
+        version: 3.1.3(astro@4.12.2(sass@1.77.8))
       astro:
         specifier: ^4.9.2
-        version: 4.12.1(sass@1.77.8)
+        version: 4.12.2(sass@1.77.8)
     devDependencies:
       sass:
         specifier: ^1.77.4
@@ -54,22 +54,22 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.25.0
-        version: 0.25.1(astro@4.12.1(sass@1.77.8))
+        version: 0.25.1(astro@4.12.2(sass@1.77.8))
       astro:
         specifier: ^4.9.2
-        version: 4.12.1(sass@1.77.8)
+        version: 4.12.2(sass@1.77.8)
       astro-breadcrumbs:
         specifier: ^2.3.1
-        version: 2.3.1(astro@4.12.1(sass@1.77.8))
+        version: 2.3.1(astro@4.12.2(sass@1.77.8))
       astro-matomo:
         specifier: ^1.6.0
-        version: 1.6.0(astro@4.12.1(sass@1.77.8))
+        version: 1.6.0(astro@4.12.2(sass@1.77.8))
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
       starlight-links-validator:
         specifier: ^0.9.0
-        version: 0.9.1(@astrojs/starlight@0.25.1(astro@4.12.1(sass@1.77.8)))(astro@4.12.1(sass@1.77.8))
+        version: 0.9.1(@astrojs/starlight@0.25.1(astro@4.12.2(sass@1.77.8)))(astro@4.12.2(sass@1.77.8))
     devDependencies:
       sass:
         specifier: ^1.77.4
@@ -266,10 +266,6 @@ packages:
     resolution: {integrity: sha512-2ofRCjnnA9y+wk8b9IAREroeUP02KHp431N2mhKniy2yKIDKpbrHv9eXwm8cBeWQYcJmzv5qKCu65P47eCF7CQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-string-parser@7.24.7':
-    resolution: {integrity: sha512-7MbVt6xrwFQbunH2DNQsAP5sTGxfqQtErvBIvIMi6EQnbgUOuVYanvREcmFrOPhoXBrTtjhhP+lW+o5UfK+tDg==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/helper-string-parser@7.24.8':
     resolution: {integrity: sha512-pO9KhhRcuUyGnJWwyEgnRJTSIZHiT+vMD0kPeD+so0l7mxkMT19g3pjY9GTnHySck/hDzq+dtW/4VgnMkippsQ==}
     engines: {node: '>=6.9.0'}
@@ -335,11 +331,6 @@ packages:
 
   '@babel/parser@7.24.5':
     resolution: {integrity: sha512-EOv5IK8arwh3LI47dz1b0tKUb/1uhHAnHJOrjgtQMIpu1uXd9mlFrJg9IUgGUgZ41Ch0K8REPTYpO7B76b4vJg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
-  '@babel/parser@7.24.7':
-    resolution: {integrity: sha512-9uUYRm6OqQrCqQdG1iCBwBPZgN8ciDBro2nIOFaiRz1/BCxaI7CNvQbDHvsArAC7Tw9Hda/B3U+6ui9u4HWXPw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -410,10 +401,6 @@ packages:
 
   '@babel/types@7.24.5':
     resolution: {integrity: sha512-6mQNsaLeXTw0nxYUYu+NSa4Hx4BlF1x1x8/PMFbiR+GBSr+2DkECc69b8hgy2frEodNcvPffeH8YfWd3LI6jhQ==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.24.7':
-    resolution: {integrity: sha512-XEFXSlxiG5td2EJRe8vOmRbaXVgfcBlszKujvVmWIK/UpywWljQCfzAv3RQCGujWQ1RD4YYWEAqDXfuJiy8f5Q==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.24.9':
@@ -1610,8 +1597,8 @@ packages:
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
 
-  astro@4.12.1:
-    resolution: {integrity: sha512-KwBoXYL4L1XLTTjoj4z6q1g/tZfWDKR1pKSTAshVqt5FH2eu82pnGW737SxcT/Ssg/hLlb9KnWiclXmqWpcbCQ==}
+  astro@4.12.2:
+    resolution: {integrity: sha512-l6OmqlL+FiuSi9x6F+EGZitteOznq1JffOil7st7cdqeMCTEIym4oagI1a6zp6QekliKWEEZWdplGhgh1k1f7Q==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2079,8 +2066,8 @@ packages:
   electron-to-chromium@1.4.439:
     resolution: {integrity: sha512-BHpErPSNhb9FB25+OwQP6mCAf3ZXfGbmuvc4LzBNVJwpCcXQJm++LerimocYRG9FRxUVRKZqaB7d0+pImSTPSg==}
 
-  electron-to-chromium@1.4.829:
-    resolution: {integrity: sha512-5qp1N2POAfW0u1qGAxXEtz6P7bO1m6gpZr5hdf5ve6lxpLM7MpiM4jIPz7xcrNlClQMafbyUDDWjlIQZ1Mw0Rw==}
+  electron-to-chromium@1.4.830:
+    resolution: {integrity: sha512-TrPKKH20HeN0J1LHzsYLs2qwXrp8TF4nHdu4sq61ozGbzMpWhI7iIOPYPPkxeq1azMT9PZ8enPFcftbs/Npcjg==}
 
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -4833,12 +4820,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.3(astro@4.12.1(sass@1.77.8))':
+  '@astrojs/mdx@3.1.3(astro@4.12.2(sass@1.77.8))':
     dependencies:
       '@astrojs/markdown-remark': 5.2.0
       '@mdx-js/mdx': 3.0.1
       acorn: 8.12.1
-      astro: 4.12.1(sass@1.77.8)
+      astro: 4.12.2(sass@1.77.8)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -4868,15 +4855,15 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.25.1(astro@4.12.1(sass@1.77.8))':
+  '@astrojs/starlight@0.25.1(astro@4.12.2(sass@1.77.8))':
     dependencies:
-      '@astrojs/mdx': 3.1.3(astro@4.12.1(sass@1.77.8))
+      '@astrojs/mdx': 3.1.3(astro@4.12.2(sass@1.77.8))
       '@astrojs/sitemap': 3.1.6
       '@pagefind/default-ui': 1.1.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      astro: 4.12.1(sass@1.77.8)
-      astro-expressive-code: 0.35.3(astro@4.12.1(sass@1.77.8))
+      astro: 4.12.2(sass@1.77.8)
+      astro-expressive-code: 0.35.3(astro@4.12.2(sass@1.77.8))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.1
       hast-util-select: 6.0.2
@@ -5104,8 +5091,6 @@ snapshots:
 
   '@babel/helper-string-parser@7.24.1': {}
 
-  '@babel/helper-string-parser@7.24.7': {}
-
   '@babel/helper-string-parser@7.24.8': {}
 
   '@babel/helper-validator-identifier@7.22.20': {}
@@ -5168,10 +5153,6 @@ snapshots:
   '@babel/parser@7.24.5':
     dependencies:
       '@babel/types': 7.24.5
-
-  '@babel/parser@7.24.7':
-    dependencies:
-      '@babel/types': 7.24.7
 
   '@babel/parser@7.24.8':
     dependencies:
@@ -5292,12 +5273,6 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.24.1
       '@babel/helper-validator-identifier': 7.24.5
-      to-fast-properties: 2.0.0
-
-  '@babel/types@7.24.7':
-    dependencies:
-      '@babel/helper-string-parser': 7.24.7
-      '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
   '@babel/types@7.24.9':
@@ -5637,7 +5612,7 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/resolve-uri@3.1.0': {}
@@ -5660,7 +5635,7 @@ snapshots:
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@mdx-js/mdx@3.0.1':
     dependencies:
@@ -6246,18 +6221,18 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-breadcrumbs@2.3.1(astro@4.12.1(sass@1.77.8)):
+  astro-breadcrumbs@2.3.1(astro@4.12.2(sass@1.77.8)):
     dependencies:
-      astro: 4.12.1(sass@1.77.8)
+      astro: 4.12.2(sass@1.77.8)
 
-  astro-expressive-code@0.35.3(astro@4.12.1(sass@1.77.8)):
+  astro-expressive-code@0.35.3(astro@4.12.2(sass@1.77.8)):
     dependencies:
-      astro: 4.12.1(sass@1.77.8)
+      astro: 4.12.2(sass@1.77.8)
       rehype-expressive-code: 0.35.3
 
-  astro-matomo@1.6.0(astro@4.12.1(sass@1.77.8)):
+  astro-matomo@1.6.0(astro@4.12.2(sass@1.77.8)):
     dependencies:
-      astro: 4.12.1(sass@1.77.8)
+      astro: 4.12.2(sass@1.77.8)
 
   astro@4.0.2(sass@1.77.6):
     dependencies:
@@ -6335,7 +6310,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.12.1(sass@1.77.8):
+  astro@4.12.2(sass@1.77.8):
     dependencies:
       '@astrojs/compiler': 2.9.2
       '@astrojs/internal-helpers': 0.4.1
@@ -6512,7 +6487,7 @@ snapshots:
   browserslist@4.23.2:
     dependencies:
       caniuse-lite: 1.0.30001642
-      electron-to-chromium: 1.4.829
+      electron-to-chromium: 1.4.830
       node-releases: 2.0.17
       update-browserslist-db: 1.1.0(browserslist@4.23.2)
 
@@ -6875,7 +6850,7 @@ snapshots:
 
   electron-to-chromium@1.4.439: {}
 
-  electron-to-chromium@1.4.829: {}
+  electron-to-chromium@1.4.830: {}
 
   emoji-regex@10.3.0: {}
 
@@ -7990,8 +7965,8 @@ snapshots:
 
   magicast@0.3.4:
     dependencies:
-      '@babel/parser': 7.24.7
-      '@babel/types': 7.24.7
+      '@babel/parser': 7.24.8
+      '@babel/types': 7.24.9
       source-map-js: 1.2.0
 
   make-dir@4.0.0:
@@ -9562,10 +9537,10 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.9.1(@astrojs/starlight@0.25.1(astro@4.12.1(sass@1.77.8)))(astro@4.12.1(sass@1.77.8)):
+  starlight-links-validator@0.9.1(@astrojs/starlight@0.25.1(astro@4.12.2(sass@1.77.8)))(astro@4.12.2(sass@1.77.8)):
     dependencies:
-      '@astrojs/starlight': 0.25.1(astro@4.12.1(sass@1.77.8))
-      astro: 4.12.1(sass@1.77.8)
+      '@astrojs/starlight': 0.25.1(astro@4.12.2(sass@1.77.8))
+      astro: 4.12.2(sass@1.77.8)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
       hast-util-has-property: 3.0.0
