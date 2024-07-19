@@ -16,3 +16,14 @@ export const coloredWarnLog = (
     "\x1b[0m",
   );
 };
+
+/**
+ * Returns boolean if the index is the last element in the array.
+ *
+ * @param   {number}  index
+ * @param   {any[]}   array
+ *
+ * @return  {boolean}
+ */
+export const isLastElement = (index: number, array: any[]): boolean =>
+  index + 1 === array.length;
