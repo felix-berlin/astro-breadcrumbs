@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/starlight": "^0.25.1",
     "astro": "^4.12.2",
-    "astro-breadcrumbs": "^3.0.0-beta.6",
+    "astro-breadcrumbs": "^3.0.0-beta.7",
     "astro-matomo": "^1.6.0",
     "sharp": "^0.33.4",
     "starlight-links-validator": "^0.9.1"
