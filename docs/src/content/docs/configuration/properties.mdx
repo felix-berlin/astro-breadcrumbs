@@ -60,6 +60,8 @@ export interface CustomizeElement {
 }
 ```
 
+**Default:** `[]`
+
 In case your preconfigured breadcrumbs are not sufficient, you can customize each link element individually.
 Therefore you can define an array of objects with the index of the element you want to customize. The index is the position of the element in the breadcrumbs array. The first element has the index 0, the second 1, and so on. If you want to customize the last element, you can use the string "last".
 
@@ -93,19 +95,21 @@ const customLastPart = [
 
 **Rendered Component:**
 
-<Breadcrumbs customizeLinks={[
-  {
-    "data-link": "home",
-    "aria-label": "Go to the home page",
-    text: "Page 1",
-  },
-  {
-    "data-link": "about",
-    "aria-label": "Go to the about page",
-    text: "Page 2",
-  },
-  { "is-last": true, text: "Last page!" },
-]} />
+<Breadcrumbs
+  customizeLinks={[
+    {
+      "data-link": "home",
+      "aria-label": "Go to the home page",
+      text: "Page 1",
+    },
+    {
+      "data-link": "about",
+      "aria-label": "Go to the about page",
+      text: "Page 2",
+    },
+    { "is-last": true, text: "Last page!" },
+  ]}
+/>
 
 ## customizeListElements
 
@@ -117,6 +121,8 @@ export interface CustomizeElement {
   [key: string]: any;
 }
 ```
+
+**Default:** `[]`
 
 Like [`customizeLinks`](#customizelinks) you can customize each list element individually.
 Therefore you can define an array of objects with the index of the element you want to customize. The index is the position of the element in the breadcrumbs array. The first element has the index 0, the second 1, and so on. If you want to customize the last element, you can use the string "last".
@@ -149,17 +155,103 @@ const customListItems = [
 
 **Rendered Component:**
 
-<Breadcrumbs customizeListElements={[
-  { index: "last", "data-attribute": "Last page!" },
-  {
-    "data-attribute": "home",
-    "aria-label": "Go to the home page",
-  },
-  {
+<Breadcrumbs
+  customizeListElements={[
+    { index: "last", "data-attribute": "Last page!" },
+    {
+      "data-attribute": "home",
+      "aria-label": "Go to the home page",
+    },
+    {
+      "data-attribute": "about",
+      "aria-label": "Go to the about page",
+    },
+  ]}
+/>
+
+## customizeList
+
+**Type:** `AddAttributes`
+
+```ts
+export interface AddAttributes {
+  [key: string]: any;
+}
+```
+
+**Default:** `{}`
+
+Adds attributes to the `<ol>` list element. Each key-value pair will be added as an attribute to the specific element.
+
+:::note
+Existing attributes can't be overwritten.
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+const customList = {
+  "data-attribute": "about",
+  id: crypto.randomUUID(),
+};
+---
+
+<Breadcrumbs customizeList={customList} />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs
+  customizeList={{
     "data-attribute": "about",
-    "aria-label": "Go to the about page",
-  },
-]} />
+    id: crypto.randomUUID(),
+  }}
+/>
+
+## customizeNav
+
+**Type:** `AddAttributes`
+
+```ts
+export interface AddAttributes {
+  [key: string]: any;
+}
+```
+
+**Default:** `{}`
+
+Adds attributes to the `<nav>` list element. Each key-value pair will be added as an attribute to the specific element.
+
+:::note
+Existing attributes can't be overwritten.
+:::
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+const customNav = {
+  "data-attribute": "about",
+  id: crypto.randomUUID(),
+};
+---
+
+<Breadcrumbs customizeNav={customNav} />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs
+  customizeList={{
+    "data-attribute": "about",
+    id: crypto.randomUUID(),
+  }}
+/>
 
 ## crumbs
 
