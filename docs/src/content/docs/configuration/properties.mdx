@@ -537,6 +537,59 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 </script>
 ```
 
+## separatorAriaHidden
+
+**Type:** `boolean`
+
+**Default:** `true`
+
+Define the `aria-hidden` attribute of the separator element.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs separatorAriaHidden={false}>
+  <svg
+    slot="separator"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    ><polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</Breadcrumbs>
+```
+
+**Rendered Component:**
+
+<Breadcrumbs separatorAriaHidden={false}>
+  <svg
+    slot="separator"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</Breadcrumbs>
+
+**Output:**
+
 ## truncated
 
 **Type:** `boolean`
