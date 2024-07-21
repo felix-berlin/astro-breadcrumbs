@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-beta.8](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2024-07-21)
+
+
+### Features
+
+* **separator:** add prop to control aria-hidden; missing css main class ([ff2f4ee](https://github.com/felix-berlin/astro-breadcrumbs/commit/ff2f4ee6fe3aa48b31b659d9ac9acbe2ed45877d))
+
 # [3.0.0-beta.7](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2024-07-21)
 
 
