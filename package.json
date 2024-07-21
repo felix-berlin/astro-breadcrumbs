@@ -65,7 +65,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@vitest/coverage-v8": "^2.0.3",
-    "jsdom": "^24.1.0",
+    "jsdom": "^24.1.1",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "semantic-release": "^24.0.0",
