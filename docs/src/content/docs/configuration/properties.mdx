@@ -69,6 +69,10 @@ If you didn't set a index the index of the array will be used.
 
 Except "index" and "text" each key-value pair will be added as an attribute to the specific element. "text" is the link text of the element.
 
+:::note
+Existing attributes can't be overwritten.
+:::
+
 **Usage:**
 
 ```astro
@@ -130,6 +134,10 @@ Therefore you can define an array of objects with the index of the element you w
 If you didn't set a index the index of the array will be used.
 
 Except "index" each key-value pair will be added as an attribute to the specific element.
+
+:::note
+Existing attributes can't be overwritten.
+:::
 
 **Usage:**
 
@@ -236,7 +244,7 @@ Existing attributes can't be overwritten.
 import { Breadcrumbs } from "astro-breadcrumbs";
 
 const customNav = {
-  "data-attribute": "about",
+  "aria-labelledby": "breadcrumb",
   id: crypto.randomUUID(),
 };
 ---
@@ -247,8 +255,8 @@ const customNav = {
 **Rendered Component:**
 
 <Breadcrumbs
-  customizeList={{
-    "data-attribute": "about",
+  customizeNav={{
+    "aria-labelledby": "breadcrumb",
     id: crypto.randomUUID(),
   }}
 />
