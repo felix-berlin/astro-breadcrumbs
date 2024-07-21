@@ -14,6 +14,7 @@ export interface BreadcrumbsProps {
   customBaseUrl?: string;
   excludeCurrentPage?: boolean;
   debug?: boolean;
+  separatorAriaHidden?: boolean;
 }
 
 export interface CustomizeElement extends AddAttributes {
