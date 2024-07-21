@@ -1,3 +1,5 @@
+import type { BreadcrumbsProps } from "..types/breadcrumbs.types";
+
 /**
  * Log a warning message to the console.
  *
@@ -27,3 +29,18 @@ export const coloredWarnLog = (
  */
 export const isLastElement = (index: number, array: any[]): boolean =>
   index + 1 === array.length;
+
+/**
+ * Check if the truncated button should be shown
+ *
+ * @param index
+ * @param pathLength
+ * @param truncated
+ */
+export const truncatedButtonVisible = (
+  truncated: BreadcrumbsProps["truncated"],
+  index: number,
+  pathLength: number,
+): boolean => {
+  return truncated && index === 1 && pathLength > 1;
+};

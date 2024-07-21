@@ -8,7 +8,7 @@ import {
 import BreadcrumbLink from "./BreadcrumbLink.astro";
 import BreadcrumbSeparator from "./BreadcrumbSeparator.astro";
 import type { BreadcrumbsProps } from "./breadcrumbs.types.ts";
-import { isLastElement } from "./lib/helper.ts";
+import { isLastElement, truncatedButtonVisible } from "./lib/helper.ts";
 import { debugInformation } from "./lib/debug.ts";
 
 const {
@@ -46,6 +46,19 @@ const parts = generateCrumbs({
 
 const customizedParts = mergeCustomizedLinks(parts, customizeLinks);
 
+const processedParts = customizedParts
+  .map((part, index, array) => {
+    const isLast = isLastElement(index, array);
+    const showTruncatedButton = truncatedButtonVisible(
+      truncated,
+      index,
+      pathLength,
+    );
+
+    return { ...part, isLast, showTruncatedButton };
+  })
+  .filter((part) => !(excludeCurrentPage && part.isLast)); // Filter out the last element if excludeCurrentPage is true
+
 debugInformation(debug, parts, customizedParts);
 ---
 
@@ -63,65 +76,58 @@ debugInformation(debug, parts, customizedParts);
       {...customizeList}
     >
       {
-        customizedParts.map(({ text, ...attrs }, index, array) => {
-          const lastElement = isLastElement(index, array);
-
-          if (excludeCurrentPage && lastElement) {
-            return null;
-          }
-
-          const showTruncatedButton =
-            truncated && index === 1 && pathLength > 1;
-
-          return (
-            <>
-              {showTruncatedButton && (
-                <li
-                  class={`${mainBemClass}__crumb has-ellipsis`}
-                  {...customizeListElements[1]}
-                >
-                  <button
-                    type="button"
-                    aria-label={ellipsisAriaLabel}
-                    class={`${mainBemClass}__truncated-button`}
+        processedParts.map(
+          ({ text, isLast, showTruncatedButton, ...attrs }, index) => {
+            return (
+              <>
+                {showTruncatedButton && (
+                  <li
+                    class={`${mainBemClass}__crumb has-ellipsis`}
+                    {...customizeListElements[1]}
                   >
-                    <slot name="ellipsis">…</slot>
-                  </button>
-                  <BreadcrumbSeparator>
-                    <slot name="separator" slot="seperator" />
-                  </BreadcrumbSeparator>
-                </li>
-              )}
-              <li
-                class={`${mainBemClass}__crumb`}
-                {...customizeListElement(
-                  index,
-                  showTruncatedButton,
-                  customizeListElements,
+                    <button
+                      type="button"
+                      aria-label={ellipsisAriaLabel}
+                      class={`${mainBemClass}__truncated-button`}
+                    >
+                      <slot name="ellipsis">…</slot>
+                    </button>
+                    <BreadcrumbSeparator>
+                      <slot name="separator" slot="seperator" />
+                    </BreadcrumbSeparator>
+                  </li>
                 )}
-              >
-                <BreadcrumbLink
-                  attrs={attrs}
-                  mainBemClass={mainBemClass}
-                  isIndex={index === 0}
-                  isCurrent={lastElement}
-                >
-                  {Astro.slots.has("index") && index === 0 ? (
-                    <slot name="index" slot="index" />
-                  ) : (
-                    text
+                <li
+                  class={`${mainBemClass}__crumb`}
+                  {...customizeListElement(
+                    index,
+                    showTruncatedButton,
+                    customizeListElements,
                   )}
-                </BreadcrumbLink>
+                >
+                  <BreadcrumbLink
+                    attrs={attrs}
+                    mainBemClass={mainBemClass}
+                    isIndex={index === 0}
+                    isCurrent={isLast}
+                  >
+                    {Astro.slots.has("index") && index === 0 ? (
+                      <slot name="index" slot="index" />
+                    ) : (
+                      text
+                    )}
+                  </BreadcrumbLink>
 
-                {Astro.slots.has("separator") && !lastElement && (
-                  <BreadcrumbSeparator>
-                    <slot name="separator" slot="separator" />
-                  </BreadcrumbSeparator>
-                )}
-              </li>
-            </>
-          );
-        })
+                  {Astro.slots.has("separator") && !isLast && (
+                    <BreadcrumbSeparator>
+                      <slot name="separator" slot="separator" />
+                    </BreadcrumbSeparator>
+                  )}
+                </li>
+              </>
+            );
+          },
+        )
       }
     </ol>
   </nav>
