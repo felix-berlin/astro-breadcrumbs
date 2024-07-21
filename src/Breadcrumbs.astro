@@ -18,6 +18,8 @@ const {
   crumbs = [],
   customizeLinks = [],
   customizeListElements = [],
+  customizeList = {},
+  customizeNav = {},
   schemaJsonScript = true,
   ellipsisAriaLabel = "Show hidden navigation",
   truncated = false,
@@ -53,11 +55,12 @@ debugInformation(debug, parts, customizedParts);
   data-path-length={pathLength}
   data-truncated={truncated}
 >
-  <nav aria-label={ariaLabel} class={mainBemClass} id={UUID}>
+  <nav aria-label={ariaLabel} class={mainBemClass} id={UUID} {...customizeNav}>
     <ol
       class={`${mainBemClass}__crumbs${
         Astro.slots.has("separator") ? " has-separators" : " has-no-separators"
       }`}
+      {...customizeList}
     >
       {
         customizedParts.map(({ text, ...attrs }, index, array) => {

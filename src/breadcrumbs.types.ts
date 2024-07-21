@@ -5,6 +5,8 @@ export interface BreadcrumbsProps {
   crumbs?: Array<BreadcrumbItem>;
   customizeLinks?: Array<CustomizeElement>;
   customizeListElements?: Array<CustomizeElement>;
+  customizeList?: AddAttributes;
+  customizeNav?: AddAttributes;
   schemaJsonScript?: boolean;
   ellipsisAriaLabel?: string;
   truncated?: boolean;
@@ -14,9 +16,12 @@ export interface BreadcrumbsProps {
   debug?: boolean;
 }
 
-export interface CustomizeElement {
+export interface CustomizeElement extends AddAttributes {
   index?: number | "last";
-  [key: string]: any; // Allows for any other properties
+}
+
+export interface AddAttributes {
+  [key: string]: any;
 }
 
 export interface BreadcrumbItem {
