@@ -1,5 +1,10 @@
 import { formatLinkText } from "./formatLinkText";
-import type { BreadcrumbItem, BreadcrumbsProps } from "../Breadcrumbs.astro";
+import type {
+  BreadcrumbItem,
+  BreadcrumbsProps,
+  CustomizeElement,
+  MergedParts,
+} from "../breadcrumbs.types.ts";
 
 type GenerateCrumbs = {
   crumbs: BreadcrumbsProps["crumbs"];
@@ -30,7 +35,7 @@ export const generateCrumbs = ({
   const parts: Array<BreadcrumbItem> = [];
   const baseUrl = import.meta.env.BASE_URL;
 
-  const basePartCount = baseUrl.split("/").filter(s => s).length;
+  const basePartCount = baseUrl.split("/").filter((s) => s).length;
 
   const hasBaseUrl = baseUrl !== "/";
 
@@ -65,7 +70,7 @@ export const generateCrumbs = ({
     // strip out any file extensions
     const matches = text.match(/^(.+?)(\.[a-z0-9]+)?\/?$/i);
 
-    if (matches && matches[2]) {
+    if (matches?.[2]) {
       text = matches[1];
     }
 
@@ -114,4 +119,53 @@ export const generateCrumbs = ({
   }
 
   return parts;
+};
+
+/**
+ * Merge the parts array with the customizeLinks array.
+ */
+export const mergeCustomizedLinks = (
+  parts: BreadcrumbItem[],
+  customizeLinks: CustomizeElement[],
+) => {
+  // Clone the parts array to avoid direct modification
+  const clonedParts: MergedParts[] = parts.map((part) => ({ ...part }));
+  const partsLength = clonedParts.length;
+
+  customizeLinks.forEach((customLink, arrayIndex) => {
+    let targetIndex = arrayIndex;
+
+    if (typeof customLink.index === "number") {
+      targetIndex = customLink.index;
+    } else if (customLink.index === "last") {
+      targetIndex = partsLength - 1;
+    }
+
+    if (!(targetIndex >= 0 && targetIndex < partsLength)) {
+      return;
+    }
+
+    Object.assign(clonedParts[targetIndex], customLink);
+
+    delete clonedParts[targetIndex].index;
+  });
+
+  return clonedParts;
+};
+
+/**
+ * Returns the list element to be customized.
+ *
+ * @param   {number}              index
+ * @param   {boolean}             truncatedButtonShown
+ * @param   {BreadcrumbsProps[]}  listElements
+ */
+export const customizeListElement = (index: number, truncatedButtonShown: boolean, listElements: BreadcrumbsProps["customizeListElements"] = []) => {
+  if (truncatedButtonShown) {
+    // Remove the item at index 1
+    return listElements.filter((item, index) => index !== 1);
+  }
+
+  // Return the item by index
+  return listElements[index];
 };
