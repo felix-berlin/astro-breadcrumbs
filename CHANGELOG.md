@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-beta.10](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.9...v3.0.0-beta.10) (2024-08-14)
+
+
+### Bug Fixes
+
+* **spacing:** replace margin with margin-inline ([76da2aa](https://github.com/felix-berlin/astro-breadcrumbs/commit/76da2aadca709c655ab1a0b28a11b607f86d1463))
+
 # [3.0.0-beta.9](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2024-08-14)
 
 
