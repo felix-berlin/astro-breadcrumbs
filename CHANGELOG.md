@@ -2,6 +2,79 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-beta.10](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.9...v3.0.0-beta.10) (2024-08-14)
+
+
+### Bug Fixes
+
+* **spacing:** replace margin with margin-inline ([76da2aa](https://github.com/felix-berlin/astro-breadcrumbs/commit/76da2aadca709c655ab1a0b28a11b607f86d1463))
+
+# [3.0.0-beta.9](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2024-08-14)
+
+
+### Bug Fixes
+
+* **customElements:** define only if not allready defined ([5df3c7f](https://github.com/felix-berlin/astro-breadcrumbs/commit/5df3c7fd1de4eaad8ed297a0157a2774b0992716))
+
+# [3.0.0-beta.8](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2024-07-21)
+
+
+### Features
+
+* **separator:** add prop to control aria-hidden; missing css main class ([ff2f4ee](https://github.com/felix-berlin/astro-breadcrumbs/commit/ff2f4ee6fe3aa48b31b659d9ac9acbe2ed45877d))
+
+# [3.0.0-beta.7](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2024-07-21)
+
+
+### Features
+
+* add props customizeList and customizeNav for attr customization ([e1bf0b3](https://github.com/felix-berlin/astro-breadcrumbs/commit/e1bf0b3ea63fe60908bbd1cb8a3f0cb6fd111000))
+
+# [3.0.0-beta.6](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2024-06-22)
+
+
+### Features
+
+* **customizeListElements:** customize list elements attributes ([3afb70e](https://github.com/felix-berlin/astro-breadcrumbs/commit/3afb70e057b94e9bbd9ae441a440ff0aefb0b4ce))
+
+# [3.0.0-beta.5](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.4...v3.0.0-beta.5) (2024-06-21)
+
+
+### Bug Fixes
+
+* type errors ([f57f4fa](https://github.com/felix-berlin/astro-breadcrumbs/commit/f57f4fa3f3b2741012a0f2fd8a53861a3e725d2c))
+
+# [3.0.0-beta.4](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.3...v3.0.0-beta.4) (2024-06-21)
+
+
+### Bug Fixes
+
+* parts were overwritten directly ([dec7f13](https://github.com/felix-berlin/astro-breadcrumbs/commit/dec7f13d4982622de99e895c3ad6724de547695f))
+
+# [3.0.0-beta.3](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.2...v3.0.0-beta.3) (2024-06-21)
+
+
+### Features
+
+* **customizeLinks:** set index in object to modify spezific parts ([006b8be](https://github.com/felix-berlin/astro-breadcrumbs/commit/006b8be250aa62968dbe4fc0528e44edfc70fd9f))
+
+# [3.0.0-beta.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2024-06-21)
+
+
+### Features
+
+* "is-last" special key for customizeLinks ([18955d8](https://github.com/felix-berlin/astro-breadcrumbs/commit/18955d88db7ee3fdfdfe6151e2de36a6bbb4b5bd))
+
+# [3.0.0-beta.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.1...v3.0.0-beta.1) (2024-06-21)
+
+
+* feat(customizeLinks)!: add new prop customizeLinks ([2cb7ac7](https://github.com/felix-berlin/astro-breadcrumbs/commit/2cb7ac7ef7d04096267668ebea4b342db977a4a6))
+
+
+### BREAKING CHANGES
+
+* customize every attribute of the breadcrumb link including the text, therefore you can define an array of objects. Each entry will be merged with the original generated crumbs array.
+
 ## [2.3.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.0...v2.3.1) (2024-06-02)
 
 

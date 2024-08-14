@@ -1,4 +1,4 @@
-import type { BreadcrumbsProps } from "../Breadcrumbs.astro";
+import type { BreadcrumbsProps } from "../breadcrumbs.types.ts";
 
 /**
  * Find the separator in a slug.
@@ -7,7 +7,7 @@ import type { BreadcrumbsProps } from "../Breadcrumbs.astro";
  *
  * @return  {string | undefined}
  */
-const findSeparator = (slug: string) => {
+const findSeparator = (slug: string): string | undefined => {
   const separators = ["-", "_"];
   for (const separator of separators) {
     if (slug.includes(separator)) {
@@ -23,7 +23,7 @@ const findSeparator = (slug: string) => {
  *
  * @return  {string}
  */
-const unSlugTrimmed = (slug: string) => {
+const unSlugTrimmed = (slug: string): string => {
   const separator = findSeparator(slug);
   if (separator) {
     return slug.split(separator).join(" ").trim();

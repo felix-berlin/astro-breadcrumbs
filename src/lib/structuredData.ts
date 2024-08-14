@@ -1,4 +1,4 @@
-import type { BreadcrumbItem } from "../Breadcrumbs.astro";
+import type { BreadcrumbItem } from "../breadcrumbs.types.ts";
 
 /**
  * Generates a JSON-LD string for the BreadcrumbList schema.

@@ -1,6 +1,6 @@
 {
   "name": "astro-breadcrumbs",
-  "version": "2.3.1",
+  "version": "3.0.0-beta.10",
   "description": "Well configurable breadcrumb component for Astro.js. Create breadcrumbs completely dynamically or specify exactly how they should look.",
   "type": "module",
   "exports": {
@@ -64,12 +64,12 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@vitest/coverage-v8": "^1.6.0",
-    "jsdom": "^24.1.0",
-    "prettier": "^3.3.0",
-    "prettier-plugin-astro": "^0.14.0",
-    "semantic-release": "^23.1.1",
-    "vitest": "^1.6.0"
+    "@vitest/coverage-v8": "^2.0.5",
+    "jsdom": "^24.1.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "semantic-release": "^24.0.0",
+    "vitest": "^2.0.5"
   },
   "peerDependencies": {
     "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0"

@@ -13,7 +13,6 @@ $spacing-vertical-separator: 6px !default;
 $icons-not-bigger-than-font-size: true !default;
 $transition-link-breadcrumbs: color 0.2s ease-in-out !default;
 $truncated: false !default;
-
 $valid-overflow-behaviors: ("wrap", "ellipsis");
 
 @if not list.index($valid-overflow-behaviors, $overflow-behavior) {
@@ -92,7 +91,7 @@ $valid-overflow-behaviors: ("wrap", "ellipsis");
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 var(--spacing-vertical-separator-breadcrumbs);
+        margin-inline: var(--spacing-vertical-separator-breadcrumbs);
 
         @if $color-separator {
           color: $color-separator;
