@@ -34,6 +34,32 @@ const crumbsWithCustomAttributes = [
     href: "#",
   },
 ];
+
+const customListItems = [
+  { index: "last", "data-attribute": "Last page!" },
+  {
+    "data-attribute": "home",
+    "aria-label": "Go to the home page",
+  },
+  {
+    "data-attribute": "about",
+    "aria-label": "Go to the about page",
+  },
+];
+
+const customLastPart = [
+  { index: "last", text: "Last page!" },
+  {
+    "data-link": "home",
+    "aria-label": "Go to the home page",
+    text: "Page 1",
+  },
+  {
+    "data-link": "about",
+    "aria-label": "Go to the about page",
+    text: "Page 2",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro Breadcrumbs.">
@@ -115,6 +141,10 @@ const crumbsWithCustomAttributes = [
     <Breadcrumbs customBaseUrl="my-new-base" />
     <h2>Example 7 - Without current</h2>
     <Breadcrumbs excludeCurrentPage={true} />
+    <h2>Example 8 - customizeListElements</h2>
+    <Breadcrumbs customizeListElements={customListItems} />
+    <h2>Example 9 - customizeLinks</h2>
+    <Breadcrumbs customizeLinks={customLastPart} />
   </main>
 </Layout>
 <style lang="scss">
