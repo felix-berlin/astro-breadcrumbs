@@ -147,5 +147,7 @@ debugInformation(debug, parts, customizedParts);
 <script>
   import { Truncated } from "./lib/truncated";
 
-  customElements.define("astro-breadcrumbs", Truncated);
+  if (!customElements.get("astro-breadcrumbs")) {
+    customElements.define("astro-breadcrumbs", Truncated);
+  }
 </script>
