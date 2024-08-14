@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-beta.9](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2024-08-14)
+
+
+### Bug Fixes
+
+* **customElements:** define only if not allready defined ([5df3c7f](https://github.com/felix-berlin/astro-breadcrumbs/commit/5df3c7fd1de4eaad8ed297a0157a2774b0992716))
+
 # [3.0.0-beta.8](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2024-07-21)
 
 
