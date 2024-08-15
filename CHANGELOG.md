@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0...v3.0.1) (2024-08-15)
+
+
+### Bug Fixes
+
+* broken breadcrumb text on non latin languages ([2a975c7](https://github.com/felix-berlin/astro-breadcrumbs/commit/2a975c79a5f0a4939a407d8b9c0019f835613b92))
+
 # [3.0.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v2.3.1...v3.0.0) (2024-08-14)
 
 
