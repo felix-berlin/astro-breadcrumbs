@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.25.5",
-    "astro": "^4.13.4",
-    "astro-breadcrumbs": "^3.0.0",
+    "astro": "^4.14.2",
+    "astro-breadcrumbs": "^3.0.1",
     "astro-matomo": "^1.6.0",
     "sharp": "^0.33.4",
     "starlight-links-validator": "^0.10.1"
@@ -20,5 +20,5 @@
   "devDependencies": {
     "sass": "^1.77.8"
   },
-  "packageManager": "pnpm@9.7.0"
+  "packageManager": "pnpm@9.7.1"
 }
