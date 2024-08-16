@@ -1,0 +1,91 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+
+import EditLink from "virtual:starlight/components/EditLink";
+import LastUpdated from "virtual:starlight/components/LastUpdated";
+import Pagination from "virtual:starlight/components/Pagination";
+import config from "virtual:starlight/user-config";
+import { Icon } from "@astrojs/starlight/components";
+---
+
+<p>test</p>
+<footer class="sl-flex">
+  <div class="meta sl-flex">
+    <EditLink {...Astro.props} />
+    <LastUpdated {...Astro.props} />
+  </div>
+  <Pagination {...Astro.props} />
+
+  <nav class="c-footer-navbar">
+    <ul class="c-footer-navbar__list">
+      <li class="c-footer-navbar__list-item">
+        <a href="/imprint">Imprint</a>
+      </li>
+      <li class="c-footer-navbar__list-item">
+        <a href="/privacy">Privacy policy</a>
+      </li>
+    </ul>
+  </nav>
+
+  {
+    config.credits && (
+      <a class="kudos sl-flex" href="https://starlight.astro.build">
+        <Icon name={"starlight"} />{" "}
+        {Astro.props.labels["builtWithStarlight.label"]}
+      </a>
+    )
+  }
+</footer>
+
+<style lang="scss">
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .meta {
+    gap: 0.75rem 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+  .meta > :global(p:only-child) {
+    margin-inline-start: auto;
+  }
+
+  .kudos {
+    align-items: center;
+    gap: 0.5em;
+    margin: 1.5rem auto;
+    font-size: var(--sl-text-xs);
+    text-decoration: none;
+    color: var(--sl-color-gray-3);
+  }
+  .kudos :global(svg) {
+    color: var(--sl-color-orange);
+  }
+  .kudos:hover {
+    color: var(--sl-color-white);
+  }
+
+  .c-footer-navbar {
+    &__list {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      font-size: var(--sl-text-xs);
+      text-decoration: none;
+      color: var(--sl-color-gray-3);
+
+      &:where(a):hover {
+        color: var(--sl-color-white);
+      }
+    }
+  }
+</style>
