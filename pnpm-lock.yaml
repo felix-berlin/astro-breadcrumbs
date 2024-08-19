@@ -31,7 +31,7 @@ importers:
         specifier: ^0.14.1
         version: 0.14.1
       semantic-release:
-        specifier: ^24.0.0
+        specifier: ^24.1.0
         version: 24.1.0(typescript@5.5.4)
       vitest:
         specifier: ^2.0.5
@@ -53,8 +53,8 @@ importers:
   docs:
     dependencies:
       '@astrojs/starlight':
-        specifier: ^0.25.5
-        version: 0.25.5(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
+        specifier: ^0.26.1
+        version: 0.26.1(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
       astro:
         specifier: ^4.14.2
         version: 4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)
@@ -65,11 +65,11 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
       sharp:
-        specifier: ^0.33.4
+        specifier: ^0.33.5
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.10.1
-        version: 0.10.1(@astrojs/starlight@0.25.5(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)))(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
+        version: 0.10.1(@astrojs/starlight@0.26.1(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)))(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.77.8
@@ -106,8 +106,8 @@ packages:
   '@astrojs/sitemap@3.1.6':
     resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
-  '@astrojs/starlight@0.25.5':
-    resolution: {integrity: sha512-JQsfoqRUX/HBpOW8LWPdiIxcfXZ5HOvi4Dz4Ez61U99hDyX3Ix2Q+pmsek1sH5R1MHWx/wlki2VPEqidtKXyiQ==}
+  '@astrojs/starlight@0.26.1':
+    resolution: {integrity: sha512-0qNYWZJ+ZOdSfM7du6fGuwUhyTHtAeRIl0zYe+dF0TxDvcakplO1SYLbGGX6lEVYE3PdBne7dcJww85bXZJIIQ==}
     peerDependencies:
       astro: ^4.8.6
 
@@ -3623,7 +3623,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.25.5(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))':
+  '@astrojs/starlight@0.26.1(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))':
     dependencies:
       '@astrojs/mdx': 3.1.3(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
       '@astrojs/sitemap': 3.1.6
@@ -4015,8 +4015,8 @@ snapshots:
       hast-util-to-html: 9.0.1
       hast-util-to-text: 4.0.2
       hastscript: 9.0.0
-      postcss: 8.4.39
-      postcss-nested: 6.0.1(postcss@8.4.39)
+      postcss: 8.4.41
+      postcss-nested: 6.0.1(postcss@8.4.41)
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
 
@@ -6730,9 +6730,9 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  postcss-nested@6.0.1(postcss@8.4.39):
+  postcss-nested@6.0.1(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.39
+      postcss: 8.4.41
       postcss-selector-parser: 6.1.0
 
   postcss-selector-parser@6.1.0:
@@ -7211,9 +7211,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.10.1(@astrojs/starlight@0.25.5(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)))(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)):
+  starlight-links-validator@0.10.1(@astrojs/starlight@0.26.1(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)))(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
-      '@astrojs/starlight': 0.25.5(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
+      '@astrojs/starlight': 0.26.1(astro@4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4))
       astro: 4.14.2(rollup@4.18.0)(sass@1.77.8)(typescript@5.5.4)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1

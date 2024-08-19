@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.25.5",
+    "@astrojs/starlight": "^0.26.1",
     "astro": "^4.14.2",
     "astro-breadcrumbs": "^3.0.1",
     "astro-matomo": "^1.6.0",
-    "sharp": "^0.33.4",
+    "sharp": "^0.33.5",
     "starlight-links-validator": "^0.10.1"
   },
   "devDependencies": {

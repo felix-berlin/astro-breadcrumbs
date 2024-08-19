@@ -68,7 +68,7 @@
     "jsdom": "^24.1.1",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "semantic-release": "^24.0.0",
+    "semantic-release": "^24.1.0",
     "vitest": "^2.0.5"
   },
   "peerDependencies": {
