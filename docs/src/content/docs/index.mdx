@@ -21,30 +21,35 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 ## Next steps
 
 <CardGrid stagger>
-  <Card title="Zero Config Mode" icon="star">
+  <Card title="Zero Config Mode" icon="rocket">
     Just install and use!
   </Card>
   <Card title="A11y support" icon="information">
     Accessible by default.
   </Card>
-  <Card title="Structured data support" icon="document">
+  <Card title="Structured data support" icon="seti:json" >
     Structured data [schema.org JSON-LD](https://schema.org/BreadcrumbList)
     script tag support.
   </Card>
   <Card title="Fully customizable" icon="setting">
     Learn more in [the Astro Breadcrumbs Docs](/start-here/getting-started/).
   </Card>
-  <Card title="Completely optional styles" icon="pencil">
+  <Card title="Completely optional styles" icon="seti:sass">
     Choose between SCSS or CSS styles:
 		- SCSS file with a lot of settings
     - CSS File with configurable CSS vars.
 
-    CSS classes are written in BEMIT style.
+    CSS classes are written in [BEMIT](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) style.
 
   </Card>
   <Card title="Zero dependencies" icon="star">
 		Its true! Here is the [proof](https://www.npmjs.com/package/astro-breadcrumbs?activeTab=dependencies).
 	</Card>
-  <Card title="Small size" icon="star"></Card>
+  <Card title="Small size" icon="seti:zip">
+    Just 1.1kb (minified & gzipped) client side code.
+
+    _Astro Breadcrumbs is a web component, JS is only used for the responsive [truncated feature](/configuration/properties/#truncated)._
+
+  </Card>
 
 </CardGrid>

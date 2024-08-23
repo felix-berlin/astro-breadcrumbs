@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../../../../src/Breadcrumbs.astro";
+---
+
+<Layout title="Welcome to Astro Breadcrumbs.">
+  <main>
+    <h1><span class="text-gradient">Astro</span> Breadcrumbs Examples</h1>
+
+    <h2>Example 1 - Custom separator</h2>
+    <div style="max-width: 500px; margin: 0 auto">
+      <Breadcrumbs indexText={"home"} truncated={true}>
+        <!-- Add icon or text here -->
+        <svg
+          slot="separator"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </Breadcrumbs>
+    </div>
+  </main>
+</Layout>

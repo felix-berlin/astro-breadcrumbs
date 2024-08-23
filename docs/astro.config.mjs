@@ -50,12 +50,13 @@ export default defineConfig({
         },
         {
           label: "Guides",
-          items: [
-            { label: "Migration to v2", link: "/guides/migration-to-v2/" },
-          ],
+          autogenerate: { directory: "guides" },
         },
       ],
       plugins: [starlightLinksValidator()],
+      components: {
+        Footer: "./src/components/Footer.astro",
+      },
     }),
     matomo({
       enabled: import.meta.env.PROD,
