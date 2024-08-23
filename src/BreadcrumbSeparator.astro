@@ -1,8 +1,5 @@
 ---
-interface BreadcrumbSeparatorProps {
-  mainBemClass: string;
-  separatorAriaHidden: boolean;
-}
+import type { BreadcrumbSeparatorProps } from "./breadcrumbs.types.ts";
 
 const { mainBemClass, separatorAriaHidden } =
   Astro.props as BreadcrumbSeparatorProps;

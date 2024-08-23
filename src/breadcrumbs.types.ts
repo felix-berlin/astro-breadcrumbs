@@ -32,3 +32,15 @@ export interface BreadcrumbItem {
 }
 
 export type MergedParts = CustomizeElement & BreadcrumbItem;
+
+export interface BreadcrumbSeparatorProps {
+  mainBemClass: string;
+  separatorAriaHidden: boolean;
+}
+
+export interface BreadcrumbLinkProps {
+  attrs: Record<string, any>;
+  mainBemClass: string;
+  isIndex: boolean;
+  isCurrent: boolean;
+}

@@ -1,10 +1,6 @@
 ---
-interface BreadcrumbLinkProps {
-  attrs: Record<string, any>;
-  mainBemClass: string;
-  isIndex: boolean;
-  isCurrent: boolean;
-}
+import type { BreadcrumbLinkProps } from "./breadcrumbs.types.ts";
+
 const { attrs, mainBemClass, isIndex, isCurrent } =
   Astro.props as BreadcrumbLinkProps;
 
