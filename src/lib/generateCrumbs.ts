@@ -4,7 +4,7 @@ import type {
   BreadcrumbsProps,
   CustomizeElement,
   MergedParts,
-} from "../breadcrumbs.types.ts";
+} from "../breadcrumbs";
 
 type GenerateCrumbs = {
   crumbs: BreadcrumbsProps["crumbs"];

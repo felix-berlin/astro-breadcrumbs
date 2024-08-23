@@ -59,8 +59,8 @@ importers:
         specifier: ^4.14.5
         version: 4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4)
       astro-breadcrumbs:
-        specifier: ^3.0.1
-        version: 3.0.1(astro@4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4))
+        specifier: ^3.0.2-beta.1
+        version: 3.0.2-beta.1(astro@4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4))
       astro-matomo:
         specifier: ^1.6.0
         version: 1.6.0(astro@4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4))
@@ -1220,8 +1220,8 @@ packages:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
 
-  astro-breadcrumbs@3.0.1:
-    resolution: {integrity: sha512-WoraP7NJM8LF8MXiq/neqsMkn1fF6YO+P4ugn/pSrZuXxHaH2naUdlbGb1+x4Z27wRDVn4Q/DXFy+cXNfLqvVQ==}
+  astro-breadcrumbs@3.0.2-beta.1:
+    resolution: {integrity: sha512-q+c3uiiUjU35wwG/1t4aLACqhRXj3xTJtZjFjUCbLnIk8ureBPwaG3DTJEWOzHlw7vjVY8fVsoQDW1XzCbbZzw==}
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
 
@@ -4855,7 +4855,7 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-breadcrumbs@3.0.1(astro@4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4)):
+  astro-breadcrumbs@3.0.2-beta.1(astro@4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
       astro: 4.14.5(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4)
 

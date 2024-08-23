@@ -1,5 +1,13 @@
 ---
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import type { BreadcrumbLinkProps } from "astro-breadcrumbs";
+
+interface ImprintProps {
+  frontmatter: {
+    title: BreadcrumbLinkProps;
+    template: string;
+  };
+}
 ---
 
 <StarlightPage frontmatter={{ title: "Imprint (DE)", template: "splash" }}>
