@@ -9,11 +9,11 @@
     "./breadcrumbs.scss": "./src/breadcrumbs.scss"
   },
   "main": "index.ts",
-  "types": "./src/breadcrumbs.types.ts",
+  "types": "./src/breadcrumbs.d.ts",
   "typesVersions": {
     ">=5.5.4": {
       "*": [
-        "./src/breadcrumbs.types.ts"
+        "./src/breadcrumbs.d.ts"
       ]
     }
   },
