@@ -54,7 +54,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.26.1
-        version: 0.26.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       astro:
         specifier: ^4.14.2
         version: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
@@ -69,7 +69,7 @@ importers:
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.11.0
-        version: 0.11.0(@astrojs/starlight@0.26.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 0.11.0(@astrojs/starlight@0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.77.8
@@ -106,8 +106,8 @@ packages:
   '@astrojs/sitemap@3.1.6':
     resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
-  '@astrojs/starlight@0.26.1':
-    resolution: {integrity: sha512-0qNYWZJ+ZOdSfM7du6fGuwUhyTHtAeRIl0zYe+dF0TxDvcakplO1SYLbGGX6lEVYE3PdBne7dcJww85bXZJIIQ==}
+  '@astrojs/starlight@0.26.3':
+    resolution: {integrity: sha512-U3rSNwr5cNvJVSPuSncduZ3ioKwNoMAZxYw/riuOfcJeT8DaJua3Uq+Z57vmhI1VxF19BZ1REQ0moUL6nhR8KQ==}
     peerDependencies:
       astro: ^4.8.6
 
@@ -752,31 +752,31 @@ packages:
   '@oslojs/encoding@0.4.1':
     resolution: {integrity: sha512-hkjo6MuIK/kQR5CrGNdAPZhS01ZCXuWDRJ187zh6qqF2+yMHZpD9fAYpX8q2bOO6Ryhl3XpCT6kUX76N8hhm4Q==}
 
-  '@pagefind/darwin-arm64@1.1.0':
-    resolution: {integrity: sha512-SLsXNLtSilGZjvqis8sX42fBWsWAVkcDh1oerxwqbac84HbiwxpxOC2jm8hRwcR0Z55HPZPWO77XeRix/8GwTg==}
+  '@pagefind/darwin-arm64@1.1.1':
+    resolution: {integrity: sha512-tZ9tysUmQpFs2EqWG2+E1gc+opDAhSyZSsgKmFzhnWfkK02YHZhvL5XJXEZDqYy3s1FAKhwjTg8XDxneuBlDZQ==}
     cpu: [arm64]
     os: [darwin]
 
-  '@pagefind/darwin-x64@1.1.0':
-    resolution: {integrity: sha512-QjQSE/L5oS1C8N8GdljGaWtjCBMgMtfrPAoiCmINTu9Y9dp0ggAyXvF8K7Qg3VyIMYJ6v8vg2PN7Z3b+AaAqUA==}
+  '@pagefind/darwin-x64@1.1.1':
+    resolution: {integrity: sha512-ChohLQ39dLwaxQv0jIQB/SavP3TM5K5ENfDTqIdzLkmfs3+JlzSDyQKcJFjTHYcCzQOZVeieeGq8PdqvLJxJxQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@pagefind/default-ui@1.1.0':
-    resolution: {integrity: sha512-+XiAJAK++C64nQcD7s3Prdmd5S92lT05fwjOxm0L1jj80jbL+tmvcqkkFnPpoqhnicIPgcAX/Y5W0HRZnBt35w==}
+  '@pagefind/default-ui@1.1.1':
+    resolution: {integrity: sha512-ZM0zDatWDnac/VGHhQCiM7UgA4ca8jpjA+VfuTJyHJBaxGqZMQnm4WoTz9E0KFcue1Bh9kxpu7uWFZfwpZZk0A==}
 
-  '@pagefind/linux-arm64@1.1.0':
-    resolution: {integrity: sha512-8zjYCa2BtNEL7KnXtysPtBELCyv5DSQ4yHeK/nsEq6w4ToAMTBl0K06khqxdSGgjMSwwrxvLzq3so0LC5Q14dA==}
+  '@pagefind/linux-arm64@1.1.1':
+    resolution: {integrity: sha512-H5P6wDoCoAbdsWp0Zx0DxnLUrwTGWGLu/VI1rcN2CyFdY2EGSvPQsbGBMrseKRNuIrJDFtxHHHyjZ7UbzaM9EA==}
     cpu: [arm64]
     os: [linux]
 
-  '@pagefind/linux-x64@1.1.0':
-    resolution: {integrity: sha512-4lsg6VB7A6PWTwaP8oSmXV4O9H0IHX7AlwTDcfyT+YJo/sPXOVjqycD5cdBgqNLfUk8B9bkWcTDCRmJbHrKeCw==}
+  '@pagefind/linux-x64@1.1.1':
+    resolution: {integrity: sha512-yJs7tTYbL2MI3HT+ngs9E1BfUbY9M4/YzA0yEM5xBo4Xl8Yu8Qg2xZTOQ1/F6gwvMrjCUFo8EoACs6LRDhtMrQ==}
     cpu: [x64]
     os: [linux]
 
-  '@pagefind/windows-x64@1.1.0':
-    resolution: {integrity: sha512-OboCM76BcMKT9IoSfZuFhiqMRgTde8x4qDDvKulFmycgiJrlL5WnIqBHJLQxZq+o2KyZpoHF97iwsGAm8c32sQ==}
+  '@pagefind/windows-x64@1.1.1':
+    resolution: {integrity: sha512-b7/qPqgIl+lMzkQ8fJt51SfguB396xbIIR+VZ3YrL2tLuyifDJ1wL5mEm+ddmHxJ2Fki340paPcDan9en5OmAw==}
     cpu: [x64]
     os: [win32]
 
@@ -1089,9 +1089,6 @@ packages:
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
-
-  '@types/unist@3.0.2':
-    resolution: {integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1512,6 +1509,15 @@ packages:
 
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
+  debug@4.3.7:
+    resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -2338,8 +2344,8 @@ packages:
   micromark-core-commonmark@2.0.1:
     resolution: {integrity: sha512-CUQyKr1e///ZODyD1U3xit6zXwy1a8q2a1S1HKtIlmgvurrEpaw/Y9y6KSIbF8P59cn/NjzHyO+Q2fAyYLQrAA==}
 
-  micromark-extension-directive@3.0.0:
-    resolution: {integrity: sha512-61OI07qpQrERc+0wEysLHMvoiO3s2R56x5u7glHq2Yqq6EHbH4dW25G9GfDdGCDYqA21KE6DWgNSzxSwHc2hSg==}
+  micromark-extension-directive@3.0.1:
+    resolution: {integrity: sha512-VGV2uxUzhEZmaP7NSFo2vtq7M2nUD+WfmYQD+d8i/1nHbzE+rMy9uzTvUybBbNiVbrhOZibg3gbyoARGqgDWyg==}
 
   micromark-extension-gfm-autolink-literal@2.1.0:
     resolution: {integrity: sha512-oOg7knzhicgQ3t4QCjCWgTmfNhvQbDDnJeVu9v81r7NltNCVmhPy1fJRX27pISafdjL+SVc4d3l48Gb6pbRypw==}
@@ -2493,6 +2499,9 @@ packages:
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+
+  ms@2.1.3:
+    resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
@@ -2715,8 +2724,8 @@ packages:
   package-json-from-dist@1.0.0:
     resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
 
-  pagefind@1.1.0:
-    resolution: {integrity: sha512-1nmj0/vfYcMxNEQj0YDRp6bTVv9hI7HLdPhK/vBBYlrnwjATndQvHyicj5Y7pUHrpCFZpFnLVQXIF829tpFmaw==}
+  pagefind@1.1.1:
+    resolution: {integrity: sha512-U2YR0dQN5B2fbIXrLtt/UXNS0yWSSYfePaad1KcBPTi0p+zRtsVjwmoPaMQgTks5DnHNbmDxyJUL5TGaLljK3A==}
     hasBin: true
 
   parent-module@1.0.1:
@@ -2828,22 +2837,18 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  postcss-nested@6.0.1:
-    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
+  postcss-nested@6.2.0:
+    resolution: {integrity: sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
 
-  postcss-selector-parser@6.1.0:
-    resolution: {integrity: sha512-UMz42UD0UY0EApS0ZL9o1XnLhSTtvvvLe5Dc2H2O56fvRZi+KulDyf5ctDhhtYJBGKStV2FL1fy6253cmLgqVQ==}
+  postcss-selector-parser@6.1.2:
+    resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
 
   postcss@8.4.39:
     resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.4.41:
-    resolution: {integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.4.45:
@@ -3464,8 +3469,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  vfile-location@5.0.2:
-    resolution: {integrity: sha512-NXPYyxyBSH7zB5U6+3uDdd6Nybz6o6/od9rk8bp9H8GR3L+cm/fC0uUTbqBmUTnMCUDslAGBOIKNfvvb+gGlDg==}
+  vfile-location@5.0.3:
+    resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
 
   vfile-message@4.0.2:
     resolution: {integrity: sha512-jRDZ1IMLttGj41KcZvlrYAaI3CfqpLpfpf+Mfig13viT6NKvRzWZ+lXz0Y5D60w6uJIBAOGq9mSHf0gktF0duw==}
@@ -3782,30 +3787,30 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.26.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))':
+  '@astrojs/starlight@0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))':
     dependencies:
       '@astrojs/mdx': 3.1.5(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       '@astrojs/sitemap': 3.1.6
-      '@pagefind/default-ui': 1.1.0
+      '@pagefind/default-ui': 1.1.1
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
       astro-expressive-code: 0.35.6(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       bcp-47: 2.1.0
-      hast-util-from-html: 2.0.1
+      hast-util-from-html: 2.0.2
       hast-util-select: 6.0.2
       hast-util-to-string: 3.0.0
       hastscript: 9.0.0
       mdast-util-directive: 3.0.0
       mdast-util-to-markdown: 2.1.0
       mdast-util-to-string: 4.0.0
-      pagefind: 1.1.0
+      pagefind: 1.1.1
       rehype: 13.0.1
       rehype-format: 5.0.0
       remark-directive: 3.0.0
       unified: 11.0.5
       unist-util-visit: 5.0.0
-      vfile: 6.0.2
+      vfile: 6.0.3
     transitivePeerDependencies:
       - supports-color
 
@@ -4162,8 +4167,8 @@ snapshots:
       hast-util-to-html: 9.0.2
       hast-util-to-text: 4.0.2
       hastscript: 9.0.0
-      postcss: 8.4.41
-      postcss-nested: 6.0.1(postcss@8.4.41)
+      postcss: 8.4.45
+      postcss-nested: 6.2.0(postcss@8.4.45)
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
 
@@ -4460,21 +4465,21 @@ snapshots:
 
   '@oslojs/encoding@0.4.1': {}
 
-  '@pagefind/darwin-arm64@1.1.0':
+  '@pagefind/darwin-arm64@1.1.1':
     optional: true
 
-  '@pagefind/darwin-x64@1.1.0':
+  '@pagefind/darwin-x64@1.1.1':
     optional: true
 
-  '@pagefind/default-ui@1.1.0': {}
+  '@pagefind/default-ui@1.1.1': {}
 
-  '@pagefind/linux-arm64@1.1.0':
+  '@pagefind/linux-arm64@1.1.1':
     optional: true
 
-  '@pagefind/linux-x64@1.1.0':
+  '@pagefind/linux-x64@1.1.1':
     optional: true
 
-  '@pagefind/windows-x64@1.1.0':
+  '@pagefind/windows-x64@1.1.1':
     optional: true
 
   '@pkgjs/parseargs@0.11.0':
@@ -4749,11 +4754,11 @@ snapshots:
 
   '@types/hast@3.0.4':
     dependencies:
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
 
   '@types/mdast@4.0.4':
     dependencies:
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
 
   '@types/mdx@2.0.13': {}
 
@@ -4774,8 +4779,6 @@ snapshots:
   '@types/semver@7.5.8': {}
 
   '@types/unist@2.0.11': {}
-
-  '@types/unist@3.0.2': {}
 
   '@types/unist@3.0.3': {}
 
@@ -5351,6 +5354,10 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
+  debug@4.3.7:
+    dependencies:
+      ms: 2.1.3
+
   decimal.js@10.4.3: {}
 
   decode-named-character-reference@1.0.2:
@@ -5711,7 +5718,7 @@ snapshots:
       devlop: 1.1.0
       hast-util-from-parse5: 8.0.1
       parse5: 7.1.2
-      vfile: 6.0.2
+      vfile: 6.0.3
       vfile-message: 4.0.2
 
   hast-util-from-html@2.0.2:
@@ -5730,8 +5737,8 @@ snapshots:
       devlop: 1.1.0
       hastscript: 8.0.0
       property-information: 6.5.0
-      vfile: 6.0.2
-      vfile-location: 5.0.2
+      vfile: 6.0.3
+      vfile-location: 5.0.3
       web-namespaces: 2.0.1
 
   hast-util-has-property@3.0.0:
@@ -5777,7 +5784,7 @@ snapshots:
   hast-util-select@6.0.2:
     dependencies:
       '@types/hast': 3.0.4
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
       bcp-47-match: 2.0.3
       comma-separated-tokens: 2.0.3
       css-selector-parser: 3.0.5
@@ -6242,7 +6249,7 @@ snapshots:
   mdast-util-directive@3.0.0:
     dependencies:
       '@types/mdast': 4.0.4
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
       devlop: 1.1.0
       mdast-util-from-markdown: 2.0.1
       mdast-util-to-markdown: 2.1.0
@@ -6262,7 +6269,7 @@ snapshots:
   mdast-util-from-markdown@2.0.1:
     dependencies:
       '@types/mdast': 4.0.4
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
@@ -6402,7 +6409,7 @@ snapshots:
   mdast-util-to-markdown@2.1.0:
     dependencies:
       '@types/mdast': 4.0.4
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
       longest-streak: 3.1.0
       mdast-util-phrasing: 4.1.0
       mdast-util-to-string: 4.0.0
@@ -6439,7 +6446,7 @@ snapshots:
       micromark-util-symbol: 2.0.0
       micromark-util-types: 2.0.0
 
-  micromark-extension-directive@3.0.0:
+  micromark-extension-directive@3.0.1:
     dependencies:
       devlop: 1.1.0
       micromark-factory-space: 2.0.0
@@ -6675,7 +6682,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.6
+      debug: 4.3.7
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.1
@@ -6729,6 +6736,8 @@ snapshots:
   mrmime@2.0.0: {}
 
   ms@2.1.2: {}
+
+  ms@2.1.3: {}
 
   mz@2.7.0:
     dependencies:
@@ -6872,13 +6881,13 @@ snapshots:
 
   package-json-from-dist@1.0.0: {}
 
-  pagefind@1.1.0:
+  pagefind@1.1.1:
     optionalDependencies:
-      '@pagefind/darwin-arm64': 1.1.0
-      '@pagefind/darwin-x64': 1.1.0
-      '@pagefind/linux-arm64': 1.1.0
-      '@pagefind/linux-x64': 1.1.0
-      '@pagefind/windows-x64': 1.1.0
+      '@pagefind/darwin-arm64': 1.1.1
+      '@pagefind/darwin-x64': 1.1.1
+      '@pagefind/linux-arm64': 1.1.1
+      '@pagefind/linux-x64': 1.1.1
+      '@pagefind/windows-x64': 1.1.1
 
   parent-module@1.0.1:
     dependencies:
@@ -6986,12 +6995,12 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  postcss-nested@6.0.1(postcss@8.4.41):
+  postcss-nested@6.2.0(postcss@8.4.45):
     dependencies:
-      postcss: 8.4.41
-      postcss-selector-parser: 6.1.0
+      postcss: 8.4.45
+      postcss-selector-parser: 6.1.2
 
-  postcss-selector-parser@6.1.0:
+  postcss-selector-parser@6.1.2:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
@@ -7000,12 +7009,6 @@ snapshots:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
-      source-map-js: 1.2.0
-
-  postcss@8.4.41:
-    dependencies:
-      nanoid: 3.3.7
-      picocolors: 1.1.0
       source-map-js: 1.2.0
 
   postcss@8.4.45:
@@ -7144,7 +7147,7 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-directive: 3.0.0
-      micromark-extension-directive: 3.0.0
+      micromark-extension-directive: 3.0.1
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
@@ -7501,9 +7504,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.11.0(@astrojs/starlight@0.26.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
+  starlight-links-validator@0.11.0(@astrojs/starlight@0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
-      '@astrojs/starlight': 0.26.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+      '@astrojs/starlight': 0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
@@ -7697,13 +7700,13 @@ snapshots:
 
   unified@11.0.5:
     dependencies:
-      '@types/unist': 3.0.2
+      '@types/unist': 3.0.3
       bail: 2.0.2
       devlop: 1.1.0
       extend: 3.0.2
       is-plain-obj: 4.1.0
       trough: 2.2.0
-      vfile: 6.0.2
+      vfile: 6.0.3
 
   unique-string@3.0.0:
     dependencies:
@@ -7787,10 +7790,10 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vfile-location@5.0.2:
+  vfile-location@5.0.3:
     dependencies:
       '@types/unist': 3.0.3
-      vfile: 6.0.2
+      vfile: 6.0.3
 
   vfile-message@4.0.2:
     dependencies:
