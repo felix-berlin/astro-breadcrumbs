@@ -41,10 +41,10 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^3.1.3
-        version: 3.1.5(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 3.1.5(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       astro:
         specifier: ^4.14.2
-        version: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+        version: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
     devDependencies:
       sass:
         specifier: ^1.77.8
@@ -54,22 +54,22 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.26.1
-        version: 0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       astro:
         specifier: ^4.14.2
-        version: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+        version: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
       astro-breadcrumbs:
         specifier: ^3.0.1
-        version: 3.0.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 3.0.1(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       astro-matomo:
         specifier: ^1.6.0
-        version: 1.6.0(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 1.6.0(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.11.0
-        version: 0.11.0(@astrojs/starlight@0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+        version: 0.11.0(@astrojs/starlight@0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.77.8
@@ -677,9 +677,6 @@ packages:
     resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
 
-  '@jridgewell/sourcemap-codec@1.4.15':
-    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
@@ -1224,8 +1221,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@4.15.3:
-    resolution: {integrity: sha512-zwO8H+vnNYbrdKz0Pkh2a4B/JK06JUvI18w+FxL3B5u4jqPB/SU+LH9XVUUWdNQsyJ/DBHKAf0LDK0RmwxXQEw==}
+  astro@4.15.4:
+    resolution: {integrity: sha512-wqy+m3qygt9DmCSqMsckxyK4ccCUFtti2d/WlLkEpAlqHgyDIg20zRTLHO2v/H4YeSlJ8sAcN0RW2FhOeYbINg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1300,8 +1297,8 @@ packages:
   caniuse-lite@1.0.30001636:
     resolution: {integrity: sha512-bMg2vmr8XBsbL6Lr0UHXy/21m84FTxDLWn2FSqMd5PrlbMxwJlQnC2YWYxVgp66PZE+BBNF2jYQUBKCo1FDeZg==}
 
-  caniuse-lite@1.0.30001657:
-    resolution: {integrity: sha512-DPbJAlP8/BAXy3IgiWmZKItubb3TYGP0WscQQlVGIfT4s/YlFYVuJgyOsQNP7rJRChx/qdMeLJQJP0Sgg2yjNA==}
+  caniuse-lite@1.0.30001658:
+    resolution: {integrity: sha512-N2YVqWbJELVdrnsW5p+apoQyYt51aBMSsBZki1XZEfeBCexcM/sf4xiAHcXQBkuOwJBXtWF7aW1sYX6tKebPHw==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1593,8 +1590,8 @@ packages:
   electron-to-chromium@1.4.807:
     resolution: {integrity: sha512-kSmJl2ZwhNf/bcIuCH/imtNOKlpkLDn2jqT5FJ+/0CXjhnFaOa9cOe9gHKKy71eM49izwuQjZhKk+lWQ1JxB7A==}
 
-  electron-to-chromium@1.5.15:
-    resolution: {integrity: sha512-Z4rIDoImwEJW+YYKnPul4DzqsWVqYetYVN3XqDmRpgV0mjz0hYTaeeh+8/9CL1bk3AHYmF4freW/NTiVoXA2gA==}
+  electron-to-chromium@1.5.17:
+    resolution: {integrity: sha512-Q6Q+04tjC2KJ8qsSOSgovvhWcv5t+SmpH6/YfAWmhpE5/r+zw6KQy1/yWVFFNyEBvy68twTTXr2d5eLfCq7QIw==}
 
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
@@ -3757,12 +3754,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.5(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))':
+  '@astrojs/mdx@3.1.5(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))':
     dependencies:
       '@astrojs/markdown-remark': 5.2.0
       '@mdx-js/mdx': 3.0.1
       acorn: 8.12.1
-      astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+      astro: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       gray-matter: 4.0.3
@@ -3787,15 +3784,15 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))':
+  '@astrojs/starlight@0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))':
     dependencies:
-      '@astrojs/mdx': 3.1.5(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+      '@astrojs/mdx': 3.1.5(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       '@astrojs/sitemap': 3.1.6
       '@pagefind/default-ui': 1.1.1
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
-      astro-expressive-code: 0.35.6(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+      astro: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+      astro-expressive-code: 0.35.6(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.2
       hast-util-select: 6.0.2
@@ -3817,7 +3814,7 @@ snapshots:
   '@astrojs/telemetry@3.1.0':
     dependencies:
       ci-info: 4.0.0
-      debug: 4.3.6
+      debug: 4.3.7
       dlv: 1.1.3
       dset: 3.1.3
       is-docker: 3.0.0
@@ -3868,7 +3865,7 @@ snapshots:
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
       convert-source-map: 2.0.0
-      debug: 4.3.6
+      debug: 4.3.7
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -3990,7 +3987,7 @@ snapshots:
 
   '@babel/parser@7.24.8':
     dependencies:
-      '@babel/types': 7.24.9
+      '@babel/types': 7.25.6
 
   '@babel/parser@7.25.6':
     dependencies:
@@ -4062,7 +4059,7 @@ snapshots:
       '@babel/parser': 7.25.6
       '@babel/template': 7.25.0
       '@babel/types': 7.25.6
-      debug: 4.3.6
+      debug: 4.3.7
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -4349,21 +4346,19 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
   '@jridgewell/set-array@1.2.1': {}
 
-  '@jridgewell/sourcemap-codec@1.4.15': {}
-
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@mdx-js/mdx@3.0.1':
     dependencies:
@@ -4843,7 +4838,7 @@ snapshots:
 
   agent-base@7.1.1:
     dependencies:
-      debug: 4.3.6
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
 
@@ -4908,18 +4903,18 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-breadcrumbs@3.0.1(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
+  astro-breadcrumbs@3.0.1(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
-      astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+      astro: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
 
-  astro-expressive-code@0.35.6(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
+  astro-expressive-code@0.35.6(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
-      astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+      astro: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
       rehype-expressive-code: 0.35.6
 
-  astro-matomo@1.6.0(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
+  astro-matomo@1.6.0(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
-      astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+      astro: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
 
   astro@4.12.2(sass@1.77.8)(typescript@5.5.4):
     dependencies:
@@ -4998,7 +4993,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4):
+  astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -5020,7 +5015,7 @@ snapshots:
       common-ancestor-path: 1.0.1
       cookie: 0.6.0
       cssesc: 3.0.0
-      debug: 4.3.6
+      debug: 4.3.7
       deterministic-object-hash: 2.0.2
       devalue: 5.0.0
       diff: 5.2.0
@@ -5135,8 +5130,8 @@ snapshots:
 
   browserslist@4.23.3:
     dependencies:
-      caniuse-lite: 1.0.30001657
-      electron-to-chromium: 1.5.15
+      caniuse-lite: 1.0.30001658
+      electron-to-chromium: 1.5.17
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -5148,7 +5143,7 @@ snapshots:
 
   caniuse-lite@1.0.30001636: {}
 
-  caniuse-lite@1.0.30001657: {}
+  caniuse-lite@1.0.30001658: {}
 
   ccount@2.0.1: {}
 
@@ -5408,7 +5403,7 @@ snapshots:
 
   electron-to-chromium@1.4.807: {}
 
-  electron-to-chromium@1.5.15: {}
+  electron-to-chromium@1.5.17: {}
 
   emoji-regex@10.4.0: {}
 
@@ -5921,14 +5916,14 @@ snapshots:
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
 
   https-proxy-agent@7.0.5:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
 
@@ -6211,7 +6206,7 @@ snapshots:
   magicast@0.3.4:
     dependencies:
       '@babel/parser': 7.24.8
-      '@babel/types': 7.24.9
+      '@babel/types': 7.25.6
       source-map-js: 1.2.0
 
   magicast@0.3.5:
@@ -7504,10 +7499,10 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.11.0(@astrojs/starlight@0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
+  starlight-links-validator@0.11.0(@astrojs/starlight@0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)))(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)):
     dependencies:
-      '@astrojs/starlight': 0.26.3(astro@4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
-      astro: 4.15.3(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
+      '@astrojs/starlight': 0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4))
+      astro: 4.15.4(rollup@4.21.2)(sass@1.77.8)(typescript@5.5.4)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
       hast-util-has-property: 3.0.0
