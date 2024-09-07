@@ -10,7 +10,7 @@ importers:
     dependencies:
       astro:
         specifier: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
-        version: 4.12.2(sass@1.77.8)(typescript@5.5.4)
+        version: 4.12.2(sass@1.78.0)(typescript@5.5.4)
     devDependencies:
       '@semantic-release/changelog':
         specifier: ^6.0.3
@@ -53,8 +53,8 @@ importers:
   docs:
     dependencies:
       '@astrojs/starlight':
-        specifier: ^0.26.1
-        version: 0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
+        specifier: ^0.27.0
+        version: 0.27.0(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
       astro:
         specifier: ^4.14.2
         version: 4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)
@@ -69,7 +69,7 @@ importers:
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.11.0
-        version: 0.11.0(@astrojs/starlight@0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)))(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
+        version: 0.11.0(@astrojs/starlight@0.27.0(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)))(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.77.8
@@ -106,8 +106,8 @@ packages:
   '@astrojs/sitemap@3.1.6':
     resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
-  '@astrojs/starlight@0.26.3':
-    resolution: {integrity: sha512-U3rSNwr5cNvJVSPuSncduZ3ioKwNoMAZxYw/riuOfcJeT8DaJua3Uq+Z57vmhI1VxF19BZ1REQ0moUL6nhR8KQ==}
+  '@astrojs/starlight@0.27.0':
+    resolution: {integrity: sha512-W06VHc4VVohKE6g1CytSF64WQ97nv/hlHHf2+vKGh/+I9nDdom/M7RXqkyLx7FBlLCbgsSvLYZUkh8cQ/mMOzQ==}
     peerDependencies:
       astro: ^4.8.6
 
@@ -1959,9 +1959,6 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  immutable@4.3.6:
-    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
-
   immutable@4.3.7:
     resolution: {integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==}
 
@@ -3038,11 +3035,6 @@ packages:
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
 
-  sass@1.77.8:
-    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
-    engines: {node: '>=14.0.0'}
-    hasBin: true
-
   sass@1.78.0:
     resolution: {integrity: sha512-AaIqGSrjo5lA2Yg7RvFZrlXDBCp3nV4XP73GrLGvdRWWwk+8H3l0SDvq/5bA4eF+0RFPLuWUk3E+P1U/YqnpsQ==}
     engines: {node: '>=14.0.0'}
@@ -3792,7 +3784,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))':
+  '@astrojs/starlight@0.27.0(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))':
     dependencies:
       '@astrojs/mdx': 3.1.5(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
       '@astrojs/sitemap': 3.1.6
@@ -4924,7 +4916,7 @@ snapshots:
     dependencies:
       astro: 4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)
 
-  astro@4.12.2(sass@1.77.8)(typescript@5.5.4):
+  astro@4.12.2(sass@1.78.0)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.9.2
       '@astrojs/internal-helpers': 0.4.1
@@ -4982,8 +4974,8 @@ snapshots:
       tsconfck: 3.1.1(typescript@5.5.4)
       unist-util-visit: 5.0.0
       vfile: 6.0.2
-      vite: 5.3.4(sass@1.77.8)
-      vitefu: 0.2.5(vite@5.3.4(sass@1.77.8))
+      vite: 5.3.4(sass@1.78.0)
+      vitefu: 0.2.5(vite@5.3.4(sass@1.78.0))
       which-pm: 3.0.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -5946,9 +5938,6 @@ snapshots:
       safer-buffer: 2.1.2
 
   ignore@5.3.2: {}
-
-  immutable@4.3.6:
-    optional: true
 
   immutable@4.3.7: {}
 
@@ -7313,13 +7302,6 @@ snapshots:
     dependencies:
       suf-log: 2.5.3
 
-  sass@1.77.8:
-    dependencies:
-      chokidar: 3.6.0
-      immutable: 4.3.6
-      source-map-js: 1.2.0
-    optional: true
-
   sass@1.78.0:
     dependencies:
       chokidar: 3.6.0
@@ -7517,9 +7499,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.11.0(@astrojs/starlight@0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)))(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)):
+  starlight-links-validator@0.11.0(@astrojs/starlight@0.27.0(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)))(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)):
     dependencies:
-      '@astrojs/starlight': 0.26.3(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
+      '@astrojs/starlight': 0.27.0(astro@4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4))
       astro: 4.15.4(rollup@4.21.2)(sass@1.78.0)(typescript@5.5.4)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
@@ -7841,15 +7823,6 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.3.4(sass@1.77.8):
-    dependencies:
-      esbuild: 0.21.5
-      postcss: 8.4.39
-      rollup: 4.18.0
-    optionalDependencies:
-      fsevents: 2.3.3
-      sass: 1.77.8
-
   vite@5.3.4(sass@1.78.0):
     dependencies:
       esbuild: 0.21.5
@@ -7868,9 +7841,9 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.78.0
 
-  vitefu@0.2.5(vite@5.3.4(sass@1.77.8)):
+  vitefu@0.2.5(vite@5.3.4(sass@1.78.0)):
     optionalDependencies:
-      vite: 5.3.4(sass@1.77.8)
+      vite: 5.3.4(sass@1.78.0)
 
   vitefu@1.0.2(vite@5.4.3(sass@1.78.0)):
     optionalDependencies:
