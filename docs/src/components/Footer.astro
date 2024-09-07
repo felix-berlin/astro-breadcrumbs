@@ -6,6 +6,10 @@ import LastUpdated from "virtual:starlight/components/LastUpdated";
 import Pagination from "virtual:starlight/components/Pagination";
 import config from "virtual:starlight/user-config";
 import { Icon } from "@astrojs/starlight/components";
+
+const hasTrailingSlash = Astro.url.pathname.endsWith("/");
+console.log("pathname: ", Astro.url.pathname);
+console.log("hasTrailingSlash: ", hasTrailingSlash);
 ---
 
 <footer class="sl-flex">
