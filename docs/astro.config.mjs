@@ -2,10 +2,15 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import matomo from "astro-matomo";
 import starlightLinksValidator from "starlight-links-validator";
-
+const hasTrailingSlash = Astro.url.pathname.endsWith("/");
+console.log("pathname: ", Astro.url.pathname);
+console.log("hasTrailingSlash: ", hasTrailingSlash);
 // https://astro.build/config
 export default defineConfig({
   site: "https://docs.astro-breadcrumbs.kasimir.dev",
+  output: "static",
+  adapter: undefined,
+  trailingSlash: "never",
   integrations: [
     starlight({
       title: "Astro Breadcrumbs",
