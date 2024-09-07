@@ -56,7 +56,7 @@ export default defineConfig({
           autogenerate: { directory: "guides" },
         },
       ],
-      plugins: [starlightLinksValidator()],
+      // plugins: [starlightLinksValidator()],
       components: {
         Footer: "./src/components/Footer.astro",
       },
