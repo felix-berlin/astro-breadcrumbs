@@ -4,7 +4,9 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
+  adapter: undefined,
   base: "/astro-breadcrumbs",
-  trailingSlash: "always",
+  trailingSlash: "never",
   integrations: [mdx()],
 });

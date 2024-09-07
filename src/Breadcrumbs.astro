@@ -32,6 +32,9 @@ const {
 
 const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
 const hasTrailingSlash = Astro.url.pathname.endsWith("/");
+console.log("pathname: ", Astro.url.pathname);
+console.log("hasTrailingSlash: ", hasTrailingSlash);
+
 const pathLength = paths?.length;
 const UUID = crypto.randomUUID();
 const listCssClasses = [
