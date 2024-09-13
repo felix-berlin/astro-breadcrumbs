@@ -113,8 +113,11 @@ const crumbsWithCustomAttributes = [
     />
     <h2>Example 6 - Custom base url</h2>
     <Breadcrumbs customBaseUrl="my-new-base" />
-    <h2>Example 7 - Without current</h2>
+    <h2>Example 7 - Exclude current page</h2>
     <Breadcrumbs excludeCurrentPage={true} />
+
+    <h2>Example 7 - Remove first item</h2>
+    <Breadcrumbs customizeListElements={[{index: 0, remove: true}]} />
   </main>
 </Layout>
 <style lang="scss">
