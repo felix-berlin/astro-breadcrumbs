@@ -4,11 +4,11 @@ import {
   generateCrumbs,
   mergeCustomizedLinks,
   customizeListElement,
+  processParts,
 } from "./lib/generateCrumbs";
 import BreadcrumbLink from "./BreadcrumbLink.astro";
 import BreadcrumbSeparator from "./BreadcrumbSeparator.astro";
 import type { BreadcrumbsProps } from "./breadcrumbs.types.ts";
-import { isLastElement, truncatedButtonVisible } from "./lib/helper.ts";
 import { debugInformation } from "./lib/debug.ts";
 
 const {
@@ -50,18 +50,13 @@ const parts = generateCrumbs({
 
 const customizedParts = mergeCustomizedLinks(parts, customizeLinks);
 
-const processedParts = customizedParts
-  .map((part, index, array) => {
-    const isLast = isLastElement(index, array);
-    const showTruncatedButton = truncatedButtonVisible(
-      truncated,
-      index,
-      pathLength,
-    );
-
-    return { ...part, isLast, showTruncatedButton };
-  })
-  .filter((part) => !(excludeCurrentPage && part.isLast)); // Filter out the last element if excludeCurrentPage is true
+const processedParts = processParts(
+  customizedParts,
+  customizeListElements,
+  excludeCurrentPage,
+  truncated,
+  pathLength,
+);
 
 debugInformation(debug, parts, customizedParts);
 ---
