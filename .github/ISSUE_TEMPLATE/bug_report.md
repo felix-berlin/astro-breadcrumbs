@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+title: I have a problem with astro-breadcrumbs [BUG]
+labels: bug, help wanted
+assignees: felix-berlin
 
 ---
 
@@ -22,6 +22,27 @@ A clear and concise description of what you expected to happen.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
+
+**Environment (please complete the following information):**
+ - astro version: [e.g. 4.15.4]
+ - astro-breadcrumbs version: [e.g. 3.1.0]
+ - used astro adapter: [e.g. @astrojs/cloudflare]
+ - used astro adapter version: [e.g. 11.0.4]
+
+**astro-breadcrumbs usage:**
+
+```astro
+<Breadcrumbs excludeCurrentPage={true} />
+```
+
+**astro config:**
+
+```astro
+export default defineConfig({
+  base: "/astro-breadcrumbs",
+  trailingSlash: "always",
+});
+```
 
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
