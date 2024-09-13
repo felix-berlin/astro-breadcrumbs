@@ -13,7 +13,6 @@ type GenerateCrumbs = {
   hasTrailingSlash: boolean;
   linkTextFormat: BreadcrumbsProps["linkTextFormat"];
   customBaseUrl: BreadcrumbsProps["customBaseUrl"];
-  excludeCurrentPage: BreadcrumbsProps["excludeCurrentPage"];
 };
 
 export const generateCrumbs = ({
@@ -23,7 +22,6 @@ export const generateCrumbs = ({
   hasTrailingSlash,
   linkTextFormat,
   customBaseUrl,
-  excludeCurrentPage,
 }: GenerateCrumbs) => {
   /**
    * If crumbs are passed, use them.
@@ -111,13 +109,6 @@ export const generateCrumbs = ({
     href: parts[0]?.href,
   };
 
-  /**
-   * If excludeCurrentPage is true, remove the last item from the parts array.
-   */
-  if (excludeCurrentPage) {
-    parts.pop();
-  }
-
   return parts;
 };
 
@@ -160,7 +151,11 @@ export const mergeCustomizedLinks = (
  * @param   {boolean}             truncatedButtonShown
  * @param   {BreadcrumbsProps[]}  listElements
  */
-export const customizeListElement = (index: number, truncatedButtonShown: boolean, listElements: BreadcrumbsProps["customizeListElements"] = []) => {
+export const customizeListElement = (
+  index: number,
+  truncatedButtonShown: boolean,
+  listElements: BreadcrumbsProps["customizeListElements"] = [],
+) => {
   if (truncatedButtonShown) {
     // Remove the item at index 1
     return listElements.filter((item, index) => index !== 1);
