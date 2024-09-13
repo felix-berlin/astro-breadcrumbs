@@ -5,6 +5,7 @@ import type {
   CustomizeElement,
   MergedParts,
 } from "../breadcrumbs.types.ts";
+import { isLastElement, truncatedButtonVisible } from "../lib/helper.ts";
 
 type GenerateCrumbs = {
   crumbs: BreadcrumbsProps["crumbs"];
@@ -13,7 +14,6 @@ type GenerateCrumbs = {
   hasTrailingSlash: boolean;
   linkTextFormat: BreadcrumbsProps["linkTextFormat"];
   customBaseUrl: BreadcrumbsProps["customBaseUrl"];
-  excludeCurrentPage: BreadcrumbsProps["excludeCurrentPage"];
 };
 
 export const generateCrumbs = ({
@@ -23,7 +23,6 @@ export const generateCrumbs = ({
   hasTrailingSlash,
   linkTextFormat,
   customBaseUrl,
-  excludeCurrentPage,
 }: GenerateCrumbs) => {
   /**
    * If crumbs are passed, use them.
@@ -111,13 +110,6 @@ export const generateCrumbs = ({
     href: parts[0]?.href,
   };
 
-  /**
-   * If excludeCurrentPage is true, remove the last item from the parts array.
-   */
-  if (excludeCurrentPage) {
-    parts.pop();
-  }
-
   return parts;
 };
 
@@ -160,7 +152,11 @@ export const mergeCustomizedLinks = (
  * @param   {boolean}             truncatedButtonShown
  * @param   {BreadcrumbsProps[]}  listElements
  */
-export const customizeListElement = (index: number, truncatedButtonShown: boolean, listElements: BreadcrumbsProps["customizeListElements"] = []) => {
+export const customizeListElement = (
+  index: number,
+  truncatedButtonShown: boolean,
+  listElements: BreadcrumbsProps["customizeListElements"] = [],
+) => {
   if (truncatedButtonShown) {
     // Remove the item at index 1
     return listElements.filter((item, index) => index !== 1);
@@ -168,4 +164,52 @@ export const customizeListElement = (index: number, truncatedButtonShown: boolea
 
   // Return the item by index
   return listElements[index];
+};
+
+/**
+ * Processes the breadcrumb parts by adding additional properties and filtering based on customization options.
+ *
+ * @param {BreadcrumbItem[]} customizedParts - The array of breadcrumb items to be processed.
+ * @param {CustomizeElement[]} customizeListElements - The array of customization options, each containing an index and a remove flag.
+ * @param {boolean} excludeCurrentPage - Flag indicating whether to exclude the current page from the breadcrumbs.
+ * @param {boolean} truncated - Flag indicating whether the breadcrumbs are truncated.
+ * @param {number} pathLength - The length of the breadcrumb path.
+ * @returns {BreadcrumbItem[]} The processed array of breadcrumb items.
+ */
+export const processParts = (
+  customizedParts: BreadcrumbItem[],
+  customizeListElements: CustomizeElement[],
+  excludeCurrentPage: boolean,
+  truncated: boolean,
+  pathLength: number,
+) => {
+  return customizedParts
+    .map((part, index, array) => {
+      // Determine if the current part is the last element in the array
+      const isLast = isLastElement(index, array);
+
+      // Determine if the truncated button should be visible for the current part
+      const showTruncatedButton = truncatedButtonVisible(
+        truncated,
+        index,
+        pathLength,
+      );
+
+      // Return the part with additional properties
+      return { ...part, isLast, showTruncatedButton };
+    })
+    .filter((part, index) => {
+      // Check if any item in customizeListElements has remove: true
+      const shouldRemove = customizeListElements.some(
+        (config) => config.remove && config.index === index,
+      );
+
+      // Filter out the part if it should be removed
+      if (shouldRemove) {
+        return false;
+      }
+
+      // Filter out the last element if excludeCurrentPage is true
+      return !(excludeCurrentPage && part.isLast);
+    });
 };

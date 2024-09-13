@@ -2,9 +2,9 @@ export interface BreadcrumbsProps {
   indexText?: string;
   mainBemClass?: string;
   ariaLabel?: string;
-  crumbs?: Array<BreadcrumbItem>;
-  customizeLinks?: Array<CustomizeElement>;
-  customizeListElements?: Array<CustomizeElement>;
+  crumbs?: BreadcrumbItem[];
+  customizeLinks?: CustomizeElement[];
+  customizeListElements?: CustomizeListElements[];
   customizeList?: AddAttributes;
   customizeNav?: AddAttributes;
   schemaJsonScript?: boolean;
@@ -19,6 +19,11 @@ export interface BreadcrumbsProps {
 
 export interface CustomizeElement extends AddAttributes {
   index?: number | "last";
+}
+
+export interface CustomizeListElements extends AddAttributes {
+  index?: number | "last";
+  remove?: boolean;
 }
 
 export interface AddAttributes {

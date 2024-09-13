@@ -9,7 +9,6 @@ test("generateCrumbs - no crumbs passed", () => {
     hasTrailingSlash: true,
     linkTextFormat: "lower",
     customBaseUrl: undefined,
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the index page
@@ -39,7 +38,6 @@ test("generateCrumbs - with crumbs passed", () => {
     hasTrailingSlash: true,
     linkTextFormat: "capitalized",
     customBaseUrl: undefined,
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the custom crumb
@@ -60,7 +58,6 @@ test("generateCrumbs - no trailing slash", () => {
     hasTrailingSlash: false,
     linkTextFormat: "capitalized",
     customBaseUrl: undefined,
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the index page
@@ -90,7 +87,6 @@ test("generateCrumbs - paths with file extensions", () => {
     hasTrailingSlash: true,
     linkTextFormat: "capitalized",
     customBaseUrl: undefined,
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the index page
@@ -120,7 +116,6 @@ test("generateCrumbs - paths with hyphens and underscores", () => {
     hasTrailingSlash: true,
     linkTextFormat: "capitalized",
     customBaseUrl: undefined,
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the index page
@@ -150,7 +145,6 @@ test("generateCrumbs - with customBaseUrl", () => {
     hasTrailingSlash: true,
     linkTextFormat: "lower",
     customBaseUrl: "custom",
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the custom base url
@@ -183,7 +177,6 @@ test("generateCrumbs - with Astro baseUrl and customBaseUrl", () => {
     hasTrailingSlash: true,
     linkTextFormat: "lower",
     customBaseUrl: "custom",
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the custom base url
@@ -219,7 +212,6 @@ test("generateCrumbs - with multipart Astro baseUrl", () => {
     hasTrailingSlash: true,
     linkTextFormat: "lower",
     customBaseUrl: undefined,
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the custom base url
@@ -255,7 +247,6 @@ test("generateCrumbs - with multipart Astro baseUrl and customBaseUrl", () => {
     hasTrailingSlash: true,
     linkTextFormat: "lower",
     customBaseUrl: "custom",
-    excludeCurrentPage: false,
   });
 
   // Check if the first crumb is the custom base url
@@ -278,42 +269,4 @@ test("generateCrumbs - with multipart Astro baseUrl and customBaseUrl", () => {
 
   // Reset the Astro baseUrl
   import.meta.env.BASE_URL = "/";
-});
-
-
-test("generateCrumbs - exclude current page", () => {
-  const result = generateCrumbs({
-    crumbs: [],
-    paths: ["path-1", "path-2", "path-3"],
-    indexText: "Home",
-    hasTrailingSlash: false,
-    linkTextFormat: "sentence",
-    customBaseUrl: undefined,
-    excludeCurrentPage: true,
-  });
-
-  expect(result).toEqual([
-    { text: "Home", href: "/" },
-    { text: "Path 1", href: "/path-1" },
-    { text: "Path 2", href: "/path-1/path-2" },
-  ]);
-});
-
-test("generateCrumbs - don't exclude current page", () => {
-  const result = generateCrumbs({
-    crumbs: [],
-    paths: ["path-1", "path-2", "path-3"],
-    indexText: "Home",
-    hasTrailingSlash: false,
-    linkTextFormat: "sentence",
-    customBaseUrl: undefined,
-    excludeCurrentPage: false,
-  });
-
-  expect(result).toEqual([
-    { text: "Home", href: "/" },
-    { text: "Path 1", href: "/path-1" },
-    { text: "Path 2", href: "/path-1/path-2" },
-    { text: "Path 3", href: "/path-1/path-2/path-3" },
-  ]);
 });

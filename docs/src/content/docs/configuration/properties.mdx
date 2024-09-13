@@ -54,7 +54,7 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 **Type:** `Array<CustomizeElement>`
 
 ```ts
-export interface CustomizeElement {
+interface CustomizeElement {
   index?: number | "last";
   [key: string]: any;
 }
@@ -63,11 +63,13 @@ export interface CustomizeElement {
 **Default:** `[]`
 
 In case your preconfigured breadcrumbs are not sufficient, you can customize each link element individually.
-Therefore you can define an array of objects with the index of the element you want to customize. The index is the position of the element in the breadcrumbs array. The first element has the index 0, the second 1, and so on. If you want to customize the last element, you can use the string "last".
+Therefore you can define an array of objects with the index of the element you want to customize. The index is the position of the element in the breadcrumbs array. The first element has the index 0, the second 1, and so on. If you want to customize the last element, you can use `index: "last"`.
 
-If you didn't set a index the index of the array will be used.
+If you didn't set a `index` the index of the array will be used.
 
-Except "index" and "text" each key-value pair will be added as an attribute to the specific element. "text" is the link text of the element.
+Except `index` and `text` each key-value pair will be added as an attribute to the specific element.
+
+`text` is the link text of the element.
 
 :::note
 Existing attributes can't be overwritten.
@@ -117,11 +119,12 @@ const customLastPart = [
 
 ## customizeListElements
 
-**Type:** `Array<CustomizeElement>`
+**Type:** `CustomizeListElements[]`
 
 ```ts
-export interface CustomizeElement {
+interface CustomizeListElements {
   index?: number | "last";
+  remove?: boolean;
   [key: string]: any;
 }
 ```
@@ -129,11 +132,13 @@ export interface CustomizeElement {
 **Default:** `[]`
 
 Like [`customizeLinks`](#customizelinks) you can customize each list element individually.
-Therefore you can define an array of objects with the index of the element you want to customize. The index is the position of the element in the breadcrumbs array. The first element has the index 0, the second 1, and so on. If you want to customize the last element, you can use the string "last".
+Therefore you can define an array of objects with the index of the element you want to customize. The index is the position of the element in the breadcrumbs array. The first element has the index 0, the second 1, and so on. If you want to customize the last element, you can use `index: "last"`.
 
-If you didn't set a index the index of the array will be used.
+If you didn't set a `index` the index of the array will be used.
 
-Except "index" each key-value pair will be added as an attribute to the specific element.
+Except `index` and `remove` each key-value pair will be added as an attribute to the specific element.
+
+When you set `remove: true` the element will be removed from the list.
 
 :::note
 Existing attributes can't be overwritten.
