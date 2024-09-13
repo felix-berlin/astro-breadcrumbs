@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.1...v3.1.0) (2024-09-13)
+
+
+### Bug Fixes
+
+* **excludeCurrentPage:** exclusion was carried out twice ([d866c98](https://github.com/felix-berlin/astro-breadcrumbs/commit/d866c984dc34e3500bf1536305a6062e8465aad4))
+
+
+### Features
+
+* **customizeListElements:** add special key "remove" to remove specific crumb ([7fe2e4a](https://github.com/felix-berlin/astro-breadcrumbs/commit/7fe2e4abfa558c420a8e713e05aeee1edc94600f))
+
 ## [3.0.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.0...v3.0.1) (2024-08-15)
 
 
