@@ -62,6 +62,7 @@
   },
   "homepage": "https://docs.astro-breadcrumbs.kasimir.dev",
   "devDependencies": {
+    "@sebbo2002/semantic-release-jsr": "^2.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@vitest/coverage-v8": "^2.1.0",
