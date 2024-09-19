@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.1.0...v3.2.0) (2024-09-19)
+
+
+### Features
+
+* add new prop id ([0821c42](https://github.com/felix-berlin/astro-breadcrumbs/commit/0821c42c6ff7ef38df334287ee2da823f8408dcd))
+
 # [3.1.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.0.1...v3.1.0) (2024-09-13)
 
 
