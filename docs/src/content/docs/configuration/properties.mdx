@@ -400,6 +400,28 @@ import { Breadcrumbs } from "astro-breadcrumbs";
 
 <Breadcrumbs excludeCurrentPage={true} />
 
+## id
+
+**Type:** `string`
+
+**Default:** `crypto.randomUUID()`
+
+The id of the breadcrumbs element.
+
+**Usage:**
+
+```astro
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<Breadcrumbs id="my-breadcrumbs" />
+```
+
+**Rendered Component:**
+
+<Breadcrumbs id="my-breadcrumbs" />
+
 ## indexText
 
 **Type:** `string`
