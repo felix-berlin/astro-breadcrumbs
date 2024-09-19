@@ -15,6 +15,7 @@ export interface BreadcrumbsProps {
   excludeCurrentPage?: boolean;
   debug?: boolean;
   separatorAriaHidden?: boolean;
+  id?: string;
 }
 
 export interface CustomizeElement extends AddAttributes {
