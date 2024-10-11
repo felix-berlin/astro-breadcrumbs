@@ -54,7 +54,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.28.1
-        version: 0.28.2(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
+        version: 0.28.3(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
       astro:
         specifier: ^4.15.8
         version: 4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)
@@ -69,7 +69,7 @@ importers:
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.12.0
-        version: 0.12.2(@astrojs/starlight@0.28.2(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)))(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
+        version: 0.12.2(@astrojs/starlight@0.28.3(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)))(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.79.1
@@ -106,11 +106,11 @@ packages:
     resolution: {integrity: sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
 
-  '@astrojs/sitemap@3.1.6':
-    resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
+  '@astrojs/sitemap@3.2.0':
+    resolution: {integrity: sha512-SkrOCL3Z6HxdiXreZ1+aPBWgnBMJ31EgPdcscgQeLqI2Gqk/4EKLuw9q0SqKU9MmHpcPXXtcd0odfCk4barPoA==}
 
-  '@astrojs/starlight@0.28.2':
-    resolution: {integrity: sha512-Q1/Ujl2EzWX71qwqdt/0KP3wOyX6Rvyzcep/zD3hRCtw/Vi2TReh4Q2wLwz7mnbuYU9H7YvBKYknbkmjC+K/0w==}
+  '@astrojs/starlight@0.28.3':
+    resolution: {integrity: sha512-GXXIPKSu5d50mLVtgI4jf6pb3FPQm8n4MI6ZXuQQqqnA0xg7PJQ76WFSVyrICeqM5fKABSqcBksp/glyEJes/A==}
     peerDependencies:
       astro: ^4.14.0
 
@@ -305,8 +305,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/runtime@7.25.6':
-    resolution: {integrity: sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==}
+  '@babel/runtime@7.25.7':
+    resolution: {integrity: sha512-FjoyLe754PMiYsFaN5C94ttGiOmBNYTf6pLr4xXHAT5uctHb092PBszndLDR5XA/jghQvn4n7JMHl7dmTgbm9w==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.7':
@@ -2167,14 +2167,14 @@ packages:
   hast-util-has-property@3.0.0:
     resolution: {integrity: sha512-MNilsvEKLFpV604hwfhVStK0usFY/QmM5zX16bo7EjnAEGofr5YyI37kzopBlZJkHD4t887i+q/C8/tr5Q94cA==}
 
-  hast-util-is-body-ok-link@3.0.0:
-    resolution: {integrity: sha512-VFHY5bo2nY8HiV6nir2ynmEB1XkxzuUffhEGeVx7orbu/B1KaGyeGgMZldvMVx5xWrDlLLG/kQ6YkJAMkBEx0w==}
+  hast-util-is-body-ok-link@3.0.1:
+    resolution: {integrity: sha512-0qpnzOBLztXHbHQenVB8uNuxTnm/QBFUOmdOSsEn7GnBtyY07+ENTWVFBAnXd/zEgd9/SUG3lRY7hSIBWRgGpQ==}
 
   hast-util-is-element@3.0.0:
     resolution: {integrity: sha512-Val9mnv2IWpLbNPqc/pUem+a7Ipj2aHacCwgNfTiK0vJKl0LF+4Ba4+v1oPHFpf3bLYmreq0/l3Gud9S5OH42g==}
 
-  hast-util-minify-whitespace@1.0.0:
-    resolution: {integrity: sha512-gD1m4YJSIk62ij32TlhFNqsC3dOQvpA4QAhyZOZFAT4u8LfEfB6N+F0V9oXQGBWXoqrs0h9wQRKa8RCeo8j61g==}
+  hast-util-minify-whitespace@1.0.1:
+    resolution: {integrity: sha512-L96fPOVpnclQE0xzdWb/D12VT5FabA7SnZOUMtL1DbXmYiHJMXZvFkIZfiMmTCNJHUeO2K9UYNXoVyfz+QHuOw==}
 
   hast-util-parse-selector@4.0.0:
     resolution: {integrity: sha512-wkQCkSYoOGCRKERFWcxMVMOcYE2K1AaNLU8DXS9arxnLOUEWbOXKXiJUNzEpqZ3JOKpnha3jkFrumEjVliDe7A==}
@@ -2200,8 +2200,8 @@ packages:
   hast-util-to-parse5@8.0.0:
     resolution: {integrity: sha512-3KKrV5ZVI8if87DVSi1vDeByYrkGzg4mEfeu4alwgmmIeARiBLKCZS2uw5Gb6nU9x9Yufyj3iudm6i7nl52PFw==}
 
-  hast-util-to-string@3.0.0:
-    resolution: {integrity: sha512-OGkAxX1Ua3cbcW6EJ5pT/tslVb90uViVkcJ4ZZIMW/R33DX/AkcJcRrPebPwJkHYwlDHXz4aIwvAAaAdtrACFA==}
+  hast-util-to-string@3.0.1:
+    resolution: {integrity: sha512-XelQVTDWvqcl3axRfI0xSeoVKzyIFPwsAGSLIsKdJKQMXDYJS4WYrBNF/8J7RdhIcFI2BOHgAifggsvsxp/3+A==}
 
   hast-util-to-text@4.0.2:
     resolution: {integrity: sha512-KK6y/BN8lbaq654j7JgBydev7wuNMcID54lkRav1P0CaE1e47P72AWWPiGKXTJU271ooYzcvTAn/Zt0REnvc7A==}
@@ -2243,8 +2243,8 @@ packages:
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
-  html-whitespace-sensitive-tag-names@3.0.0:
-    resolution: {integrity: sha512-KlClZ3/Qy5UgvpvVvDomGhnQhNWH5INE8GwvSIQ9CWt1K0zbbXrl7eN5bWaafOZgtmO3jMPwUqmrmEwinhPq1w==}
+  html-whitespace-sensitive-tag-names@3.0.1:
+    resolution: {integrity: sha512-q+310vW8zmymYHALr1da4HyXUQ0zgiIwIicEfotYPWGN0OJVEN/58IJ3A4GBYcEq3LGAZqKb+ugvP0GNB9CEAA==}
 
   http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
@@ -2269,8 +2269,8 @@ packages:
     resolution: {integrity: sha512-/1/GPCpDUCCYwlERiYjxoczfP0zfvZMU/OWgQPMya9AbAE24vseigFdhAMObpc8Q4lc/kjutPfUddDYyAmejnA==}
     engines: {node: '>=18.18.0'}
 
-  i18next@23.15.1:
-    resolution: {integrity: sha512-wB4abZ3uK7EWodYisHl/asf8UYEhrI/vj/8aoSsrj/ZDxj4/UXPOa1KvFt1Fq5hkUHquNqwFlDprmjZ8iySgYA==}
+  i18next@23.15.2:
+    resolution: {integrity: sha512-zcPSWzCvw6uKnuYHIqs4W7hTuB9e3AFcSdZgvCWoPXIZsBjBd4djN2/2uOHIB+1DFFkQnMBXvhNg7J3WyCuywQ==}
 
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
@@ -3482,9 +3482,9 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  sitemap@7.1.2:
-    resolution: {integrity: sha512-ARCqzHJ0p4gWt+j7NlU5eDlIO9+Rkr/JhPFZKKQ1l5GCus7rJH4UdrlVAh0xC/gDS/Qir2UMxqYNHtsKr2rpCw==}
-    engines: {node: '>=12.0.0', npm: '>=5.6.0'}
+  sitemap@8.0.0:
+    resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
+    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
     hasBin: true
 
   skin-tone@2.0.0:
@@ -4206,16 +4206,16 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/sitemap@3.1.6':
+  '@astrojs/sitemap@3.2.0':
     dependencies:
-      sitemap: 7.1.2
+      sitemap: 8.0.0
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.28.2(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))':
+  '@astrojs/starlight@0.28.3(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))':
     dependencies:
       '@astrojs/mdx': 3.1.8(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
-      '@astrojs/sitemap': 3.1.6
+      '@astrojs/sitemap': 3.2.0
       '@pagefind/default-ui': 1.1.1
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
@@ -4224,14 +4224,14 @@ snapshots:
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.3
       hast-util-select: 6.0.2
-      hast-util-to-string: 3.0.0
+      hast-util-to-string: 3.0.1
       hastscript: 9.0.0
-      i18next: 23.15.1
+      i18next: 23.15.2
       mdast-util-directive: 3.0.0
       mdast-util-to-markdown: 2.1.0
       mdast-util-to-string: 4.0.0
       pagefind: 1.1.1
-      rehype: 13.0.1
+      rehype: 13.0.2
       rehype-format: 5.0.1
       remark-directive: 3.0.0
       unified: 11.0.5
@@ -4503,7 +4503,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/runtime@7.25.6':
+  '@babel/runtime@7.25.7':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -6409,10 +6409,10 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
       hast-util-embedded: 3.0.0
-      hast-util-minify-whitespace: 1.0.0
+      hast-util-minify-whitespace: 1.0.1
       hast-util-phrasing: 3.0.1
       hast-util-whitespace: 3.0.0
-      html-whitespace-sensitive-tag-names: 3.0.0
+      html-whitespace-sensitive-tag-names: 3.0.1
       unist-util-visit-parents: 6.0.1
 
   hast-util-from-html@2.0.1:
@@ -6448,7 +6448,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  hast-util-is-body-ok-link@3.0.0:
+  hast-util-is-body-ok-link@3.0.1:
     dependencies:
       '@types/hast': 3.0.4
 
@@ -6456,7 +6456,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  hast-util-minify-whitespace@1.0.0:
+  hast-util-minify-whitespace@1.0.1:
     dependencies:
       '@types/hast': 3.0.4
       hast-util-embedded: 3.0.0
@@ -6473,7 +6473,7 @@ snapshots:
       '@types/hast': 3.0.4
       hast-util-embedded: 3.0.0
       hast-util-has-property: 3.0.0
-      hast-util-is-body-ok-link: 3.0.0
+      hast-util-is-body-ok-link: 3.0.1
       hast-util-is-element: 3.0.0
 
   hast-util-raw@9.0.4:
@@ -6502,7 +6502,7 @@ snapshots:
       devlop: 1.1.0
       direction: 2.0.1
       hast-util-has-property: 3.0.0
-      hast-util-to-string: 3.0.0
+      hast-util-to-string: 3.0.1
       hast-util-whitespace: 3.0.0
       not: 0.1.0
       nth-check: 2.1.1
@@ -6576,7 +6576,7 @@ snapshots:
       web-namespaces: 2.0.1
       zwitch: 2.0.4
 
-  hast-util-to-string@3.0.0:
+  hast-util-to-string@3.0.1:
     dependencies:
       '@types/hast': 3.0.4
 
@@ -6629,7 +6629,7 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  html-whitespace-sensitive-tag-names@3.0.0: {}
+  html-whitespace-sensitive-tag-names@3.0.1: {}
 
   http-cache-semantics@4.1.1: {}
 
@@ -6653,9 +6653,9 @@ snapshots:
 
   human-signals@8.0.0: {}
 
-  i18next@23.15.1:
+  i18next@23.15.2:
     dependencies:
-      '@babel/runtime': 7.25.6
+      '@babel/runtime': 7.25.7
 
   iconv-lite@0.6.3:
     dependencies:
@@ -8243,7 +8243,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  sitemap@7.1.2:
+  sitemap@8.0.0:
     dependencies:
       '@types/node': 17.0.45
       '@types/sax': 1.2.7
@@ -8288,9 +8288,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.12.2(@astrojs/starlight@0.28.2(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)))(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)):
+  starlight-links-validator@0.12.2(@astrojs/starlight@0.28.3(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)))(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)):
     dependencies:
-      '@astrojs/starlight': 0.28.2(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
+      '@astrojs/starlight': 0.28.3(astro@4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4))
       '@types/picomatch': 2.3.3
       astro: 4.16.0(rollup@4.24.0)(sass@1.79.5)(typescript@5.5.4)
       github-slugger: 2.0.0
