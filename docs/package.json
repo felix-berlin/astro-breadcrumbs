@@ -20,5 +20,5 @@
   "devDependencies": {
     "sass": "^1.79.5"
   },
-  "packageManager": "pnpm@9.12.2"
+  "packageManager": "pnpm@9.12.3"
 }
