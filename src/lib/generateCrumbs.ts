@@ -183,7 +183,7 @@ export const processParts = (
   truncated: boolean,
   pathLength: number,
 ) => {
-  return customizedParts
+  const processedParts = customizedParts
     .map((part, index, array) => {
       // Determine if the current part is the last element in the array
       const isLast = isLastElement(index, array);
@@ -212,4 +212,8 @@ export const processParts = (
       // Filter out the last element if excludeCurrentPage is true
       return !(excludeCurrentPage && part.isLast);
     });
+
+    // Set the last element as the previous last element may have been excluded
+    if(processedParts.length > 0) processedParts[processedParts.length-1].isLast = true;
+    return processedParts
 };
