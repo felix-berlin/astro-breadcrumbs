@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.2.0...v3.2.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* **generateCrumbs:** fix extra separator with excludeCurrentPage prop ([abfd508](https://github.com/felix-berlin/astro-breadcrumbs/commit/abfd508e72f47a20473b6d441b3e9f8487963cee))
+* make sure excludeCurrentPage is used ([0d3f27f](https://github.com/felix-berlin/astro-breadcrumbs/commit/0d3f27ffd5c0ef7fea6700ff3faf4fd8e1f9c02e))
+
 # [3.2.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.1.0...v3.2.0) (2024-09-19)
 
 
