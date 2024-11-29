@@ -213,7 +213,11 @@ export const processParts = (
       return !(excludeCurrentPage && part.isLast);
     });
 
-    // Set the last element as the previous last element may have been excluded
-    if(processedParts.length > 0) processedParts[processedParts.length-1].isLast = true;
+  // Remove the separator for the last part if excludeCurrentPage is true
+  if (excludeCurrentPage && processedParts.length > 0) {
+    // Set the last element as the previous last element
+    processedParts[processedParts.length - 1].isLast = true;
+ }
+  
     return processedParts
 };
