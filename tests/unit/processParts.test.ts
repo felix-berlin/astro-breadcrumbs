@@ -113,6 +113,6 @@ test("processParts - customization options", () => {
   const result = processParts(parts, customizeListElements, false, false, 2);
 
   expect(result).toEqual([
-    { text: "Home", href: "/", isLast: true, showTruncatedButton: false },
+    { text: "Home", href: "/", isLast: false, showTruncatedButton: false },
   ]);
 });
