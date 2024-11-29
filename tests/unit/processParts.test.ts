@@ -83,7 +83,7 @@ test("processParts - exclude current page", () => {
   const result = processParts(parts, customizeListElements, true, false, 2);
 
   expect(result).toEqual([
-    { text: "Home", href: "/", isLast: false, showTruncatedButton: false },
+    { text: "Home", href: "/", isLast: true, showTruncatedButton: false },
   ]);
 });
 
