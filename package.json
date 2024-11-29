@@ -74,5 +74,5 @@
   "peerDependencies": {
     "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0"
   },
-  "packageManager": "pnpm@9.14.3"
+  "packageManager": "pnpm@9.14.4"
 }
