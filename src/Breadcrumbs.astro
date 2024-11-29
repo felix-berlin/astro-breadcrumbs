@@ -55,7 +55,7 @@ const processedParts = processParts(
   customizeListElements,
   excludeCurrentPage,
   truncated,
-  pathLength,
+  pathLength
 );
 
 debugInformation(debug, parts, customizedParts);
@@ -90,7 +90,7 @@ debugInformation(debug, parts, customizedParts);
                       mainBemClass={mainBemClass}
                       separatorAriaHidden={separatorAriaHidden}
                     >
-                      <slot name="separator" slot="seperator" />
+                      <slot name="separator" slot="separator" />
                     </BreadcrumbSeparator>
                   </li>
                 )}
@@ -99,7 +99,7 @@ debugInformation(debug, parts, customizedParts);
                   {...customizeListElement(
                     index,
                     showTruncatedButton,
-                    customizeListElements,
+                    customizeListElements
                   )}
                 >
                   <BreadcrumbLink
@@ -126,7 +126,7 @@ debugInformation(debug, parts, customizedParts);
                 </li>
               </>
             );
-          },
+          }
         )
       }
     </ol>
