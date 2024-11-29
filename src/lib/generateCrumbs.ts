@@ -217,7 +217,7 @@ export const processParts = (
   if (excludeCurrentPage && processedParts.length > 0) {
     // Set the last element as the previous last element
     processedParts[processedParts.length - 1].isLast = true;
- }
-  
-    return processedParts
+  }
+
+  return processedParts;
 };
