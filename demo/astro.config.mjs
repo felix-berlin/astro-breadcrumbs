@@ -7,4 +7,15 @@ export default defineConfig({
   base: "/astro-breadcrumbs",
   trailingSlash: "always",
   integrations: [mdx()],
+
+  vite: {
+    css: {
+      preprocessorMaxWorkers: true,
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
 });
