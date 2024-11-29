@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.2.1...v3.2.2) (2024-11-29)
+
+
+### Bug Fixes
+
+* typo in slot name ([ade10b1](https://github.com/felix-berlin/astro-breadcrumbs/commit/ade10b1e2024b6445a8ef147404b344a9b0399f6))
+
 ## [3.2.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.2.0...v3.2.1) (2024-11-29)
 
 
