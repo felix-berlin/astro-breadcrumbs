@@ -11,11 +11,6 @@ export default defineConfig({
   vite: {
     css: {
       preprocessorMaxWorkers: true,
-      preprocessorOptions: {
-        scss: {
-          api: "modern-compiler",
-        },
-      },
     },
   },
 });
