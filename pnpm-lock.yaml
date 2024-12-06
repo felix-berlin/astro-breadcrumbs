@@ -66,7 +66,7 @@ importers:
         version: 3.3.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
       astro-matomo:
         specifier: ^1.6.0
-        version: 1.6.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
+        version: 1.7.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -1312,10 +1312,10 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro-matomo@1.6.0:
-    resolution: {integrity: sha512-iUKSlA1zv1mBKH86wQ1xhu+1wfu55qmyAk3hIY1VxbL+TmrFqdid0sd8cI2b/7dQEX+LUWX9AKqB0JdGfu0+Ew==}
+  astro-matomo@1.7.0:
+    resolution: {integrity: sha512-TpgiP4X1ZiAFnPn73eOQtbEj0bRJX46q2a4oClswYtjZXbqaCnWFSfZjRByEk6RQsLXFAgBqvBUL0XF1VRSf4A==}
     peerDependencies:
-      astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
+      astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
   astro@4.16.17:
     resolution: {integrity: sha512-OuD+BP7U6OqQLKtZ/FJkU2S+TOlifxS/OKUbZOb5p6y+LLBa1J3zHRJrIl7DUSq6eXY+9wSWwbJpD9JS+lqhxA==}
@@ -5092,7 +5092,7 @@ snapshots:
       astro: 4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)
       rehype-expressive-code: 0.38.3
 
-  astro-matomo@1.6.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)):
+  astro-matomo@1.7.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)):
     dependencies:
       astro: 4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)
 
