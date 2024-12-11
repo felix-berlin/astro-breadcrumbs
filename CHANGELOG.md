@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.0...v3.3.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* docs state customizeLinks instead of customizeListElements ([a427479](https://github.com/felix-berlin/astro-breadcrumbs/commit/a427479c319e45bc3d2a809c3259f75892d4b5e0))
+
 # [3.3.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.2.2...v3.3.0) (2024-12-04)
 
 
