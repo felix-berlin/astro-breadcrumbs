@@ -47,7 +47,7 @@ importers:
         version: 5.0.3(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)
       astro-breadcrumbs:
         specifier: ^3.2.2
-        version: 3.3.0(astro@5.0.3(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
+        version: 3.3.1(astro@5.0.3(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.82.0
@@ -63,7 +63,7 @@ importers:
         version: 4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)
       astro-breadcrumbs:
         specifier: ^3.2.2
-        version: 3.3.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
+        version: 3.3.1(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
       astro-matomo:
         specifier: ^1.6.0
         version: 1.7.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4))
@@ -1302,8 +1302,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro-breadcrumbs@3.3.0:
-    resolution: {integrity: sha512-kIXg3jP5lQgLVL73Wpo/4YcCxbFxyMr2/tq33mKNA+4fmiqLvmg2KrVUVCgT56CsnawWsx3rYBejQO7UtlQ0dA==}
+  astro-breadcrumbs@3.3.1:
+    resolution: {integrity: sha512-O3wWzlc4HOU//ePefcwk2F4yQn830buVUVn6h7+sGmVq7+xvv9JmHTcmihU18ISte72ELnJlG2U8s58nIuPXfg==}
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
@@ -5079,11 +5079,11 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-breadcrumbs@3.3.0(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)):
+  astro-breadcrumbs@3.3.1(astro@4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)):
     dependencies:
       astro: 4.16.17(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)
 
-  astro-breadcrumbs@3.3.0(astro@5.0.3(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)):
+  astro-breadcrumbs@3.3.1(astro@5.0.3(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)):
     dependencies:
       astro: 5.0.3(rollup@4.28.0)(sass@1.82.0)(typescript@5.5.4)
 
