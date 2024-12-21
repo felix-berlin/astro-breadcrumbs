@@ -1,15 +1,23 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vitest/config";
+import { getViteConfig, envField } from "astro/config";
+import { coverageConfigDefaults } from "vitest/config";
 
-export default defineConfig({
-  test: {
-    include: ["./tests/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    exclude: ["./tests/unit/__needsFix/*"],
-    globals: true,
-    environment: "jsdom",
-    coverage: {
-      include: ["src/**"],
-      reportsDirectory: "./tests/unit/coverage",
+export default getViteConfig(
+  {
+    test: {
+      include: ["tests/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+      exclude: ["tests/unit/__needsFix/*"],
+      globals: true,
+      environment: "jsdom",
+      setupFiles: ["tests/unit/vitest.setup.ts"],
+      coverage: {
+        include: ["src/**"],
+        exclude: ["src/**/*.types.*", ...coverageConfigDefaults.exclude],
+        reportsDirectory: "tests/unit/coverage",
+      },
     },
   },
-});
+  {
+    srcDir: "demo/src",
+  },
+);
