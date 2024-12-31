@@ -15,50 +15,54 @@ _Please correct me if this should be different and open a [Github issue](https:/
 
 1. Install the SASS Pre-processor
 
-   If already present this is optional.
-   <Tabs>
-     <TabItem label="npm">
-       ```bash
-         # Using NPM
-         npm install -D sass
-       ```
+If already present this is optional.
 
-     </TabItem>
-     <TabItem label="pnpm">
-       ```bash
-         # Using PNPM
-         pnpm add -D sass
-       ```
+<Tabs>
+  <TabItem label="npm">
+    ```bash
+      # Using NPM
+      npm install -D sass
+    ```
 
-     </TabItem>
-     <TabItem label="yarn">
-       ```bash
-         # Using Yarn
-         yarn add -D sass
-       ```
+    </TabItem>
 
-     </TabItem>
-   </Tabs>
+  <TabItem label="pnpm">
+    ```bash
+      # Using PNPM
+      pnpm add -D sass
+    ```
+
+    </TabItem>
+
+  <TabItem label="yarn">
+    ```bash
+      # Using Yarn
+      yarn add -D sass
+    ```
+
+    </TabItem>
+
+</Tabs>
 
 2. Create a new SCSS file
 
-   Create a new SCSS file (for example astro-breadcrumbs-config.scss) in your project and import the `astro-breadcrumbs` SCSS file. You can then use the SCSS variables to customize the look of your breadcrumbs.
+Create a new SCSS file (for example astro-breadcrumbs-config.scss) in your project and import the `astro-breadcrumbs` SCSS file. You can then use the SCSS variables to customize the look of your breadcrumbs.
 
-   ```scss
-   // astro-breadcrumbs-config.scss
-   @use "astro-breadcrumbs/breadcrumbs.scss" with (
-     /// Your config goes here
-     /// $size-font: 12px;
-     /// $color-link: rebeccapurple;
-   );
-   ```
+```scss
+// astro-breadcrumbs-config.scss
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  /// Your config goes here
+  $size-font: 12px,
+  $color-link: rebeccapurple
+);
+```
+
 3. Import the SCSS file in your Astro file
 
-   ```astro
-   ---
-   import "../styles/astro-breadcrumbs-config.scss";
-   ---
-   ```
+```astro
+---
+import "../styles/astro-breadcrumbs-config.scss";
+---
+```
+
 </Steps>
-
-
