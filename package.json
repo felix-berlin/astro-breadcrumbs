@@ -69,7 +69,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "semantic-release": "^24.2.0",
-    "vitest": "2.1.6"
+    "vitest": "2.1.9"
   },
   "peerDependencies": {
     "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0"
