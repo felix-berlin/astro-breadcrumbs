@@ -1,0 +1,141 @@
+---
+import { Image } from "astro:assets";
+import { funding } from "../../../package.json";
+
+// Idea from: https://blog.otterlord.dev/posts/starlight-sponsors/
+
+const { position = "sidebar" } = Astro.props;
+
+const sponsors = [
+  {
+    name: "WebShaped",
+    img: "https://cms.webshaped.de/wp-content/uploads/web_shaped_logo_23_inline_plane_trans_dark.svg",
+    url: "https://webshaped.de",
+    size: "large",
+    width: 529,
+    height: 72,
+  },
+];
+---
+
+<section class="sponsors" class:list={`position-${position}`}>
+  <div class="sponsor-list">
+    {
+      sponsors.map((sponsor) => (
+        <a href={sponsor.url} class={sponsor.size ?? ""}>
+          <article>
+            <h4>{sponsor.name}</h4>
+            <Image
+              src={sponsor.img}
+              alt={sponsor.name}
+              width={sponsor?.width ?? ""}
+              height={sponsor?.height ?? ""}
+              class:list={sponsor.size === "large" ? "is-large" : ""}
+            />
+          </article>
+        </a>
+      ))
+    }
+  </div>
+
+  <details class="become-sponsor">
+    <summary>Become a sponsor!</summary>
+    <ul>
+      {
+        funding.map((item) => (
+          <li>
+            <a href={item.url}>{item.type}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <i>Thanks for the support!</i>
+  </details>
+</section>
+
+<style lang="scss" scoped>
+  .sponsors {
+    &.position-footer {
+      @media (min-width: 72rem) {
+        display: none;
+      }
+    }
+  }
+  .become-sponsor {
+    margin-top: 0.5rem;
+    cursor: pointer;
+
+    a {
+      width: 100%;
+    }
+
+    i {
+      font-size: var(--sl-text-xs);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 12px;
+
+    &.is-large {
+      max-height: 24px;
+    }
+  }
+
+  .sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    gap: 0.25rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  a {
+    width: 34%;
+    flex-grow: 1;
+
+    &.large {
+      width: 100%;
+    }
+  }
+
+  article {
+    display: flex;
+    background-color: var(--sl-color-gray-6);
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--sl-color-gray-1);
+
+      :global(img) {
+        filter: none !important;
+      }
+    }
+  }
+
+  :root[data-theme="light"] article:hover :global(img) {
+    filter: grayscale(1) invert(75%) brightness(1.2) !important;
+  }
+
+  :root[data-theme="dark"] article :global(img) {
+    filter: grayscale(1) invert(75%) brightness(1.2);
+  }
+
+  h4 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+  }
+</style>
