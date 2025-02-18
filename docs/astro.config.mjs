@@ -56,6 +56,7 @@ export default defineConfig({
       plugins: [starlightLinksValidator()],
       components: {
         Footer: "./src/components/Footer.astro",
+        TableOfContents: "./src/components/TableOfContents.astro",
       },
     }),
     matomo({
