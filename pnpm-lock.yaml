@@ -41,13 +41,13 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.0.8
-        version: 4.1.0(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+        version: 4.1.0(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       astro:
         specifier: ^5.3.0
-        version: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+        version: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
       astro-breadcrumbs:
         specifier: ^3.3.1
-        version: 3.3.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+        version: 3.3.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.85.0
@@ -57,22 +57,22 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.32.0
-        version: 0.32.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+        version: 0.32.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       astro:
         specifier: ^5.3.0
-        version: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+        version: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
       astro-breadcrumbs:
         specifier: ^3.3.1
-        version: 3.3.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+        version: 3.3.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       astro-matomo:
         specifier: ^1.8.0
-        version: 1.8.0(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+        version: 1.8.0(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.14.3
-        version: 0.14.3(@astrojs/starlight@0.32.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)))
+        version: 0.14.3(@astrojs/starlight@0.32.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)))
     devDependencies:
       sass:
         specifier: ^1.85.0
@@ -1402,8 +1402,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@5.4.0:
-    resolution: {integrity: sha512-7A//zrCtJUGfJcQAt6PDhMu4a6pogvnK54HLXnYlPnKSWQZu/tKIYWfyvocVnTuEYIPExIN3CpjNAFFLoweJVw==}
+  astro@5.4.1:
+    resolution: {integrity: sha512-z9BiBz8pV7pZVn1evZv/9bJil3A9UZNyEjDFH3IjD87ioz95HHGLgbjRbbqF1EwSy8JOLKlMNyuQPqjrX8xqWw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4058,12 +4058,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.1.0(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))':
+  '@astrojs/mdx@4.1.0(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))':
     dependencies:
       '@astrojs/markdown-remark': 6.2.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+      astro: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -4087,16 +4087,16 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/starlight@0.32.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))':
+  '@astrojs/starlight@0.32.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))':
     dependencies:
-      '@astrojs/mdx': 4.1.0(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+      '@astrojs/mdx': 4.1.0(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       '@astrojs/sitemap': 3.2.1
       '@pagefind/default-ui': 1.3.0
       '@types/hast': 3.0.4
       '@types/js-yaml': 4.0.9
       '@types/mdast': 4.0.4
-      astro: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
-      astro-expressive-code: 0.40.2(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+      astro: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+      astro-expressive-code: 0.40.2(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.3
       hast-util-select: 6.0.4
@@ -5161,18 +5161,18 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-breadcrumbs@3.3.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)):
+  astro-breadcrumbs@3.3.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)):
     dependencies:
-      astro: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+      astro: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
 
-  astro-expressive-code@0.40.2(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)):
+  astro-expressive-code@0.40.2(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)):
     dependencies:
-      astro: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+      astro: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
       rehype-expressive-code: 0.40.2
 
-  astro-matomo@1.8.0(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)):
+  astro-matomo@1.8.0(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)):
     dependencies:
-      astro: 5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
+      astro: 5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4)
 
   astro@5.3.0(jiti@2.4.2)(rollup@4.34.7)(sass@1.85.1)(typescript@5.5.4):
     dependencies:
@@ -5271,7 +5271,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4):
+  astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.4
       '@astrojs/internal-helpers': 0.6.0
@@ -7842,9 +7842,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.14.3(@astrojs/starlight@0.32.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))):
+  starlight-links-validator@0.14.3(@astrojs/starlight@0.32.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))):
     dependencies:
-      '@astrojs/starlight': 0.32.1(astro@5.4.0(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
+      '@astrojs/starlight': 0.32.1(astro@5.4.1(jiti@2.4.2)(rollup@4.34.8)(sass@1.85.1)(typescript@5.5.4))
       '@types/picomatch': 3.0.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
