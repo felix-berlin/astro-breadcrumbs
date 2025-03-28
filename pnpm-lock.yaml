@@ -57,7 +57,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.32.0
-        version: 0.32.4(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))
+        version: 0.32.5(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))
       astro:
         specifier: ^5.3.0
         version: 5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4)
@@ -72,7 +72,7 @@ importers:
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.14.3
-        version: 0.14.3(@astrojs/starlight@0.32.4(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4)))
+        version: 0.14.3(@astrojs/starlight@0.32.5(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4)))
     devDependencies:
       sass:
         specifier: ^1.85.0
@@ -118,8 +118,8 @@ packages:
   '@astrojs/sitemap@3.3.0':
     resolution: {integrity: sha512-nYE4lKQtk+Kbrw/w0G0TTgT724co0jUsU4tPlHY9au5HmTBKbwiCLwO/15b1/y13aZ4Kr9ZbMeMHlXuwn0ty4Q==}
 
-  '@astrojs/starlight@0.32.4':
-    resolution: {integrity: sha512-l6aHQ4wzFPdw2G2XPqft/SrzhOYWYBYPkIHlLdgFT09Lt3NUpHnHwdcomtDJfHPlvrAqBKt/C+aJqQjLBApu0Q==}
+  '@astrojs/starlight@0.32.5':
+    resolution: {integrity: sha512-KYZsYbA5eEAsCO3XNc6DWDPml1JCD6GVusuB15fYq5dbxyB7RtC6kgwbtiEmr84maIjcQUmDtFJCz3sN4CdaSg==}
     peerDependencies:
       astro: ^5.1.5
 
@@ -144,8 +144,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.26.10':
-    resolution: {integrity: sha512-2WJMeRQPHKSPemqk/awGrAiuFfzBmOIPXKizAsVhWH9YJqLZ0H+HS4c8loHGgW6utJ3E/ejXQUsiGaQy2NZ9Fw==}
+  '@babel/runtime@7.27.0':
+    resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.0':
@@ -4206,7 +4206,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/starlight@0.32.4(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))':
+  '@astrojs/starlight@0.32.5(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))':
     dependencies:
       '@astrojs/mdx': 4.2.2(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))
       '@astrojs/sitemap': 3.3.0
@@ -4263,7 +4263,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.27.0
 
-  '@babel/runtime@7.26.10':
+  '@babel/runtime@7.27.0':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -6433,7 +6433,7 @@ snapshots:
 
   i18next@23.16.8:
     dependencies:
-      '@babel/runtime': 7.26.10
+      '@babel/runtime': 7.27.0
 
   iconv-lite@0.6.3:
     dependencies:
@@ -8042,9 +8042,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.14.3(@astrojs/starlight@0.32.4(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))):
+  starlight-links-validator@0.14.3(@astrojs/starlight@0.32.5(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))):
     dependencies:
-      '@astrojs/starlight': 0.32.4(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))
+      '@astrojs/starlight': 0.32.5(astro@5.5.5(jiti@2.4.2)(rollup@4.37.0)(sass@1.86.0)(typescript@5.5.4))
       '@types/picomatch': 3.0.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
