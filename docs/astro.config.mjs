@@ -9,9 +9,13 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Astro Breadcrumbs",
-      social: {
-        github: "https://github.com/felix-berlin/astro-breadcrumbs",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/felix-berlin/astro-breadcrumbs",
+        },
+      ],
       editLink: {
         baseUrl:
           "https://github.com/felix-berlin/astro-breadcrumbs/tree/main/docs/",
