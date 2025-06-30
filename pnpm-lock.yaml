@@ -71,8 +71,8 @@ importers:
         specifier: ^0.34.1
         version: 0.34.2
       starlight-links-validator:
-        specifier: ^0.16.0
-        version: 0.16.0(@astrojs/starlight@0.34.3(astro@5.9.0(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.89.1)(typescript@5.5.4)))
+        specifier: ^0.17.0
+        version: 0.17.0(@astrojs/starlight@0.34.3(astro@5.9.0(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.89.1)(typescript@5.5.4)))
     devDependencies:
       sass:
         specifier: ^1.88.0
@@ -3121,8 +3121,8 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  starlight-links-validator@0.16.0:
-    resolution: {integrity: sha512-wInToor19C7UxhesPuxTBIhB1LH1wzNQHD4HaumfcB+yFhg5u80yQEnkZDrABHrUEEEwFm//NoZbWhnUj1m2ug==}
+  starlight-links-validator@0.17.0:
+    resolution: {integrity: sha512-D+j0W7Z6CVSxPlt8jskBcApqaAU16JmuxE4c483Xj2sWJteiz0wW2xvk0cG3o/cW1q9x44Ezc668OnUi3a5LAA==}
     engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.32.0'
@@ -7475,7 +7475,7 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.16.0(@astrojs/starlight@0.34.3(astro@5.9.0(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.89.1)(typescript@5.5.4))):
+  starlight-links-validator@0.17.0(@astrojs/starlight@0.34.3(astro@5.9.0(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.89.1)(typescript@5.5.4))):
     dependencies:
       '@astrojs/starlight': 0.34.3(astro@5.9.0(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.89.1)(typescript@5.5.4))
       '@types/picomatch': 3.0.2
