@@ -57,7 +57,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.35.0
-        version: 0.35.0(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))
+        version: 0.35.1(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))
       astro:
         specifier: ^5.7.12
         version: 5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4)
@@ -72,7 +72,7 @@ importers:
         version: 0.34.3
       starlight-links-validator:
         specifier: ^0.17.0
-        version: 0.17.0(@astrojs/starlight@0.35.0(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4)))
+        version: 0.17.0(@astrojs/starlight@0.35.1(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4)))
     devDependencies:
       sass:
         specifier: ^1.88.0
@@ -122,8 +122,8 @@ packages:
   '@astrojs/sitemap@3.4.1':
     resolution: {integrity: sha512-VjZvr1e4FH6NHyyHXOiQgLiw94LnCVY4v06wN/D0gZKchTMkg71GrAHJz81/huafcmavtLkIv26HnpfDq6/h/Q==}
 
-  '@astrojs/starlight@0.35.0':
-    resolution: {integrity: sha512-YmHSj2KkzZ2B1ST/ZMqfvctPz1nbw78kBwHF4W2BFKnDFJhCTHFDW81IByT1Dwf52f81LPs8vlOTXtxSZq6yKQ==}
+  '@astrojs/starlight@0.35.1':
+    resolution: {integrity: sha512-/hshlAayMd3B+E+h8wY6JWT1lNmX/K1+ugiZPirW5XFo5QUcNMk/Bsa4oHgg+TFoU6kbxPtijo0VppATfD9XuA==}
     peerDependencies:
       astro: ^5.5.0
 
@@ -156,8 +156,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.27.6':
-    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
+  '@babel/runtime@7.28.2':
+    resolution: {integrity: sha512-KHp2IflsnGywDjBWDkR9iEqiWSpc8GIi0lgTT3mOElT0PP1tG26P4tmFI2YvAdzgq9RGyoHZQEIEdZy6Ec5xCA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.0':
@@ -4309,7 +4309,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/starlight@0.35.0(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))':
+  '@astrojs/starlight@0.35.1(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.3
       '@astrojs/mdx': 4.3.1(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))
@@ -4382,7 +4382,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.27.0
 
-  '@babel/runtime@7.27.6': {}
+  '@babel/runtime@7.28.2': {}
 
   '@babel/types@7.27.0':
     dependencies:
@@ -5380,6 +5380,7 @@ snapshots:
   '@types/node@24.0.14':
     dependencies:
       undici-types: 7.8.0
+    optional: true
 
   '@types/node@24.1.0':
     dependencies:
@@ -5391,7 +5392,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.0.14
+      '@types/node': 17.0.45
 
   '@types/unist@2.0.11': {}
 
@@ -6679,7 +6680,7 @@ snapshots:
 
   i18next@23.16.8:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.2
 
   iconv-lite@0.6.3:
     dependencies:
@@ -8260,9 +8261,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.17.0(@astrojs/starlight@0.35.0(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))):
+  starlight-links-validator@0.17.0(@astrojs/starlight@0.35.1(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))):
     dependencies:
-      '@astrojs/starlight': 0.35.0(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))
+      '@astrojs/starlight': 0.35.1(astro@5.12.3(@types/node@24.1.0)(jiti@2.4.2)(rollup@4.45.1)(sass@1.89.2)(typescript@5.5.4))
       '@types/picomatch': 3.0.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
