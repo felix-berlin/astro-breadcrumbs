@@ -10,7 +10,7 @@ importers:
     dependencies:
       astro:
         specifier: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
-        version: 5.7.13(@types/node@24.8.0)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4)
+        version: 5.7.13(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4)
     devDependencies:
       '@semantic-release/changelog':
         specifier: ^6.0.3
@@ -71,8 +71,8 @@ importers:
         specifier: ^0.34.1
         version: 0.34.4
       starlight-links-validator:
-        specifier: ^0.18.0
-        version: 0.18.0(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4)))
+        specifier: ^0.19.0
+        version: 0.19.0(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4)))
     devDependencies:
       sass:
         specifier: ^1.88.0
@@ -1388,9 +1388,6 @@ packages:
 
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-
-  '@types/node@24.8.0':
-    resolution: {integrity: sha512-5x08bUtU8hfboMTrJ7mEO4CpepS9yBwAqcL52y86SWNmbPX8LVbNs3EP4cNrIZgdjk2NAlP2ahNihozpoZIxSg==}
 
   '@types/node@24.8.1':
     resolution: {integrity: sha512-alv65KGRadQVfVcG69MuB4IzdYVpRwMG/mq8KWOaoOdyY617P5ivaDiMCGOFDWD2sAn5Q0mR3mRtUOgm99hL9Q==}
@@ -3509,8 +3506,8 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  starlight-links-validator@0.18.0:
-    resolution: {integrity: sha512-R0gLdrKWdpAEqux3DL2B3QvNJM8Zpys8CQu1BGLD9hc+66nt/Q6aJDkvvkvoCVky9JKmBEnmL4PhFkyz13lK5g==}
+  starlight-links-validator@0.19.0:
+    resolution: {integrity: sha512-wsqVL/vL6A4wvnM0m1A9Rwu8WuKS4rZerg1Dw5p8Xq4MquJco2F68LNt5lm9kYa3G9dUi4jMZbUAUuzzczQyJQ==}
     engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.32.0'
@@ -5492,11 +5489,6 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@24.8.0':
-    dependencies:
-      undici-types: 7.14.0
-    optional: true
-
   '@types/node@24.8.1':
     dependencies:
       undici-types: 7.14.0
@@ -5761,7 +5753,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.7.13(@types/node@24.8.0)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4):
+  astro@5.7.13(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -5815,8 +5807,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.3.4(@types/node@24.8.0)(jiti@2.4.2)(sass@1.93.2)
-      vitefu: 1.0.6(vite@6.3.4(@types/node@24.8.0)(jiti@2.4.2)(sass@1.93.2))
+      vite: 6.3.4(@types/node@24.8.1)(jiti@2.4.2)(sass@1.93.2)
+      vitefu: 1.0.6(vite@6.3.4(@types/node@24.8.1)(jiti@2.4.2)(sass@1.93.2))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -6399,6 +6391,10 @@ snapshots:
   fdir@6.4.4(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
+
+  fdir@6.4.4(picomatch@4.0.3):
+    optionalDependencies:
+      picomatch: 4.0.3
 
   fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
@@ -8362,7 +8358,7 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.18.0(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4))):
+  starlight-links-validator@0.19.0(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4))):
     dependencies:
       '@astrojs/starlight': 0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4))
       '@types/picomatch': 3.0.2
@@ -8528,8 +8524,8 @@ snapshots:
 
   tinyglobby@0.2.13:
     dependencies:
-      fdir: 6.4.4(picomatch@4.0.2)
-      picomatch: 4.0.2
+      fdir: 6.4.4(picomatch@4.0.3)
+      picomatch: 4.0.3
 
   tinyglobby@0.2.14:
     dependencies:
@@ -8767,20 +8763,6 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.3.4(@types/node@24.8.0)(jiti@2.4.2)(sass@1.93.2):
-    dependencies:
-      esbuild: 0.25.1
-      fdir: 6.4.4(picomatch@4.0.2)
-      picomatch: 4.0.2
-      postcss: 8.5.3
-      rollup: 4.40.1
-      tinyglobby: 0.2.13
-    optionalDependencies:
-      '@types/node': 24.8.0
-      fsevents: 2.3.3
-      jiti: 2.4.2
-      sass: 1.93.2
-
   vite@6.3.4(@types/node@24.8.1)(jiti@2.4.2)(sass@1.93.2):
     dependencies:
       esbuild: 0.25.1
@@ -8809,9 +8791,9 @@ snapshots:
       jiti: 2.4.2
       sass: 1.93.2
 
-  vitefu@1.0.6(vite@6.3.4(@types/node@24.8.0)(jiti@2.4.2)(sass@1.93.2)):
+  vitefu@1.0.6(vite@6.3.4(@types/node@24.8.1)(jiti@2.4.2)(sass@1.93.2)):
     optionalDependencies:
-      vite: 6.3.4(@types/node@24.8.0)(jiti@2.4.2)(sass@1.93.2)
+      vite: 6.3.4(@types/node@24.8.1)(jiti@2.4.2)(sass@1.93.2)
 
   vitefu@1.1.1(vite@6.4.0(@types/node@24.8.1)(jiti@2.4.2)(sass@1.93.2)):
     optionalDependencies:
