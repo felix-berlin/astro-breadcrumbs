@@ -72,7 +72,7 @@ importers:
         version: 0.34.4
       starlight-links-validator:
         specifier: ^0.18.0
-        version: 0.18.0(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4)))
+        version: 0.18.1(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4)))
     devDependencies:
       sass:
         specifier: ^1.88.0
@@ -1483,6 +1483,10 @@ packages:
 
   ansi-escapes@7.1.0:
     resolution: {integrity: sha512-YdhtCd19sKRKfAAUsrcC1wzm4JuzJoiX4pOJqIoW2qmKj5WzG/dL8uUJ0361zaXtHqK7gEhOwtAtz7t3Yq3X5g==}
+    engines: {node: '>=18'}
+
+  ansi-escapes@7.1.1:
+    resolution: {integrity: sha512-Zhl0ErHcSRUaVfGUeUdDuLgpkEo8KIFjB4Y9uAc46ScOpdDiU1Dbyplh7qWJeJ/ZHpbyMSM26+X3BySgnIz40Q==}
     engines: {node: '>=18'}
 
   ansi-regex@5.0.1:
@@ -3506,8 +3510,8 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  starlight-links-validator@0.18.0:
-    resolution: {integrity: sha512-R0gLdrKWdpAEqux3DL2B3QvNJM8Zpys8CQu1BGLD9hc+66nt/Q6aJDkvvkvoCVky9JKmBEnmL4PhFkyz13lK5g==}
+  starlight-links-validator@0.18.1:
+    resolution: {integrity: sha512-64BlSEL6SYItOdEZadCicORYAbLyDtLSAH2Ry8FWh/cLAvOSPTCFZiOzmk0h4A0vPU7mZ2H/FZEcIGmyB7Hb9g==}
     engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.32.0'
@@ -3599,8 +3603,8 @@ packages:
     resolution: {integrity: sha512-zFObLMyZeEwzAoKCyu1B91U79K2t7ApXuQfo8OuxwXLDgcKxuwM+YvcbIhm6QWqz7mHUH1TVytR1PwVVjEuMig==}
     engines: {node: '>=14.18'}
 
-  supports-hyperlinks@4.2.0:
-    resolution: {integrity: sha512-FWXryrXrsYX2vlTD9WdfgOeN7a2EbuS3MiMaDkFibR0B6IxelCNbFgUJEGLn3eSn+9HX7RuM0ig6Lzr8lccxUA==}
+  supports-hyperlinks@4.3.0:
+    resolution: {integrity: sha512-i6sWEzuwadSlcr2mOnb0ktlIl+K5FVxsPXmoPfknDd2gyw4ZBIAZ5coc0NQzYqDdEYXMHy8NaY9rWwa1Q1myiQ==}
     engines: {node: '>=20'}
 
   symbol-tree@3.2.4:
@@ -5598,6 +5602,10 @@ snapshots:
       string-width: 4.2.3
 
   ansi-escapes@7.1.0:
+    dependencies:
+      environment: 1.1.0
+
+  ansi-escapes@7.1.1:
     dependencies:
       environment: 1.1.0
 
@@ -8355,7 +8363,7 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.18.0(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4))):
+  starlight-links-validator@0.18.1(@astrojs/starlight@0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4))):
     dependencies:
       '@astrojs/starlight': 0.35.3(astro@5.14.6(@types/node@24.8.1)(jiti@2.4.2)(rollup@4.52.4)(sass@1.93.2)(typescript@5.5.4))
       '@types/picomatch': 3.0.2
@@ -8462,7 +8470,7 @@ snapshots:
       has-flag: 4.0.0
       supports-color: 7.2.0
 
-  supports-hyperlinks@4.2.0:
+  supports-hyperlinks@4.3.0:
     dependencies:
       has-flag: 5.0.1
       supports-color: 10.2.2
@@ -8480,8 +8488,8 @@ snapshots:
 
   terminal-link@5.0.0:
     dependencies:
-      ansi-escapes: 7.1.0
-      supports-hyperlinks: 4.2.0
+      ansi-escapes: 7.1.1
+      supports-hyperlinks: 4.3.0
 
   test-exclude@7.0.1:
     dependencies:
