@@ -1,4 +1,4 @@
-@use '../../../src/breadcrumbs.scss' with (
+@use '../../../packages/astro-breadcrumbs/src/breadcrumbs.scss' with (
   $bem-root: 'c-breadcrumbs',
   $overflow-behavior: 'wrap',
   $size-font: 1.1rem,

@@ -94,4 +94,36 @@ describe("Breadcrumbs", () => {
     );
     expect(render).toContain("<span>|</span>");
   });
+
+  it("renders without default styles when cssClasses is provided", async () => {
+    const render = await renderBreadcrumbs({ cssClasses: {} }, {});
+    expect(render).not.toContain(' class="c-breadcrumbs"');
+    expect(render).not.toContain(' class="c-breadcrumbs__crumbs"');
+    expect(render).not.toContain(' class="c-breadcrumbs__crumb"');
+  });
+
+  it("renders with custom classes when provided via cssClasses", async () => {
+    const render = await renderBreadcrumbs(
+      {
+        cssClasses: {
+          container: "custom-nav",
+          list: "custom-list",
+          item: "custom-item",
+          link: "custom-link",
+          separator: "custom-separator",
+        },
+        crumbs: [
+          { text: "Home", href: "/" },
+          { text: "Page", href: "/page" },
+        ],
+      },
+      { separator: ">" }
+    );
+
+    expect(render).toContain('class="custom-nav"');
+    expect(render).toContain('class="custom-list"');
+    expect(render).toContain('class="custom-item"');
+    expect(render).toContain('class="custom-link"');
+    expect(render).toContain('class="custom-separator"');
+  });
 });
