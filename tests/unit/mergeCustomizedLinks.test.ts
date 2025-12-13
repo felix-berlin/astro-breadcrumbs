@@ -87,3 +87,14 @@ test("mergeCustomizedLinks - customizeLinks with index 'last' and multiple modif
   expect(result[1].text).toEqual("Our Story");
   expect(result[result.length - 1].text).toEqual("Reach Out");
 });
+
+test("mergeCustomizedLinks - customizeLinks without index (implicit index)", () => {
+  const parts = [
+    { text: "Home", href: "/" },
+    { text: "About", href: "/about" },
+  ];
+  const customizeLinks = [{ text: "Start" }, { text: "About Us" }];
+  const result = mergeCustomizedLinks(parts, customizeLinks);
+  expect(result[0].text).toEqual("Start");
+  expect(result[1].text).toEqual("About Us");
+});

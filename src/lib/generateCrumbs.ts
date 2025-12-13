@@ -27,7 +27,7 @@ export const generateCrumbs = ({
   /**
    * If crumbs are passed, use them.
    */
-  if (crumbs && crumbs?.length > 0) {
+  if (crumbs && crumbs.length > 0) {
     return crumbs;
   }
 
