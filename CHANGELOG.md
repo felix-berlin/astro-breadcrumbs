@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.3](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.2...v3.3.3) (2025-12-13)
+
+
+### Bug Fixes
+
+* update repository URL format in package.json ([22d2007](https://github.com/felix-berlin/astro-breadcrumbs/commit/22d200773d5ed5b9ffc510e27aba38ec81aac856))
+
 ## [3.3.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.1...v3.3.2) (2025-12-13)
 
 
