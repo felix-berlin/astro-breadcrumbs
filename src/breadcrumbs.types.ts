@@ -16,6 +16,16 @@ export interface BreadcrumbsProps {
   debug?: boolean;
   separatorAriaHidden?: boolean;
   id?: string;
+  cssClasses?: BreadcrumbsCssClasses;
+}
+
+export interface BreadcrumbsCssClasses {
+  container?: string;
+  list?: string;
+  item?: string;
+  link?: string;
+  separator?: string;
+  truncatedButton?: string;
 }
 
 export interface CustomizeElement extends AddAttributes {

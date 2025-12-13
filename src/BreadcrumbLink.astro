@@ -4,21 +4,30 @@ interface BreadcrumbLinkProps {
   mainBemClass: string;
   isIndex: boolean;
   isCurrent: boolean;
+  disableDefaultStyles?: boolean;
+  linkClass?: string;
 }
-const { attrs, mainBemClass, isIndex, isCurrent } =
-  Astro.props as BreadcrumbLinkProps;
+const {
+  attrs,
+  mainBemClass,
+  isIndex,
+  isCurrent,
+  disableDefaultStyles,
+  linkClass,
+} = Astro.props as BreadcrumbLinkProps;
 
 const cssClasses = [
-  `${mainBemClass}__link`,
-  { "is-current": isCurrent },
-  { "is-index": isIndex },
+  !disableDefaultStyles && `${mainBemClass}__link`,
+  !disableDefaultStyles && { 'is-current': isCurrent },
+  !disableDefaultStyles && { 'is-index': isIndex },
+  linkClass,
 ];
 ---
 
 <a
   {...attrs}
   class:list={cssClasses}
-  aria-current={isCurrent ? "location" : false}
+  aria-current={isCurrent ? 'location' : false}
 >
-  <slot name="index" />
+  <slot name='index' />
 </a>

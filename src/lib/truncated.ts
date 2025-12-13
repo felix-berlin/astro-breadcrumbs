@@ -27,7 +27,7 @@ export class Truncated extends HTMLElement {
    */
   initializeCrumbs(): void {
     const crumbs = this.breadcrumbs?.querySelectorAll(
-      `.${this.mainBemClass}__crumb`,
+      `[data-crumb]`,
     );
     crumbs?.forEach((crumb) => {
       this.totalWidth += (crumb as HTMLElement).offsetWidth;
@@ -74,7 +74,7 @@ export class Truncated extends HTMLElement {
    */
   showHiddenCrumbs() {
     const truncatedButton = this.breadcrumbs?.querySelector(
-      `.${this.mainBemClass}__truncated-button`,
+      `[data-truncated-button]`,
     );
     truncatedButton?.removeEventListener(
       "click",

@@ -2,12 +2,24 @@
 interface BreadcrumbSeparatorProps {
   mainBemClass: string;
   separatorAriaHidden: boolean;
+  disableDefaultStyles?: boolean;
+  separatorClass?: string;
 }
 
-const { mainBemClass, separatorAriaHidden } =
-  Astro.props as BreadcrumbSeparatorProps;
+const {
+  mainBemClass,
+  separatorAriaHidden,
+  disableDefaultStyles,
+  separatorClass,
+} = Astro.props as BreadcrumbSeparatorProps;
 ---
 
-<span class={`${mainBemClass}__separator`} aria-hidden={separatorAriaHidden}>
-  <slot name="separator" />
+<span
+  class:list={[
+    !disableDefaultStyles && `${mainBemClass}__separator`,
+    separatorClass,
+  ]}
+  aria-hidden={separatorAriaHidden}
+>
+  <slot name='separator' />
 </span>

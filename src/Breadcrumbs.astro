@@ -1,27 +1,27 @@
 ---
-import { schemaJson } from "./lib/structuredData";
+import { schemaJson } from './lib/structuredData';
 import {
   generateCrumbs,
   mergeCustomizedLinks,
   customizeListElement,
   processParts,
-} from "./lib/generateCrumbs";
-import BreadcrumbLink from "./BreadcrumbLink.astro";
-import BreadcrumbSeparator from "./BreadcrumbSeparator.astro";
-import type { BreadcrumbsProps } from "./breadcrumbs.types.ts";
-import { debugInformation } from "./lib/debug.ts";
+} from './lib/generateCrumbs';
+import BreadcrumbLink from './BreadcrumbLink.astro';
+import BreadcrumbSeparator from './BreadcrumbSeparator.astro';
+import type { BreadcrumbsProps } from './breadcrumbs.types.ts';
+import { debugInformation } from './lib/debug.ts';
 
 const {
-  indexText = "Home",
-  mainBemClass = "c-breadcrumbs",
-  ariaLabel = "breadcrumbs",
+  indexText = 'Home',
+  mainBemClass = 'c-breadcrumbs',
+  ariaLabel = 'breadcrumbs',
   crumbs = [],
   customizeLinks = [],
   customizeListElements = [],
   customizeList = {},
   customizeNav = {},
   schemaJsonScript = true,
-  ellipsisAriaLabel = "Show hidden navigation",
+  ellipsisAriaLabel = 'Show hidden navigation',
   truncated = false,
   linkTextFormat,
   customBaseUrl,
@@ -29,14 +29,18 @@ const {
   debug = false,
   separatorAriaHidden = true,
   id = crypto.randomUUID(),
+  cssClasses,
 } = Astro.props as BreadcrumbsProps;
 
-const paths = Astro.url.pathname.split("/").filter((crumb: any) => crumb);
-const hasTrailingSlash = Astro.url.pathname.endsWith("/");
+const paths = Astro.url.pathname.split('/').filter((crumb: any) => crumb);
+const hasTrailingSlash = Astro.url.pathname.endsWith('/');
 const pathLength = paths?.length;
+const disableDefaultStyles = !!cssClasses;
 const listCssClasses = [
-  `${mainBemClass}__crumbs`,
-  Astro.slots.has("separator") ? " has-separators" : " has-no-separators",
+  !disableDefaultStyles && `${mainBemClass}__crumbs`,
+  !disableDefaultStyles &&
+    (Astro.slots.has('separator') ? ' has-separators' : ' has-no-separators'),
+  cssClasses?.list,
 ];
 
 const parts = generateCrumbs({
@@ -67,7 +71,12 @@ debugInformation(debug, parts, customizedParts);
   data-path-length={pathLength}
   data-truncated={truncated}
 >
-  <nav aria-label={ariaLabel} class={mainBemClass} id={id} {...customizeNav}>
+  <nav
+    aria-label={ariaLabel}
+    class:list={[!disableDefaultStyles && mainBemClass, cssClasses?.container]}
+    id={id}
+    {...customizeNav}
+  >
     <ol class:list={listCssClasses} {...customizeList}>
       {
         processedParts.map(
@@ -76,26 +85,42 @@ debugInformation(debug, parts, customizedParts);
               <>
                 {showTruncatedButton && (
                   <li
-                    class={`${mainBemClass}__crumb has-ellipsis`}
+                    class:list={[
+                      !disableDefaultStyles && `${mainBemClass}__crumb`,
+                      !disableDefaultStyles && 'has-ellipsis',
+                      cssClasses?.item,
+                    ]}
+                    data-crumb
                     {...customizeListElements[1]}
                   >
                     <button
-                      type="button"
+                      type='button'
                       aria-label={ellipsisAriaLabel}
-                      class={`${mainBemClass}__truncated-button`}
+                      class:list={[
+                        !disableDefaultStyles &&
+                          `${mainBemClass}__truncated-button`,
+                        cssClasses?.truncatedButton,
+                      ]}
+                      data-truncated-button
                     >
-                      <slot name="ellipsis">…</slot>
+                      <slot name='ellipsis'>…</slot>
                     </button>
                     <BreadcrumbSeparator
                       mainBemClass={mainBemClass}
                       separatorAriaHidden={separatorAriaHidden}
+                      disableDefaultStyles={disableDefaultStyles}
+                      separatorClass={cssClasses?.separator}
                     >
-                      <slot name="separator" slot="separator" />
+                      <slot name='separator' slot='separator' />
                     </BreadcrumbSeparator>
                   </li>
                 )}
                 <li
-                  class={`${mainBemClass}__crumb`}
+                  class:list={[
+                    !disableDefaultStyles && `${mainBemClass}__crumb`,
+                    cssClasses?.item,
+                  ]}
+                  data-crumb
                   {...customizeListElement(
                     index,
                     showTruncatedButton,
@@ -107,20 +132,24 @@ debugInformation(debug, parts, customizedParts);
                     mainBemClass={mainBemClass}
                     isIndex={index === 0}
                     isCurrent={isLast}
+                    disableDefaultStyles={disableDefaultStyles}
+                    linkClass={cssClasses?.link}
                   >
-                    {Astro.slots.has("index") && index === 0 ? (
-                      <slot name="index" slot="index" />
+                    {Astro.slots.has('index') && index === 0 ? (
+                      <slot name='index' slot='index' />
                     ) : (
                       decodeURI(text)
                     )}
                   </BreadcrumbLink>
 
-                  {Astro.slots.has("separator") && !isLast && (
+                  {Astro.slots.has('separator') && !isLast && (
                     <BreadcrumbSeparator
                       mainBemClass={mainBemClass}
                       separatorAriaHidden={separatorAriaHidden}
+                      disableDefaultStyles={disableDefaultStyles}
+                      separatorClass={cssClasses?.separator}
                     >
-                      <slot name="separator" slot="separator" />
+                      <slot name='separator' slot='separator' />
                     </BreadcrumbSeparator>
                   )}
                 </li>
@@ -134,14 +163,14 @@ debugInformation(debug, parts, customizedParts);
 </astro-breadcrumbs>
 {
   schemaJsonScript && (
-    <script type="application/ld+json" set:html={schemaJson(customizedParts)} />
+    <script type='application/ld+json' set:html={schemaJson(customizedParts)} />
   )
 }
 
 <script>
-  import { Truncated } from "./lib/truncated";
+  import { Truncated } from './lib/truncated';
 
-  if (!customElements.get("astro-breadcrumbs")) {
-    customElements.define("astro-breadcrumbs", Truncated);
+  if (!customElements.get('astro-breadcrumbs')) {
+    customElements.define('astro-breadcrumbs', Truncated);
   }
 </script>
