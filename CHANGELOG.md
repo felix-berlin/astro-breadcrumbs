@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.1...v3.3.2) (2025-12-13)
+
+
+### Bug Fixes
+
+* update condition to check crumbs length and add test for implicit index in mergeCustomizedLinks ([0c3cf8b](https://github.com/felix-berlin/astro-breadcrumbs/commit/0c3cf8b41fd1f857855a73c3506f80de043e66d7))
+
 ## [3.3.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.0...v3.3.1) (2024-12-11)
 
 
