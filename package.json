@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "release": "semantic-release"
+    "release": "pnpm --filter astro-breadcrumbs release",
+    "test:unit": "pnpm --filter astro-breadcrumbs test:unit"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",

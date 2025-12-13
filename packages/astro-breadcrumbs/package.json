@@ -10,7 +10,8 @@
   },
   "main": "index.ts",
   "scripts": {
-    "test:unit": "vitest --coverage"
+    "test:unit": "vitest --coverage",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
