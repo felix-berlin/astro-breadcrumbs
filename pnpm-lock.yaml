@@ -46,8 +46,8 @@ importers:
         specifier: ^5.16.5
         version: 5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4)
       astro-breadcrumbs:
-        specifier: ^3.3.1
-        version: 3.3.1(astro@5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4))
+        specifier: workspace:*
+        version: link:..
     devDependencies:
       sass:
         specifier: ^1.96.0
@@ -62,8 +62,8 @@ importers:
         specifier: ^5.16.5
         version: 5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4)
       astro-breadcrumbs:
-        specifier: ^3.3.1
-        version: 3.3.1(astro@5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4))
+        specifier: workspace:*
+        version: link:..
       astro-matomo:
         specifier: ^1.9.0
         version: 1.9.0(astro@5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4))
@@ -1550,11 +1550,6 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
-
-  astro-breadcrumbs@3.3.1:
-    resolution: {integrity: sha512-O3wWzlc4HOU//ePefcwk2F4yQn830buVUVn6h7+sGmVq7+xvv9JmHTcmihU18ISte72ELnJlG2U8s58nIuPXfg==}
-    peerDependencies:
-      astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
   astro-expressive-code@0.41.3:
     resolution: {integrity: sha512-u+zHMqo/QNLE2eqYRCrK3+XMlKakv33Bzuz+56V1gs8H0y6TZ0hIi3VNbIxeTn51NLn+mJfUV/A0kMNfE4rANw==}
@@ -5650,10 +5645,6 @@ snapshots:
       js-tokens: 9.0.1
 
   astring@1.9.0: {}
-
-  astro-breadcrumbs@3.3.1(astro@5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4)):
-    dependencies:
-      astro: 5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4)
 
   astro-expressive-code@0.41.3(astro@5.16.5(@types/node@25.0.1)(jiti@2.4.2)(rollup@4.53.3)(sass@1.96.0)(typescript@5.5.4)):
     dependencies:
