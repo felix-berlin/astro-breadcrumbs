@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felix-berlin/astro-breadcrumbs.git"
+    "url": "https://github.com/felix-berlin/astro-breadcrumbs.git"
   },
   "keywords": [
     "astro",
