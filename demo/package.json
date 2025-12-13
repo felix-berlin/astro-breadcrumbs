@@ -8,8 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "styles:build": "sass ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
-    "styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
+    "styles:build": "sass ../packages/astro-breadcrumbs/src/breadcrumbs-dist.scss:../packages/astro-breadcrumbs/src/breadcrumbs.css",
+    "styles:watch": "sass --watch ../packages/astro-breadcrumbs/src/breadcrumbs-dist.scss:../packages/astro-breadcrumbs/src/breadcrumbs.css",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {

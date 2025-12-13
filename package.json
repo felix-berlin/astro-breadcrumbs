@@ -1,78 +1,16 @@
 {
-  "name": "astro-breadcrumbs",
-  "version": "3.3.3",
-  "description": "Well configurable breadcrumb component for Astro.js. Create breadcrumbs completely dynamically or specify exactly how they should look.",
+  "name": "astro-breadcrumbs-monorepo",
+  "private": true,
   "type": "module",
-  "exports": {
-    ".": "./index.ts",
-    "./breadcrumbs.css": "./src/breadcrumbs.css",
-    "./breadcrumbs.scss": "./src/breadcrumbs.scss"
-  },
-  "main": "index.ts",
-  "workspaces": [
-    "demo",
-    "docs"
-  ],
   "scripts": {
-    "release": "semantic-release --branches main",
-    "test:unit": "vitest --coverage"
+    "release": "semantic-release"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/felix-berlin/astro-breadcrumbs.git"
-  },
-  "keywords": [
-    "astro",
-    "astro.js",
-    "astro-component",
-    "withastro",
-    "breadcrumbs",
-    "a11y",
-    "accessibility",
-    "ui",
-    "css",
-    "structured data schema"
-  ],
-  "author": {
-    "name": "Felix Scholze",
-    "email": "felix@webshaped.de",
-    "url": "https://webshaped.de"
-  },
-  "funding": [
-    {
-      "type": "GitHub Sponsors",
-      "url": "https://github.com/sponsors/felix-berlin"
-    },
-    {
-      "type": "Ko-fi",
-      "url": "https://ko-fi.com/felixberlin"
-    },
-    {
-      "type": "PayPal",
-      "url": "https://paypal.me/FelixScholze"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/felixberlin"
-    }
-  ],
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/felix-berlin/astro-breadcrumbs/issues"
-  },
-  "homepage": "https://docs.astro-breadcrumbs.kasimir.dev",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@vitest/coverage-v8": "4.0.15",
-    "jsdom": "^27.3.0",
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1",
-    "semantic-release": "^25.0.2",
-    "vitest": "4.0.15"
-  },
-  "peerDependencies": {
-    "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0"
+    "semantic-release": "^25.0.2"
   },
   "packageManager": "pnpm@10.25.0"
 }

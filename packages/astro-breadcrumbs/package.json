@@ -1,0 +1,69 @@
+{
+  "name": "astro-breadcrumbs",
+  "version": "3.3.3",
+  "description": "Well configurable breadcrumb component for Astro.js. Create breadcrumbs completely dynamically or specify exactly how they should look.",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./breadcrumbs.css": "./src/breadcrumbs.css",
+    "./breadcrumbs.scss": "./src/breadcrumbs.scss"
+  },
+  "main": "index.ts",
+  "scripts": {
+    "test:unit": "vitest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felix-berlin/astro-breadcrumbs.git",
+    "directory": "packages/astro-breadcrumbs"
+  },
+  "keywords": [
+    "astro",
+    "astro.js",
+    "astro-component",
+    "withastro",
+    "breadcrumbs",
+    "a11y",
+    "accessibility",
+    "ui",
+    "css",
+    "structured data schema"
+  ],
+  "author": {
+    "name": "Felix Scholze",
+    "email": "felix@webshaped.de",
+    "url": "https://webshaped.de"
+  },
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/felix-berlin"
+    },
+    {
+      "type": "Ko-fi",
+      "url": "https://ko-fi.com/felixberlin"
+    },
+    {
+      "type": "PayPal",
+      "url": "https://paypal.me/FelixScholze"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/felixberlin"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/felix-berlin/astro-breadcrumbs/issues"
+  },
+  "homepage": "https://docs.astro-breadcrumbs.kasimir.dev",
+  "devDependencies": {
+    "@vitest/coverage-v8": "4.0.15",
+    "jsdom": "^27.3.0",
+    "vitest": "4.0.15"
+  },
+  "peerDependencies": {
+    "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0"
+  },
+  "packageManager": "pnpm@10.25.0"
+}

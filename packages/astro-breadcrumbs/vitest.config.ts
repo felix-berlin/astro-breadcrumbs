@@ -15,6 +15,6 @@ export default getViteConfig(
     },
   },
   {
-    srcDir: "demo/src",
+    srcDir: "../../demo/src",
   },
 );
