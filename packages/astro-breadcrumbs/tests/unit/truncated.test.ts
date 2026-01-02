@@ -40,11 +40,11 @@ describe("Truncated Web Component", () => {
     document.body.innerHTML = `
       <nav id="breadcrumbs-id" class="c-breadcrumbs">
         <ol class="c-breadcrumbs__crumbs">
-          <li class="c-breadcrumbs__crumb">Home</li>
-          <li class="c-breadcrumbs__crumb">Page 1</li>
-          <li class="c-breadcrumbs__crumb">Page 2</li>
-          <li class="c-breadcrumbs__crumb has-ellipsis">
-             <button class="c-breadcrumbs__truncated-button">...</button>
+          <li class="c-breadcrumbs__crumb" data-crumb>Home</li>
+          <li class="c-breadcrumbs__crumb" data-crumb>Page 1</li>
+          <li class="c-breadcrumbs__crumb" data-crumb>Page 2</li>
+          <li class="c-breadcrumbs__crumb has-ellipsis" data-crumb>
+             <button class="c-breadcrumbs__truncated-button" data-truncated-button>...</button>
           </li>
         </ol>
       </nav>

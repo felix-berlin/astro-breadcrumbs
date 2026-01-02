@@ -1,5 +1,4 @@
 packages:
   - "demo"
   - "docs"
-  - package
   - "packages/*"

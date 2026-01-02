@@ -1,36 +1,36 @@
 ---
-import { Image } from "astro:assets";
-import { funding } from "../../../package.json";
+import { Image } from 'astro:assets';
+import { funding } from '../../../packages/astro-breadcrumbs/package.json';
 
 // Idea from: https://blog.otterlord.dev/posts/starlight-sponsors/
 
-const { position = "sidebar" } = Astro.props;
+const { position = 'sidebar' } = Astro.props;
 
 const sponsors = [
   {
-    name: "WebShaped",
-    img: "https://cms.webshaped.de/wp-content/uploads/web_shaped_logo_23_inline_plane_trans_dark.svg",
-    url: "https://webshaped.de",
-    size: "large",
+    name: 'WebShaped',
+    img: 'https://cms.webshaped.de/wp-content/uploads/web_shaped_logo_23_inline_plane_trans_dark.svg',
+    url: 'https://webshaped.de',
+    size: 'large',
     width: 529,
     height: 72,
   },
 ];
 ---
 
-<section class="sponsors" class:list={`position-${position}`}>
-  <div class="sponsor-list">
+<section class='sponsors' class:list={`position-${position}`}>
+  <div class='sponsor-list'>
     {
       sponsors.map((sponsor) => (
-        <a href={sponsor.url} class={sponsor.size ?? ""}>
+        <a href={sponsor.url} class={sponsor.size ?? ''}>
           <article>
             <h4>{sponsor.name}</h4>
             <Image
               src={sponsor.img}
               alt={sponsor.name}
-              width={sponsor?.width ?? ""}
-              height={sponsor?.height ?? ""}
-              class:list={sponsor.size === "large" ? "is-large" : ""}
+              width={sponsor?.width ?? ''}
+              height={sponsor?.height ?? ''}
+              class:list={sponsor.size === 'large' ? 'is-large' : ''}
             />
           </article>
         </a>
@@ -38,7 +38,7 @@ const sponsors = [
     }
   </div>
 
-  <details class="become-sponsor">
+  <details class='become-sponsor'>
     <summary>Become a sponsor!</summary>
     <ul>
       {
@@ -54,7 +54,7 @@ const sponsors = [
   </details>
 </section>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
   .sponsors {
     &.position-footer {
       @media (min-width: 72rem) {
@@ -121,11 +121,11 @@ const sponsors = [
     }
   }
 
-  :root[data-theme="light"] article:hover :global(img) {
+  :root[data-theme='light'] article:hover :global(img) {
     filter: grayscale(1) invert(75%) brightness(1.2) !important;
   }
 
-  :root[data-theme="dark"] article :global(img) {
+  :root[data-theme='dark'] article :global(img) {
     filter: grayscale(1) invert(75%) brightness(1.2);
   }
 
