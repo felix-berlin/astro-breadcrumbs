@@ -11,7 +11,7 @@
   "main": "index.ts",
   "scripts": {
     "test:unit": "vitest --coverage",
-    "release": "semantic-release"
+    "release": "pnpm dlx --package semantic-release --package @semantic-release/changelog --package @semantic-release/git semantic-release"
   },
   "repository": {
     "type": "git",
