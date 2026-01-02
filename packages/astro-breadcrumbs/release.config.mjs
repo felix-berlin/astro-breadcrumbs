@@ -3,11 +3,10 @@
  */
 export default {
   release: {
-    branches: ["main", "550-tailwind-support"],
+    branches: ["main"],
   },
   branches: [
     "main",
-    "550-tailwind-support",
     {
       name: "beta",
       prerelease: true,
@@ -45,6 +44,6 @@ export default {
       },
     ],
   ],
-  dryRun: true,
+  dryRun: false,
   debug: true,
 };
