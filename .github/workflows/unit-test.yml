@@ -36,6 +36,6 @@ jobs:
       - name: Codecov 📝
         uses: codecov/codecov-action@v5
         with:
-          directory: ./tests/unit/coverage
+          directory: ./packages/astro-breadcrumbs/tests/unit/coverage
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
