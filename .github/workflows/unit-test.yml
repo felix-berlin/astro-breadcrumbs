@@ -1,4 +1,7 @@
 name: Unit tests
+permissions:
+  contents: read
+  statuses: write
 on:
   pull_request:
   push:
@@ -13,13 +16,13 @@ jobs:
 
     steps:
       - name: Checkout ✅
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup pnpm 🛠️
         uses: pnpm/action-setup@v4
 
       - name: Setup Node.js 🛠️
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
           cache: "pnpm"
@@ -31,8 +34,8 @@ jobs:
         run: pnpm run test:unit
 
       - name: Codecov 📝
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
-          directory: ./tests/unit/coverage
+          directory: ./packages/astro-breadcrumbs/tests/unit/coverage
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

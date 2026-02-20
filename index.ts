@@ -1,1 +1,0 @@
-export { default as Breadcrumbs } from './src/Breadcrumbs.astro';

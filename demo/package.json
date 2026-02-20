@@ -1,5 +1,5 @@
 {
-  "name": "green-giant",
+  "name": "astro-breadcrumbs-demo",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -8,16 +8,17 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "styles:build": "sass ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
-    "styles:watch": "sass --watch ../src/breadcrumbs-dist.scss:../src/breadcrumbs.css",
+    "styles:build": "sass ../packages/astro-breadcrumbs/src/breadcrumbs-dist.scss:../packages/astro-breadcrumbs/src/breadcrumbs.css",
+    "styles:watch": "sass --watch ../packages/astro-breadcrumbs/src/breadcrumbs-dist.scss:../packages/astro-breadcrumbs/src/breadcrumbs.css",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.4",
-    "astro": "^4.14.5"
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.17.3",
+    "astro-breadcrumbs": "workspace:*"
   },
   "devDependencies": {
-    "sass": "^1.77.8"
+    "sass": "^1.97.3"
   },
-  "packageManager": "pnpm@9.8.0"
+  "packageManager": "pnpm@10.30.1"
 }

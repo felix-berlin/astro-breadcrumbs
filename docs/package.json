@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.26.1",
-    "astro": "^4.14.5",
-    "astro-breadcrumbs": "^3.0.2-beta.1",
-    "astro-matomo": "^1.6.0",
-    "sharp": "^0.33.5",
-    "starlight-links-validator": "^0.10.1"
+    "@astrojs/starlight": "^0.37.6",
+    "astro": "^5.17.3",
+    "astro-breadcrumbs": "workspace:*",
+    "astro-matomo": "^1.9.0",
+    "sharp": "^0.34.5",
+    "starlight-links-validator": "^0.19.2"
   },
   "devDependencies": {
-    "sass": "^1.77.8"
+    "sass": "^1.97.3"
   },
-  "packageManager": "pnpm@9.8.0"
+  "packageManager": "pnpm@10.30.1"
 }

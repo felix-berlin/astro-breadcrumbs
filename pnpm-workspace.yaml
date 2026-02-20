@@ -1,5 +1,7 @@
 packages:
-  - "demo"
-  - "docs"
-  - package
-  - "packages/*"
+  - demo
+  - docs
+  - packages/*
+
+onlyBuiltDependencies:
+  - esbuild

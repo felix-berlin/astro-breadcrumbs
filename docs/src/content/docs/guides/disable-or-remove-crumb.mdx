@@ -1,0 +1,78 @@
+---
+title: "Disable or remove crumb(s)"
+description: "Learn how to disable or remove a crumb from the breadcrumb list."
+---
+
+import { LinkCard } from "@astrojs/starlight/components";
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+## Disable one of the crumbs (link elements)
+
+### Disable first crumb
+
+Mark the first crumb as disabled by setting the `aria-disabled` attribute to `true`.
+
+```astro
+<Breadcrumbs customizeLinks={[{ index: 0, "aria-disabled": true }]} />
+```
+
+To prevent clicking on it you can do something like this:
+
+```css
+.c-breadcrumbs__link[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: default;
+}
+```
+
+### Disable last crumb
+
+You can to the same with the last crumb.
+
+```astro
+<Breadcrumbs customizeLinks={[{ index: "last", "aria-disabled": true }]} />
+```
+
+### Disable specific crumb
+
+You can also disable a specific crumb by setting the `aria-disabled` attribute to `true`.
+
+```astro
+<Breadcrumbs customizeLinks={[{ index: 1, "aria-disabled": true }]} />
+```
+
+_Targets the second link item_
+
+## Remove one of the crumbs (link elements)
+
+Instead of adding an attribute to disable the crumb, you can remove it from the list of crumbs. Therefore, you can use the special key `remove` in the `customizeListElements` array.
+
+### Remove first crumb
+
+Set the `index` to `0` and the `remove` key to `true`.
+
+```astro
+<Breadcrumbs customizeListElements={[{ index: 0, remove: true }]}
+```
+
+### Remove last crumb
+
+With the `index` set to `last` and the `remove` key to `true`, you can remove the last crumb.
+
+```astro
+<Breadcrumbs customizeListElements={[{ index: "last", remove: true }]}
+```
+
+You can do the same with `excludeCurrentPage`.
+
+```astro
+<Breadcrumbs excludeCurrentPage={true} />
+```
+
+### Remove specific crumb
+
+You can also remove a specific crumb by setting the `index` to the index of the crumb you want to remove.
+
+```astro
+<Breadcrumbs customizeListElements={[{ index: 1, remove: true }]} />
+```

@@ -1,14 +1,17 @@
 ---
-import type { Props } from "@astrojs/starlight/props";
+import type { Props } from '@astrojs/starlight/props'
 
-import EditLink from "virtual:starlight/components/EditLink";
-import LastUpdated from "virtual:starlight/components/LastUpdated";
-import Pagination from "virtual:starlight/components/Pagination";
-import config from "virtual:starlight/user-config";
-import { Icon } from "@astrojs/starlight/components";
+import EditLink from 'virtual:starlight/components/EditLink'
+import LastUpdated from 'virtual:starlight/components/LastUpdated'
+import Pagination from 'virtual:starlight/components/Pagination'
+import config from 'virtual:starlight/user-config'
+import { Icon } from '@astrojs/starlight/components'
+import Sponsors from './Sponsors.astro'
 ---
 
 <footer class="sl-flex">
+  <Sponsors position="footer" />
+
   <div class="meta sl-flex">
     <EditLink {...Astro.props} />
     <LastUpdated {...Astro.props} />

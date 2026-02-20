@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Breadcrumbs } from 'astro-breadcrumbs'
+
+const crumbs = [
+  { text: 'Home', href: '/' },
+  { text: 'Category', href: '/category' },
+  { text: 'Other page', href: '/other/page' },
+  { text: 'Next Page', href: '/next-page' },
+  { text: 'Test', href: '/test' },
+  { text: 'Current Page', href: '/category/page' },
+]
+---
+
+<Layout title='Tailwind Support Test'>
+  <script src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4'></script>
+  <main class='max-w-4xl mx-auto p-8'>
+    <h1 class='mb-8 text-3xl font-bold'>Tailwind Support Test</h1>
+
+    <div class='mb-12 border border-gray-200 p-6 rounded-lg bg-white'>
+      <h2 class='mt-0 text-xl font-semibold'>
+        Default Styles (Disabled) with Custom Utility Classes
+      </h2>
+      <p class='mb-4'>
+        This breadcrumb uses the new <code>cssClasses</code> prop to apply custom
+        styles mimicking Tailwind utilities.
+      </p>
+
+      <div class='mt-4 border border-dashed border-slate-300 p-4 rounded'>
+        <Breadcrumbs
+          crumbs={crumbs}
+          cssClasses={{
+            container: 'flex py-4 bg-gray-100 rounded-lg px-4',
+            list: 'flex items-center space-x-2 list-none m-0 p-0',
+            item: 'inline-flex items-center',
+            link: 'text-blue-600 hover:text-blue-800 font-medium no-underline transition-colors',
+            separator: 'text-gray-400 mx-2',
+            truncatedButton: 'bg-gray-200 px-2 rounded hover:bg-gray-300',
+          }}
+          truncated={true}
+        />
+      </div>
+    </div>
+
+    <div class='mb-12 border border-gray-200 p-6 rounded-lg bg-white'>
+      <h2 class='mt-0 text-xl font-semibold'>Comparison: Default Styles</h2>
+      <p class='mb-4'>For reference, here is the default styled breadcrumb.</p>
+      <div class='mt-4 border border-dashed border-slate-300 p-4 rounded'>
+        <Breadcrumbs crumbs={crumbs} truncated={true} />
+      </div>
+    </div>
+  </main>
+</Layout>

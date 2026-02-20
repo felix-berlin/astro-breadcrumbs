@@ -1,65 +1,39 @@
 ---
-import Layout from "../../../../layouts/Layout.astro";
-import Breadcrumbs from "../../../../../../src/Breadcrumbs.astro";
+import Layout from '../../../../layouts/Layout.astro'
+import Breadcrumbs from '../../../../../../packages/astro-breadcrumbs/src/Breadcrumbs.astro'
 // import "../../../../styles/styles.scss";
 
 const customCrumbs = [
   {
-    text: "Custom Crumb 1",
-    href: "#",
+    text: 'Custom Crumb 1',
+    href: '#',
   },
   {
-    text: "Custom Crumb 2",
-    href: "#",
+    text: 'Custom Crumb 2',
+    href: '#',
   },
   {
-    text: "Custom Crumb 3",
-    href: "#",
+    text: 'Custom Crumb 3',
+    href: '#',
   },
-];
+]
 
 const crumbsWithCustomAttributes = [
   {
-    text: "Crumb with custom title",
-    href: "#",
-    title: "Custom title",
+    text: 'Crumb with custom title',
+    href: '#',
+    title: 'Custom title',
   },
   {
-    text: "Crumb with custom data attribute",
-    href: "#",
-    "data-custom": "Custom data attribute",
+    text: 'Crumb with custom data attribute',
+    href: '#',
+    'data-custom': 'Custom data attribute',
   },
   {
-    text: "Custom Crumb 3",
-    href: "#",
+    text: 'Custom Crumb 3',
+    href: '#',
   },
-];
-
-const customListItems = [
-  { index: "last", "data-attribute": "Last page!" },
-  {
-    "data-attribute": "home",
-    "aria-label": "Go to the home page",
-  },
-  {
-    "data-attribute": "about",
-    "aria-label": "Go to the about page",
-  },
-];
-
-const customLastPart = [
-  { index: "last", text: "Last page!" },
-  {
-    "data-link": "home",
-    "aria-label": "Go to the home page",
-    text: "Page 1",
-  },
-  {
-    "data-link": "about",
-    "aria-label": "Go to the about page",
-    text: "Page 2",
-  },
-];
+]
 ---
 
 <Layout title="Welcome to Astro Breadcrumbs.">
@@ -139,12 +113,11 @@ const customLastPart = [
     />
     <h2>Example 6 - Custom base url</h2>
     <Breadcrumbs customBaseUrl="my-new-base" />
-    <h2>Example 7 - Without current</h2>
+    <h2>Example 7 - Exclude current page</h2>
     <Breadcrumbs excludeCurrentPage={true} />
-    <h2>Example 8 - customizeListElements</h2>
-    <Breadcrumbs customizeListElements={customListItems} />
-    <h2>Example 9 - customizeLinks</h2>
-    <Breadcrumbs customizeLinks={customLastPart} />
+
+    <h2>Example 7 - Remove first item</h2>
+    <Breadcrumbs customizeListElements={[{index: 0, remove: true}]} />
   </main>
 </Layout>
 <style lang="scss">

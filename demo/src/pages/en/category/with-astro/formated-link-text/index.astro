@@ -1,39 +1,39 @@
 ---
-import Layout from "../../../../../layouts/Layout.astro";
-import Breadcrumbs from "../../../../../../../src/Breadcrumbs.astro";
+import Layout from '../../../../../layouts/Layout.astro'
+import Breadcrumbs from '../../../../../../../packages/astro-breadcrumbs/src/Breadcrumbs.astro'
 // import "../../../../styles/styles.scss";
 
 const customCrumbs = [
   {
-    text: "Custom Crumb 1",
-    href: "#",
+    text: 'Custom Crumb 1',
+    href: '#',
   },
   {
-    text: "Custom Crumb 2",
-    href: "#",
+    text: 'Custom Crumb 2',
+    href: '#',
   },
   {
-    text: "Custom Crumb 3",
-    href: "#",
+    text: 'Custom Crumb 3',
+    href: '#',
   },
-];
+]
 
 const crumbsWithCustomAttributes = [
   {
-    text: "Crumb with custom title",
-    href: "#",
-    title: "Custom title",
+    text: 'Crumb with custom title',
+    href: '#',
+    title: 'Custom title',
   },
   {
-    text: "Crumb with custom data attribute",
-    href: "#",
-    "data-custom": "Custom data attribute",
+    text: 'Crumb with custom data attribute',
+    href: '#',
+    'data-custom': 'Custom data attribute',
   },
   {
-    text: "Custom Crumb 3",
-    href: "#",
+    text: 'Custom Crumb 3',
+    href: '#',
   },
-];
+]
 ---
 
 <Layout title="Welcome to Astro Breadcrumbs.">
