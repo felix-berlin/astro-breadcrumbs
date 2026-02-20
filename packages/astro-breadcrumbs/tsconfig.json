@@ -1,5 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "include": ["index.ts", "src/**/*.ts", "src/**/*.astro", "src/env.d.ts"],
   "exclude": [
     "node_modules",
     "src/tests/**/*.spec.ts",
@@ -10,7 +11,7 @@
     "paths": {
       "@lib/*": ["./src/lib/*"]
     },
-    "types": ["vitest/globals"],
+    "types": ["astro/client", "vitest/globals"],
     // https://bobbyhadz.com/blog/typescript-module-can-only-be-default-imported-esmoduleinterop
     "esModuleInterop": true
   }
