@@ -1,4 +1,4 @@
-import type { BreadcrumbItem, MergedParts } from '../types/breadcrumbs.types.ts'
+import type { BreadcrumbItem, MergedParts } from '../breadcrumbs.types.ts'
 
 export const debugInformation = (
   debug: boolean,

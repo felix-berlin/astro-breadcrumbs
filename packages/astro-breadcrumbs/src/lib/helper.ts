@@ -1,4 +1,4 @@
-import type { BreadcrumbsProps } from '..types/breadcrumbs.types'
+import type { BreadcrumbsProps } from '../breadcrumbs.types.ts'
 
 /**
  * Log a warning message to the console.
@@ -35,5 +35,5 @@ export const truncatedButtonVisible = (
   index: number,
   pathLength: number,
 ): boolean => {
-  return truncated && index === 1 && pathLength > 1
+  return Boolean(truncated) && index === 1 && pathLength > 1
 }
