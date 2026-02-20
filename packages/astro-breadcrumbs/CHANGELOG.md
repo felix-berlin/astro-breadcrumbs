@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0-beta.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.3...v3.4.0-beta.1) (2026-02-20)
+
+
+### Bug Fixes
+
+* add missing type exports ([2f9eb90](https://github.com/felix-berlin/astro-breadcrumbs/commit/2f9eb90ea3f0bcc8d98a090e03f456356118e5e3))
+* correct import paths for breadcrumbs types and ensure boolean return in truncatedButtonVisible ([77d95ca](https://github.com/felix-berlin/astro-breadcrumbs/commit/77d95ca7f7c5b960968ec27ec6334c39f1e5378f))
+* types file name ([ecc82e9](https://github.com/felix-berlin/astro-breadcrumbs/commit/ecc82e9ff53dc49458c8eb141cdfee47591817c7))
+* update astro-breadcrumbs dependency to use workspace protocol ([2133145](https://github.com/felix-berlin/astro-breadcrumbs/commit/21331451931d0b301609181a3a7adfef2f88209f))
+
+
+### Features
+
+* add support for custom CSS classes and disable default styles in Breadcrumb components ([46aaa7e](https://github.com/felix-berlin/astro-breadcrumbs/commit/46aaa7e98e9c60a9a7e42b68fb2662ca7ec47c7b))
+* add TypeScript support for .astro files and update tsconfig ([1364028](https://github.com/felix-berlin/astro-breadcrumbs/commit/13640289d1e34d57dd42003a751be84ca1452af2))
+
 ## [3.3.3](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.2...v3.3.3) (2025-12-13)
 
 
