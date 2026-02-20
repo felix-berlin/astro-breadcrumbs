@@ -1,4 +1,4 @@
-import type { BreadcrumbsProps } from "../breadcrumbs.types.ts";
+import type { BreadcrumbsProps } from '../breadcrumbs.types.ts'
 
 /**
  * Find the separator in a slug.
@@ -8,13 +8,13 @@ import type { BreadcrumbsProps } from "../breadcrumbs.types.ts";
  * @return  {string | undefined}
  */
 const findSeparator = (slug: string): string | undefined => {
-  const separators = ["-", "_"];
+  const separators = ['-', '_']
   for (const separator of separators) {
     if (slug.includes(separator)) {
-      return separator;
+      return separator
     }
   }
-};
+}
 
 /**
  * Remove the separator from a slug and replace it with a space.
@@ -24,12 +24,12 @@ const findSeparator = (slug: string): string | undefined => {
  * @return  {string}
  */
 const unSlugTrimmed = (slug: string): string => {
-  const separator = findSeparator(slug);
+  const separator = findSeparator(slug)
   if (separator) {
-    return slug.split(separator).join(" ").trim();
+    return slug.split(separator).join(' ').trim()
   }
-  return slug;
-};
+  return slug
+}
 
 /**
  * Format the link text based on the linkTextFormat prop.
@@ -38,26 +38,26 @@ const unSlugTrimmed = (slug: string): string => {
  */
 export const formatLinkText = (
   slug: string,
-  format?: BreadcrumbsProps["linkTextFormat"],
+  format?: BreadcrumbsProps['linkTextFormat'],
 ) => {
-  const slugToFormat = unSlugTrimmed(slug);
+  const slugToFormat = unSlugTrimmed(slug)
 
   switch (format) {
-    case "lower":
-      return slugToFormat.toLowerCase();
+    case 'lower':
+      return slugToFormat.toLowerCase()
 
-    case "capitalized":
+    case 'capitalized':
       return slugToFormat
-        .split(" ")
+        .split(' ')
         .map(
           (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(),
         )
-        .join(" ");
+        .join(' ')
 
-    case "sentence":
-      return slugToFormat.charAt(0).toUpperCase() + slugToFormat.slice(1);
+    case 'sentence':
+      return slugToFormat.charAt(0).toUpperCase() + slugToFormat.slice(1)
 
     default:
-      return slug;
+      return slug
   }
-};
+}

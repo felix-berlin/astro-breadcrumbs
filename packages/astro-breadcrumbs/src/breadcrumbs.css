@@ -13,7 +13,9 @@
   visibility: var(--visibility-truncated-breadcrumbs, hidden);
   position: var(--position-truncated-breadcrumbs, absolute);
 }
-.c-breadcrumbs.is-truncated .c-breadcrumbs__crumb:first-of-type, .c-breadcrumbs.is-truncated .c-breadcrumbs__crumb:last-of-type, .c-breadcrumbs.is-truncated .c-breadcrumbs__crumb.has-ellipsis {
+.c-breadcrumbs.is-truncated .c-breadcrumbs__crumb:first-of-type,
+.c-breadcrumbs.is-truncated .c-breadcrumbs__crumb:last-of-type,
+.c-breadcrumbs.is-truncated .c-breadcrumbs__crumb.has-ellipsis {
   --visibility-truncated-breadcrumbs: visible;
   --position-truncated-breadcrumbs: relative;
 }
@@ -50,7 +52,8 @@
   max-width: var(--size-font-breadcrumbs);
   max-height: var(--size-font-breadcrumbs);
 }
-.c-breadcrumbs__link, .c-breadcrumbs__truncated-button {
+.c-breadcrumbs__link,
+.c-breadcrumbs__truncated-button {
   font-size: var(--size-font-breadcrumbs);
   text-decoration: none;
   color: var(--color-link-breadcrumbs);

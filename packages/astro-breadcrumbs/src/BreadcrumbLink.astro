@@ -1,11 +1,11 @@
 ---
 interface BreadcrumbLinkProps {
-  attrs: Record<string, any>;
-  mainBemClass: string;
-  isIndex: boolean;
-  isCurrent: boolean;
-  disableDefaultStyles?: boolean;
-  linkClass?: string;
+  attrs: Record<string, any>
+  mainBemClass: string
+  isIndex: boolean
+  isCurrent: boolean
+  disableDefaultStyles?: boolean
+  linkClass?: string
 }
 const {
   attrs,
@@ -14,14 +14,14 @@ const {
   isCurrent,
   disableDefaultStyles,
   linkClass,
-} = Astro.props as BreadcrumbLinkProps;
+} = Astro.props as BreadcrumbLinkProps
 
 const cssClasses = [
   !disableDefaultStyles && `${mainBemClass}__link`,
   !disableDefaultStyles && { 'is-current': isCurrent },
   !disableDefaultStyles && { 'is-index': isIndex },
   linkClass,
-];
+]
 ---
 
 <a

@@ -1,1 +1,1 @@
-import "./setupTestEnvironmentCompatibility";
+import './setupTestEnvironmentCompatibility'

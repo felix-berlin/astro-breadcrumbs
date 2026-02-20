@@ -1,10 +1,10 @@
 ---
-import { Image } from 'astro:assets';
-import { funding } from '../../../packages/astro-breadcrumbs/package.json';
+import { Image } from 'astro:assets'
+import { funding } from '../../../packages/astro-breadcrumbs/package.json'
 
 // Idea from: https://blog.otterlord.dev/posts/starlight-sponsors/
 
-const { position = 'sidebar' } = Astro.props;
+const { position = 'sidebar' } = Astro.props
 
 const sponsors = [
   {
@@ -15,7 +15,7 @@ const sponsors = [
     width: 529,
     height: 72,
   },
-];
+]
 ---
 
 <section class='sponsors' class:list={`position-${position}`}>

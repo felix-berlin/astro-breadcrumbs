@@ -3,41 +3,41 @@
  */
 export default {
   release: {
-    branches: ["main"],
+    branches: ['main'],
   },
   branches: [
-    "main",
+    'main',
     {
-      name: "beta",
+      name: 'beta',
       prerelease: true,
     },
   ],
-  tagFormat: "v${version}",
+  tagFormat: 'v${version}',
   plugins: [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    '@semantic-release/commit-analyzer',
+    '@semantic-release/release-notes-generator',
     [
-      "@semantic-release/changelog",
+      '@semantic-release/changelog',
       {
         changelogTitle:
-          "# Changelog\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.",
+          '# Changelog\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.',
       },
     ],
-    "@semantic-release/npm",
+    '@semantic-release/npm',
     [
-      "@semantic-release/git",
+      '@semantic-release/git',
       {
         assets: [
-          "CHANGELOG.md",
-          "package.json",
-          "package-lock.json",
-          "npm-shrinkwrap.json",
+          'CHANGELOG.md',
+          'package.json',
+          'package-lock.json',
+          'npm-shrinkwrap.json',
         ],
-        message: "chore(release): publish version ${nextRelease.version}",
+        message: 'chore(release): publish version ${nextRelease.version}',
       },
     ],
     [
-      "@semantic-release/github",
+      '@semantic-release/github',
       {
         message:
           "Release <%= nextRelease.version %> - <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %> [skip ci]\n\n<%= nextRelease.notes %>",
@@ -46,4 +46,4 @@ export default {
   ],
   dryRun: false,
   debug: true,
-};
+}

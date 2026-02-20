@@ -1,4 +1,4 @@
-import type { BreadcrumbItem } from "../breadcrumbs.types.ts";
+import type { BreadcrumbItem } from '../breadcrumbs.types.ts'
 
 /**
  * Generates a JSON-LD string for the BreadcrumbList schema.
@@ -9,14 +9,14 @@ import type { BreadcrumbItem } from "../breadcrumbs.types.ts";
  */
 export const schemaJson = (parts: BreadcrumbItem[]): string =>
   JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
     itemListElement: parts.map((part, index) => ({
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@id": part.href,
+        '@id': part.href,
         name: part.text,
       },
     })),
-  });
+  })

@@ -1,23 +1,23 @@
 export class Truncated extends HTMLElement {
-  isManualToggle = false;
-  breadcrumbs: HTMLElement | null = null;
-  mainBemClass: string | null = null;
-  totalWidth = 0;
-  resizeObserver: ResizeObserver | null = null;
+  isManualToggle = false
+  breadcrumbs: HTMLElement | null = null
+  mainBemClass: string | null = null
+  totalWidth = 0
+  resizeObserver: ResizeObserver | null = null
 
   constructor() {
-    super();
+    super()
 
-    this.mainBemClass = this.dataset.mainBemClass || null;
-    const id = this.dataset.id;
+    this.mainBemClass = this.dataset.mainBemClass || null
+    const id = this.dataset.id
 
-    if (!("truncated" in this.dataset) || !id) return;
+    if (!('truncated' in this.dataset) || !id) return
 
     // Select the breadcrumbs element
-    this.breadcrumbs = document.getElementById(id);
+    this.breadcrumbs = document.getElementById(id)
 
-    this.initializeCrumbs();
-    this.setupResizeObserver();
+    this.initializeCrumbs()
+    this.setupResizeObserver()
   }
 
   /**
@@ -26,12 +26,10 @@ export class Truncated extends HTMLElement {
    * @return  {void}
    */
   initializeCrumbs(): void {
-    const crumbs = this.breadcrumbs?.querySelectorAll(
-      `[data-crumb]`,
-    );
+    const crumbs = this.breadcrumbs?.querySelectorAll(`[data-crumb]`)
     crumbs?.forEach((crumb) => {
-      this.totalWidth += (crumb as HTMLElement).offsetWidth;
-    });
+      this.totalWidth += (crumb as HTMLElement).offsetWidth
+    })
   }
 
   /**
@@ -42,21 +40,21 @@ export class Truncated extends HTMLElement {
   setupResizeObserver(): void {
     this.resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
-        this.checkOverflow(entry.target.clientWidth);
-      });
-    });
+        this.checkOverflow(entry.target.clientWidth)
+      })
+    })
 
-    if (this.breadcrumbs) this.resizeObserver.observe(this.breadcrumbs);
+    if (this.breadcrumbs) this.resizeObserver.observe(this.breadcrumbs)
   }
 
   connectedCallback() {
-    this.showHiddenCrumbs();
+    this.showHiddenCrumbs()
   }
 
   disconnectedCallback() {
     if (this.resizeObserver && this.breadcrumbs) {
-      this.resizeObserver.unobserve(this.breadcrumbs);
-      this.resizeObserver.disconnect();
+      this.resizeObserver.unobserve(this.breadcrumbs)
+      this.resizeObserver.disconnect()
     }
   }
 
@@ -66,7 +64,7 @@ export class Truncated extends HTMLElement {
    * @param isTruncated
    */
   toggleTruncated(isTruncated: boolean) {
-    this.breadcrumbs?.classList.toggle("is-truncated", isTruncated);
+    this.breadcrumbs?.classList.toggle('is-truncated', isTruncated)
   }
 
   /**
@@ -75,15 +73,15 @@ export class Truncated extends HTMLElement {
   showHiddenCrumbs() {
     const truncatedButton = this.breadcrumbs?.querySelector(
       `[data-truncated-button]`,
-    );
+    )
     truncatedButton?.removeEventListener(
-      "click",
+      'click',
       this.handleTruncatedButtonClick,
-    );
+    )
     truncatedButton?.addEventListener(
-      "click",
+      'click',
       this.handleTruncatedButtonClick.bind(this),
-    );
+    )
   }
 
   /**
@@ -92,9 +90,9 @@ export class Truncated extends HTMLElement {
    * @return  {void}
    */
   handleTruncatedButtonClick = (): void => {
-    this.breadcrumbs?.classList.remove("is-truncated");
-    this.isManualToggle = true;
-  };
+    this.breadcrumbs?.classList.remove('is-truncated')
+    this.isManualToggle = true
+  }
 
   /**
    * Check if the breadcrumbs are overflowing
@@ -104,8 +102,8 @@ export class Truncated extends HTMLElement {
    * @return  {void}
    */
   checkOverflow(clientWidth: number): void {
-    const isOverflowing = this.totalWidth > clientWidth && !this.isManualToggle;
-    this.toggleTruncated(isOverflowing);
-    if (!isOverflowing) this.isManualToggle = false;
+    const isOverflowing = this.totalWidth > clientWidth && !this.isManualToggle
+    this.toggleTruncated(isOverflowing)
+    if (!isOverflowing) this.isManualToggle = false
   }
 }

@@ -1,1 +1,1 @@
-export { default as Breadcrumbs } from './src/Breadcrumbs.astro';
+export { default as Breadcrumbs } from './src/Breadcrumbs.astro'

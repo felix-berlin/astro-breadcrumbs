@@ -1,1 +1,1 @@
-declare module 'astro-breadcrumbs';
+declare module 'astro-breadcrumbs'

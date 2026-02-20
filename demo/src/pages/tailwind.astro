@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Breadcrumbs } from 'astro-breadcrumbs';
+import Layout from '../layouts/Layout.astro'
+import { Breadcrumbs } from 'astro-breadcrumbs'
 
 const crumbs = [
   { text: 'Home', href: '/' },
@@ -9,7 +9,7 @@ const crumbs = [
   { text: 'Next Page', href: '/next-page' },
   { text: 'Test', href: '/test' },
   { text: 'Current Page', href: '/category/page' },
-];
+]
 ---
 
 <Layout title='Tailwind Support Test'>
@@ -37,6 +37,7 @@ const crumbs = [
             separator: 'text-gray-400 mx-2',
             truncatedButton: 'bg-gray-200 px-2 rounded hover:bg-gray-300',
           }}
+          truncated={true}
         />
       </div>
     </div>
@@ -45,7 +46,7 @@ const crumbs = [
       <h2 class='mt-0 text-xl font-semibold'>Comparison: Default Styles</h2>
       <p class='mb-4'>For reference, here is the default styled breadcrumb.</p>
       <div class='mt-4 border border-dashed border-slate-300 p-4 rounded'>
-        <Breadcrumbs crumbs={crumbs} />
+        <Breadcrumbs crumbs={crumbs} truncated={true} />
       </div>
     </div>
   </main>

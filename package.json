@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "release": "pnpm --filter astro-breadcrumbs release",
-    "test:unit": "pnpm --filter astro-breadcrumbs test:unit"
+    "test:unit": "pnpm --filter astro-breadcrumbs test:unit",
+    "format": "pnpm exec biome format --write"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.3"
