@@ -9,10 +9,6 @@
     "./breadcrumbs.scss": "./src/breadcrumbs.scss"
   },
   "main": "index.ts",
-  "workspaces": [
-    "demo",
-    "docs"
-  ],
   "scripts": {
     "release": "semantic-release --branches main",
     "test:unit": "vitest --coverage"
@@ -65,14 +61,14 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@vitest/coverage-v8": "4.0.18",
-    "jsdom": "^28.0.0",
-    "prettier": "^3.7.4",
+    "jsdom": "^28.1.0",
+    "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
-    "semantic-release": "^25.0.2",
+    "semantic-release": "^25.0.3",
     "vitest": "4.0.18"
   },
   "peerDependencies": {
-    "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0"
+    "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
   },
-  "packageManager": "pnpm@10.30.3"
+  "packageManager": "pnpm@10.32.1"
 }
