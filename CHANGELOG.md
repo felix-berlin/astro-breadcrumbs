@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.3...v3.4.0) (2026-03-11)
+
+
+### Features
+
+* add astro v6 support; update all dependencies ([bf54fbf](https://github.com/felix-berlin/astro-breadcrumbs/commit/bf54fbfae5a38f2e6681ef149eb63ce2120dbf17))
+
 ## [3.3.3](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.2...v3.3.3) (2025-12-13)
 
 
