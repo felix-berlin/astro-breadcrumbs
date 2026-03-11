@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { Truncated } from "../../src/lib/truncated";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
