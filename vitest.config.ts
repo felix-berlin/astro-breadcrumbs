@@ -6,7 +6,7 @@ export default getViteConfig(
     test: {
       include: ["tests/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
       globals: true,
-      environment: "jsdom",
+      environment: "node",
       setupFiles: ["tests/unit/vitest.setup.ts"],
       coverage: {
         include: ["src/**/*.{js,jsx,ts,tsx,astro}"],
