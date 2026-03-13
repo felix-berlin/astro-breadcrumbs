@@ -57,7 +57,7 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.38.0
-        version: 0.38.0(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
+        version: 0.38.1(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
       astro:
         specifier: ^6.0.3
         version: 6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)
@@ -72,7 +72,7 @@ importers:
         version: 0.34.5
       starlight-links-validator:
         specifier: ^0.20.0
-        version: 0.20.0(@astrojs/starlight@0.38.0(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
+        version: 0.20.0(@astrojs/starlight@0.38.1(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.98.0
@@ -129,8 +129,8 @@ packages:
   '@astrojs/sitemap@3.7.1':
     resolution: {integrity: sha512-IzQqdTeskaMX+QDZCzMuJIp8A8C1vgzMBp/NmHNnadepHYNHcxQdGLQZYfkbd2EbRXUfOS+UDIKx8sKg0oWVdw==}
 
-  '@astrojs/starlight@0.38.0':
-    resolution: {integrity: sha512-l+7VJ9DeOcXdU43u3lF39VDHrS0AB8eX7sN9qft77hfHIK4GkduClF+V7J9kd9xLDxwo2zcYDyzmp4o26gy8mg==}
+  '@astrojs/starlight@0.38.1':
+    resolution: {integrity: sha512-CATPH4Dy44OYAJhoyUHh6NqpColWEVufanGVwnM0l/bcaNMo5V/rypwL0Vu0Edp+ZIXE7/1DA9CrNj5jmCVSLQ==}
     peerDependencies:
       astro: ^6.0.0
 
@@ -3758,7 +3758,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 4.3.6
 
-  '@astrojs/starlight@0.38.0(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))':
+  '@astrojs/starlight@0.38.1(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))':
     dependencies:
       '@astrojs/markdown-remark': 7.0.0
       '@astrojs/mdx': 5.0.0(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
@@ -4649,6 +4649,7 @@ snapshots:
   '@types/node@25.0.3':
     dependencies:
       undici-types: 7.16.0
+    optional: true
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -4656,7 +4657,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 25.0.3
+      '@types/node': 24.12.0
 
   '@types/unist@2.0.11': {}
 
@@ -7237,9 +7238,9 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.20.0(@astrojs/starlight@0.38.0(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)):
+  starlight-links-validator@0.20.0(@astrojs/starlight@0.38.1(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)):
     dependencies:
-      '@astrojs/starlight': 0.38.0(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
+      '@astrojs/starlight': 0.38.1(astro@6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4))
       '@types/picomatch': 4.0.2
       astro: 6.0.4(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.59.0)(sass@1.98.0)(typescript@5.5.4)
       github-slugger: 2.0.0
