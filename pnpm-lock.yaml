@@ -72,7 +72,7 @@ importers:
         version: 0.34.5
       starlight-links-validator:
         specifier: ^0.20.0
-        version: 0.20.0(@astrojs/starlight@0.38.1(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4))
+        version: 0.20.1(@astrojs/starlight@0.38.1(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4))
     devDependencies:
       sass:
         specifier: ^1.98.0
@@ -1173,8 +1173,8 @@ packages:
   '@types/chai@5.2.2':
     resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
 
-  '@types/debug@4.1.12':
-    resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+  '@types/debug@4.1.13':
+    resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
 
   '@types/deep-eql@4.0.2':
     resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
@@ -1289,6 +1289,10 @@ packages:
 
   ansi-escapes@7.2.0:
     resolution: {integrity: sha512-g6LhBsl+GBPRWGWsBtutpzBYuIIdBkLEvad5C/va/74Db018+5TZiyA26cZJAr3Rft5lprVqOIPxf5Vid6tqAw==}
+    engines: {node: '>=18'}
+
+  ansi-escapes@7.3.0:
+    resolution: {integrity: sha512-BvU8nYgGQBxcmMuEeUEmNTvrMVjJNSH7RgW24vXexN4Ven6qCvy4TntnvlnwnMLTVlcRQQdbRY8NKnaIoeWDNg==}
     engines: {node: '>=18'}
 
   ansi-regex@5.0.1:
@@ -3125,8 +3129,8 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  starlight-links-validator@0.20.0:
-    resolution: {integrity: sha512-/sRyMDtT0bmFpjh1Ssxd9xZszY9I/85oreH18mqHSiCfZLSvOxrgcwMDTDQJfQ/u+K/zrUxmLCC7AvufniKzcg==}
+  starlight-links-validator@0.20.1:
+    resolution: {integrity: sha512-bPfX9tlvkLcygIwo4nszOf7TOj1iqfZEpUss5oxRlaa3/mt7zGBHANSkanVMd0FK6VQa2oUD9MjH1DszykkwPA==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       '@astrojs/starlight': '>=0.38.0'
@@ -3212,8 +3216,8 @@ packages:
     resolution: {integrity: sha512-zFObLMyZeEwzAoKCyu1B91U79K2t7ApXuQfo8OuxwXLDgcKxuwM+YvcbIhm6QWqz7mHUH1TVytR1PwVVjEuMig==}
     engines: {node: '>=14.18'}
 
-  supports-hyperlinks@4.2.0:
-    resolution: {integrity: sha512-FWXryrXrsYX2vlTD9WdfgOeN7a2EbuS3MiMaDkFibR0B6IxelCNbFgUJEGLn3eSn+9HX7RuM0ig6Lzr8lccxUA==}
+  supports-hyperlinks@4.4.0:
+    resolution: {integrity: sha512-UKbpT93hN5Nr9go5UY7bopIB9YQlMz9nm/ct4IXt/irb5YRkn9WaqrOBJGZ5Pwvsd5FQzSVeYlGdXoCAPQZrPg==}
     engines: {node: '>=20'}
 
   svgo@4.0.0:
@@ -4743,7 +4747,7 @@ snapshots:
     dependencies:
       '@types/deep-eql': 4.0.2
 
-  '@types/debug@4.1.12':
+  '@types/debug@4.1.13':
     dependencies:
       '@types/ms': 2.1.0
 
@@ -4870,6 +4874,10 @@ snapshots:
       indent-string: 5.0.0
 
   ansi-escapes@7.2.0:
+    dependencies:
+      environment: 1.1.0
+
+  ansi-escapes@7.3.0:
     dependencies:
       environment: 1.1.0
 
@@ -6646,7 +6654,7 @@ snapshots:
 
   micromark@4.0.2:
     dependencies:
-      '@types/debug': 4.1.12
+      '@types/debug': 4.1.13
       debug: 4.4.3
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
@@ -7391,7 +7399,7 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.20.0(@astrojs/starlight@0.38.1(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4)):
+  starlight-links-validator@0.20.1(@astrojs/starlight@0.38.1(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4)))(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4)):
     dependencies:
       '@astrojs/starlight': 0.38.1(astro@6.1.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.0)(sass@1.98.0)(typescript@5.5.4))
       '@types/picomatch': 4.0.2
@@ -7403,7 +7411,7 @@ snapshots:
       kleur: 4.1.5
       mdast-util-mdx-jsx: 3.2.0
       mdast-util-to-string: 4.0.0
-      picomatch: 4.0.3
+      picomatch: 4.0.4
       terminal-link: 5.0.0
       unist-util-visit: 5.1.0
     transitivePeerDependencies:
@@ -7490,7 +7498,7 @@ snapshots:
       has-flag: 4.0.0
       supports-color: 7.2.0
 
-  supports-hyperlinks@4.2.0:
+  supports-hyperlinks@4.4.0:
     dependencies:
       has-flag: 5.0.1
       supports-color: 10.2.2
@@ -7530,8 +7538,8 @@ snapshots:
 
   terminal-link@5.0.0:
     dependencies:
-      ansi-escapes: 7.2.0
-      supports-hyperlinks: 4.2.0
+      ansi-escapes: 7.3.0
+      supports-hyperlinks: 4.4.0
 
   thenify-all@1.6.0:
     dependencies:
