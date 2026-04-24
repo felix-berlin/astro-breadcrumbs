@@ -60,12 +60,12 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@vitest/coverage-v8": "4.1.4",
+    "@vitest/coverage-v8": "4.1.5",
     "jsdom": "^29.0.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "semantic-release": "^25.0.3",
-    "vitest": "4.1.4"
+    "vitest": "4.1.5"
   },
   "peerDependencies": {
     "astro": "^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
