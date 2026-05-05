@@ -71,8 +71,8 @@ importers:
         specifier: ^0.34.5
         version: 0.34.5
       starlight-links-validator:
-        specifier: ^0.23.0
-        version: 0.23.0(@astrojs/starlight@0.38.4(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3)))(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3))
+        specifier: ^0.24.0
+        version: 0.24.0(@astrojs/starlight@0.38.4(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3)))(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3))
     devDependencies:
       sass:
         specifier: ^1.98.0
@@ -3325,8 +3325,8 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  starlight-links-validator@0.23.0:
-    resolution: {integrity: sha512-dpKJdNv170+jyw8HDgPKGIW/MnXUxa3v8RqJrER47jx4fbxvLsITIw0/Y76xzTTrDv8LhQ7t/ExFutUDQqm3FQ==}
+  starlight-links-validator@0.24.0:
+    resolution: {integrity: sha512-bsZf77oRJmY92KWOcu3vYK8Y12KJNvO3jQca1BgOBs+XskNfjPXrkgVtT7ls/FnLoomfsIV0wLdJfJs7kzGojA==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       '@astrojs/starlight': '>=0.38.0'
@@ -7822,7 +7822,7 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.23.0(@astrojs/starlight@0.38.4(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3)))(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3)):
+  starlight-links-validator@0.24.0(@astrojs/starlight@0.38.4(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3)))(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3)):
     dependencies:
       '@astrojs/starlight': 0.38.4(astro@6.2.1(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.60.2)(sass@1.99.0)(typescript@5.5.4)(yaml@2.8.3))
       '@types/picomatch': 4.0.2
