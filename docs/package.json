@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.38.0",
+    "@astrojs/starlight": "^0.41.0",
     "astro": "^6.0.3",
     "astro-breadcrumbs": "workspace:*",
     "astro-matomo": "^1.10.0",
