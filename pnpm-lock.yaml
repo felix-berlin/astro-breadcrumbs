@@ -26,7 +26,7 @@ importers:
         version: 29.1.1
       prettier:
         specifier: ^3.8.1
-        version: 3.8.5
+        version: 3.9.0
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
@@ -3126,8 +3126,8 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier@3.8.5:
-    resolution: {integrity: sha512-zxcTTCedNGJM4R8sj/Cq/F0W/c4iE0afWBcBwMTRtw4WHYP9TWkYjdiH3npPRUYsXQCPR0hTU9yjovOu+E6EQA==}
+  prettier@3.9.0:
+    resolution: {integrity: sha512-LjIqSIC5VYLzs9WedVmJ2ljNAGnU+DteIClbahu4L/DBeWjZ6iT/k1lAYyu9JUh+1xINxWadaPw/Pl63y/agAw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7614,10 +7614,10 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.10.4
-      prettier: 3.8.5
+      prettier: 3.9.0
       sass-formatter: 0.7.9
 
-  prettier@3.8.5: {}
+  prettier@3.9.0: {}
 
   pretty-ms@9.3.0:
     dependencies:
