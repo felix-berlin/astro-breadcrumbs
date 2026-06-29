@@ -3,3 +3,10 @@ packages:
   - "docs"
   - package
   - "packages/*"
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+minimumReleaseAgeExclude:
+  - prettier@3.9.3
+  - starlight-links-validator@0.25.2
