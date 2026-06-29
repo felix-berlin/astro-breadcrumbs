@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.4.0...v3.4.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* **docs:** migrate autogenerate sidebar to Starlight v0.39+ syntax ([15c808f](https://github.com/felix-berlin/astro-breadcrumbs/commit/15c808f0c8d89e2356619531f18e118ee4a7f42b))
+* **structured-data:** use absolute URLs for JSON-LD [@id](https://github.com/id) and strip .html suffix ([3833cd7](https://github.com/felix-berlin/astro-breadcrumbs/commit/3833cd7332af037591af5f55ca78513d4646e107))
+* **tests:** correct crumbs fixture to use href instead of url ([6e2d847](https://github.com/felix-berlin/astro-breadcrumbs/commit/6e2d84775d7000ae9a64bb44b66b3dd38aba2948))
+
 # [3.4.0](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.3.3...v3.4.0) (2026-03-11)
 
 
