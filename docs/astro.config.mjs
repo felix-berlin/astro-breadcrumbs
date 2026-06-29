@@ -54,7 +54,7 @@ export default defineConfig({
         },
         {
           label: "Guides",
-          autogenerate: { directory: "guides" },
+          items: [{ autogenerate: { directory: "guides" } }],
         },
       ],
       plugins: [starlightLinksValidator()],

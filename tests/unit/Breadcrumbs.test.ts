@@ -29,8 +29,8 @@ describe("Breadcrumbs", () => {
 
   it("renders with custom crumbs", async () => {
     const crumbs = [
-      { text: "Home", url: "/" },
-      { text: "About", url: "/about" },
+      { text: "Home", href: "/" },
+      { text: "About", href: "/about" },
     ];
     const render = await renderBreadcrumbs({ crumbs }, {});
     expect(render).toContain("Home");

@@ -1,13 +1,12 @@
 import type { BreadcrumbItem } from "../breadcrumbs.types.ts";
 
-/**
- * Generates a JSON-LD string for the BreadcrumbList schema.
- *
- * @param   {BreadcrumbItem[]}  parts
- *
- * @return  {string}
- */
-export const schemaJson = (parts: BreadcrumbItem[]): string =>
+const toAbsoluteId = (href: string, baseUrl: URL | string): string =>
+  new URL(href.replace(/\.html$/, ""), baseUrl).href;
+
+export const schemaJson = (
+  parts: BreadcrumbItem[],
+  baseUrl: URL | string,
+): string =>
   JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -15,7 +14,7 @@ export const schemaJson = (parts: BreadcrumbItem[]): string =>
       "@type": "ListItem",
       position: index + 1,
       item: {
-        "@id": part.href,
+        "@id": toAbsoluteId(part.href, baseUrl),
         name: part.text,
       },
     })),
