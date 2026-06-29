@@ -8,6 +8,10 @@
     "./breadcrumbs.css": "./src/breadcrumbs.css",
     "./breadcrumbs.scss": "./src/breadcrumbs.scss"
   },
+  "files": [
+    "index.ts",
+    "src/"
+  ],
   "main": "index.ts",
   "scripts": {
     "release": "semantic-release --branches main",
