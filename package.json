@@ -10,6 +10,7 @@
   },
   "files": [
     "index.ts",
+    "index.d.ts",
     "src/"
   ],
   "main": "index.ts",
