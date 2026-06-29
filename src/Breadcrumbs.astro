@@ -134,7 +134,7 @@ debugInformation(debug, parts, customizedParts);
 </astro-breadcrumbs>
 {
   schemaJsonScript && (
-    <script type="application/ld+json" set:html={schemaJson(customizedParts)} />
+    <script type="application/ld+json" set:html={schemaJson(customizedParts, Astro.url)} />
   )
 }
 
