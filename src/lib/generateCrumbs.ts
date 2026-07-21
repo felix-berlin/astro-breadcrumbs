@@ -51,27 +51,29 @@ export const generateCrumbs = ({
     paths.unshift(customBaseUrl);
   }
   /**
+   * Strip out any file extensions (e.g. ".html", ".js") from each path segment
+   * up front, so neither the visible text nor the generated href leaks them.
+   */
+  const strippedPaths = paths.map((text) => {
+    const matches = text.match(/^(.+?)(\.[a-z0-9]+)?\/?$/i);
+    return matches?.[2] ? matches[1] : text;
+  });
+
+  /**
    * Loop through the paths and create a breadcrumb item for each.
    */
-  paths.forEach((text: string, index: number) => {
+  strippedPaths.forEach((text: string, index: number) => {
     /**
-     * generateHref will create the href out of the paths array.
+     * generateHref will create the href out of the stripped paths array.
      * Example: ["path1", "path2"] => /path1/path2
      */
-    const generateHref = `/${paths.slice(0, index + 1).join("/")}`;
+    const generateHref = `/${strippedPaths.slice(0, index + 1).join("/")}`;
 
     const addTrailingSlash = hasTrailingSlash
       ? `${generateHref}/`
       : generateHref;
 
     const finalHref = addTrailingSlash;
-
-    // strip out any file extensions
-    const matches = text.match(/^(.+?)(\.[a-z0-9]+)?\/?$/i);
-
-    if (matches?.[2]) {
-      text = matches[1];
-    }
 
     parts.push({
       text: formatLinkText(text, linkTextFormat),
