@@ -98,13 +98,13 @@ test("generateCrumbs - paths with file extensions", () => {
   // Check if the second crumb is correct
   expect(result[1]).toEqual({
     text: "Path1",
-    href: "/path1.html/",
+    href: "/path1/",
   });
 
   // Check if the third crumb is correct
   expect(result[2]).toEqual({
     text: "Path2",
-    href: "/path1.html/path2.js/",
+    href: "/path1/path2/",
   });
 });
 
