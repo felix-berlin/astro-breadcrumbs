@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.2](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.4.1...v3.4.2) (2026-07-21)
+
+
+### Bug Fixes
+
+* strip file extensions from generated href, not just link text ([c59e469](https://github.com/felix-berlin/astro-breadcrumbs/commit/c59e4690879ba44cbe5cffa7788055c58971addc))
+
 ## [3.4.1](https://github.com/felix-berlin/astro-breadcrumbs/compare/v3.4.0...v3.4.1) (2026-06-29)
 
 
