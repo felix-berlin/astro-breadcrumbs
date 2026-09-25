@@ -10,7 +10,7 @@ importers:
     dependencies:
       astro:
         specifier: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-        version: 7.0.3(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.62.0)(sass@1.102.0)(yaml@2.8.3)
+        version: 7.0.3(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.62.0)(sass@1.105.0)(yaml@2.8.3)
     devDependencies:
       '@semantic-release/changelog':
         specifier: ^6.0.3
@@ -28,23 +28,23 @@ importers:
         specifier: ^3.9.3
         version: 3.9.9
       prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
+        specifier: ^1.0.0
+        version: 1.1.0(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(prettier@3.9.9)
       semantic-release:
         specifier: ^25.0.5
         version: 25.0.9(supports-color@10.2.2)(typescript@5.5.4)
       vitest:
         specifier: 4.1.11
-        version: 4.1.11(@types/node@25.0.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
+        version: 4.1.11(@types/node@25.0.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
 
   demo:
     dependencies:
       '@astrojs/mdx':
         specifier: ^7.0.0
-        version: 7.0.8(@astrojs/markdown-satteri@0.3.8)(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)
+        version: 7.0.8(@astrojs/markdown-satteri@0.3.8)(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)
       astro:
         specifier: ^7.0.3
-        version: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+        version: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       astro-breadcrumbs:
         specifier: workspace:*
         version: link:..
@@ -57,22 +57,22 @@ importers:
     dependencies:
       '@astrojs/starlight':
         specifier: ^0.41.1
-        version: 0.41.4(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4)
+        version: 0.41.4(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4)
       astro:
         specifier: ^7.0.3
-        version: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+        version: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       astro-breadcrumbs:
         specifier: workspace:*
         version: link:..
       astro-matomo:
         specifier: ^1.10.0
-        version: 1.12.0(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
+        version: 1.12.0(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
       sharp:
         specifier: ^0.35.2
         version: 0.35.3(@types/node@25.0.3)
       starlight-links-validator:
         specifier: ^0.25.2
-        version: 0.25.2(@astrojs/starlight@0.41.4(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4))(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)
+        version: 0.25.2(@astrojs/starlight@0.41.4(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)
     devDependencies:
       sass:
         specifier: ^1.101.0
@@ -107,6 +107,12 @@ packages:
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
 
+  '@astrojs/compiler-binding-android-arm64@0.4.1':
+    resolution: {integrity: sha512-Wtx2DZORuNTLASLLZ8hlrjFaJe1LUloatcCn9EPq7knBhRpjMGXeJANIJMeBZG4igvz7x+3nyAJM2iwCSW9xog==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [android]
+
   '@astrojs/compiler-binding-android-arm64@0.5.0':
     resolution: {integrity: sha512-wVviC/1KaBqGVF0DbTZ8UtAE3c8TN84CCe7w4ju3SGzo/ByWKn8HCqSU/+1wdltGCCSa30pjVk3H8DQUgnfhRQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -115,6 +121,12 @@ packages:
 
   '@astrojs/compiler-binding-darwin-arm64@0.2.3':
     resolution: {integrity: sha512-sJIHeL1ONXEBLob8ZaXfmX6iCftUno08G/cMXj2FJnL0xNbHuELcEq1mjxHVFHNgUYu4P7xJNm2mpc0zUEPoKw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@astrojs/compiler-binding-darwin-arm64@0.4.1':
+    resolution: {integrity: sha512-7iwXcU+hB60Y1SvOfnWHNioT72gDsDQKaDipXh2Onwp/TvQMozhbvhy13wJR8Af940a0h6PbddCeJFpj791UDA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [darwin]
@@ -131,6 +143,12 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  '@astrojs/compiler-binding-darwin-x64@0.4.1':
+    resolution: {integrity: sha512-pifjICos49RXhSVKSDu5gDB0/8j0O7DmxSp1DaWW2PyLG5ekwSkcrfOZto5JqhdI7QYMZB3XOiXpsdOXpS4npA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [darwin]
+
   '@astrojs/compiler-binding-darwin-x64@0.5.0':
     resolution: {integrity: sha512-HU/waaccOQDXpvjoWA/9xzadNZIcWKblJoaw19lCxfVs6AHQYdZZOzZUQjY8HaLYGerTXjdADbra2XU+kXk9Og==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -139,6 +157,13 @@ packages:
 
   '@astrojs/compiler-binding-linux-arm64-gnu@0.2.3':
     resolution: {integrity: sha512-PqVN5AqhuDqfx3ejaerwrC8codpV9jnyKV+IOel027qsJ1anFUJLdjUlY8VVys0xgd8lmqveX11OkcaQj/otTg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@astrojs/compiler-binding-linux-arm64-gnu@0.4.1':
+    resolution: {integrity: sha512-hsZMlNWc6LqWHh9LlSwTq1/XCY7pxA5rkkKIdZRV8mgbOz9OwLvjEoe5Jry13eIZjMUQO8XnQyzk8o/Pjw2YFA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
@@ -158,6 +183,13 @@ packages:
     os: [linux]
     libc: [musl]
 
+  '@astrojs/compiler-binding-linux-arm64-musl@0.4.1':
+    resolution: {integrity: sha512-a3EW27f+Z9uf57vYmpLgUriA1y9wDhKz57PT8D8XlFZt2HZEWhUxKuxI1jvKVI9p8okYee11WXEm/FHY1G9yoQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
   '@astrojs/compiler-binding-linux-arm64-musl@0.5.0':
     resolution: {integrity: sha512-t5rmu23b/6e6v0bhPibCtwPdABXMRL+bUaJXdkJwTpkINp4zCgH6fNa5Z6+RgkgFSCpmg9uf1MtRIqx1gdmBaA==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -167,6 +199,13 @@ packages:
 
   '@astrojs/compiler-binding-linux-x64-gnu@0.2.3':
     resolution: {integrity: sha512-hbLBjXVp+96psMe7/7uqyrquGiULXANrq6REVxxPK/I5VzebZ7LHmSfykmByUbLyR1u+K6CTBKgvdQsK2L+2Xw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@astrojs/compiler-binding-linux-x64-gnu@0.4.1':
+    resolution: {integrity: sha512-XruPTKB/SS4DFzeAjQ1ZyM0ieHDjapHkOSnnzRApZ4FXY2YAI7UY3mETjfJiIS/acyZyrnPH5jObv1gATTdUJQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
@@ -186,6 +225,13 @@ packages:
     os: [linux]
     libc: [musl]
 
+  '@astrojs/compiler-binding-linux-x64-musl@0.4.1':
+    resolution: {integrity: sha512-E8j7lGanqNpudtkUbsFaOLJhmwFe4Ecqux7K9hkj4wULIPNZRM2bYZNcMSj8r1oWvaUiwZl8LaaNwv3+14jqhw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
   '@astrojs/compiler-binding-linux-x64-musl@0.5.0':
     resolution: {integrity: sha512-LlaSO5v3UC6IxuTKXDViWV/fFHYhLKSO9Of118lNBXv/sjIWwziU+jjENxPgxfq/4oUeOu+613y6H93LBPNTOA==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -198,6 +244,11 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
 
+  '@astrojs/compiler-binding-wasm32-wasi@0.4.1':
+    resolution: {integrity: sha512-vNLxIv41ZE+nmPFtw24cRW5ZXG+ZPcAGtgigtjCP8lvcxKI7u2GrXoMsCgEH5fMw8WCEJpwLvsVBg15rJKAkyA==}
+    engines: {node: '>=14.0.0'}
+    cpu: [wasm32]
+
   '@astrojs/compiler-binding-wasm32-wasi@0.5.0':
     resolution: {integrity: sha512-IP+Cp0m9yKg/AUT47077vHEaAOh/oT/iUZx1PDnV2GJzUxLSEotdQy5Hhv+ycvEadO/DbETSJfAWeV7kte4etQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -205,6 +256,12 @@ packages:
 
   '@astrojs/compiler-binding-win32-arm64-msvc@0.2.3':
     resolution: {integrity: sha512-vcCG6JttIb5vbSmcxO2O398hpVj7lQ349iS7cjgYP6ZuLVEnw+9qPAr2MM2kJkU5wEGZqJ2gyi/M7UJoPwH1iQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [win32]
+
+  '@astrojs/compiler-binding-win32-arm64-msvc@0.4.1':
+    resolution: {integrity: sha512-/xTDgRsFDoTh0/+KFXJ74DY4Jqn8CoSHwa8UP5RAblHfnRHkenwfSl4zYDET61O9vXKLk09UzHjjq09yP20/AQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [win32]
@@ -221,6 +278,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@astrojs/compiler-binding-win32-x64-msvc@0.4.1':
+    resolution: {integrity: sha512-0x5J6iHZO0Fjo/CVzoIbXKzWnGESftDbEUQ/oXQ61HhUAFoR7+T1jfToZSNAS+gYyBXHSTpMWYC7lzarbhClcg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [win32]
+
   '@astrojs/compiler-binding-win32-x64-msvc@0.5.0':
     resolution: {integrity: sha512-SgM158cSCJ248UIXaCCW2WqSTjOoFlDv93ed/ATguJqYpZNNVMlOdcPlgNH7WYj/OYeD0rIQr7XyRAYhB7+G1A==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -231,6 +294,10 @@ packages:
     resolution: {integrity: sha512-Xz3iBNse+hXXD25IXxsuXEt2ai8klAWE15CRm/EQBc9+aE3jXaF07DZx+iakk3HC6NHvWlEPzLPyxsLgPzOJsw==}
     engines: {node: ^20.19.0 || >=22.12.0}
 
+  '@astrojs/compiler-binding@0.4.1':
+    resolution: {integrity: sha512-ZYVDW1P58OXyxqZbOMp+/2U9KA7y2esIx9r4pWdpZ/l6fCZhaw4ul+D7EgpRVxYLkyTWqzANbTTUFGPFP8zDHA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+
   '@astrojs/compiler-binding@0.5.0':
     resolution: {integrity: sha512-PxFTx3WoxQnbgUvvwmF6LRQwhHO77a4pewOtJvzxlrYtQ90tLgomLKvks/akrd2iix2ngGlOhxQonKNd8YoBHg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -238,12 +305,13 @@ packages:
   '@astrojs/compiler-rs@0.2.3':
     resolution: {integrity: sha512-JRAtRcPxS4JeAZEIQFQ6GecBs/Wyp4m6/E8vBNxSgVfo1AtRVLUqRCl5oCGOZ0X/BSBB3Vef/7IlzyiGKi2ORA==}
 
+  '@astrojs/compiler-rs@0.4.1':
+    resolution: {integrity: sha512-//NmAuRhy7eU9iP0ceI5Pymy55M+nUZ//kS6XeOyhBWdDib2KbJOyFaVJ52k7sDkJwTKVox7oPu3SpYiVnGm5A==}
+    engines: {node: '>=22.12.0'}
+
   '@astrojs/compiler-rs@0.5.0':
     resolution: {integrity: sha512-2xIypn5R33FRWCXXXv0sfbDj8xcOvc2VmIbteytxMjOzP9LiGfvqaAFJjhdAjzhs6+ZKzYzbSE79rrPObYW5mg==}
     engines: {node: '>=22.12.0'}
-
-  '@astrojs/compiler@2.10.4':
-    resolution: {integrity: sha512-86B3QGagP99MvSNwuJGiYSBHnh8nLvm2Q1IFI15wIUJJsPeQTO3eb2uwBmrqRsXykeR/mBzH8XCgz5AAt1BJrQ==}
 
   '@astrojs/internal-helpers@0.10.0':
     resolution: {integrity: sha512-Ry2R3VPeIN4uPCSA4xQc+e+vsJXkalKpEbDc07hV+a/o5Bs2N/s/uDcPJH/05L19DKh9tAy7e6JM3YZ6Cxfezw==}
@@ -1663,6 +1731,9 @@ packages:
   '@pnpm/npm-conf@3.0.3':
     resolution: {integrity: sha512-//0sR/cow/s4ICQaYoAobOl4aU8cjU6x/V24V7XkKotb9+O+3zySIYp146vpaobYHnxa4pZX8NkV54Z5AwbDKA==}
     engines: {node: '>=12'}
+
+  '@prettier/parse-srcset@3.1.0':
+    resolution: {integrity: sha512-FIRv2rZotO9NP/r66taYqD1zICpPiBbrECqjKV/xqNotqDxF7fLzzUeK+1RSRx9Tenk0DajR/GcRmTJ2qtHaKQ==}
 
   '@rolldown/binding-android-arm64@1.1.4':
     resolution: {integrity: sha512-EZLpf/8y7GXkkra90ML47kzik/GMP3EMcE9bPyHmRfxLC6z9+aW5A8poCsoxjrT5GfEcNAAvWwUHjvP1pUQkfw==}
@@ -4022,9 +4093,11 @@ packages:
     resolution: {integrity: sha512-u82N74LFzG8ca+dD8puPnplTXoGH4fTPpVGuIbt36G3qvNlkvfD0lEAZSxaly3KX8TS/L1A1gsCEmvKmBcVbkQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier-plugin-astro@0.14.1:
-    resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
-    engines: {node: ^14.15.0 || >=16.0.0}
+  prettier-plugin-astro@1.1.0:
+    resolution: {integrity: sha512-ujJ1VX+iin4eYJPHVCEbmXHzrEVsi1SaVehHtbAteTZv8VTrZyBiZPmYc6Ud6+fkr/UBMXuEu3N3+d49h7YfKw==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      prettier: ^3.5.3
 
   prettier@3.9.9:
     resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
@@ -4217,12 +4290,8 @@ packages:
   safe-buffer@5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
 
-  sass-formatter@0.7.9:
-    resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
-
-  sass@1.102.0:
-    resolution: {integrity: sha512-NSOyTnaQF7rTAEOtI2fwb386vL+akyiQLBZu8Na7hXCb+umJy0GAqlcMIaqACZ6Z1VgTBS4K9PG6B3IdjHGJsw==}
-    engines: {node: '>=20.19.0'}
+  sass-formatter@0.8.0:
+    resolution: {integrity: sha512-Nf4eMGE2O5vnJG7KPCRyksWS9gVKSYoUWtPeMXRRxwZSPVQhSGtL602xVYS65LvMkHmkvKa7xpauF0+/5pPwrg==}
     hasBin: true
 
   sass@1.105.0:
@@ -5076,10 +5145,16 @@ snapshots:
 
   '@asamuzakjp/nwsapi@2.3.9': {}
 
+  '@astrojs/compiler-binding-android-arm64@0.4.1':
+    optional: true
+
   '@astrojs/compiler-binding-android-arm64@0.5.0':
     optional: true
 
   '@astrojs/compiler-binding-darwin-arm64@0.2.3':
+    optional: true
+
+  '@astrojs/compiler-binding-darwin-arm64@0.4.1':
     optional: true
 
   '@astrojs/compiler-binding-darwin-arm64@0.5.0':
@@ -5088,10 +5163,16 @@ snapshots:
   '@astrojs/compiler-binding-darwin-x64@0.2.3':
     optional: true
 
+  '@astrojs/compiler-binding-darwin-x64@0.4.1':
+    optional: true
+
   '@astrojs/compiler-binding-darwin-x64@0.5.0':
     optional: true
 
   '@astrojs/compiler-binding-linux-arm64-gnu@0.2.3':
+    optional: true
+
+  '@astrojs/compiler-binding-linux-arm64-gnu@0.4.1':
     optional: true
 
   '@astrojs/compiler-binding-linux-arm64-gnu@0.5.0':
@@ -5100,10 +5181,16 @@ snapshots:
   '@astrojs/compiler-binding-linux-arm64-musl@0.2.3':
     optional: true
 
+  '@astrojs/compiler-binding-linux-arm64-musl@0.4.1':
+    optional: true
+
   '@astrojs/compiler-binding-linux-arm64-musl@0.5.0':
     optional: true
 
   '@astrojs/compiler-binding-linux-x64-gnu@0.2.3':
+    optional: true
+
+  '@astrojs/compiler-binding-linux-x64-gnu@0.4.1':
     optional: true
 
   '@astrojs/compiler-binding-linux-x64-gnu@0.5.0':
@@ -5112,12 +5199,23 @@ snapshots:
   '@astrojs/compiler-binding-linux-x64-musl@0.2.3':
     optional: true
 
+  '@astrojs/compiler-binding-linux-x64-musl@0.4.1':
+    optional: true
+
   '@astrojs/compiler-binding-linux-x64-musl@0.5.0':
     optional: true
 
   '@astrojs/compiler-binding-wasm32-wasi@0.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
     dependencies:
       '@napi-rs/wasm-runtime': 1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
+    optional: true
+
+  '@astrojs/compiler-binding-wasm32-wasi@0.4.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)':
+    dependencies:
+      '@napi-rs/wasm-runtime': 1.2.4(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -5133,10 +5231,16 @@ snapshots:
   '@astrojs/compiler-binding-win32-arm64-msvc@0.2.3':
     optional: true
 
+  '@astrojs/compiler-binding-win32-arm64-msvc@0.4.1':
+    optional: true
+
   '@astrojs/compiler-binding-win32-arm64-msvc@0.5.0':
     optional: true
 
   '@astrojs/compiler-binding-win32-x64-msvc@0.2.3':
+    optional: true
+
+  '@astrojs/compiler-binding-win32-x64-msvc@0.4.1':
     optional: true
 
   '@astrojs/compiler-binding-win32-x64-msvc@0.5.0':
@@ -5153,6 +5257,22 @@ snapshots:
       '@astrojs/compiler-binding-wasm32-wasi': 0.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
       '@astrojs/compiler-binding-win32-arm64-msvc': 0.2.3
       '@astrojs/compiler-binding-win32-x64-msvc': 0.2.3
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
+
+  '@astrojs/compiler-binding@0.4.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)':
+    optionalDependencies:
+      '@astrojs/compiler-binding-android-arm64': 0.4.1
+      '@astrojs/compiler-binding-darwin-arm64': 0.4.1
+      '@astrojs/compiler-binding-darwin-x64': 0.4.1
+      '@astrojs/compiler-binding-linux-arm64-gnu': 0.4.1
+      '@astrojs/compiler-binding-linux-arm64-musl': 0.4.1
+      '@astrojs/compiler-binding-linux-x64-gnu': 0.4.1
+      '@astrojs/compiler-binding-linux-x64-musl': 0.4.1
+      '@astrojs/compiler-binding-wasm32-wasi': 0.4.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
+      '@astrojs/compiler-binding-win32-arm64-msvc': 0.4.1
+      '@astrojs/compiler-binding-win32-x64-msvc': 0.4.1
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -5177,17 +5297,22 @@ snapshots:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
+  '@astrojs/compiler-rs@0.4.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)':
+    dependencies:
+      '@astrojs/compiler-binding': 0.4.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
+
   '@astrojs/compiler-rs@0.5.0':
     dependencies:
       '@astrojs/compiler-binding': 0.5.0
-
-  '@astrojs/compiler@2.10.4': {}
 
   '@astrojs/internal-helpers@0.10.0':
     dependencies:
       '@types/hast': 3.0.5
       '@types/mdast': 4.0.4
-      js-yaml: 4.3.1
+      js-yaml: 4.3.2
       picomatch: 4.0.5
       retext-smartypants: 6.2.0
       shiki: 4.4.3
@@ -5302,13 +5427,13 @@ snapshots:
       github-slugger: 2.0.0
       satteri: 0.10.5
 
-  '@astrojs/mdx@7.0.8(@astrojs/markdown-satteri@0.3.4)(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)':
+  '@astrojs/mdx@7.0.8(@astrojs/markdown-satteri@0.3.4)(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.10.4
       '@astrojs/markdown-remark': 7.2.4(supports-color@10.2.2)
       '@mdx-js/mdx': 3.1.1(supports-color@10.2.2)
       acorn: 8.18.0
-      astro: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      astro: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       es-module-lexer: 2.3.2
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5324,13 +5449,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@7.0.8(@astrojs/markdown-satteri@0.3.8)(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)':
+  '@astrojs/mdx@7.0.8(@astrojs/markdown-satteri@0.3.8)(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.10.4
       '@astrojs/markdown-remark': 7.2.4(supports-color@10.2.2)
       '@mdx-js/mdx': 3.1.1(supports-color@10.2.2)
       acorn: 8.18.0
-      astro: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      astro: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       es-module-lexer: 2.3.2
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5356,17 +5481,17 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 4.5.4
 
-  '@astrojs/starlight@0.41.4(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4)':
+  '@astrojs/starlight@0.41.4(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4)':
     dependencies:
       '@astrojs/markdown-satteri': 0.3.4
-      '@astrojs/mdx': 7.0.8(@astrojs/markdown-satteri@0.3.4)(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)
+      '@astrojs/mdx': 7.0.8(@astrojs/markdown-satteri@0.3.4)(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)
       '@astrojs/sitemap': 3.7.3
       '@pagefind/default-ui': 1.5.2
       '@types/hast': 3.0.5
       '@types/js-yaml': 4.0.9
       '@types/mdast': 4.0.4
-      astro: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
-      astro-expressive-code: 0.44.1(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
+      astro: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      astro-expressive-code: 0.44.1(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
       bcp-47: 2.1.1
       hast-util-from-html: 2.0.3
       hast-util-select: 6.0.4
@@ -5388,6 +5513,8 @@ snapshots:
       unified: 11.0.5
       unist-util-visit: 5.1.0
       vfile: 6.0.3
+    optionalDependencies:
+      '@astrojs/markdown-remark': 7.2.0(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6381,6 +6508,8 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
+  '@prettier/parse-srcset@3.1.0': {}
+
   '@rolldown/binding-android-arm64@1.1.4':
     optional: true
 
@@ -6822,7 +6951,7 @@ snapshots:
       obug: 2.1.4
       std-env: 4.0.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.11(@types/node@25.0.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
+      vitest: 4.1.11(@types/node@25.0.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
 
   '@vitest/expect@4.1.11':
     dependencies:
@@ -6833,13 +6962,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.11(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))':
+  '@vitest/mocker@4.1.11(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))':
     dependencies:
       '@vitest/spy': 4.1.11
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      vite: 8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
 
   '@vitest/pretty-format@4.1.11':
     dependencies:
@@ -6932,17 +7061,17 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.44.1(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
+  astro-expressive-code@0.44.1(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
     dependencies:
-      astro: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      astro: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       rehype-expressive-code: 0.44.1
       url-extras: 0.1.0
 
-  astro-matomo@1.12.0(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
+  astro-matomo@1.12.0(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
     dependencies:
-      astro: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      astro: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
 
-  astro@7.0.3(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.62.0)(sass@1.102.0)(yaml@2.8.3):
+  astro@7.0.3(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@25.0.3)(jiti@2.4.2)(rollup@4.62.0)(sass@1.105.0)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler-rs': 0.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
       '@astrojs/internal-helpers': 0.10.0
@@ -6995,8 +7124,8 @@ snapshots:
       unist-util-visit: 5.1.0
       unstorage: 1.17.5
       vfile: 6.0.3
-      vite: 8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.102.0)(yaml@2.8.3)
-      vitefu: 1.1.3(vite@8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.102.0)(yaml@2.8.3))
+      vite: 8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      vitefu: 1.1.3(vite@8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 22.0.0
       zod: 4.4.3
@@ -7038,7 +7167,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3):
+  astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler-rs': 0.5.0
       '@astrojs/internal-helpers': 0.11.0
@@ -7094,6 +7223,7 @@ snapshots:
       yargs-parser: 22.0.0
       zod: 4.5.4
     optionalDependencies:
+      '@astrojs/markdown-remark': 7.2.0(supports-color@10.2.2)
       sharp: 0.35.4(@types/node@25.0.3)
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -9105,11 +9235,15 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier-plugin-astro@0.14.1:
+  prettier-plugin-astro@1.1.0(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(prettier@3.9.9):
     dependencies:
-      '@astrojs/compiler': 2.10.4
+      '@astrojs/compiler-rs': 0.4.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
+      '@prettier/parse-srcset': 3.1.0
       prettier: 3.9.9
-      sass-formatter: 0.7.9
+      sass-formatter: 0.8.0
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
 
   prettier@3.9.9: {}
 
@@ -9434,18 +9568,9 @@ snapshots:
 
   safe-buffer@5.1.2: {}
 
-  sass-formatter@0.7.9:
+  sass-formatter@0.8.0:
     dependencies:
       suf-log: 2.5.3
-
-  sass@1.102.0:
-    dependencies:
-      chokidar: 5.0.0
-      immutable: 5.1.9
-      source-map-js: 1.2.1
-    optionalDependencies:
-      '@parcel/watcher': 2.5.6
-    optional: true
 
   sass@1.105.0:
     dependencies:
@@ -9758,12 +9883,12 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  starlight-links-validator@0.25.2(@astrojs/starlight@0.41.4(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4))(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2):
+  starlight-links-validator@0.25.2(@astrojs/starlight@0.41.4(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2):
     dependencies:
       '@astrojs/markdown-satteri': 0.3.2
-      '@astrojs/starlight': 0.41.4(astro@7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4)
+      '@astrojs/starlight': 0.41.4(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(astro@7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))(supports-color@10.2.2)(typescript@5.5.4)
       '@types/picomatch': 4.0.2
-      astro: 7.3.5(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      astro: 7.3.5(@astrojs/markdown-remark@7.2.0(supports-color@10.2.2))(@types/node@25.0.3)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
       is-absolute-url: 5.0.0
@@ -10131,7 +10256,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.102.0)(yaml@2.8.3):
+  vite@8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.5
@@ -10143,7 +10268,22 @@ snapshots:
       esbuild: 0.28.1
       fsevents: 2.3.3
       jiti: 2.4.2
-      sass: 1.102.0
+      sass: 1.105.0
+      yaml: 2.8.3
+
+  vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3):
+    dependencies:
+      lightningcss: 1.33.0
+      picomatch: 4.0.5
+      postcss: 8.5.26
+      rolldown: 1.2.3
+      tinyglobby: 0.2.17
+    optionalDependencies:
+      '@types/node': 25.0.3
+      esbuild: 0.28.1
+      fsevents: 2.3.3
+      jiti: 2.4.2
+      sass: 1.105.0
       yaml: 2.8.3
 
   vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3):
@@ -10161,18 +10301,18 @@ snapshots:
       sass: 1.105.0
       yaml: 2.8.3
 
-  vitefu@1.1.3(vite@8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.102.0)(yaml@2.8.3)):
+  vitefu@1.1.3(vite@8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
     optionalDependencies:
-      vite: 8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.102.0)(yaml@2.8.3)
+      vite: 8.1.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
 
   vitefu@1.1.3(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
     optionalDependencies:
       vite: 8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
 
-  vitest@4.1.11(@types/node@25.0.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
+  vitest@4.1.11(@types/node@25.0.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)):
     dependencies:
       '@vitest/expect': 4.1.11
-      '@vitest/mocker': 4.1.11(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
+      '@vitest/mocker': 4.1.11(vite@8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3))
       '@vitest/pretty-format': 4.1.11
       '@vitest/runner': 4.1.11
       '@vitest/snapshot': 4.1.11
@@ -10189,7 +10329,7 @@ snapshots:
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vite: 8.2.1(@types/node@25.0.3)(esbuild@0.28.2)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
+      vite: 8.2.1(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.4.2)(sass@1.105.0)(yaml@2.8.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.0.3
