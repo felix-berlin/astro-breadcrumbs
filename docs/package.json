@@ -15,7 +15,7 @@
     "astro-breadcrumbs": "workspace:*",
     "astro-matomo": "^1.10.0",
     "sharp": "^0.35.2",
-    "starlight-links-validator": "^0.25.2"
+    "starlight-links-validator": "^0.26.0"
   },
   "devDependencies": {
     "sass": "^1.101.0"
